@@ -1,0 +1,277 @@
+\chapter{Electromagnetic waves in periodic media}
+\label{ch:Electromagnetic waves in periodic media}
+\section{Maxwell equations}
+
+Give an introduction to Maxwell equations in both their Integral and Diferntial forms.
+
+\begin{align}
+&\oint_C \mathbf{E}\cdot d\mathbf{l} = -\frac{d}{dt}\int_S \mathbf{B}\cdot d\mathbf{S} &\mbox{(Faraday)}\\
+&\oint_C \mathbf{H}\cdot d\mathbf{l} = \frac{d}{dt}\int_S \mathbf{D}\cdot d\mathbf{S} + \int_S \mathbf{J}\cdot d\mathbf{S} &\mbox{(Ampere-Maxwell)}\\
+&\int_S \mathbf{D}\cdot d\mathbf{S} = \int_V \rho dV &\mbox{(Gauss)} \label{eq:Gauss}\\
+&\int_S \mathbf{B}\cdot d\mathbf{S} = 0 &\mbox{(Gauss for magnetism)},
+\end{align}
+
+
+In differential form we have
+\begin{align}
+&\nabla\times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t} &\mbox{(Faraday)} \label{eq:diff_Faraday}\\
+&\nabla\times \mathbf{H} =  \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J} &\mbox{(Ampere-Maxwell)} \label{eq:diff_Ampere}\\
+&\nabla\cdot \mathbf{D} = \rho &\mbox{(Gauss)} \label{eq:diff_Gauss}\\
+&\nabla\cdot \mathbf{B} = 0 &\mbox{(Gauss for magnetism)} \label{eq:diff_Gauss2}\\
+&\nabla\cdot \mathbf{J} = -\frac{\partial \rho}{\partial t} &\mbox{(Continuity)}, \label{eq:diff_cont}
+\end{align}
+Describe the current Continuity Equation
+
+\begin{equation}
+\int_S \mathbf{J}\cdot d\mathbf{S} = -\frac{d}{dt} \int_V \rho dV.
+\end{equation}
+
+from \ref{eq:diff_Faraday} to \eqref{eq:diff_cont} we can get just 3 independent set of vectorial equations. 
+Define the meaning of each variable in that expression and continue with the definition of  constitutive relations (Electric polarization and Magnetization):  
+
+In both set of equation we have
+\begin{itemize}
+\item $\mathbf{E}$: Electric field intensity (volts/meter),
+\item $\mathbf{D}$: Electric flux density (coulombs/meter$^2$),
+\item $\mathbf{H}$: Magnetic field intensity (amperes/meter),
+\item $\mathbf{B}$: Magnetic flux density (webers/meter),
+\item $\mathbf{J}$: Electric current density (amperes/meter$^2$),
+\item $\rho$: Electric charge density (coulombs/meter$^3$).
+\end{itemize}
+
+\begin{align}
+&\mathbf{D} = \epsilon_0 \cdot \mathbf{E} + \mathbf{P}\\
+&\mathbf{B} = \mu_0 \cdot \mathbf{H} + \mathbf{M},
+\end{align}
+$\mathbf{P}$ is the polarization vector that tell us information about the response of the material to the external field due to orientation of the molecules inside of it, and $\mathbf{M}$ is the magnetization vector that is the analogous of the polarization for the magnetic case. If the fields are small enough the behavior of the material is linear and we can express the polarization and magnetization vectors as linear functions of $\mathbf{E}$ and $\mathbf{H}$
+\begin{align}
+&\mathbf{D} = \bar{\bar{\epsilon}} \cdot \mathbf{E}\\
+&\mathbf{B} = \bar{\bar{\mu}} \cdot \mathbf{H},
+\end{align}
+where the double bar refers to a second order tensor, $\cdot$ is a tensor-vector product.
+
+This may be a good place to talk about classification of media and or boundary conditions, Jianmings book: Theory and computation of electromagnetic fields might be a good source for that.
+
+\section{Wave equation for electric fields}
+
+If we take the curl to \eqref{eq:diff_Faraday}, we get
+\[ \nabla\times\nabla\times\mathbf{E} = -\frac{\partial}{\partial t} \nabla\times \mathbf{B} = -\frac{\partial}{\partial t} \nabla\times (\bar{\bar{\mu}} \cdot \mathbf{H}) \enspace , \]
+assuming a (piecewise) homogeneous material
+\begin{align*}
+\nabla\times\nabla\times \mathbf{E} = - \frac{\partial}{\partial t} \nabla\times \mathbf{B} &= \- \frac{\partial}{\partial t} ( \bar{\bar{\mu}}\cdot \nabla\times \mathbf{H})\\
+&= -\frac{\partial}{\partial t} \left( \bar{\bar{\mu}}\cdot \left[ \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J}\right] \right)\enspace ,
+\end{align*}
+if the polarization and magnetization do not vary with time --there is not hysteresis-- 
+\begin{align}
+&\nabla\times\nabla\times \mathbf{E} = -\bar{\bar{\mu}}\cdot \left[ \frac{\partial^2 \mathbf{D}}{\partial t^2} + \frac{\partial \mathbf{J}}{\partial t} \right] \nonumber \\
+&\nabla\times\nabla\times \mathbf{E} = -\bar{\bar{\mu}}\cdot \left[ \bar{\bar{\epsilon}}\cdot\frac{\partial^2 \mathbf{E}}{\partial t^2} + \frac{\partial \mathbf{J}}{\partial t} \right] \label{eq:E-wave-loads} \enspace .
+\end{align}
+Similarly, we take the curl to \eqref{eq:diff_Ampere}, and under the same assumptions, we get
+\begin{align*}
+\nabla\times\nabla\times \mathbf{H} &= \frac{\partial \nabla\times \mathbf{D}}{\partial t} + \nabla\times \mathbf{J}\\
+&= \frac{\partial \nabla\times (\bar{\bar{\epsilon}}\cdot\mathbf{E})}{\partial t} + \nabla\times \mathbf{J}\\
+&= \frac{\partial  \bar{\bar{\epsilon}}\cdot\nabla\times\mathbf{E}}{\partial t} + \nabla\times \mathbf{J}\\
+&= \frac{\partial  \bar{\bar{\epsilon}}\cdot\left(-\frac{\partial \mathbf{B}}{\partial t}\right)}{\partial t} + \nabla\times \mathbf{J} \enspace ,
+\end{align*}
+finally
+\begin{align}
+&\nabla\times\nabla\times \mathbf{H} = -\bar{\bar{\epsilon}}\cdot  \frac{\partial^2 \mathbf{B}}{\partial t^2} +  \nabla\times\mathbf{J} \nonumber \\
+&\nabla\times\nabla\times \mathbf{H} = -\bar{\bar{\epsilon}}\cdot  \bar{\bar{\mu}}\cdot\frac{\partial^2 \mathbf{H}}{\partial t^2} + \nabla\times\mathbf{J} \label{eq:H-wave-loads} \enspace .
+\end{align}
+If we apply the vector identity $\nabla\times\nabla\times \mathbf{A} = \nabla(\nabla\cdot\mathbf{A}) - \nabla^2 \mathbf{A}$, and assume that we do not have electrical charges\footnote{This identity always hold for the magnetic  field since it is divergence free. WHAT ABOUT THE ELECTRICAL CASE?? Maybe this is why Joannopolous treats the problem for the magnetic field case instead of the electric one} we can rewrite \eqref{eq:E-wave-loads} and \eqref{eq:H-wave-loads} as
+\begin{align}
+&\nabla^2 \mathbf{E} = \bar{\bar{\mu}}\cdot\bar{\bar{\epsilon}}\cdot \frac{\partial^2 \mathbf{E}}{\partial t^2} - \bar{\bar{\mu}}\cdot \frac{\partial \mathbf{J}}{\partial t} \\
+&\nabla^2 \mathbf{H} = \bar{\bar{\epsilon}}\cdot\bar{\bar{\mu}}\cdot \frac{\partial^2 \mathbf{H}}{\partial t^2} - \nabla\times \mathbf{J}
+\end{align}
+
+
+If we neglect the terms $\frac{\partial \mathbf{J}}{\partial t}$ and $\nabla\times \mathbf{J}$ --the source terms in the equations-- and assume isotropy --assuming isotropy the material tensors could be represented as simple scalars-- we get the well known expressions
+\begin{align}
+&\left(\nabla^2 - \mu\epsilon \frac{\partial^2}{\partial t^2} \right) \mathbf{E} = \mathbf{0} \label{eq:E-wave-homo}\\
+&\left(\nabla^2 - \mu\epsilon \frac{\partial^2}{\partial t^2} \right) \mathbf{H} = \mathbf{0} \label{eq:H-wave-homo} \enspace ,
+\end{align}
+that are vectorial wave equations with phase speed $c = \sqrt{\epsilon \mu}$. 
+
+This form of \eqref{eq:E-wave-loads} is relevant for us because the program is currently based on this approximation. This particular topic will be treated furthermore in the implementation section \ref{sec:Implementation}.
+
+
+\section{Time harmonic fields, reciprocal space and Fourier transform}
+
+Linearity of Maxwell equations, and a restriction to time harmonic variations permits the separation of time and spatial dependencies in the form:
+
+$$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
+
+This is known as a phasorial notation, and from here on, when dealing with time harmonic fields we will be interested only on the unknown phasor function $\mathbf{E}(\mathbf{r})$ which will represent the field distribution at a fixed time.
+
+Considering a single harmonic wave propagating with angular frequency $\omega$ we get:
+\begin{align}
+&\nabla\times\nabla\times \mathbf{E} = -\omega^2\bar{\bar{\mu}}\cdot\bar{\bar{\epsilon}}\cdot \mathbf{E} - i\omega\bar{\bar{\mu}}\cdot  \mathbf{J} \label{eq:E-wave-harmonic}\\
+&\nabla\times\nabla\times \mathbf{H} = -\omega^2\bar{\bar{\epsilon}}\cdot\bar{\bar{\mu}}\cdot \mathbf{H} + \nabla\times \mathbf{J} \label{eq:H-wave-harmonic} \enspace ,
+\end{align}
+that are the expressions for the frequency domain.
+
+\begin{align}
+&\bar{\bar{\mu}} = \mu_0\bar{\bar{\mu_r}}\\
+&\bar{\bar{\epsilon}} = \epsilon_0\bar{\bar{\epsilon_r}}\\
+&\mu_0 =\sqrt{\mu_0\epsilon_0}\sqrt{\frac{\mu_0}{\epsilon_0}}\\
+&k_0 = \omega\sqrt{\mu_0\epsilon_0}\\
+&Z_0 = \sqrt{\frac{\mu_0}{\epsilon_0}}\\
+c = \frac{1}{\sqrt{\mu_0\epsilon_0}}
+\end{align}
+
+where $\bar{\bar{\mu_r}}$,$\bar{\bar{\epsilon_r}}$  are the relative permeability and permitivity, respectively, $k_0$, $Z_0$, and $c$ are the free space wave number intrinsic impedance, and speed of light in free space. Using this:
+
+\begin{align}
+&\bar{\bar{\mu_r}}^{-1}\nabla\times\nabla\times \mathbf{E} = -\omega^2\mu_0\epsilon_0\bar{\bar{\epsilon_r}}\cdot \mathbf{E} - i\omega\mu_0 \mathbf{J} \\
+&\bar{\bar{\mu_r}}^{-1}\nabla\times\nabla\times \mathbf{E} = k_0^{2}\bar{\bar{\epsilon_r}}\cdot \mathbf{E} - ik_0Z_0 \mathbf{J} \label{eq:E-wave-harmonic2}
+\end{align}
+\section{Electromagnetism as an eigenvalue problem}
+
+The current section treats the harmonic wave equation in a formalism similar to that of quantum mechanics. It might be seen as a sumarized version of the treatment of Joannopoulos \cite{Joannopoulos2008}, and Johnson.
+
+
+Going back to equation \ref{eq:E-wave-harmonic2}, and assuming no sinks or sources ($\mathbf{J}=0$), we can see that the form of the equation is one of a eigenvalue problem. Where a series of operations on a function $\mathbf{E}$ (eigenfunction or eigenvector) gives us the same function multiplied by a constant scalar (eigenvalue).
+In this case we will label the operator acting on $\mathbf{E}$ as $\hat{\Theta}$ in order to make the equation look like a simpler-looking eigenvalue problem:
+
+\begin{equation}
+\hat{\Theta}\mathbf{E} = \left(\frac{\omega}{c}\right)^2\mathbf{E}
+\label{eq:simple_eigproblem}
+\end{equation} 
+
+Where:
+
+\begin{equation}
+\hat{\Theta}\mathbf{E}\triangleq \bar{\bar{\mu_r}}^{-1}\nabla\times\nabla\times \mathbf{E}
+\end{equation}
+
+Here the eigenvectors or phasors $\mathbf{E}$ represent spatial patterns of the harmonic modes, and eigenvalues $ \left( \frac{\omega}{c}\right)^2$ give information about the frequency $\omega$ (and thus wave number $k_0$) of such modes.
+\subsection{Hermiticity}
+As in Quantum Mechanics with the Hamiltonian, some key properties of the eigenfunctions that satisfy equation \ref{eq:simple_eigproblem} are:
+\begin{itemize}
+\item Have real eigenvalues,
+\item are orthogonal,
+\item can be obtained by a variational principle
+\item and can be catalogued by symmetry properties .
+\end{itemize}
+
+All of these properties rely on the fact that the linear operator is from a kind known as \textbf{Hermitian operator}. 
+
+To understand why $\hat{\Theta}$ is Hermitian we need first to understand the inner product of two wavefunctions $\mathbf{F(r)}$ and $\mathbf{G(r)}$:
+
+\begin{equation}
+\left( \mathbf{F(r)},\mathbf{G(r)}\right)  \triangleq
+\int \mathbf{F^*(r)}\cdot \mathbf{G(r)}
+\label{eq:inner_prod}
+\end{equation}
+
+where $^*$ denotes complex conjugation. From definition \ref{eq:inner_prod} we can see that:
+$\left(\mathbf{F},\mathbf{G}\right) =  \left(\mathbf{G},\mathbf{F}\right)^*$
+ for and $\mathbf{F}$ and $\mathbf{G}$. Also, $\left(\mathbf{F},\mathbf{F}\right)$ is always real and non-negative, and $\left(\mathbf{F},\mathbf{F}\right)$ is known as the $L^2$ norm of $\mathbf{F}$. A normalized wavefunction is one where 
+ $\left(\mathbf{F},\mathbf{F}\right)=1$.
+
+Having defined an inner product for two wavefunctions, we say that any operator $\hat{\Theta}$ is \textbf{Hermitian} if $\left(\mathbf{F},\hat{\Theta}\mathbf{G}\right) = \left(\hat{\Theta}\mathbf{F},\mathbf{G}\right)$
+for any fields $\mathbf{F}$ and $\mathbf{G}$. 
+
+Now using this we can check that the operator in equation \ref{eq:E-wave-harmonic2} is Hermitian and derive nice properties around that conclusion:
+
+\begin{align*}
+\left(\mathbf{F},\hat{\Theta}\mathbf{G}\right) &=
+\int \mathbf{F^*}\cdot \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\nabla\times \mathbf{G}\\
+& = \int \left(\nabla\times\mathbf{F}\right)^*\cdot
+	\frac{1}{\bar{\bar{\mu_r}}}\left(\nabla\times\mathbf{G}
+	\right)+ \int \nabla\cdot\left( \mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right)\\
+&= \int \left[\nabla\times \left(\frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{F}\right)\right]^*
+\cdot\mathbf{G} + 
+\int \nabla\cdot\left(\nabla\times\mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right)+\int \nabla\cdot\left( \mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right) \\
+& = \int \left[\nabla\times \left(\frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{F}\right)\right]^*
+\cdot\mathbf{G} \\
+&= \left(\hat{\Theta}\mathbf{F},\mathbf{G}\right)
+\end{align*}
+
+Here the vector cross product identity\footnote{$\nabla \cdot \left(\mathbf{A}\times \mathbf{B} \right) = \mathbf{B}\cdot\left(\nabla \times \mathbf{A} \right) - \mathbf{A}\cdot\left(\nabla \times \mathbf{B} \right)$ With $\mathbf{A} = \mathbf{F}$ and $\mathbf{B} =\nabla\times\mathbf{G}$, first and then $\mathbf{A} = \nabla\times\mathbf{F}$ and $\mathbf{B} =\mathbf{G}$} is used twice and surface terms that derive from using the Divergence Theorem are neglected.
+
+The importance of knowing that the operator in the left side of \ref{eq:E-wave-harmonic2} is hermitian resides in the fact that Hermitian operators have real numbers as eigenvalues.
+This can be seen by taking the inner product $\left(\mathbf{E},\hat{\Theta}\mathbf{E}\right)$ and observing  that operation of $\hat{\Theta}$ on one of its eigenvectors $\mathbf{E}$ produces the same eigenvector multiplied by the eigenvalue as shown in \ref{eq:simple_eigproblem}. Then:
+$$
+\left(\mathbf{E},\hat{\Theta}\mathbf{E}\right) = \left(\frac{\omega}{c}\right)^2\left(\mathbf{E},\mathbf{E}\right)
+$$
+Given that $\left(\mathbf{E},\mathbf{E}\right)$ is real, as we mentioned before, when taking the complex conjugate 
+of that product we have:
+$$
+\left(\mathbf{E},\hat{\Theta}\mathbf{E}\right)^* = \left(\frac{\omega^2}{c^2}\right)^*\left(\mathbf{E},\mathbf{E}\right)
+$$
+and being Hermitian: 
+\begin{align*}
+\left(\mathbf{E},\hat{\Theta}\mathbf{E}\right)^* &= \left(\mathbf{E},\hat{\Theta}\mathbf{E}\right)^* \\
+\left(\frac{\omega^2}{c^2}\right)^*\left(\mathbf{E},\mathbf{E}\right) &= \left(\frac{\omega^2}{c^2}\right)\left(\mathbf{E},\mathbf{E}\right)
+\end{align*}
+
+Speed of light $c$ is real, so $\omega^2 = \left(\omega^2\right)^*$ must be real.
+
+\subsection{Symmetry groups}
+
+As in Quantum Mechanics and any other eigen-problems, we must introduce the concept of orthogonality in order to understand other operations.
+We say that two wavevectors are \textbf{orthogonal} if $\left(\mathbf{E},\mathbf{E}\right) = 0$, and this happens whenever they have different frequencies. This can be seen as a product of Hermiticity of operator $\hat{\Theta}$ by the following operation on two different modes $\mathbf{E}_1$ and $\mathbf{E}_1$:
+\begin{align*}
+c^2\left(\mathbf{E}_2,\hat{\Theta}\mathbf{E}_1\right) &=
+c^2\left(\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right) \\
+\omega_1^2\left(\mathbf{E}_2,\mathbf{E}_1\right) &= \omega_2^2\left(\mathbf{E}_2,\mathbf{E}_1\right) \\
+\left(\omega_1^2-\omega_2^2\right) \left(\mathbf{E}_2,\mathbf{E}_1\right) &= 0
+\end{align*}
+From this one can see that if two eigenfunctions have different frequencies ($\omega_1^2-\omega_2^2\neq 0$) then $\left(\mathbf{E},\mathbf{E}\right) = 0$
+must be true and they are orthogonal.
+Now, if $\left(\omega_1^2-\omega_2^2\right) = 0$ then $\mathbf{E}_1$ and $\mathbf{E}_1$ are not necessarily orthogonal, and the value is known as a \textbf{degenerate} frequency because there is more than one state or wavefunction with eigenvalue $\left(\frac{\omega^2}{c^2}\right)$. In this section we will see that degeneracy is related with symmetries of the domain, and that will be useful for the solution of periodic problems.  
+
+Symmetry operations are operations that do not transform the wavefunction of a mode. Symmetries of a problem are such that if a symetry operation is applied to the wavefunction, it remains the same but multiplied by a scalar. This is called being invariant under the operation.
+So rotation, inversion, and reflections, are common symmetry operations that can be applied to systems that are symmetric under rotation, inversion and reflection, respectively. 
+Probably the most immediate symmetry operation one can think of is the identity operation:
+$\hat{E}\mathbf{E(r)} = \mathbf{E(r)}$, that transform a system into itself.
+
+Another interesting operation is that of Inversion ($\hat{O_I}$), which takes a function $\mathbf{E(r)}$ and inverts its argument: $\hat{O_I}\mathbf{E(r)} = \mathbf{E(-r)}$. If $\mathbf{E(-r)}=\mathbf{E(r)}$ we say that the mode is invariant under inversion, or invertible.
+Finally, the translation operator is one where the argument gets shifted in space by a given displacement $\mathbf{d}$: $\hat{T}_d\mathbf{E(r)} = \mathbf{E(r-d)}$. 
+One function that is invariant over translation operations is a plane wave like $e^{ikz}$, because operation of $\hat{T}$ over the planewave gives the same wavefunction by a scalar $e^{-ik\mathbf{d}}$:
+$$\hat{T}e^{ikz} = e^{ik(z-\mathbf{d})} = e^{-ik\mathbf{d}}e^{ikz}$$
+We can see here that this is an eigenvalue problem with eigenfunctions of the form  $e^{ikz}$ and complex eigenvalues $e^{-ik\mathbf{d}}$.
+Now, operators can act on other operators, and they can also be invariant under symmetry operations. If we have an operator $\hat{\Theta}$ whose intrinsic medium properties are characterized by $\bar{\bar{\epsilon}}$ and $\bar{\bar{\mu}}$, and those properties are homogeneous in space, we will be acting on a system with translational symmetry. That is, the operator is the same at different points in space.
+So, if we have a wave function $\mathbf{E(r)}$ displace it with $\hat{T_d}$, then act on it with $\hat{\Theta}$ and displace it back with an inverted translation operator $\hat{T_d}^{-1}$ we will get the same result as if only $\hat{\Theta}$ was used:
+
+\begin{align*}
+\hat{\Theta}\mathbf{E(r)} &= \hat{T_d}^{-1}\hat{\Theta}\hat{T_d}\mathbf{E(r)}\\
+\hat{\Theta} &= \hat{T_d}^{-1}\hat{\Theta}\hat{T_d}
+\end{align*}
+
+Whenever that happens with operators, we can write it in the form: $$\hat{T_d}\hat{\Theta}-\hat{\Theta}\hat{T_d}=0$$
+and bring the definition of \textbf{commutator} between two operators as in Quantum Mechanics: 
+\begin{equation}
+\left[\hat{A},\hat{B}\right] \triangleq \hat{A}\hat{B}-\hat{B}\hat{A}
+\label{eq:commutator}
+\end{equation}
+If $\left[\hat{A},\hat{B}\right] = 0$ we say that $\hat{\Theta}$ commutes with $\hat{T_d}$, and that implies that that there are wavefunctions common to both.
+This is useful because sometimes eigenvalues and eigenfunctions of simple symmetry operators are easier to determine than those of $\hat{\Theta}$.  
+The set of symmetry operators that commute with $\hat{\Theta}$ forms the symmetry group of the problem.  
+
+The fact that plane wave solutions are a solution of the problem is a consequence of them being solution to a symmetry operation that commutes with the operator of the problem.
+"When one has commuting operators, one can choose simultaneous eiigenvectors of both operators" \cite	{Joannopoulos2008}
+
+The shared eigenfunctions transform as irreducible representations of the symmetry group.
+Examples of operators that belong to the symmetry group of a given crystal lattice are Translation (both continous and discrete), Rotation, and mirror operations.  
+
+Bloch-Floquet theory results from the special case of discrete translation operators.
+Also from quantum mechanics we can import the concept of commuting and commutators between operators. 
+
+\subsection{Conservation of energy for waves in source less media}
+We define the energy of a field $\mathbf{w}$ as its norm $||\mathbf{w}||^2 = \left(\mathbf{w},\mathbf{w}\right)$.
+Conservation of energy in time in a source less problem like that of equation \ref{eq:E-wave-loads} is obtained when $||\mathbf{w}||^2$ variation in time is zero, thus:
+\begin{equation}
+\frac{\partial ||\mathbf{w}||^2}{\partial t} =\frac{\partial \left(\mathbf{w},\mathbf{w}\right)}{\partial t} = \left(\dot{\mathbf{w}},\mathbf{w}\right)-\left(\mathbf{w},\dot{\mathbf{w}}\right) = \left(\hat{\Theta}\mathbf{w},\mathbf{w}\right)+\left(\mathbf{w},\hat{\Theta}\mathbf{w}\right) = \left(\hat{\Theta}\mathbf{w},\mathbf{w}\right)-\left(\hat{\Theta}\mathbf{w},\mathbf{w}\right) = 0
+\end{equation}
+Remembering that in a problem that is not harmonic we have $\hat{\Theta}\mathbf{E} = \frac{\partial^2 \mathbf{E}}{\partial t^2}$This means that under Hermitic operators such as $\hat{\Theta}$ the energy of the field is conserved
+ \subsection{Energy functional of electromagnetic waves}
+ 
+By means of the \textbf{electromagnetic variational theorem} we can formulate an energy functional to  to be minimized. This functional is defined as a normalized inner product between the function and the function multiplied by the operator:
+\begin{equation}
+U_f(\mathbf{E}) \triangleq \frac{\left(\mathbf{E}, \hat{\Theta} \mathbf{E}\right)}{\left(\mathbf{E},\mathbf{E}\right)}
+\label{eq:energy_functional}
+\end{equation}
+It is similar to other formulations used in fields like Quantum Mechanics and Classical mechanics such as expectation values, and energy Lagrangians.  The process of finding solutions that minimize such a potential is the core of what methods like Galerkin do for solving differential equations. In chapter \ref{ch:Finite_element_method} we will use a similar expression in order to solve the wave equation using Galerkin with Finite Elements.
+ 

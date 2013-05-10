@@ -1,0 +1,43 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}Problem}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Problem statement}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Objectives }{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}General objectives}{7}{subsection.2.2.1}
+\contentsline {subsubsection}{Specific objectives}{7}{section*.2}
+\contentsline {section}{\numberline {2.3}Justification}{9}{section.2.3}
+\contentsline {chapter}{\numberline {3}Electromagnetic waves in periodic media}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Maxwell equations}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Wave equation for electric fields}{13}{section.3.2}
+\contentsline {section}{\numberline {3.3}Time harmonic fields, reciprocal space and Fourier transform}{14}{section.3.3}
+\contentsline {section}{\numberline {3.4}Electromagnetism as an eigenvalue problem}{15}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Hermiticity}{16}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Symmetry groups}{17}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Conservation of energy for waves in source less media}{19}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Energy functional of electromagnetic waves}{19}{subsection.3.4.4}
+\contentsline {chapter}{\numberline {4}Finite element method}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Weak formulation of the problem}{22}{section.4.1}
+\contentsline {section}{\numberline {4.2}Boundary conditions}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Abstract form of the equation}{23}{section.4.3}
+\contentsline {section}{\numberline {4.4}Base functions and discretization}{24}{section.4.4}
+\contentsline {section}{\numberline {4.5}Vectorial vs scalar formulation}{29}{section.4.5}
+\contentsline {section}{\numberline {4.6}Edge elements vs Node Elements}{29}{section.4.6}
+\contentsline {section}{\numberline {4.7}Second order elements, shape functions.}{29}{section.4.7}
+\contentsline {section}{\numberline {4.8}Numerical integration and Gauss quadrature}{29}{section.4.8}
+\contentsline {section}{\numberline {4.9}Mass matrices}{29}{section.4.9}
+\contentsline {section}{\numberline {4.10}Explicit formulation}{30}{section.4.10}
+\contentsline {chapter}{\numberline {5}Results}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Electrostatic benchmark tests}{31}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Electric field due to charged elements}{31}{subsection.5.1.1}
+\contentsline {subsubsection}{Parallel plate capacitor}{31}{section*.3}
+\contentsline {subsubsection}{Charged cylinder}{33}{section*.4}
+\contentsline {subsubsection}{Electric Dipole, two charged spheres.}{35}{section*.5}
+\contentsline {section}{\numberline {5.2}Harmonic benchmark tests}{37}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Eigenvalues and modes in waveguides}{37}{subsection.5.2.1}
+\contentsline {subsubsection}{Rectangular waveguides}{37}{section*.6}
+\contentsline {chapter}{\numberline {6}Implementation}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Object Oriented Paradigm}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}Classes, Diagrams and flow charts of PeYeQM}{39}{section.6.2}
+\contentsline {chapter}{\numberline {7}Conclusions and future work}{41}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{41}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future work}{41}{section.7.2}

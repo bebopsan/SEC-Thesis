@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis_ document_frame.aux
+A level-1 auxiliary file: ./src/Introduction.aux
+A level-1 auxiliary file: ./src/Problem.aux
+A level-1 auxiliary file: ./src/Reference_Framework.aux
+A level-1 auxiliary file: ./src/Electromagnetic_waves_in_periodic_media.aux
+A level-1 auxiliary file: ./src/Periodicity_crystals_and_Bloch_theory.aux
+A level-1 auxiliary file: ./src/Cristal_lattice_and_reiprocal.aux
+A level-1 auxiliary file: ./src/Finite_element_method.aux
+A level-1 auxiliary file: ./src/Results.aux
+A level-1 auxiliary file: ./src/Implementation.aux
+A level-1 auxiliary file: ./src/Conclusions.aux
+The style file: plain.bst
+Database file #1: thesis_references.bib
+Name 1 in "F. X. Kärtner, S. Akiyama, G. Barbastathis," has a comma at the end for entry F.X.Kaertner2006
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Ardavan F. Oskooi , David Roundy , Mihai Ibanescu , Peter Bermel , J.D. Joannopoulos , Steven Johnson G" for entry Oskooi2009
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Ardavan F. Oskooi , David Roundy , Mihai Ibanescu , Peter Bermel , J.D. Joannopoulos , Steven Johnson G" for entry Oskooi2009
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Ardavan F. Oskooi , David Roundy , Mihai Ibanescu , Peter Bermel , J.D. Joannopoulos , Steven Johnson G" for entry Oskooi2009
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Ardavan F. Oskooi , David Roundy , Mihai Ibanescu , Peter Bermel , J.D. Joannopoulos , Steven Johnson G" for entry Oskooi2009
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Ardavan F. Oskooi , David Roundy , Mihai Ibanescu , Peter Bermel , J.D. Joannopoulos , Steven Johnson G" for entry Oskooi2009
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Ardavan F. Oskooi , David Roundy , Mihai Ibanescu , Peter Bermel , J.D. Joannopoulos , Steven Johnson G" for entry Oskooi2009
+while executing---line 1090 of file plain.bst
+Name 1 in "F. X. Kärtner, S. Akiyama, G. Barbastathis," has a comma at the end for entry F.X.Kaertner2006
+while executing---line 1090 of file plain.bst
+You've used 31 entries,
+            2118 wiz_defined-function locations,
+            679 strings with 8922 characters,
+and the built_in function-call counts, 6850 in all, are:
+= -- 662
+> -- 241
+< -- 0
++ -- 101
+- -- 70
+* -- 308
+:= -- 1275
+add.period$ -- 93
+call.type$ -- 31
+change.case$ -- 118
+chr.to.int$ -- 0
+cite$ -- 31
+duplicate$ -- 325
+empty$ -- 600
+format.name$ -- 70
+if$ -- 1409
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 35
+newline$ -- 158
+num.names$ -- 64
+pop$ -- 148
+preamble$ -- 1
+purify$ -- 97
+quote$ -- 0
+skip$ -- 202
+stack$ -- 0
+substring$ -- 230
+swap$ -- 25
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 100
+warning$ -- 0
+while$ -- 65
+width$ -- 33
+write$ -- 327
+(There were 8 error messages)

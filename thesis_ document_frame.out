@@ -1,0 +1,37 @@
+\BOOKMARK [0][]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][]{chapter.2}{Problem}{}% 2
+\BOOKMARK [1][]{section.2.1}{Problem statement}{chapter.2}% 3
+\BOOKMARK [1][]{section.2.2}{Objectives }{chapter.2}% 4
+\BOOKMARK [2][]{subsection.2.2.1}{General objectives}{section.2.2}% 5
+\BOOKMARK [1][]{section.2.3}{Justification}{chapter.2}% 6
+\BOOKMARK [0][]{chapter.3}{Electromagnetic waves in periodic media}{}% 7
+\BOOKMARK [1][]{section.3.1}{Maxwell equations}{chapter.3}% 8
+\BOOKMARK [1][]{section.3.2}{Wave equation for electric fields}{chapter.3}% 9
+\BOOKMARK [1][]{section.3.3}{Time harmonic fields, reciprocal space and Fourier transform}{chapter.3}% 10
+\BOOKMARK [1][]{section.3.4}{Electromagnetism as an eigenvalue problem}{chapter.3}% 11
+\BOOKMARK [2][]{subsection.3.4.1}{Hermiticity}{section.3.4}% 12
+\BOOKMARK [2][]{subsection.3.4.2}{Symmetry groups}{section.3.4}% 13
+\BOOKMARK [2][]{subsection.3.4.3}{Conservation of energy for waves in source less media}{section.3.4}% 14
+\BOOKMARK [2][]{subsection.3.4.4}{Energy functional of electromagnetic waves}{section.3.4}% 15
+\BOOKMARK [0][]{chapter.4}{Finite element method}{}% 16
+\BOOKMARK [1][]{section.4.1}{Weak formulation of the problem}{chapter.4}% 17
+\BOOKMARK [1][]{section.4.2}{Boundary conditions}{chapter.4}% 18
+\BOOKMARK [1][]{section.4.3}{Abstract form of the equation}{chapter.4}% 19
+\BOOKMARK [1][]{section.4.4}{Base functions and discretization}{chapter.4}% 20
+\BOOKMARK [1][]{section.4.5}{Vectorial vs scalar formulation}{chapter.4}% 21
+\BOOKMARK [1][]{section.4.6}{Edge elements vs Node Elements}{chapter.4}% 22
+\BOOKMARK [1][]{section.4.7}{Second order elements, shape functions.}{chapter.4}% 23
+\BOOKMARK [1][]{section.4.8}{Numerical integration and Gauss quadrature}{chapter.4}% 24
+\BOOKMARK [1][]{section.4.9}{Mass matrices}{chapter.4}% 25
+\BOOKMARK [1][]{section.4.10}{Explicit formulation}{chapter.4}% 26
+\BOOKMARK [0][]{chapter.5}{Results}{}% 27
+\BOOKMARK [1][]{section.5.1}{Electrostatic benchmark tests}{chapter.5}% 28
+\BOOKMARK [2][]{subsection.5.1.1}{Electric field due to charged elements}{section.5.1}% 29
+\BOOKMARK [1][]{section.5.2}{Harmonic benchmark tests}{chapter.5}% 30
+\BOOKMARK [2][]{subsection.5.2.1}{Eigenvalues and modes in waveguides}{section.5.2}% 31
+\BOOKMARK [0][]{chapter.6}{Implementation}{}% 32
+\BOOKMARK [1][]{section.6.1}{Object Oriented Paradigm}{chapter.6}% 33
+\BOOKMARK [1][]{section.6.2}{Classes, Diagrams and flow charts of PeYeQM}{chapter.6}% 34
+\BOOKMARK [0][]{chapter.7}{Conclusions and future work}{}% 35
+\BOOKMARK [1][]{section.7.1}{Conclusions}{chapter.7}% 36
+\BOOKMARK [1][]{section.7.2}{Future work}{chapter.7}% 37
