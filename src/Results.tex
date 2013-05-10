@@ -175,9 +175,12 @@ Where $\omega$ is indexed by integers $n,m$ and the trivial solution $\omega = 0
 The wave functions that are solution to this eigenproblem for each component of the field are in the following general form:
 
 \begin{align}
-&\mathbf{E}_z = A\sin{\dfrac{m\pi x}{a}}\sin{\dfrac{n\pi x}{b}}e^{\mp jk_zz}\\
-&\mathbf{E}_x =\mp jB
+&\mathbf{E}_z = A\sin{\dfrac{m\pi x}{a}}\sin{\dfrac{n\pi x}{b}}e^{\mp jk_zz} \label{eq:Ez_mag}\\
+&\mathbf{E}_x =\mp jB\dfrac{m\pi}{a}\cos{\dfrac{m\pi x}{a}}\sin{\dfrac{n\pi x}{b}}e^{\mp jk_zz}\\
+&\mathbf{E}_y =\mp jC\dfrac{n\pi}{b}\sin{\dfrac{m\pi x}{a}}\cos{\dfrac{n\pi x}{b}}e^{\mp jk_zz}
 \end{align}
+
+For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \ref{eq:Ez_mag}, and how similar are the analýtic and numeric  natural frequencies of the guide $\omega$.
 
 
 

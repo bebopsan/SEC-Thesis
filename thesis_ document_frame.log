@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.12.15)  10 MAY 2013 15:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.12.15)  10 MAY 2013 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,13 +776,115 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-[9] <./img/EM_simulation_applications.png, id=294, 462.22687pt x 268.00125pt>
+
+LaTeX Warning: Citation `Joannopoulos2008' on page 9 undefined on input line 49
+.
+
+
+LaTeX Warning: Citation `Obayya2011' on page 9 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Engheta2006' on page 9 undefined on input line 56.
+
+
+LaTeX Warning: Citation `Capoliono2009' on page 9 undefined on input line 56.
+
+
+LaTeX Warning: Citation `Joannopoulos2008' on page 9 undefined on input line 56
+.
+
+
+LaTeX Warning: Citation `Obayya2011' on page 9 undefined on input line 59.
+
+
+LaTeX Warning: Citation `GangBao1987' on page 9 undefined on input line 65.
+
+
+LaTeX Warning: Citation `F.X.Kaertner2006' on page 9 undefined on input line 68
+.
+
+
+LaTeX Warning: Citation `A.M.Apetrei2005' on page 9 undefined on input line 68.
+
+
+
+LaTeX Warning: Citation `Pervez2010' on page 9 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Yablonovich1987' on page 9 undefined on input line 68.
+
+
+
+LaTeX Warning: Citation `Yablonovich1991' on page 9 undefined on input line 68.
+
+
+
+LaTeX Warning: Citation `Villeneuve1996' on page 9 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Altug2006' on page 9 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Moore2008' on page 9 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Wolters2010' on page 9 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Jin2010' on page 9 undefined on input line 70.
+
+
+LaTeX Warning: Citation `StevenG.Johnson2001' on page 9 undefined on input line
+ 70.
+
+
+LaTeX Warning: Citation `Loaiza2011' on page 9 undefined on input line 70.
+
+
+LaTeX Warning: Citation `A.M.Apetrei2005' on page 9 undefined on input line 70.
+
+
+
+LaTeX Warning: Citation `Oskooi2009' on page 9 undefined on input line 70.
+
+
+LaTeX Warning: Citation `Rodriguez2005' on page 9 undefined on input line 70.
+
+
+LaTeX Warning: Citation `Masanori2001' on page 9 undefined on input line 70.
+
+[9] <./img/EM_simulation_applications.png, id=257, 462.22687pt x 268.00125pt>
 File: ./img/EM_simulation_applications.png Graphic file (type png)
 
 <use ./img/EM_simulation_applications.png>
 Package pdftex.def Info: ./img/EM_simulation_applications.png used on input lin
 e 74.
 (pdftex.def)             Requested size: 231.11287pt x 134.00029pt.
+
+
+LaTeX Warning: Citation `Jin2010' on page 10 undefined on input line 75.
+
+
+LaTeX Warning: Citation `Jin2010' on page 10 undefined on input line 75.
+
+
+LaTeX Warning: Citation `Guarin2012' on page 10 undefined on input line 79.
+
+
+LaTeX Warning: Citation `Rodriguez2012' on page 10 undefined on input line 79.
+
+
+LaTeX Warning: Citation `Villegas2011' on page 10 undefined on input line 79.
+
+
+LaTeX Warning: Citation `Echeverri2011' on page 10 undefined on input line 79.
+
+
+LaTeX Warning: Citation `Sierra2010' on page 10 undefined on input line 79.
+
+
+LaTeX Warning: Citation `Loaiza2011' on page 10 undefined on input line 79.
+
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -822,7 +924,16 @@ ns-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-[15] [16] [17] [18]) [19]
+
+LaTeX Warning: Citation `Joannopoulos2008' on page 15 undefined on input line 1
+30.
+
+[15] [16] [17]
+
+LaTeX Warning: Citation `Joannopoulos2008' on page 18 undefined on input line 2
+54.
+
+[18]) [19]
 \openout2 = `./src/Periodicity_crystals_and_Bloch_theory.aux'.
 
 
@@ -842,7 +953,18 @@ No file ./src/Cristal_lattice_and_reiprocal.tex.
 
 ]
 Chapter 4.
-<./img/dominio.pdf, id=437, 112.39806pt x 111.18324pt>
+
+LaTeX Warning: Citation `Goldstein2001' on page 21 undefined on input line 28.
+
+
+LaTeX Warning: Citation `Zienkiewicz2005' on page 21 undefined on input line 28
+.
+
+
+LaTeX Warning: Citation `Reddy_functional_analysis' on page 21 undefined on inp
+ut line 28.
+
+<./img/dominio.pdf, id=376, 112.39806pt x 111.18324pt>
 File: ./img/dominio.pdf Graphic file (type pdf)
  <use ./img/dominio.pdf>
 Package pdftex.def Info: ./img/dominio.pdf used on input line 42.
@@ -859,7 +981,16 @@ Underfull \vbox (badness 4328) has occurred while \output is active []
 LaTeX Warning: Reference `eq:weak-E_complete' on page 26 undefined on input lin
 e 235.
 
-[26] [27] [28] [29]) [30]
+[26] [27] [28]
+
+LaTeX Warning: Citation `RobertD.Cook1989' on page 29 undefined on input line 3
+53.
+
+
+LaTeX Warning: Citation `RobertD.Cook1989' on page 29 undefined on input line 3
+60.
+
+[29]) [30]
 \openout2 = `./src/Results.aux'.
 
  (./src/Results.tex
@@ -872,7 +1003,7 @@ Chapter 5.
 
 LaTeX Warning: Reference `Rao2004' on page 32 undefined on input line 38.
 
-<./img/parallel_plate_capacitor.pdf, id=555, 533.68488pt x 192.96912pt>
+<./img/parallel_plate_capacitor.pdf, id=487, 533.68488pt x 192.96912pt>
 File: ./img/parallel_plate_capacitor.pdf Graphic file (type pdf)
 
 <use ./img/parallel_plate_capacitor.pdf>
@@ -880,18 +1011,22 @@ Package pdftex.def Info: ./img/parallel_plate_capacitor.pdf used on input line
 42.
 (pdftex.def)             Requested size: 266.84178pt x 96.48431pt.
 
-<./img/capacitor.pdf, id=557, 1072.005pt x 427.39674pt>
+<./img/capacitor.pdf, id=489, 1072.005pt x 427.39674pt>
 File: ./img/capacitor.pdf Graphic file (type pdf)
 
 <use ./img/capacitor.pdf>
 Package pdftex.def Info: ./img/capacitor.pdf used on input line 51.
 (pdftex.def)             Requested size: 321.60399pt x 128.22pt.
- [32] [33 <./img/parallel_plate_capacitor.pdf> <./img/capacitor.pdf
+ [32]
+
+LaTeX Warning: Citation `Cheng1993' on page 33 undefined on input line 73.
+
+[33 <./img/parallel_plate_capacitor.pdf> <./img/capacitor.pdf
 
 pdfTeX warning: pdflatex (file ./img/capacitor.pdf): PDF inclusion: multiple pd
 fs with page group included in a single page
 >]
-<./img/charged_cylinder_inside_rectangle.pdf, id=608, 2060.15962pt x 582.71234p
+<./img/charged_cylinder_inside_rectangle.pdf, id=539, 2060.15962pt x 582.71234p
 t>
 File: ./img/charged_cylinder_inside_rectangle.pdf Graphic file (type pdf)
  <use ./img/charged_cylinder_inside_rectangle.pdf>
@@ -899,7 +1034,7 @@ Package pdftex.def Info: ./img/charged_cylinder_inside_rectangle.pdf used on in
 put line 97.
 (pdftex.def)             Requested size: 412.02463pt x 116.5404pt.
 
-<./img/Eight_of_cylinder.pdf, id=609, 2303.46289pt x 371.67427pt>
+<./img/Eight_of_cylinder.pdf, id=540, 2303.46289pt x 371.67427pt>
 File: ./img/Eight_of_cylinder.pdf Graphic file (type pdf)
 
 <use ./img/Eight_of_cylinder.pdf>
@@ -911,14 +1046,14 @@ Overfull \hbox (33.25288pt too wide) in paragraph at lines 104--105
  []
 
 [34 <./img/charged_cylinder_inside_rectangle.pdf>]
-<./img/two_cylinders.pdf, id=626, 1855.56653pt x 834.84389pt>
+<./img/two_cylinders.pdf, id=557, 1855.56653pt x 834.84389pt>
 File: ./img/two_cylinders.pdf Graphic file (type pdf)
 
 <use ./img/two_cylinders.pdf>
 Package pdftex.def Info: ./img/two_cylinders.pdf used on input line 125.
 (pdftex.def)             Requested size: 371.10674pt x 166.96582pt.
 
-<./img/two_cylinders_Gliphs.png, id=627, 819.863pt x 342.078pt>
+<./img/two_cylinders_Gliphs.png, id=558, 819.863pt x 342.078pt>
 File: ./img/two_cylinders_Gliphs.png Graphic file (type png)
 
 <use ./img/two_cylinders_Gliphs.png>
@@ -926,7 +1061,7 @@ Package pdftex.def Info: ./img/two_cylinders_Gliphs.png used on input line 132.
 
 (pdftex.def)             Requested size: 409.9305pt x 171.03857pt.
 
-<./img/two_cylinders_error.pdf, id=629, 889.8343pt x 288.77031pt>
+<./img/two_cylinders_error.pdf, id=560, 889.8343pt x 288.77031pt>
 File: ./img/two_cylinders_error.pdf Graphic file (type pdf)
 
 <use ./img/two_cylinders_error.pdf>
@@ -943,6 +1078,9 @@ ultiple pdfs with page group included in a single page
 >]
 
 LaTeX Warning: Citation `Rao2004' on page 37 undefined on input line 167.
+
+
+LaTeX Warning: Citation `Jin2010' on page 37 undefined on input line 167.
 
 [37]) [38]
 \openout2 = `./src/Implementation.aux'.
@@ -962,20 +1100,12 @@ Chapter 6.
 
 ]
 Chapter 7.
-) [41] (./thesis_ document_frame.bbl (./thesis_ document_frame.brf)
-\tf@brf=\write5
-\openout5 = `"thesis_ document_frame.brf"'.
-
- [42
-
-
-]
-[43])
+) [41]
+No file "thesis_ document_frame".bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
- [44] [45]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
- (./thesis_ document_frame.aux (./src/Introduction.aux)
-(./src/Problem.aux) (./src/Reference_Framework.aux)
+(./thesis_ document_frame.aux (./src/Introduction.aux) (./src/Problem.aux)
+(./src/Reference_Framework.aux)
 (./src/Electromagnetic_waves_in_periodic_media.aux)
 (./src/Periodicity_crystals_and_Bloch_theory.aux)
 (./src/Cristal_lattice_and_reiprocal.aux) (./src/Finite_element_method.aux)
@@ -985,9 +1115,6 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `"thesis_ document_frame".out' has not change
 d.
 (rerunfilecheck)             Checksum: 70EB34F0C45614D82C8108DD6E6C9007;2626.
-Package rerunfilecheck Info: File `"thesis_ document_frame".brf' has not change
-d.
-(rerunfilecheck)             Checksum: 02C4E0A84F65A1A2E1CA43D199ADF995;1727.
 
 
 LaTeX Warning: There were undefined references.
@@ -998,13 +1125,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
- 7554 strings out of 495059
- 107895 string characters out of 3182029
- 208696 words of memory out of 3000000
- 10291 multiletter control sequences out of 15000+200000
+ 7418 strings out of 495059
+ 105657 string characters out of 3182029
+ 207633 words of memory out of 3000000
+ 10193 multiletter control sequences out of 15000+200000
  13467 words of font info for 50 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,15n,31p,1644b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,15n,30p,1644b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
@@ -1025,10 +1152,10 @@ nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb>
-Output written on "thesis_ document_frame.pdf" (47 pages, 1151536 bytes).
+Output written on "thesis_ document_frame.pdf" (43 pages, 1137458 bytes).
 PDF statistics:
- 892 PDF objects out of 1000 (max. 8388607)
- 780 compressed objects within 8 object streams
- 226 named destinations out of 1000 (max. 500000)
+ 764 PDF objects out of 1000 (max. 8388607)
+ 658 compressed objects within 7 object streams
+ 193 named destinations out of 1000 (max. 500000)
  342 words of extra memory for PDF output out of 10000 (max. 10000000)
 
