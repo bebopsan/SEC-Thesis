@@ -1,11 +1,11 @@
 # Auxiliary files #
 ###################
-.aux
-.bbl
-.blg
-.brf
-.log
-.out
-.toc
-.bak
-.gz
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.out
+*.toc
+*.bak
+*.gz
