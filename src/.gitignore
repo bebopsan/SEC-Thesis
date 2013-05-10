@@ -4,6 +4,7 @@
 *.bbl
 *.blg
 *.brf
+*.db
 *.log
 *.out
 *.toc
