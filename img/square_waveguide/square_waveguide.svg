@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="731.42859"
-   height="697.14288"
+   width="4033.1165"
+   height="3691.5234"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="square_waveguide.svg">
+   sodipodi:docname="square_waveguide.pdf">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -23,8 +23,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.175"
-     inkscape:cx="1553.1036"
-     inkscape:cy="-1017.0832"
+     inkscape:cx="2217.3897"
+     inkscape:cy="1652.7116"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -257,12 +257,12 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-48.57143,-229.50504)"
+     transform="translate(918.83095,36.644165)"
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
@@ -587,7 +587,7 @@
          style="fill:#700000" />
     </g>
     <g
-       transform="matrix(1.1385699,0,0,1.1518327,-657.46847,-247.61523)"
+       transform="matrix(1.1385699,0,0,1.1224698,-649.46847,-237.66885)"
        id="g3609">
       <path
          clip-path="url(#clipPath3643)"
