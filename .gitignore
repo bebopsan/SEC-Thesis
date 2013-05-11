@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Auxiliary files #
 ###################
 *.aux
@@ -10,3 +11,23 @@
 *.toc
 *.bak
 *.gz
+=======
+# Auxiliary files #
+###################
+*.aux
+*.bbl
+*.blg
+*.brf
+*.db
+*.log
+*.out
+*.toc
+*.bak
+*.gz
+# Trackchanges folder#
+######################
+AcceptChanges/
+TrackChanges/
+acceptchanges.py
+trackchanges.py
+>>>>>>> f1dc5e2b0298f1219638b728268bad3bfe689f65
