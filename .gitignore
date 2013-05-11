@@ -10,3 +10,9 @@
 *.toc
 *.bak
 *.gz
+# Trackchanges folder#
+######################
+AcceptChanges/
+TrackChanges/
+acceptchanges.py
+trackchanges.py

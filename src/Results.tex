@@ -89,7 +89,7 @@ And by trigonometry we know that $cos(\theta) =\dfrac{x}{r}$ and $sin(\theta)=\d
 So, a plot the solution after simulating should match a representation of this analytic result. We initially proposed a model where the charged cylinder or point source is modeled as a \href{https://github.com/bebopsan/peyeQM/tree/
 Depuration/Lib/OOPyQM/Examples/Whole\%20cylinder}{whole circle inside a square domain}, the results of the simulation ( figure \ref{fig:whole_cylinder}) showed that for this kind of problem where the field decays in the form $\dfrac{1}{r^2}$ it was better to use finer meshes and take advantage of symmetries to reduce the computational cost. 
 Taking just an eight of the model, and reshaping the outer boundary to a circle improved the quality of the elements and allowed us to use a finer mesh. figure \ref{fig:eight_of_cylinder} shows the $y$ and $x$ components of the field as well as the error between the simulation and the analytic solution.
-For the simulation factor $\dfrac{q}{2\pi \epsilon}$ has been normalized to 1, and the mesh was done done using 1996 QUAD8\note[NGZ]{Fueron descritos antes?} elements with 5525 nodes, thus 11050 degrees of freedom. As a comparison, the simulation of the whole circle involved 2432 elements and 7040 nodes with 14080 degrees of freedom, but it solved for a domain that was eight times bigger.
+For the simulation factor $\dfrac{q}{2\pi \epsilon}$ has been normalized to 1, and the mesh was done done using 1996 QUAD8 elements with 5525 nodes, thus 11050 degrees of freedom. As a comparison, the simulation of the whole circle involved 2432 elements and 7040 nodes with 14080 degrees of freedom, but it solved for a domain that was eight times bigger.
 
 
 \begin{figure}
@@ -118,7 +118,7 @@ A similar simulation was performed using two semicircular surfaces, taking advan
 \end{align}
 
 Where again $\dfrac{q}{2\pi \epsilon} = 1$ for the left charged circle and $-1$ for the one on the right at a distance $d=4$. Figure \ref{fig:two_cylinders} shows components $x$ and $y$ of the resulting field as obtained from the FE solver. The direction of the field lines can be observed by means of arrow glyphs in figure \ref{fig:two_cylinders_glyph}, where field lines go outwards in the positively charged cylinder and inwards in the negative.
-In the same way as before, a comparison between analytic and numerical solutions was performed (figure \ref{fig:two_cylinders_error}) and error appeared to be magnified in the region between cylinders. This value keeps being higher than expected, and different meshing schemes were tested in order to improve accuracy. Less error was observed using adaptative meshing methods than structured grids. The current mesh for this simulation has 510 elements and 1622 degrees of freedom, a future simulation is proposed with finer meshes using a PC with bigger RAM memory.
+In the same way as before, a comparison between analytic and numerical solutions was performed (figure \ref{fig:two_cylinders_error}) and error appeared to be magnified in the region between cylinders. This value keeps being higher than expected, and different meshing schemes were tested in order to improve accuracy. Less error was observed using adaptative meshing methods than structured grids. The current mesh for this simulation has 510 elements and 1622 degrees of freedom, a future simulation is proposed with finer meshes using a PC with bigger RAM.
 
 \begin{figure}
 \centering
@@ -217,17 +217,19 @@ FEM     & 3.08425459 & 4.93480795 & 8.0190859 & 12.33717191 \\
 Anlytic & 3.08425137 & 4.93480220 & 8.0190535 & 12.33700550 \\ 
 \hline 
 \end{tabular} 
-\label{tab:sq_wav_comparison}
+\label{tab:rec_wav_comparison}
 \end{center}
 \begin{figure}
 \centering
-\includegraphics[scale=0.07]{./img/rectangular_waveguide.pdf}
+\includegraphics[scale=0.1]{./img/rectangular_waveguide.pdf}
 \caption{Results for three different modes from the simulation of a rectangle shaped waveguide with sides $a=4$ and $b=2$.}
-\label{fig:square_waveguide}
+\label{fig:rectangular_waveguide}
 \end{figure}
 
 
 \subsubsection{Circular waveguides}
+
+For a circular wave guide the modes are 
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
@@ -241,5 +243,38 @@ FEM     & 2.40482634 & 3.83171343 & 5.13564189 & 5.52012378 \\
 Anlytic & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\ 
 \hline 
 \end{tabular} 
-\label{tab:sq_wav_comparison}
+\label{tab:cir_wav_comparison}
 \end{center}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.1]{./img/circular_waveguide.pdf}
+\caption{Results for three different modes from the simulation of circular waveguide with radius $a=2$.}
+\label{fig:circular_waveguide}
+\end{figure}
+
+\subsubsection{Hexagonal waveguide}
+
+Threefold degeneracy is seen in modes of hexagonal guides due to symmetries.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Comparison of $\omega^2$ for hexagonal wave-guide} \\
+\hline 
+m,n & 0,1 & 1,1 & 2,1 & 0,2 \\ 
+\hline 
+FEM     & 5.34990939 & 8.51630317 & 11.39340788 & 12.2461672 \\ 
+\hline 
+Anlytic &  &  &  &  \\ 
+\hline 
+\end{tabular} 
+\label{tab:hex_wav_comparison}
+\end{center}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.07]{./img/hexagonal_waveguide.pdf}
+\caption{Degneracy of modes from the simulation of hexagonal waveguide.}
+\label{fig:hexagonal_waveguide}
+\end{figure}
