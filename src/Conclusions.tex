@@ -1,17 +1,16 @@
 \chapter{Conclusions and future work}
 
 \section{Conclusions}
-The objectives were met.
+The objectives were met. \note[NGZ]{Como \emph{regla general} podemos decir que debe aparecer una conclusi\'on como respuesta a cada objetivo}
 
 \section{Future work}
 \begin{itemize}
-\item Define vectorial triangular elements and scalar quadrilateral elements.
-\item Consider adding regions with Perfectly Matched Layers (PML) for the simulation of
-	  open domains.
-\item Evaluate convergence of the method for the problems described in chapter \ref{ch:Results} using finer spatial and spectral meshes. 
+\item Define vectorial triangular elements and scalar quadrilateral elements.\note[NGZ]{Cabe mencionar que los elementos triangulares son m\'as simples que los cuadril\'ateros. Adem\'as que los elementos escalares son equivalentes (salvo por el potencial) a los que existen para el caso de la ecuaci\'on de Schrodinger.}
+\item Consider adding regions with Perfectly Matched Layers (PML) for the simulation of unbounded domains. \note[NGZ]{Creo que cabe mencionar que no es la \'unica forma de obtener el decaimiento de las funciones hacia el infinito, sin embargo, son las m\'as usadas en electromagnetismo.}
+\item Evaluate convergence of the method for the problems described in chapter \ref{ch:Results} using finer spatial and spectral meshes.\note[NGZ]{En este caso espectral se refiere a un m\'etodo espectral o a un m\'etodo pseudo espectral como el de Elementos finitos espectrales?}
 \item Perform more simulations of time dependent problems involving deffects in finite crystals. And compare the results of Q factor and efficiency with other publications.
 \item Integrate the CAD and solver into a optimization algorithm that maximizes transmission or confinement by inducing variations in position and shape of defects in the lattice.
-\item Consider parallelization schemes to be implemented in order to make bigger simulations plausible.
+\item Consider parallelization schemes to be implemented in order to make bigger simulations plausible. \note[NGZ]{Mencionar algunos aspectos de esto.}
 \end{itemize}
 
 

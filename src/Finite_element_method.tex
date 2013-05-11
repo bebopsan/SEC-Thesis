@@ -1,37 +1,30 @@
 \chapter{Finite element method}
 \label{ch:Finite_element_method}
-El cálculo variacional es una disciplina que se encarga de encontrar el mínimo de un funcional.
-En donde un funcional es una mapeo de un espacio evectorial a los reales.
-esta es la ec diferencial
-Lu = f
-sí o qué?
-Entonces
-el residuo es esto
-R = Lu - f
-o mejor dicho
-esto
-R(v) = Lv - f
-Y cuando se evalúa en la solución
-R(u) = 0
-Entonces minimizar un residuo no tiene gracia, porque es encontrar la solución exacta
-Que es lo que no sabemos hacer
-Pero entonces uno puede decir
-Minimicemos un residuo "promediado"
-Por, ej, la norma del error
-Entonces definimos un Residuo ponderado
-Rp(u,v) = int(v*Lu - v*f)
-(weighting en españoll es ponderar)
-Uno propone una solución con una forma que uno conoce: senos y cosenos, polinomios, Gaussianas....
-Y encuentra encuentra la combinación lineal de esas funciones que minimiza Rp
-(Ya estamos hablando de métodos aproximados para la ecuación diferencial)
+El calculo variacional es una disciplina que se encarga de encontrar el minimo de un funcional. En donde un funcional es el mapeo de un espacio vectorial a los reales. Si esta es la ecuacion diferencial
 
-The Finite Element Method approximate an integral formulation that is --in some sense-- equivalent with a differential equation. This integral (weak) formulation could be obtained from a variational principle, such as the Principle of Virtual Works, or the Integral of Action \cite{Goldstein2001}, but could also be obtained from a more general approach like the Weigthed Residue Method \cite{Zienkiewicz2005, Reddy_functional_analysis}. In the cas of electromagnetic waves, we can formulate a variational principle where the functional to be minimized is the energy carried by the electric and magnetic fields (FALTA REFERENCIA). 
+Lu = f
+
+Entonces el residuo es
+
+R(v) = Lv - f
+
+y si se evalua en la solucion u
+
+R(u) = 0
+
+entonces minimizar un residio no tiene gracia, porque se trata de encontrar la solucion exacta a la ecuacion diferencial. Que es lo que no sabemos hacer. Pero entonces podemos proponer minimizar un residuo promediado, p. ej., la norma del error. Entonces definimos un residuo ponderado
+
+Rp(u,v) = int(v*Lu - v*f)
+
+(weigthin se dice ponderar en espanhol). Entonces, uno propone una solucion con una forma conocida: senos y cosenos, polinomios, Gaussianas... Y encuentra la combinacion lineal de esas funciones que minimiza Rp (Ya estamos hablando de metodos aproximados para resolver la ecuacion diferencial).
+
+The Finite Element Method approximate an integral formulation that is --in some sense-- equivalent with a differential equation. This integral (weak) formulation could be obtained from a variational principle, such as the Principle of Virtual Works, or the Integral of Action \cite{Goldstein2001}, but could also be obtained from a more general approach like the Weigthed Residue Method \cite{Zienkiewicz2005, Reddy_functional_analysis}. In the cas of electromagnetic waves, we can formulate a variational principle where the functional to be minimized is the energy carried by the electric and magnetic fields note[NGZ]{Falta esta referencia, que ya se mencion\'o en el cap\'itulo anterior}. 
 
 This project uses the Galerkin Finite Element Method to construct an approximate solution of  initial-boundary value problems involving the wave equation of electromagnetic fields \ref{eq:E-wave-harmonic2}.
 
 Galerkin's method converts a continuous operator problem like a differential equation to a discrete problem by stating it as a weighted residual formulation. 
 
-\section{Weak formulation of the problem}
+\section{Weak formulation of the problem}\note[NGZ]{Hace falta una buena limpieza de estilo en este cap\'itulo.}
 
 In a weighted residual formulation weight functions 
 are used in order to minimize a functional
@@ -39,7 +32,7 @@ that is stated as the integral of the operator problem over the simulation domai
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{./img/dominio.pdf}
+\includegraphics[height=5cm]{./img/dominio.pdf}
 \caption{Abstract simulation domain and boundary}
 \label{fig:domain}
 \end{figure}

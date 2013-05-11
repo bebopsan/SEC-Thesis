@@ -1,8 +1,9 @@
 \chapter{Electromagnetic waves in periodic media}
 \label{ch:Electromagnetic waves in periodic media}
+\note[NGZ]{Falta una intro a este capitulo: Que se describe en este capitulo?}
 \section{Maxwell equations}
 
-Give an introduction to Maxwell equations in both their Integral and Diferntial forms.
+Give an introduction to Maxwell equations in both their Integral and Differential forms. 
 
 \begin{align}
 &\oint_C \mathbf{E}\cdot d\mathbf{l} = -\frac{d}{dt}\int_S \mathbf{B}\cdot d\mathbf{S} &\mbox{(Faraday)}\\
@@ -78,7 +79,7 @@ finally
 &\nabla\times\nabla\times \mathbf{H} = -\bar{\bar{\epsilon}}\cdot  \frac{\partial^2 \mathbf{B}}{\partial t^2} +  \nabla\times\mathbf{J} \nonumber \\
 &\nabla\times\nabla\times \mathbf{H} = -\bar{\bar{\epsilon}}\cdot  \bar{\bar{\mu}}\cdot\frac{\partial^2 \mathbf{H}}{\partial t^2} + \nabla\times\mathbf{J} \label{eq:H-wave-loads} \enspace .
 \end{align}
-If we apply the vector identity $\nabla\times\nabla\times \mathbf{A} = \nabla(\nabla\cdot\mathbf{A}) - \nabla^2 \mathbf{A}$, and assume that we do not have electrical charges\footnote{This identity always hold for the magnetic  field since it is divergence free. WHAT ABOUT THE ELECTRICAL CASE?? Maybe this is why Joannopolous treats the problem for the magnetic field case instead of the electric one} we can rewrite \eqref{eq:E-wave-loads} and \eqref{eq:H-wave-loads} as
+If we apply the vector identity $\nabla\times\nabla\times \mathbf{A} = \nabla(\nabla\cdot\mathbf{A}) - \nabla^2 \mathbf{A}$, and assume that we do not have electrical charges\footnote{This identity always hold for the magnetic  field since it is divergence free. WHAT ABOUT THE ELECTRICAL CASE?? Maybe this is why Joannopolous treats the problem for the magnetic field case instead of the electric one \note[NGZ]{Creo que este comentario no hace falta en el documento.}} we can rewrite \eqref{eq:E-wave-loads} and \eqref{eq:H-wave-loads} as
 \begin{align}
 &\nabla^2 \mathbf{E} = \bar{\bar{\mu}}\cdot\bar{\bar{\epsilon}}\cdot \frac{\partial^2 \mathbf{E}}{\partial t^2} - \bar{\bar{\mu}}\cdot \frac{\partial \mathbf{J}}{\partial t} \\
 &\nabla^2 \mathbf{H} = \bar{\bar{\epsilon}}\cdot\bar{\bar{\mu}}\cdot \frac{\partial^2 \mathbf{H}}{\partial t^2} - \nabla\times \mathbf{J}
@@ -127,7 +128,7 @@ where $\bar{\bar{\mu_r}}$,$\bar{\bar{\epsilon_r}}$  are the relative permeabilit
 \end{align}
 \section{Electromagnetism as an eigenvalue problem}
 
-The current section treats the harmonic wave equation in a formalism similar to that of quantum mechanics. It might be seen as a sumarized version of the treatment of Joannopoulos \cite{Joannopoulos2008}, and Johnson.
+The current section treats the harmonic wave equation in a formalism similar to that of quantum mechanics. It might be seen as a sumarized version of the treatment of Joannopoulos \cite{Joannopoulos2008}, and Johnson.\note[NGZ]{Entre este p\'arrafo y el siguiente hace falta una mejor conexi\'on.}
 
 
 Going back to equation \ref{eq:E-wave-harmonic2}, and assuming no sinks or sources ($\mathbf{J}=0$), we can see that the form of the equation is one of a eigenvalue problem. Where a series of operations on a function $\mathbf{E}$ (eigenfunction or eigenvector) gives us the same function multiplied by a constant scalar (eigenvalue).
@@ -146,7 +147,7 @@ Where:
 
 Here the eigenvectors or phasors $\mathbf{E}$ represent spatial patterns of the harmonic modes, and eigenvalues $ \left( \frac{\omega}{c}\right)^2$ give information about the frequency $\omega$ (and thus wave number $k_0$) of such modes.
 \subsection{Hermiticity}
-As in Quantum Mechanics with the Hamiltonian, some key properties of the eigenfunctions that satisfy equation \ref{eq:simple_eigproblem} are:
+As in Quantum Mechanics with the Hamiltonian, some key properties of the eigenfunctions that satisfy equation \ref{eq:simple_eigproblem} are \footnote{This proposition holds if we are not considering lossy materials, where the properties are treated as complex valued tensor and then the matrix is no longer Hermitian.}:
 \begin{itemize}
 \item Have real eigenvalues,
 \item are orthogonal,
@@ -268,7 +269,7 @@ Conservation of energy in time in a source less problem like that of equation \r
 Remembering that in a problem that is not harmonic we have $\hat{\Theta}\mathbf{E} = \frac{\partial^2 \mathbf{E}}{\partial t^2}$This means that under Hermitic operators such as $\hat{\Theta}$ the energy of the field is conserved
  \subsection{Energy functional of electromagnetic waves}
  
-By means of the \textbf{electromagnetic variational theorem} we can formulate an energy functional to  to be minimized. This functional is defined as a normalized inner product between the function and the function multiplied by the operator:
+By means of the \textbf{electromagnetic variational theorem} we can formulate an energy functional to  to be minimized. This functional is defined as a normalized inner product between the function and the function multiplied by the operator \note[NGZ]{Este funcional se conoce como el cociente de Rayleigh.}:
 \begin{equation}
 U_f(\mathbf{E}) \triangleq \frac{\left(\mathbf{E}, \hat{\Theta} \mathbf{E}\right)}{\left(\mathbf{E},\mathbf{E}\right)}
 \label{eq:energy_functional}
