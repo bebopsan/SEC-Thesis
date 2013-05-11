@@ -505,4 +505,49 @@ Anlytic &  &  &  &  \\
 \caption{Degneracy of modes from the simulation of hexagonal waveguide.}
 \label{fig:hexagonal_waveguide}
 \end{figure}
->>>>>>> f1dc5e2b0298f1219638b728268bad3bfe689f65
+\subsubsection{Elliptical waveguide}
+
+The closest to a reference from which to compare the solutions of elliptical waveguides was a study of oscillationin an elliptic membrane by J. Gutiérrez Vega \cite{J.Gutierrez-Vega1999}. Shapes shown in figure \ref{fig:elliptical_waveguide} are in agreement with the images in the reference. 
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Comparison of $\omega^2$ for hexagonal wave-guide} \\
+\hline 
+m,n & 0,1 & 1,1 & 2,1 & 0,2 \\ 
+\hline 
+FEM     & 4.07825369 & 5.83160577 & 7.09000291 & 8.67724176 \\ 
+\hline 
+Anlytic &  &  &  &  \\ 
+\hline 
+\end{tabular} 
+\label{tab:eli_wav_comparison}
+\end{center}
+\begin{figure}
+\centering
+\includegraphics[scale=0.1]{./img/elliptical_waveguide.pdf}
+\caption{Results for the first 8 modes from the simulation of an elliptical waveguide with minor axis $a=2$ and mayor axis $b=3$.}
+\label{fig:elliptical_waveguide}
+\end{figure}
+\subsubsection{Isoespectral shapes}
+
+Tested the solver by performing the computation of isoespectral shapes as proposed by Chapman in \cite{Chapman1995}. The idea behind this was to obtain the same eigenvalues from different shapes by taking advantage of possible mappings between figures that share certain properties.
+A comparison between eigenvalues is presented in table \ref{tab:iso_wav_comparison}, and the first 4 non-degenerate modes are shown in figure \ref{fig:isoespectral_waveguide}.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Comparison of $\omega^2$ for two isoespectral wave-guides} \\
+\hline 
+Shape 1  & 6.38705867 & 7.65676809 & 9.11294713 & 10.23292227 \\ 
+\hline 
+Shape 2 & 6.3850403 & 7.65926504 & 9.11794073 & 10.23394057 \\ 
+\hline 
+\end{tabular}
+\label{tab:iso_wav_comparison}
+\end{center}
+\begin{figure}
+\centering
+\includegraphics[scale=0.1]{./img/isoespectral.pdf}
+\caption{First 4 modes from the simulation of two isoespectral shapes as taken from \cite{Chapman1995}.}
+\label{fig:isoespectral_waveguide}
+\end{figure}
