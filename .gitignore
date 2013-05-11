@@ -10,6 +10,9 @@
 *.toc
 *.bak
 *.gz
+# PDF File, because is causing trouble#
+#######################################
+thesis_ document_frame.pdf
 # Trackchanges folder#
 ######################
 AcceptChanges/
