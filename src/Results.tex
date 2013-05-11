@@ -181,11 +181,45 @@ The wave functions that are solution to this eigenproblem for each component of 
 \end{align}
 
 For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \ref{eq:Ez_mag}, and how similar are the analytic and numeric  natural frequencies of the guide $\omega$.
-
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Comparison of $\omega^2$ for square wave-guide} \\
+\hline 
+m,n & 1,1 & 1,2 & 2,2 & 3,1 \\ 
+\hline 
+FEM & 4.93480857 & 12.33721117 & 19.73961759 & 24.6763011 \\ 
+\hline 
+Anlytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\ 
+\hline 
+\end{tabular} 
+\label{tab:sq_wav_comparison}
+\end{center}
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.1]{./img/square_waveguide.pdf}
 \caption{Results for three different modes from the simulation of a square shaped waveguide with side $a=b=2$}
+\label{fig:square_waveguide}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Comparison of $\omega^2$ for rectangular waveguide $a =2b$} \\
+\hline 
+m,n & 1,1 & 1,2 & 2,2 & 3,1 \\ 
+\hline 
+FEM & 4.93480857 & 12.33721117 & 19.73961759 & 24.6763011 \\ 
+\hline 
+Anlytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\ 
+\hline 
+\end{tabular} 
+\label{tab:sq_wav_comparison}
+\end{center}
+\begin{figure}
+\centering
+\includegraphics[scale=0.07]{./img/rectangular_waveguide.pdf}
+\caption{Results for three different modes from the simulation of a rectangle shaped waveguide with sides $a=4$ and $b=2$.}
 \label{fig:square_waveguide}
 \end{figure}
