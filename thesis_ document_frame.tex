@@ -1,4 +1,4 @@
-\documentclass[office, 10pt]{book}
+\documentclass[office, 10pt, openany]{book}
 
 % idioma
 \usepackage[utf8]{inputenc}
@@ -20,7 +20,7 @@
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
 
 
-%margenes según n. icontec
+%margenes segun n. icontec
 \usepackage{vmargin}
 \setmarginsrb           { 4.0cm}  % left margin
                         { 4.0cm}  % top margcm
@@ -32,12 +32,21 @@
                         { 0.3cm}  % foot sep
 
 
-% inserción url's notas de pie.
+% insercion url notas de pie.
 \usepackage{url}
 %\usepackage{hyperref}
 % Paquetes de la AMS:
 \usepackage{amsmath, amsthm, amsfonts, amssymb}
+%Para incluir detalles cucas del pdf
+\usepackage[pdftex, pdftitle={A Software Platform For The Simulation Of Light Propagation In Photonic Crystal Structures With Defects}, pdfauthor={Santiago Echeverri},
+pdfsubject={Photonic Crystals numerical modeling}, pdfkeywords={Numerical methods, computational photonics, photonic crystal defects}, pdfpagemode=UseOutlines,bookmarks,bookmarksopen,pdfstartview=FitH,colorlinks,linkcolor=blue,
+urlcolor=black, cite color=blue]{hyperref} %
+\usepackage[hyperpageref]{backref}
 
+\usepackage[inline]{trackchanges} %% For tracking changes
+\addeditor{NGZ}
+
+%% New commands %%
 
 \newcommand\portada{
 \begin{titlepage}
@@ -45,16 +54,16 @@
 			{\large \bf  A Software Platform For The Simulation Of Light Propagation In Photonic Crystal Structures With Defects}
 			\vfill
 % 			{\large\bf PRESENTADO POR \par}
-			{\large\bf Santiago Echeverri Chacón
+			{\large\bf Santiago Echeverri Chac\'on
 			\\\emph{sechev14@eafit.edu.co}\par}
-			{\large\bf Advisor: Nicolás Guarín Zapata
+			{\large\bf Advisor: Nicol\'as Guar\'in Zapata
 			\\\emph{nicoguarin@gmail.com}}
 			\vfill
 								\vfill
-			{\large\bf Departamento de Ciencias Básicas \par}
+			{\large\bf Departamento de Ciencias B\'asicas \par}
 			{\large\bf Escuela de Ciencias y Humanidades \par}
 			{\large\bf Universidad EAFIT \par}
-			{\large\bf Medellín Colombia\par}
+			{\large\bf Medell\'in, Colombia\par}
 			{\large\bf May 2013 \par}
 		\end{center}
 \end{titlepage}
@@ -66,37 +75,26 @@
 			{\large \bf A Software Platform For The Simulation Of Light Propagation In Photonic Crystal Structures With Defects} 
 			\vfill
 % 			{\large\bf PRESENTADO POR \par}
-			{\large\bf Santiago Echeverri Chacón
+			{\large\bf Santiago Echeverri Chac\'on
 			\\\emph{sechev14@eafit.edu.co}\par}
-			{\large\bf Advisor: Nicolás Guarín Zapata
+			{\large\bf Advisor: Nicol\'as Guar\'in Zapata
 			\\\emph{nicoguarin@gmail.com}}
 			\vfill
 			{\large\bf Thesis document presented as a partial prerequisite for the title of Bachelor in Engineering Physics \par}
 			\vfill
 					\vfill
-			{\large\bf Departamento de Ciencias Básicas \par}
+			{\large\bf Departamento de Ciencias B\'asicas \par}
 			{\large\bf Escuela de Ciencias y Humanidades \par}
 			{\large\bf Universidad EAFIT \par}
-			{\large\bf Medellín Colombia\par}
+			{\large\bf Medell\'in Colombia\par}
 			{\large\bf May 2013 \par}
 		\end{center}
 \end{titlepage}
 }
 
+%% ------------- %%
 
-%--------------------------------------------------------------------------
-% \title{\LARGE \bf Plantilla para un artculo \LaTeX }
-% % \vfill
-% \author{El autor va aqu\\
-%   \small Dept. Plantillas y Editores\\
-%   \small E12345\\
-%   \small Espaa
-% }
-%Para incluir detalles cucas del pdf
-\usepackage[pdftex, pdftitle={A Software Platform For The Simulation Of Light Propagation In Photonic Crystal Structures With Defects}, pdfauthor={Santiago Echeverri},
-pdfsubject={Photonic Crystals numerical modeling}, pdfkeywords={Numérical methods, computational photonics, photonic crystal defects}, pdfpagemode=UseOutlines,bookmarks,bookmarksopen,pdfstartview=FitH,colorlinks,linkcolor=blue,
-urlcolor=black, cite color=blue]{hyperref} %
-\usepackage[hyperpageref]{backref} 
+
 \begin{document}
 \portada
 \contraportada
@@ -111,7 +109,7 @@ urlcolor=black, cite color=blue]{hyperref} %
 \include{./src/Electromagnetic_waves_in_periodic_media}
 
 \include{./src/Periodicity_crystals_and_Bloch_theory}
-\include{./src/Cristal_lattice_and_reiprocal}
+\include{./src/Crystal_lattice_and_reciprocal}
 
 \include{./src/Finite_element_method}
 \include{./src/Results}
