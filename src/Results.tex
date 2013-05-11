@@ -181,6 +181,8 @@ The wave functions that are solution to this eigenproblem for each component of 
 \end{align}
 
 For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \ref{eq:Ez_mag}, and how similar are the analytic and numeric  natural frequencies of the guide $\omega$.
+
+The numerical solution for rectangular waveguide has less degenerate modes, and the sapes look better.
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -208,11 +210,11 @@ Anlytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\
 \hline
 \multicolumn{5}{|c|}{Comparison of $\omega^2$ for rectangular waveguide $a =2b$} \\
 \hline 
-m,n & 1,1 & 1,2 & 2,2 & 3,1 \\ 
+m,n & 1,1 & 2,1 & 3,1 & 1,2 \\ 
 \hline 
-FEM & 4.93480857 & 12.33721117 & 19.73961759 & 24.6763011 \\ 
+FEM     & 3.08425459 & 4.93480795 & 8.0190859 & 12.33717191 \\ 
 \hline 
-Anlytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\ 
+Anlytic & 3.08425137 & 4.93480220 & 8.0190535 & 12.33700550 \\ 
 \hline 
 \end{tabular} 
 \label{tab:sq_wav_comparison}
@@ -223,3 +225,21 @@ Anlytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\
 \caption{Results for three different modes from the simulation of a rectangle shaped waveguide with sides $a=4$ and $b=2$.}
 \label{fig:square_waveguide}
 \end{figure}
+
+
+\subsubsection{Circular waveguides}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Comparison of $\frac{\omega}{a}$ for circular wave-guide} \\
+\hline 
+m,n & 0,1 & 1,1 & 2,1 & 0,2 \\ 
+\hline 
+FEM     & 2.40482634 & 3.83171343 & 5.13564189 & 5.52012378 \\ 
+\hline 
+Anlytic & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\ 
+\hline 
+\end{tabular} 
+\label{tab:sq_wav_comparison}
+\end{center}
