@@ -344,7 +344,7 @@ Air  & 1.11074305 & 1.75637223 & 2.22176045 & 2.48458998 \\
 \label{tab:fin_lat_comparison}
 \end{center}
 
-Note table \ref{tab:fin_lat_comparison} that if frequencies found for the air filled case are multiplied by two (this domain is twice as big) and then squared, we get the same result as in \ref{tab:sq_wav_comparison}. 
+Note in table \ref{tab:fin_lat_comparison} that if frequencies found for the air filled case are multiplied by two (this domain is twice as big) and then squared, we get the same result as in \ref{tab:sq_wav_comparison}. 
 Figure \ref{fig:fin_lat_waveguide} illustrates the difference between solving for an homogeneous and non-homogenous problems. The flexibility to easily model interfaces and to couple regions is one of the great advantages of using both the Finite Element Method and a vectorial formulation. Note that these are solutions that are hard to solve analytically.
 
 \begin{figure}
@@ -352,4 +352,41 @@ Figure \ref{fig:fin_lat_waveguide} illustrates the difference between solving fo
 \includegraphics[scale=0.1]{./img/finite_lattice.pdf}
 \caption{A lattice of dielectric rods embedded in a domain causes peaks of field magnitude in the places with higher dielectric constant.}
 \label{fig:fin_lat_waveguide}
+\end{figure}
+
+\subsection{Bloch periodic lattices and dispersion curves}
+Finally, we solved the harmonic equation for infinite crystals by defining Bloch periodicity boundary conditions over a unitary cell. Looping through combinations of phase changes at boundaries, allowed us to see the spectrum for the crystal given different incident plane waves defined by varying wave number $\vec{k}$. 
+Dispersion plots shown in figures \ref{fig:dispersion_plot_ra01}, \ref{fig:dispersion_plot_ra02}, and \ref{fig:dispersion_plot_ra04} are made by taking only the perimeter of the irreducible Brillouin zone which is the minimal representation of the domain in frequency space. Figure \ref{fig:frequency_surfaces} shows the complete representation of natural frequencies for the lattice given every combination of incident plane waves with wave number $\vec{k} = \vec{k}_x+\vec{k}_y$ inside a unitary cell.
+The results presented in figure \ref{fig:dispersion_plot_ra02} were made with the same conditions as those used by Joannopolous in page 68 of the book: \textbf{Photonic Crystals: molding the flow of light} \cite{Joannopoulos2008} and agree with their findings. Apart from great similarity between the curves, our value of $31.41\%$ for the gap-midgap ratio is close to the one reported by them of $31.4\%$.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.2]{./img/reduced_brillouin_zone.pdf}
+\caption{Illustration of reduced Brillouin zone in spectral domain, and reference points $\Gamma$, $\chi$ and $M$.}
+\end{figure}
+ 
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{./img/square_lattice_ra01.pdf}
+\caption{Dispersion plot for a square lattice of r/a = 0.1 and $\epsilon_r = 8.9$.}
+\label{fig:dispersion_plot_ra01}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{./img/square_lattice_ra02.pdf}
+\caption{Dispersion plot for a square lattice of r/a = 0.2 and $\epsilon_r = 8.9$.}
+\label{fig:dispersion_plot_ra02}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{./img/square_lattice_ra04.pdf}
+\caption{Dispersion plot for a square lattice of r/a = 0.4 and $\epsilon_r = 8.9$.}
+\label{fig:dispersion_plot_ra04}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.1]{./img/energy_surfaces.pdf}
+\caption{Frequency surfaces for square lattice of \ref{fig:dispersion_plot_ra02}, where each point in a surface $i$ represents the eigenvalue $i$ of the solution, given a pair of $\vec{k}_x$, $\vec{k}_y$.}
+\label{fig:frequency_surfaces}
 \end{figure}
