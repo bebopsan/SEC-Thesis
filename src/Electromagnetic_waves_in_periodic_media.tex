@@ -4,7 +4,6 @@
 This chapter focuses on basic concepts and principles related to electromagnetic fields and waves based on Maxwell's equations. More over, some emphasis will be taken on stating these equations as a linear Hermitian Eigenvalue problem that has many common points with the Schrödinger equation and its application to crystals in the field of Solid State Physics.
 In this way, propagation of light in a photonic crystal can be defined using linear operators acting over wave functions that are solution to a given eigenvalue problem.  Periodicity is then invoked by means of discrete translational symmetry operators, and their associated phase shift eigenvalue. 
 
-\note[NGZ]{Falta una intro a este capitulo: Que se describe en este capitulo?}
 \section{Maxwell equations}
 
 The macroscopic behavior of electromagnetism, including propagation of light in Photonic Crystals (PCs) are governed by \textbf{Maxwell quations}. Maxwell's equations are four equations that relate the electric and magnetic fields to their respective sources i.e. electric charges and currents. They were established by James Clerk Maxwell (1831-1879) based on experimental discoveries of André-Marie Ampere (1775-1836) and Michael Faraday (1791-1867) and a law of electricity made by Carl Friederich Gauss (1777-1855) \cite{Jin2010}.
@@ -264,7 +263,14 @@ The fact that plane wave solutions are a solution of the homogeneous isotropic w
 \subsection{Discrete translational symmetries}
 Photonic crystals, like crystals of atoms or molecules do not have continuous translational symmetry, instead, they have discrete translational symmetry \cite{Joannopoulos2008}. This means that the ruling operator for the field inside a photonic crystal is invariant only for certain translation operations, specifically those in which the distance of translation is multiple of some fixed length that we will call a \textbf{primitive lattice vector}.
 
-So, if we have a 2D lattice of dielectric rods in air like in figure \ref{} where the dielectric constant is a periodic function of space $\epsilon = \epsilon_0\epsilon_r(r)$\footnote{In which $\epsilon$ for air is $\epsilon(r) = \epsilon_0$ and inside the rod we have some positive realizable value $\epsilon_r$}, then following what we learn in a solid state course we can define the crystal as a base given by one rod and a lattice which is in fact the two primitive translation lattice vectors.
+\begin{figure}
+\centering
+\includegraphics[scale=1]{./img/squarel.pdf}
+\caption{Illustration of a bi dimensional point lattice: a) Section of a square lattice with primitive lattice vectors $a_1$ and $a_2$ b)  and one of the possible correspondent unitary cells where corners of four points are shared by one cell. Taken with permission from \cite{Guarin2012}.}
+\label{fig:sq_lat_fig}
+\end{figure}
+
+So, if we have a 2D lattice of dielectric rods in air like in figure \ref{fig:sq_lat_fig} where the dielectric constant is a periodic function of space $\epsilon = \epsilon_0\epsilon_r(r)$\footnote{In which $\epsilon$ for air is $\epsilon(r) = \epsilon_0$ and inside the rod we have some positive realizable value $\epsilon_r$}, then following what we learn in a solid state course we can define the crystal as a base (for example one rod) and a lattice which the set of discrete translation operations that are a linear combination of  multiples of the two primitive translation lattice vectors $a_1$ and $a_2$\cite{Kittel2005}.
 
 Bloch-Floquet theory results from the special case of discrete translation operators\cite{J.Gazalet2012}.
 
