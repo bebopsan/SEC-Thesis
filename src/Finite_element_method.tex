@@ -305,7 +305,7 @@ a\left(W_x,E_x\right)=&\langle \mathbb{A}\vec{g}^x,\vec{W}^x\rangle
 +\langle\mathbb{A}\vec{E}^x,\vec{W}^x\rangle  
 \end{align*}
 
-Where A is a matrix whose elements contain the indexed integration over the basis functions $h_i$, and $h_j$, these are known values because we know the form of the functions and can easily calculate the integrals by numerical or analytic means. For the solution in the software routines we implemented numerical integration based on Gauss-Legendre quadrature as defined in \citep{Bathe1996}. 
+Where A is a matrix whose elements contain the indexed integration over the basis functions $h_i$, and $h_j$, these are known values because we know the form of the functions and can easily calculate the integrals by numerical or analytic means. For the solution in the software routines we implemented numerical integration based on Gauss-Legendre quadrature as defined in \cite{Bathe1996}. 
 
 Matrix $\mathbb{A}$ is known as the stiffness matrix in Mechanics, and here it relates to energy stored in form of electric field. Matrix $\mathbb{A}$ is built as a combination of matrices $\mathbb{A}^x$ and $\mathbb{A}^y$:
 $$\mathbb{A} = \mathbb{A}^x+\mathbb{A}^y$$
@@ -373,14 +373,19 @@ Something that is used in many references is to remove rows and columns associat
 ^{\setminus D}\left[\left(\mathbb{A}-\mathbb{M}\right)\vec{E}= \vec{b}-\vec{d}-\vec{q}-\vec{f}\right]
 \end{equation*}
 
-The solution of this linear system of equations is achieved by means of robust computational routines such as \href{http://www.netlib.org/lapack/}{LAPACK}.
+The solution of this linear system of equations is achieved by means of robust computational routines such as \href{http://www.netlib.org/lapack/}{LAPACK}. And they are finally put together with the known values in order to get a full representation of the field inside the domain.
 
-
-\section{Vectorial vs scalar formulation}
 \section{Edge elements vs Node Elements}
+There is another way to represent vector fields in Finite Elements, and it is by using Edge Elements \cite{Jin2010}. Up until now we defined the problem as a simultaneous solution of two scalar fields, one associated to the $x$ coordinate and another to $y$, the advantage of doing that over solving for only one scalar field is that we have much more flexibility in the kinds of boundary conditions that can be formulated. We also achieve higher accuracy and can know more about the problem. 
+There is  however another form to postulate vector fields, and that is by defining tangential values of the field on each edge and interpolating $\mathbf{E}$ inside the element by using vectorial basis functions, these functions are then not related to each node, but to each line at the element. For example, the field inside  a three node element ($el$) with nodes $1,2,3$ is then the combination of the vector shape functions $\mathbf{N}_{ij}$:
+\begin{equation}
+\mathbf{E}^{el}(x,y) =\mathbf{N}_{12}^{el}E_{12}^{el} + \mathbf{N}_{13}^{el}E_{13}^{el}+ \mathbf{N}_{23}^{el}E_{23}^{el}
+\end{equation}
+And from this point the formulation continues almost identically to what we did before.
+
+There is however an ongoing discussion \cite{Mur1994,Webb1993,Gerr1998} over the advantages and disadvantages of using edge elements instead of nodal elements, and at the moment of implementation edge elements seemed more troublesome to implement than node elements. The formulation of a vector field solver using edge elements is pending as one possible alternative to our current implementation.
 
 \section{Mass matrices}
-¿What is the meaning of Mass matrices in EM?
 
 discrete representation of a continuous distribution of something that multiplies the second time derivative of the field.
 
