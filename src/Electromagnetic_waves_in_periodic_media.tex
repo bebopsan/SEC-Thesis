@@ -182,7 +182,7 @@ for any fields $\mathbf{F}$ and $\mathbf{G}$.
 
 Using this, we can check that the operator in equation \ref{eq:E-wave-harmonic2} is Hermitian and derive nice properties around that conclusion:
 
-\begin{align*}
+\begin{align}
 \left(\mathbf{F},\hat{\Theta}\mathbf{G}\right) &=
 \int \mathbf{F^*}\cdot \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\nabla\times \mathbf{G}\\
 & = \int \left(\nabla\times\mathbf{F}\right)^*\cdot
@@ -194,7 +194,8 @@ Using this, we can check that the operator in equation \ref{eq:E-wave-harmonic2}
 & = \int \left[\nabla\times \left(\frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{F}\right)\right]^*
 \cdot\mathbf{G} \\
 &= \left(\hat{\Theta}\mathbf{F},\mathbf{G}\right)
-\end{align*}
+\label{eq:hermiticity_proof}
+\end{align}
 
 Here the vector cross product identity\footnote{$\nabla \cdot \left(\mathbf{A}\times \mathbf{B} \right) = \mathbf{B}\cdot\left(\nabla \times \mathbf{A} \right) - \mathbf{A}\cdot\left(\nabla \times \mathbf{B} \right)$ With $\mathbf{A} = \mathbf{F}$ and $\mathbf{B} =\nabla\times\mathbf{G}$, first and then $\mathbf{A} = \nabla\times\mathbf{F}$ and $\mathbf{B} =\mathbf{G}$} is used twice and surface terms that derive from using the Divergence Theorem are neglected.
 
@@ -326,10 +327,11 @@ Conservation of energy in time in a source less problem like that of equation \r
 Remembering that in a problem that is not harmonic we have $\hat{\Theta}\mathbf{E} = \frac{\partial^2 \mathbf{E}}{\partial t^2}$This means that under Hermitic operators such as $\hat{\Theta}$ the energy of the field is conserved
  \subsection{Energy functional of electromagnetic waves}
  
-By means of the \textbf{electromagnetic variational theorem} we can formulate an energy functional to  to be minimized. This functional is defined as a normalized inner product between the function and the function multiplied by the operator \note[NGZ]{Este funcional se conoce como el cociente de Rayleigh.}:
+By means of the \textbf{electromagnetic variational theorem} we can formulate an energy functional to  to be minimized. This functional is defined as a normalized inner product between the function and the function multiplied by the following operator known as Rayleigh Quotient \note[NGZ]{Este funcional se conoce como el cociente de Rayleigh.}:
 \begin{equation}
 U_f(\mathbf{E}) \triangleq \frac{\left(\mathbf{E}, \hat{\Theta} \mathbf{E}\right)}{\left(\mathbf{E},\mathbf{E}\right)}
 \label{eq:energy_functional}
 \end{equation}
+
 It is similar to other formulations used in fields like Quantum Mechanics and Classical mechanics such as expectation values, and energy Lagrangians.  The process of finding solutions that minimize such a potential is the core of what methods like Galerkin do for solving differential equations. In chapter \ref{ch:Finite_element_method} we will use a similar expression in order to solve the wave equation using Galerkin with Finite Elements.
  
