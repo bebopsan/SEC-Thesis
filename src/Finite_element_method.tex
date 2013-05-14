@@ -371,10 +371,10 @@ Something that is used in many references is to remove rows and columns associat
 
 \begin{equation*}
 ^{\setminus D}\left[\left(\mathbb{A}-\mathbb{M}\right)\vec{E}= \vec{b}-\vec{d}-\vec{q}-\vec{f}\right]
+\label{eq:harmonic_eq_dirichlet}
 \end{equation*}
 
 The solution of this linear system of equations is achieved by means of robust computational routines such as \href{http://www.netlib.org/lapack/}{LAPACK}. And they are finally put together with the known values in order to get a full representation of the field inside the domain.
-
 \section{Edge elements vs Node Elements}
 There is another way to represent vector fields in Finite Elements, and it is by using Edge Elements \cite{Jin2010}. Up until now we defined the problem as a simultaneous solution of two scalar fields, one associated to the $x$ coordinate and another to $y$, the advantage of doing that over solving for only one scalar field is that we have much more flexibility in the kinds of boundary conditions that can be formulated. We also achieve higher accuracy and can know more about the problem. 
 There is  however another form to postulate vector fields, and that is by defining tangential values of the field on each edge and interpolating $\mathbf{E}$ inside the element by using vectorial basis functions, these functions are then not related to each node, but to each line at the element. For example, the field inside  a three node element ($el$) with nodes $1,2,3$ is then the combination of the vector shape functions $\mathbf{N}_{ij}$:
@@ -384,12 +384,131 @@ There is  however another form to postulate vector fields, and that is by defini
 And from this point the formulation continues almost identically to what we did before.
 
 There is however an ongoing discussion \cite{Mur1994,Webb1993,Gerr1998} over the advantages and disadvantages of using edge elements instead of nodal elements, and at the moment of implementation edge elements seemed more troublesome to implement than node elements. The formulation of a vector field solver using edge elements is pending as one possible alternative to our current implementation.
+\section{Time domain formulation}
+For analysis of wave propagation in finite lattices with defects we must be able to simulate the evolution of the fields along time and a stationary harmonic model is no longer suitable. For this we have to define construct a numerical solution that combines the finite element method and finite differences, the former for the solution of spatial derivatives and the later for time derivatives.
+The following procedures are summarized and have less comments because they are made in a very similar way than the process in the previous section.
+\subsection{Weak formulation in time dependent problem}
+Proceeding in the same way as in the time harmonic case we take equation
+\ref{eq:E-wave-loads}, and rewrite it as:
+\begin{align}
+\nabla\times\left[\bar{\bar{\mu}}^-1\cdot\nabla \times\mathcal{E}(t)\right] + \bar{\bar{\epsilon}}\cdot\frac{\partial^2 \mathcal{E}(t)}{\partial t^2}=-\frac{\partial \mathcal{J}}{\partial t} 
+\end{align}
+
+Multiplying by the test function $\mathbf{W}$ and integrating over the entire domain will give us a functional equivalent to \ref{eq:E-wave-weak} to be minimized: 
+\begin{align}
+\int\limits_{\Omega}\mathbf{W}\cdot\nabla\times\left[\bar{\bar{\mu}}^-1\cdot\nabla \times\mathcal{E}(t)\right] + \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \nonumber\\
+\int\limits_{\Omega}\mathbf{W}\cdot\nabla\times\left[\bar{\bar{\mu}}^-1\cdot\nabla \times\mathcal{E}(t)\right] +\int\limits_{\Omega} \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \nonumber\\
+\int\limits_{\Omega} \bar{\bar{\mu_r}}^{-1}\nabla\times \mathcal{E}(t)\cdot \nabla\times\mathbf{W}-\int\limits_{\Omega}\nabla\cdot
+\left(\mathbf{W}\times\bar{\bar{\mu_r}}^{-1}\nabla\times \mathcal{E}(t)
+\right) +\int\limits_{\Omega} \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \nonumber\\
+\int\limits_{\Omega} \bar{\bar{\mu_r}}^{-1}\nabla\times \mathcal{E}(t)\cdot \nabla\times\mathbf{W}-\oint_{\Gamma}\hat{n}\cdot
+\left(\mathbf{W}\times\bar{\bar{\mu_r}}^{-1}\nabla \times\mathcal{E}(t)\right)  +\int\limits_{\Omega} \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \nonumber\\
+\int\limits_{\Omega} \bar{\bar{\mu_r}}^{-1}\nabla\times \mathcal{E}(t)\cdot \nabla\times\mathbf{W}
++\int_{\Gamma_N}\mathbf{W}\cdot
+\left(\hat{n}\times\bar{\bar{\mu_r}}^{-1}\nabla \times\mathcal{E}(t)\right)
++\int\limits_{\Omega} \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \label{eq:time_dependent_Electric}
+\end{align}
+
+This is achieved remembering from before that $\hat{n}\cdot\mathbf{W} =0$ on $\Gamma_D$, and using all the vector identities invoked in the previous section.
+
+\subsection{Boundary conditions in time dependent problem}
+Boundaries are defined in the same way, but now they are time dependent:
+\begin{align}
+\hat{n}\times\mathcal{E}(t)=&\mathcal{P}(t)\quad on \quad \Gamma_D\\
+\hat{n}\times\left(\bar{\bar{\mu}}^{-1}\nabla\times\mathcal{E}(t)
+\right)+Y\hat{n}\times\left(\hat{n}\times\frac{\partial\mathcal{E} (t)}{\partial t}\right)=& \mathcal{K}_N(t)
+\end{align}
+
+Using Newman boundary conditions applied to \ref{eq:time_dependent_Electric} we get:
+\begin{equation}
+\int\limits_{\Omega} \bar{\bar{\mu_r}}^{-1}\nabla\times \mathcal{E}(t)\cdot \nabla\times\mathbf{W}
++ \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int_{\Gamma_N}\mathbf{W}\cdot\mathcal{K}_N(t)
+-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \label{eq:td_weak_form_E_equation}
+\end{equation}
+\subsection{Base functions and abstract form?}
+To obtain a finite element solution the spatial domain has to be discretized in the same way as we did when obtaining the frequency domain solution. For this, we use compact support basis functions that in combination with nodal values will give a representation of the global field as the combination of spatial  subdivisions called elements.
+In this case is better to invoke the definitions for the approximated functions firsthand:
+\begin{align*}
+\mathcal{E}(t)=\mathcal{E}(x,y,t)_x\hat{a}_x + \mathcal{E}(x,y,t)_y \hat{a}_y\\
+\mathcal{E}(x,y,t)_x\approx \sum_{i:\ n_x \in \eta_D} h_i \mathcal{E}_i^x(t)+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i \mathcal{E}_i^x(t)\\
+\mathcal{E}(x,y,t)_y\approx \sum_{i:\ n_y \in \eta_D}h_i\mathcal{E}_i^y(t)+
+\sum_{i:\ n_x \in \eta\setminus\eta_D}h_i\mathcal{E}_i^y(t)
+\end{align*}
+Noting that when time derivatives are applied over the field, these will act only on the nodal values $\mathcal{E}_i^x(t)$ so that for example:
+$$\frac{\partial \mathcal{E}(x,y,t)_x}{\partial t}\approx \sum_{i:\ n_x \in \eta_D} h_i \frac{\partial \mathcal{E}_i^x(t)}{\partial t}+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i \frac{\partial\mathcal{E}_i^x(t)}{\partial t}$$
+$\mathbf{W}$ Keeps being the same as defined in the previous section.$$\mathcal{J}=\mathbf{J}$$
+$$\mathcal{K}_N=\mathbf{K}_N$$
+
+Operators are be almost the same as before. The main difference being that free space related material constants $k_0$ and $Z_0$ haven't been extracted from material matrices $\bar{\bar{\mu}}$ and $\bar{\bar{\epsilon}}$.
+
+\begin{equation}
+\begin{array}{rcl}
+      a(\mathbf{W},\mathbf{E})&&:\mathbb{V}\times \mathbb{V}\rightarrow \mathbb{R}\\
+      a(\mathbf{W},\mathbf{E})&&= \int\limits_{\Omega}  \bar{\bar{\mu}}^{-1}\nabla\times \mathbf{E}\cdot \nabla\times\mathbf{W} d\Omega
+\label{eq:a_td_def}
+\end{array}
+\end{equation}
+\begin{equation}
+\begin{array}{rcl}
+      m(\mathbf{W},\mathbf{E})&:\mathbb{V}\times \mathbb{V}\rightarrow \mathbb{R}\\
+      m(\mathbf{W},\mathbf{E})&= \int\limits_{\Omega} \mathbf{W}\cdot \bar{\bar{\epsilon}}\cdot \mathbf{E} d\Omega
+\label{eq:m_td_def}
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{rcl}
+      q(\mathbf{W})&:\mathbb{V}\rightarrow \mathbb{R}\\
+      q(\mathbf{W})&=\int_{\Gamma_N} \mathbf{W} \cdot\mathcal{K}_N
+\label{eq:m_td_def}
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{rcl}
+      f(\mathbf{W})&:\mathbb{V}\rightarrow \mathbb{R}\\
+      f(\mathbf{W})&= \int_{\Omega} \mathbf{W}\cdot\frac{\partial\mathcal{J}}{\partial t}
+\label{eq:m_td_def}
+\end{array}
+\end{equation}
+Note that all these are operators that act on spatial coordinates and as such are independent of time derivatives. The abstract form for wave propagation in time domain formulation is then:
+
+\begin{equation}
+a\left(\mathbf{W},\mathcal{E}\right)+m\left(\mathbf{W},\frac{\partial^2 \mathcal{E}}{\partial t^2}\right)
+=-f\left(\mathbf{W}\right)-q\left(\mathbf{W}\right) 
+\end{equation}
+
+If a process of substitution like that shown in equation \ref{eq:substitution_of_app_fields_in_a} is performed for each of these operators, one gets a system of equations equivalent to the one in equation \ref{eq:harmonic_eq_dirichlet}
+
+$$\sum_{j:\ n_x \in \eta_D}\mathcal{E}_j^x = \left\lbrace g^x \right\rbrace $$
+$$ \mathbb{A}^x\left\lbrace g^x \right\rbrace=\left\lbrace d^x \right\rbrace$$ 
+$$\mathbb{M}^x\left\lbrace g^x \right\rbrace=\left\lbrace b^x \right\rbrace$$
+$$\sum_{i:\ n_x \in \eta\setminus\eta_D}W_i^x = \vec{W}^x $$
+$$\sum_{j:\ n_x \in\eta\setminus\eta_D}\mathcal{E}_j^x = \left\lbrace \mathcal{E}^x\right\rbrace $$
+$$\sum_{j:\ n_x \in\eta\setminus\eta_D}\frac{\partial^2 \mathcal{E}_j^x}{\partial t^2} = \frac{\partial^2\left\lbrace \mathcal{E}^x\right\rbrace}{\partial t^2} $$
+$$ \sum_{i:\ n_x \in \eta}\int_{\Omega} h_i\frac{\partial\mathcal{J}_i^x}{\partial t} = \left\lbrace f^x \right\rbrace $$
+$$\sum_{i:\ n_x \in \eta_N}\int_{\Gamma_N} h_i\mathcal{K}_i^x = \left\lbrace q^x   \right\rbrace$$
+
+\begin{align}
+\langle\left\lbrace d^x \right\rbrace,\vec{W}^x\rangle
++\langle\mathbb{A}^x\left\lbrace\mathcal{E}^x \right\rbrace,\vec{W}^x\rangle&-\langle \left\lbrace b^x \right\rbrace,\vec{W}^x\rangle
+-\langle\mathbb{M}^x \frac{\partial^2\left\lbrace\mathcal{E}^x \right\rbrace}{\partial t^2},\vec{W}^x\rangle = -\langle \left\lbrace f^x\right\rbrace, \vec{W^x}\rangle-\langle \left\lbrace q^x\right\rbrace, \vec{W^x}\rangle \nonumber\\
+\langle\mathbb{A}^x\left\lbrace \mathcal{E}^x \right\rbrace- \mathbb{M}^x\frac{\partial^2\left\lbrace\mathcal{E}^x \right\rbrace}{\partial t^2},\vec{W}^x \rangle &=\langle \left\lbrace b^x \right\rbrace-\left\lbrace d^x \right\rbrace-\left\lbrace q^x   \right\rbrace-\left\lbrace f^x\right\rbrace , \vec{W}^x \rangle
+\end{align}
+
+\begin{equation}
+\mathbb{A}\left\lbrace \mathcal{E} \right\rbrace- \mathbb{M}\frac{\partial^2\left\lbrace\mathcal{E} \right\rbrace}{\partial t^2} = \left\lbrace b \right\rbrace-\left\lbrace d \right\rbrace-\left\lbrace q   \right\rbrace-\left\lbrace f\right\rbrace
+\label{eq:time_domain_linear_matrix_form}
+\end{equation}
+
+In the simulations that were performed as part of the project we didn't consider any sources or Neumann boundaries, so $\left\lbrace q=0\right\rbrace$ and $\left\lbrace f\right\rbrace$. The details about the finite difference formulation used to discretize the time derivative are explained in the section (\ref{sec:explicit_formulation}) where the explicit solution of \ref{eq:time_domain_linear_matrix_form} is explored .
+
 
 \section{Mass matrices}
-
+\label{sec:explicit_formulation}
 discrete representation of a continuous distribution of something that multiplies the second time derivative of the field.
 
-Mass matrices are cataloged as consistent or diagonal. Consistent mass matrices use the same shape functions as the ones used to generate the element stiffness matrix. All reference to mass matrices mentioned before, were consistent. \cite{RobertD.Cook1989}
+Mass matrices are cataloged as consistent or diagonal. Consistent mass matrices use the same shape functions as the ones used to generate the element stiffness matrix. All reference to mass matrices mentioned before, were consistent \cite{RobertD.Cook1989}. 
 The other way to formulate mass matrices is the lumped mass matrix. Which is made by avoiding the interpolation and simply placing particle masses $m_i$ at nodes $i$ of an element such that $\sum m_i$ is the total element mass. 
 
 The great advantage of lumped mass matrices is that they are diagonal and the solution of the system of equations can be performed in a explicit manner convenient for big computational domains.
@@ -404,10 +523,11 @@ which consist on the following algorithm \cite{RobertD.Cook1989}:
 \item Compute the trace of the matrix $s$.
 \item scale all the diagonal coefficients by multiplying them by the ratio $\frac{m}{s}$.
 \end{enumerate}
+Lumped mass matrices are used in the implementation of an explicit formulation of Finite Elements in Time Domain FETD where equation \ref{eq:H-wave-homo} is solved instead of \ref{eq:E-wave-harmonic3}. The next section expands on the topic of explicit formulation.
 
 \section{Explicit formulation}
-central-difference method
-Aproximates the second order derivative of $\mathbf{E}$ by expanding $\mathbf{E}_{n+1}$ and $\mathbf{E}_{n-1}$  in taylor series about time $n \vartriangle t$:
+
+The central-difference method is used to approximate the second order derivative of $\mathbf{E}$ in \ref{eq:time_domain_linear_matrix_form} by expanding $\mathbf{E}_{n+1}$ and $\mathbf{E}_{n-1}$  in taylor series about time $n \vartriangle t$:
 
 \begin{equation}
 \mathbf{E}_{n+1} = \mathbf{E}_n + \delta t \dot{\mathbf{E}}_n +\frac{\delta t^2}{2} \ddot{\mathbf{E}}_n +\frac{\delta t^3}{6} \dddot{\mathbf{E}}_n+ O(\delta t^4)
@@ -428,9 +548,10 @@ subscript $n$ denotes time $n\delta t$ with $\delta t$ being the selected timest
 Replacing into our general formulation one gets (fix details):
 
 \begin{equation}
-\frac{1}{\delta t^2} \mathbb{M} \mathbf{E}_{n+1} = \frac{1}{\delta t^2}\mathbb{M}\left[2
+\frac{1}{\delta t^2} \mathbb{M} \mathbf{E}_{n+1} = - \mathbb{A}\mathbf{E}_n + \frac{1}{\delta t^2}\mathbb{M}\left[2
 \mathbf{E}_{n}-\mathbf{E}_{n-1}
-\right] \mathbb{A}\mathbf{E}_n 	 
+\right] 	 
+\label{eq:implicit_time_domain}
 \end{equation}
 
-Nice concluding remarks in page 424 of the book.
+The equation \ref{eq:implicit_time_domain} can be solve by an implicit solver that takes matrices and solves in one pass the system of equations for one time $n$ as we do with \ref{eq:harmonic_eq_dirichlet}. This however is not very practical for interesting problems with complex domains when running under workstations that have low memory such as my laptop. For the solution of \ref{eq:implicit_time_domain} is best to solve for each node at a time and this is done by using lumped matrices instead of consistent ones. Having a diagonal mass matrix $\mathbb{M}$ decouples the nodal values in time and makes it possible to solve for $\mathbf{E}_{n+1}$ without solving simultaneous systems of equations. The details of how the algorithm computes the solution of \ref{eq:implicit_time_domain} explicitly are treated in the documentation of the software online.
