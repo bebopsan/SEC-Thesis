@@ -26,7 +26,10 @@ $$\dfrac{d^2V}{d x^2}=0$$ Integrating twice, we get:
 V(x) = Ax + B
 \end{equation}
 Where $A$  and $B$ are constants of integration solved by using boundary conditions.
-$$V(0) = A0 + B = 0 \quad or \quad B = 0$$$$V(d) = Ad + B = V_0 \quad or \quad A = \dfrac{V_0}{d}$$
+\begin{align*}
+V(0) &= A0 + B = 0 \quad or \quad B = 0\\
+V(d) &= Ad + B = V_0 \quad or \quad A = \dfrac{V_0}{d}
+\end{align*}
 
 Making the particular solution for the potential:
 $$V=\dfrac{V_0}{d}x \quad for \quad 0<x<d$$ 
@@ -35,7 +38,7 @@ The field is then obtained by taking the gradient of $V$, and we add a $-$ sign 
 \begin{equation}
 \mathbf{E}= -\nabla V = - \dfrac{dV}{dx}\hat{a}_x = -\dfrac{V}{d}\hat{a}_x
 \end{equation}
- This means that the field is uniform and directed from the higher potential plate to the lower potential plate as shown in \ref{fig:parallel_plate} \ref{Rao2004}.
+This means that the field is uniform and directed from the higher potential plate to the lower potential plate as shown in \ref{fig:parallel_plate} \ref{Rao2004}.
 
 \begin{figure}
 \centering
@@ -62,7 +65,7 @@ The script for producing this simulation and the necessary input files can be se
 
 \subsubsection{Charged cylinder}
 
-The next field problem to solve in order to test PeyeQM was one with circular geometry. The solution for the field due to a point charge or a charged cylinder was used to compare the precision of the method for representing fields with two components.
+The next field problem to solve in order to test PeYeQM was one with circular geometry. The solution for the field due to a point charge or a charged cylinder was used to compare the precision of the method for representing fields with two components.
 
 Gauss law \ref{eq:Gauss} in spherical coordinates, assuming a homogeneous medium with scalar permittivity is:
 
@@ -86,7 +89,7 @@ And by trigonometry we know that $cos(\theta) =\dfrac{x}{r}$ and $sin(\theta)=\d
 \begin{equation}
 \mathbf{E}_r(r) = \mathbf{E}_x(x,y) + \mathbf{E}_y(x,y) = \frac{qx}{4\pi \epsilon \sqrt{\left(x^2+y^2\right)}^3} \hat{x}+\frac{qy}{4\pi \epsilon \sqrt{\left(x^2+y^2\right)}^3} \hat{y}
 \end{equation}
-So, a plot the solution after simulating should match a representation of this analytic result. We initially proposed a model where the charged cylinder or point source is modeled as a \href{https://github.com/bebopsan/peyeQM/tree/
+So, a plot the solution after simulating should match a representation of this analytic result. We initially proposed a model where the charged cylinder or point source is modelled as a \href{https://github.com/bebopsan/peyeQM/tree/
 Depuration/Lib/OOPyQM/Examples/Whole\%20cylinder}{whole circle inside a square domain}, the results of the simulation ( figure \ref{fig:whole_cylinder}) showed that for this kind of problem where the field decays in the form $\dfrac{1}{r^2}$ it was better to use finer meshes and take advantage of symmetries to reduce the computational cost. 
 Taking just an eight of the model, and reshaping the outer boundary to a circle improved the quality of the elements and allowed us to use a finer mesh. figure \ref{fig:eight_of_cylinder} shows the $y$ and $x$ components of the field as well as the error between the simulation and the analytic solution.
 For the simulation factor $\dfrac{q}{2\pi \epsilon}$ has been normalized to 1, and the mesh was done done using 1996 QUAD8 elements with 5525 nodes, thus 11050 degrees of freedom. As a comparison, the simulation of the whole circle involved 2432 elements and 7040 nodes with 14080 degrees of freedom, but it solved for a domain that was eight times bigger.
@@ -102,7 +105,7 @@ For the simulation factor $\dfrac{q}{2\pi \epsilon}$ has been normalized to 1, a
 \begin{figure}
 \centering
 \includegraphics[scale=0.2]{./img/Eight_of_cylinder.pdf}
-\caption{Segment of the simulation for Electric field due to a charged cylinder. a) Numerical result for the $y$ component of the field, b) x component of the solution, c) Mesh and error calculated between analytic formula and results.}
+\caption{Segment of the simulation for Electric field due to a charged cylinder. a) Numerical result for the $y$ component of the field, b) $x$ component of the solution, c) Mesh and error calculated between analytic formula and results.}
 \label{fig:eight_of_cylinder}
 \end{figure}
 
@@ -130,7 +133,7 @@ In the same way as before, a comparison between analytic and numerical solutions
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{./img/two_cylinders_Gliphs}
-\caption{Arrow glyphs of the solution for the dipole problem. Lenght and color of the arrow indicate magnitude of the field. As expected, the field points from the positively charged cylinder to the negative.}
+\caption{Arrow glyphs of the solution for the dipole problem. Length and color of the arrow indicate magnitude of the field. As expected, the field points from the positively charged cylinder to the negative.}
 \label{fig:two_cylinders_glyph}
 \end{figure}
 
@@ -142,23 +145,23 @@ In the same way as before, a comparison between analytic and numerical solutions
 \end{figure}
 
 \section{Harmonic benchmark tests}
-The second section regards solutions of eigenvalue problems, either for closed domains or infinite and periodic ones. The first part will deal with simulation of resonant modes in wave guides, and the second with free waves and periodic crystals.
-In this stage of PeyeQM we knew that the program was capable of assembling stiffness matrices and solving systems of linear equations, what the following tests with waveguides would give was the certainty that we were able to form mass matrices as well  as solve the eigenvalue problems associated with a formulation of the form:
-$$\mathbb{A}\mathbf{\vec{E}} = \mathbb{M}\mathbf{\vec{E}}$$
+The second section regards solutions of eigenvalue problems, either for closed domains or infinite and periodic ones. The first part will deal with simulation of resonant modes in wave-guides, and the second with free waves and periodic crystals.
+In this stage of PeYeQM we knew that the program was capable of assembling stiffness matrices and solving systems of linear equations, what the following tests with wave-guides would give was the certainty that we were able to form mass matrices as well  as solve the eigenvalue problems associated with a formulation of the form:
+\[\mathbb{A}\mathbf{\vec{E}} = \mathbb{M}\mathbf{\vec{E}}\]
 
 
-\subsection{Eigenvalues and modes in waveguides}
+\subsection{Eigenvalues and modes in wave-guides}
 
-Ideal wave guides can be modeled by a source-less version of the wave equation for time harmonic fields \ref{eq:E-wave-harmonic} in arbitrary 2D domains closed by a metallic boundary that guarantees Dirichlet condition $\mathbf{E} = 0\quad at\quad \Gamma$. This problem is relevant in electromagnetism and telecommunications because it is the principle behind many applications such as data transmission in fiber optics, and microwaves. Here, the 2D domain represents a cross section of a metallic structure that guides waves along its axis. We are particularly interested in knowing two things:
+Ideal wave-guides can be modelled by a source-less version of the wave equation for time harmonic fields \ref{eq:E-wave-harmonic} in arbitrary 2D domains closed by a metallic boundary that guarantees Dirichlet condition $\mathbf{E} = 0\quad at\quad \Gamma$ \note[NGZ]{Un borde met\'alico no garantiza que las l\'ineas entran perpendicular al conductor? y por ende son condiciones de Neumann??}. This problem is relevant in electromagnetism and telecommunications because it is the principle behind many applications such as data transmission in fiber optics, and microwaves. Here, the 2D domain represents a cross section of a metallic structure that guides waves along its axis. We are particularly interested in knowing two things:
 \begin{enumerate}
 \item The modes or wave functions that are solution to the equation for a particular shape.
 \item The frequencies associated to those modes or shapes. 
 \end{enumerate}
-And will start by introducing the analytic solution behind simple wave guides such as rectangular and circular guides.
+And will start by introducing the analytic solution behind simple wave-guides such as rectangular and circular guides.
 
-\subsubsection{Rectangular waveguides} 
+\subsubsection{Rectangular wave-guides} 
 
-In transverse magnetic fields (TM) that travel inside a waveguide whose axis is over $z$, we have $\mathbf{H}_z = 0$ and solve for $\mathbf{E}$ components. 
+In transverse magnetic fields (TM) that travel inside a wave-guide whose axis is over $z$, we have $\mathbf{H}_z = 0$ and solve for $\mathbf{E}$ components. 
 Solutions of equation \ref{eq:E-wave-harmonic2} where the medium inside the wave guide is a perfect dielectric, and  for eigenvalues $\vec{k}^2 = \omega^2\mu\epsilon$ is a lengthy but straightforward process that involves separation of variables and use of boundary conditions:
 \begin{align}
 &\mathbf{E}_x = 0 \quad for \quad y=0,\ 0<x<a\\
@@ -168,11 +171,11 @@ Solutions of equation \ref{eq:E-wave-harmonic2} where the medium inside the wave
 \label{eq:square_bc}
 \end{align}
 
-A description of the solution process is left for the reader to look up in references such as Rao  \cite{Rao2004} or Jianming \cite{Jin2010}. What is found in the process is that only certain discrete frequencies are allowed inside the waveguide, and they are given by:
+A description of the solution process is left for the reader to look up in references such as Rao  \cite{Rao2004} or Jianming \cite{Jin2010}. What is found in the process is that only certain discrete frequencies are allowed inside the wave-guide, and they are given by:
 
 \begin{equation}
 \omega_{n,m} = \frac{1}{\sqrt{\mu\epsilon}}\sqrt{\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2}
-\qquad m,n = 0,1,2,... \quad (m=n\neq0)
+\qquad m,n = 0,1,2,\cdots \quad (m=n\neq0)
 \label{eq:eig_vals_sqare_waveguide}
 \end{equation}
 Where $\omega$ is indexed by integers $n,m$ and the trivial solution $\omega = 0$ is excluded. $a$ is the width of the rectangular cross section and $b$ is its height.
@@ -186,7 +189,7 @@ The wave functions that are solution to this eigenproblem for each component of 
 
 For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \ref{eq:Ez_mag}, and how similar are the analytic and numeric  natural frequencies of the guide $\omega$.
 
-The numerical solution for rectangular waveguide has less degenerate modes, and the sapes look better.
+The numerical solution for rectangular wave-guide has less degenerate modes, and the shapes look better.
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -205,14 +208,14 @@ Anlytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\
 \begin{figure}
 \centering
 \includegraphics[scale=0.1]{./img/square_waveguide.pdf}
-\caption{Results for three different modes from the simulation of a square shaped waveguide with side $a=b=2$}
+\caption{Results for three different modes from the simulation of a square shaped wave-guide with side $a=b=2$}
 \label{fig:square_waveguide}
 \end{figure}
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\multicolumn{5}{|c|}{Comparison of $\omega^2$ for rectangular waveguide $a =2b$} \\
+\multicolumn{5}{|c|}{Comparison of $\omega^2$ for rectangular wave-guide $a =2b$} \\
 \hline 
 m,n & 1,1 & 2,1 & 3,1 & 1,2 \\ 
 \hline 
@@ -231,9 +234,9 @@ Anlytic & 3.08425137 & 4.93480220 & 8.0190535 & 12.33700550 \\
 \end{figure}
 
 
-\subsubsection{Circular waveguides}
+\subsubsection{Circular wave-guides}
 
-For a circular wave guide the modes are 
+For a circular wave-guide the modes are 
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
@@ -253,11 +256,11 @@ Anlytic & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\
 \begin{figure}
 \centering
 \includegraphics[scale=0.1]{./img/circular_waveguide.pdf}
-\caption{Results for three different modes from the simulation of circular waveguide with radius $a=2$.}
+\caption{Results for three different modes from the simulation of circular wave-guide with radius $a=2$.}
 \label{fig:circular_waveguide}
 \end{figure}
 
-\subsubsection{Hexagonal waveguide}
+\subsubsection{Hexagonal wave-guide}
 
 Threefold degeneracy is seen in modes of hexagonal guides due to symmetries.
 
@@ -279,17 +282,17 @@ Anlytic &  &  &  &  \\
 \begin{figure}
 \centering
 \includegraphics[scale=0.07]{./img/hexagonal_waveguide.pdf}
-\caption{Degneracy of modes from the simulation of hexagonal waveguide.}
+\caption{Degneracy of modes from the simulation of hexagonal wave-guide.}
 \label{fig:hexagonal_waveguide}
 \end{figure}
 \subsubsection{Elliptical waveguide}
 
-The closest to a reference from which to compare the solutions of elliptical waveguides was a study of oscillationin an elliptic membrane by J. Gutiérrez Vega \cite{J.Gutierrez-Vega1999}. Shapes shown in figure \ref{fig:elliptical_waveguide} are in agreement with the images in the reference. 
+The closest to a reference from which to compare the solutions of elliptical waveguides was a study of oscillation in an elliptic membrane by J. Guti\'errez Vega \cite{J.Gutierrez-Vega1999}. Shapes shown in figure \ref{fig:elliptical_waveguide} are in agreement with the images in the reference. 
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\multicolumn{5}{|c|}{First four frequencies $\omega$ for hexagonal wave-guide} \\
+\multicolumn{5}{|c|}{First four frequencies $\omega$ for elliptical wave-guide} \\
 \hline 
 FEM     & 2.0195 & 2.4149 & 2.6627 & 2.9457 \\ 
 \hline 
@@ -299,12 +302,12 @@ FEM     & 2.0195 & 2.4149 & 2.6627 & 2.9457 \\
 \begin{figure}
 \centering
 \includegraphics[scale=0.1]{./img/elliptical_waveguide.pdf}
-\caption{Results for the first 8 modes from the simulation of an elliptical waveguide with minor axis $a=2$ and mayor axis $b=3$.}
+\caption{Results for the first 8 modes from the simulation of an elliptical wave-guide with minor axis $a=2$ and mayor axis $b=3$.}
 \label{fig:elliptical_waveguide}
 \end{figure}
-\subsubsection{Isoespectral shapes}
 
-Tested the solver by performing the computation of isoespectral shapes as proposed by Chapman in \cite{Chapman1995}. The idea behind this was to obtain the same eigenvalues from different shapes by taking advantage of possible mappings between figures that share certain properties.
+\subsubsection{Isoespectral shapes}
+We also tested the solver by performing the computation of isoespectral shapes as proposed by Chapman in \cite{Chapman1995}. The idea behind this was to obtain the same eigenvalues from different shapes by taking advantage of possible mappings between figures that share certain properties.
 A comparison between eigenvalues is presented in table \ref{tab:iso_wav_comparison}, and the first 4 non-degenerate modes are shown in figure \ref{fig:isoespectral_waveguide}.
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
@@ -327,7 +330,7 @@ Shape 2 & 6.3850403 & 7.65926504 & 9.11794073 & 10.23394057 \\
 
 \subsubsection{Finite lattices}
 
-Now that the software was tested for the solution of eigenvalue problems, it needed to prove its ability to handle simulations of heterogeneous domains, like in photonic crystals. The following results are tests where the harmonic wave equation is solved for a finite grid of $4\times 4$ circular dielectric slabs with ratio $\dfrac{r}{a}=0.2$ and dielectric constant $\epsilon_r = 8.9$ surrounded by air. Boundary conditions are as in \ref{eq:square_bc}, this is, inside a rectangular metallic boundary like if in a wave guide. The expected result is to see concentration of field inside regions with higher $\epsilon$. As well as lower natural frequencies than those produced by homogeneous medium due to the denominator $\sqrt{\mu\epsilon}$ in \ref{eq:eig_vals_sqare_waveguide}. 
+Now that the software was tested for the solution of eigenvalue problems, it needed to prove its ability to handle simulations of heterogeneous domains, like in photonic crystals. The following results are tests where the harmonic wave equation is solved for a finite grid of $4\times 4$ circular dielectric slabs with ratio $\dfrac{r}{a}=0.2$ and dielectric constant $\epsilon_r = 8.9$ surrounded by air. Boundary conditions are as in \ref{eq:square_bc}, this is, inside a rectangular metallic boundary like if in a wave-guide \note[NGZ]{Yo creo que en este caso tambi\'en estamos hablando de condiciones de Dirichlet...}. The expected result is to see concentration of field inside regions with higher $\epsilon$. As well as lower natural frequencies than those produced by homogeneous medium due to the denominator $\sqrt{\mu\epsilon}$ in \ref{eq:eig_vals_sqare_waveguide}. 
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
@@ -345,7 +348,7 @@ Air  & 1.11074305 & 1.75637223 & 2.22176045 & 2.48458998 \\
 \end{center}
 
 Note in table \ref{tab:fin_lat_comparison} that if frequencies found for the air filled case are multiplied by two (this domain is twice as big) and then squared, we get the same result as in \ref{tab:sq_wav_comparison}. 
-Figure \ref{fig:fin_lat_waveguide} illustrates the difference between solving for an homogeneous and non-homogenous problems. The flexibility to easily model interfaces and to couple regions is one of the great advantages of using both the Finite Element Method and a vectorial formulation. Note that these are solutions that are hard to solve analytically.
+Figure \ref{fig:fin_lat_waveguide} illustrates the difference between solving for an homogeneous and non-homogenous problems. The flexibility to easily model interfaces and to couple regions is one of the great advantages of using both the Finite Element Method and a vectorial formulation. Notice that these are solutions that are hard to solve analytically.
 
 \begin{figure}
 \centering

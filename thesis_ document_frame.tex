@@ -1,4 +1,4 @@
-\documentclass[office, 10pt]{book}
+\documentclass[office, 10pt, openany]{book}
 \usepackage{trackchanges}
 % idioma
 \usepackage[utf8]{inputenc}
@@ -22,9 +22,9 @@
 
 %margenes según n. icontec
 \usepackage{vmargin}
-\setmarginsrb           { 4.0cm}  % left margin
+\setmarginsrb           { 3.0cm}  % left margin
                         { 4.0cm}  % top margcm
-                        { 2.0cm}  % right margcm
+                        { 3.0cm}  % right margcm
                         { 3.0cm}  % bottom margcm
                         {  10pt}  % head height
                         {0.25cm}  % head sep
@@ -46,8 +46,8 @@
 			\vfill
 			{\large\bf Santiago Echeverri Chac\'on
 			\\\emph{sechev14@eafit.edu.co}\par}
-			{\large\bf Advisor: Nicol\'as Guar\'in Zapata
-			\\\emph{nicoguarin@gmail.com}}
+%			{\large\bf Advisor: Nicol\'as Guar\'in Zapata
+%			\\\emph{nicoguarin@gmail.com}}
 			\vfill
 								\vfill
 			{\large\bf Departamento de Ciencias B\'asicas \par}
@@ -72,7 +72,7 @@
 			\vfill
 			{\large\bf Thesis document presented as a partial prerequisite for the title of Bachelor in Engineering Physics \par}
 			\vfill
-					\vfill
+			\vfill
 			{\large\bf Departamento de Ciencias B\'asicas \par}
 			{\large\bf Escuela de Ciencias y Humanidades \par}
 			{\large\bf Universidad EAFIT \par}
@@ -98,25 +98,25 @@ urlcolor=black, cite color=blue]{hyperref} %
 \usepackage[hyperpageref]{backref} 
 \begin{document}
 \portada
+\cleardoublepage
 \contraportada
 
+\pdfbookmark[0]{Table of contents}{}
 \tableofcontents
+\listoffigures
 \clearpage
 
 \include{./src/Introduction}
 \include{./src/Problem}
-<<<<<<< HEAD
 
-=======
->>>>>>> d34c76520d2d7823356a5a7078bd259f7749c34c
 \include{./src/Electromagnetic_waves_in_periodic_media}
-\include{./src/Periodicity_crystals_and_Bloch_theory}
-
 \include{./src/Finite_element_method}
 \include{./src/Implementation}
 \include{./src/Results}
 \include{./src/Conclusions}
 
+\cleardoublepage \phantomsection
+\addcontentsline{toc}{chapter}{References}
 \bibliographystyle{unsrt}
 \bibliography{thesis_references}
 \end{document}

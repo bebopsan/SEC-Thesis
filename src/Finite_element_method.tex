@@ -21,20 +21,20 @@
 
 The Finite Element Method approximates an integral formulation that is --in some sense-- equivalent with a differential equation. This integral (weak) formulation can be obtained from a variational principle, such as the Principle of Virtual Works, or the Integral of Action \cite{Goldstein2001}, but can also be obtained from a more general approach like the Weighted Residuals Method \cite{Zienkiewicz2005, Reddy_functional_analysis}. In the case of electromagnetic waves, we can formulate a variational principle where the functional to be minimized is the energy carried by the electric and magnetic fields defined in \ref{eq:energy_functional}. 
 
-This project uses the Galerkin Finite Element Method to construct an approximate solution of  initial-boundary value and eigenvalue problems involving the wave equation of electromagnetic fields \ref{eq:E-wave-harmonic2}. Galerkin's method is one of these weighted residual methods in which both the weight functions and the bases for approximating the solution are defined as a linear combination of piece wise continuous polynomial functions $h$: $$u = \sum_{i=1}^Nu_ih_i$$. Where $u_i$ are the unknown expansion coefficients and $h$ is the base. 
+This project uses the Galerkin Finite Element Method to construct an approximate solution of  initial-boundary value and eigenvalue problems involving the wave equation of electromagnetic fields \ref{eq:E-wave-harmonic2}. Galerkin's method is one of these weighted residual methods in which both the weight functions and the bases for approximating the solution are defined as a linear combination of piece wise continuous polynomial functions $h$: $$u = \sum_{i=1}^Nu_ih_i$$. Where $u_i$ are the unknown expansion coefficients and $h_i$ are the base functions. 
 
 So if we have a general partial differential equation of the form: 
 \begin{equation}
 \mathcal{L}(u) = f
 \label{eq:general_form_of_DE}
-\end{equation}  where $\mathcal{L}$ denotes a differential operator, u denotes the unknown solution to be found and $f$ denotes source function, we can assume an approximation $u'$ of $u$ and build a residual defined as $\mathcal{R} = \mathcal{L}(u')-f$ to be minimized. What we want is to find a function $u'$ that makes $\mathcal{R}=0$. A way to do this is to construct a functional that is defined as the integral over all space of the residual multiplied by a weighting function $w$, and then set this functional equal to zero. 
+\end{equation}  where $\mathcal{L}$ denotes a differential operator, $u$ denotes the unknown solution to be found and $f$ denotes source function, we can assume an approximation $u'$ of $u$ and build a residual defined as $\mathcal{R} = \mathcal{L}(u')-f$ to be minimized. What we want is to find a function $u'$ that makes $\mathcal{R}$ a minimum in an \emph{average} sense. A way to do this is to construct a functional that is defined as the integral over all space of the residual multiplied by a weighting function $w$, and then set this functional equal to zero. 
 \begin{equation}
 \int w \mathcal{R}(u') = 0
 \end{equation}
 Now depending on what bases we use to approximate $u$ and what we choose to do with the weighting functions we will get a different weighted residual method to obtain $u$. 
 Galerkin's method works by defining $w$ in the same form of $u$ as shown before.
 
-In the rest of this chapter, we will show how to apply Galerkíns Finite Element formulation to electromagnetism problems, and specifically to the time harmonic wave equation described in \ref{eq:E-wave-harmonic2}. The concepts treated here are the basis of the code that has been implemented in the software platform PeyeQM.
+In the rest of this chapter, we will show how to apply Galerkin's Finite Element formulation to electromagnetism problems, and specifically to the time harmonic wave equation described in \ref{eq:E-wave-harmonic2}. The concepts treated here are the basis of the code that has been implemented in the software platform PeYeQM.
 
 \section{Weak formulation of the problem}
 
@@ -52,9 +52,9 @@ If the field we want to obtain $\mathbf{E}$ is solution to equation \ref{eq:E-wa
 \begin{equation}
 \int_{\Omega}\mathbf{W}\cdot\left[ \nabla\times\ \left(\bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E} \right) - k_0^{2}\bar{\bar{\epsilon_r}}\cdot \mathbf{E}\right]= - ik_0Z_0 \int_{\Omega} \mathbf{W}\cdot\mathbf{J} \label{eq:E-wave-harmonic3} 
 \end{equation}
-Note that here the term $\nabla\times\ \left(\bar{\bar{\mu_r}}^{-1}\nabla\times \bullet \right) - k_0^{2}\bar{\bar{\epsilon_r}}\cdot \bullet$ stands as the operator $\mathcal{L}$ in equation \ref{eq:general_form_of_DE}, and $- ik_0Z_0\mathbf{J}$ as $f$. Separating the two terms of this new $\mathcal{L}$ we get:
+Note that here the term $\nabla\times\ \left(\bar{\bar{\mu_r}}^{-1}\nabla\times \bullet \right) - k_0^{2}\bar{\bar{\epsilon_r}}\cdot \bullet$ stands as the operator $\mathcal{L}$ in equation \ref{eq:general_form_of_DE}, and $- ik_0 Z_0\mathbf{J}$ as $f$. Separating the two terms of this new $\mathcal{L}$ we get:
 \begin{equation}
-\int_{\Omega}\mathbf{W}\cdot \nabla\times\ \left(\bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E} \right) -k_0^{2}\int_{\Omega}\mathbf{W}\cdot \bar{\bar{\epsilon_r}}\cdot \mathbf{E}= - ik_0Z_0 \int_{\Omega} \mathbf{W}\cdot\mathbf{J} \label{eq:E-wave-harmonic3} 
+\int_{\Omega}\mathbf{W}\cdot \nabla\times\ \left(\bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E} \right) -k_0^{2}\int_{\Omega}\mathbf{W}\cdot \bar{\bar{\epsilon_r}}\cdot \mathbf{E}= - ik_0 Z_0 \int_{\Omega} \mathbf{W}\cdot\mathbf{J} \label{eq:E-wave-harmonic3} 
 \end{equation}
 Now, lets focus on the first integral on the left hand side of the equation. Here we will invoke the vector identity: $\mathbf{A}\cdot\nabla\times\mathbf{B} = \mathbf{B}\cdot\nabla\times\mathbf{A} - \nabla\cdot(\mathbf{A}\times\mathbf{B})$ 
 Where $\mathbf{A}=\mathbf{W}$ and $\mathbf{B}=\bar{\bar{\epsilon_r}}\nabla\times \mathbf{E}$ To express it as:
@@ -75,8 +75,8 @@ The Divergence Theorem allows us to transform the volume integral on the second 
 \right) 
 \end{equation}
 
-And we will have two kinds of boundaries, Dirichlet and Newman \cite{Garcia2011}, thus $\oint_{\Gamma} = \int_{\Gamma_D}+\int_{\Gamma_N}$. Weight functions have been conveniently chosen to be zero at Dirichlet boundaries so, $\mathbf{W}\mid_{\Gamma_D}=0$. 
-One last step is to apply the triple product identity to the argument inside the Newman integral so that:
+And we will have two kinds of boundaries, Dirichlet and Neumann \cite{Garcia2011}, thus $\oint_{\Gamma} = \int_{\Gamma_D}+\int_{\Gamma_N}$. Weight functions have been conveniently chosen to be zero at Dirichlet boundaries so, $\mathbf{W}\mid_{\Gamma_D}=0$. 
+One last step is to apply the triple product identity to the argument inside the Neumann integral so that:
 
 $$\hat{n}\cdot
 \left(\mathbf{W}\times\bar{\bar{\mu_r}}^{-1}
@@ -104,11 +104,11 @@ For uniqueness of the solution and given that this is a boundary value problem, 
 \begin{align}
 \hat{n}\times\mathbf{E}&=\mathbf{P} \quad on \ \Gamma_D\\
 \hat{n}\times\left(\bar{\bar{\mu_r}}^{-1}
-\nabla\times \mathbf{E}\right) &=\mathbf{K}_N \quad on \ \Gamma_N \label{eq:Robin}
+\nabla\times \mathbf{E}\right) &=\mathbf{K}_N \quad on \ \Gamma_N \label{eq:BC}
 \end{align}
-$\mathbf{P}$ is the value for tangential electric field on Dirichlet boundaries $\Gamma_D$,  and $\mathbf{K}_N$ is a function that represents boundary sources or electric field flux on $\Gamma_N$. 
+$\mathbf{P}$ is the value for tangential electric field on Dirichlet boundaries $\Gamma_D$,  and $\mathbf{K}_N$ is a function that represents boundary sources or electric field flux on $\Gamma_N$.
 
-Replacing equation \ref{eq:Robin} in \ref{eq:E-wave-weak} we get:
+Replacing equation \ref{eq:BC} in \ref{eq:E-wave-weak} we get:
 
 \begin{equation}
 \begin{array}{rcl}
@@ -127,7 +127,7 @@ $$-\mathbf{W}\cdot\left(\hat{n}\times \left( \hat{n}\times
 
 \section{Abstract form of the equation}
 
-Now, in order to reduce verbosity and ease the calculations, we define a set of bi linear operators\footnote{Which are similar to the definition of inner product made in \ref{eq:inner_prod}} who represent the integrals in \ref{eq:E-wave-weak_3}. These operators are meant to ease mathematical manipulations. Let's do some definitions first:
+Now, in order to reduce verbosity and ease the calculations, we define a set of bi-linear operators\footnote{Which are similar to the definition of inner product made in \ref{eq:inner_prod}} who represent the integrals in \ref{eq:E-wave-weak_3}. These operators are meant to ease mathematical manipulations. Let's do some definitions first:
 $\mathbb{V}$ is a vector space of square integrable functions that vanishes at Dirichlet boundaries.
 
 $$ \mathbb{V}=\left\lbrace v\in L^2(a,b):a(v,v)<\infty\wedge v(\Gamma_D)=0\right\rbrace$$
@@ -174,13 +174,13 @@ a(\mathbf{W},\mathbf{E}) - m(\mathbf{W},\mathbf{E}) = -f(\mathbf{W})-q(\mathbf{W
 
 \section{Base functions and discretization}
 However right now we don't have a proper Galerkin formulation because $\mathbf{E}$ is still a continuous function of all space, and thus, very hard to solve. Specifically if we are in a 2D domain where:
-$$\mathbf{E}=E(x,y)_x\hat{a}_x + E(x,y)_y \hat{a}_y $$
-In order to have a discrete problem to solve for $\mathbf{E}$, it must be approximated, and this is done by assuming that we can write it as a linear combination of base functions. Obviously, in order to have a computable problem we must take only a finite number of those base functions. What we do in FE is using piecewise polynomials as base functions, piecewise polynomials are functions that we define continuous only over finite regions of space. So a function like $\mathbf{E}$ that is continuous over all space can be split into a number $N$ of functions that each is continuous over a finite region of the domain. 
+\[\mathbf{E}=E(x,y)_x\hat{a}_x + E(x,y)_y \hat{a}_y \]
+To have a discrete problem to solve for $\mathbf{E}$, it must be approximated, and this is done by assuming that we can write it as a linear combination of base functions. Obviously,  to have a computable problem we must take only a finite number of those base functions. What we do in FE is using piecewise polynomials as base functions, piecewise polynomials are functions that we define continuous only over disjoint finite regions of space. So a function like $\mathbf{E}$ that is continuous over all space can be split into a number $N$ of functions that each is continuous over a finite region of the domain. 
 Being so, the first step is to split the domain into elements like illustrated in figure \ref{fig:disc_domain}. Each base function of the expansion will exist only within its corresponding finite region or element. With that we have
 \begin{equation}
 \mathbf{E} = \sum_{el=1}^{N_{el}}\mathbf{E}^{el}
 \end{equation}
-Where $\mathbf{E}^{el}$ is a linear combination of interpolation functions $h$ who are locally continuous inside elements $el$:
+Where $\mathbf{E}^{el}$ is a linear combination of interpolation functions $h_i$ who are locally continuous inside elements $el$:
 \begin{equation}
 \mathbf{E}^{el} = \sum_{i =1}^N E_i^{el}h_i^{el}
 \end{equation}
@@ -191,7 +191,7 @@ and the values $E_i^{el}$ are the expansion coefficients that allow the function
 \caption{Discretized domain defined by a set of elements and their nodes. Taken with permission from \cite{Guarin2012}}
 \label{fig:disc_domain}
 \end{figure}
-Now, these functions $h$ can be seen as local interpolation functions of arbitrary order, and the order of the function will be proportional to the number of evaluation points in space needed to define it. The points will herein be called nodes, and they are a discrete representation of the coordinates in the domain. For higher order bases, one needs more evaluation points to define them, and because its easier to solve for lower order polynomials (fewer unknowns) we intentionally limit their order (usually to first or secon order). notice that an exact representation of $\mathbf{E}$ happens when $N\leftarrow\infty$.
+Now, these functions $h_i$ can be seen as local interpolation functions of arbitrary order, and the order of the function will be proportional to the number of evaluation points in space needed to define it. The points will herein be called nodes, and they are a discrete representation of the coordinates in the domain. For higher order bases, one needs more evaluation points to define them, and because its easier to solve for lower order polynomials (fewer unknowns) we intentionally limit their order (usually to first or second order). Notice that an exact representation of $\mathbf{E}$ happens when $N\leftarrow\infty$.
 
 \begin{figure}
 \centering
@@ -200,12 +200,12 @@ Now, these functions $h$ can be seen as local interpolation functions of arbitra
 \label{fig:2d_elem}
 \end{figure}
 
-For bi dimensional elements like those in \ref{fig:2d_elem} one has to define one interpolation function for each node and they must be built so that on each node $i$ the function $h_i$ has a value of 1 and the rest are zero. This is accomplished for a quadrilateral element of 4 to 9 nodes by using the functions given in table \ref{tab:int_funct}. The elements used in the software for the solution of electromagnetic fields are 8 node quadrilateral elements.
+For bi-dimensional elements like those in \ref{fig:2d_elem} one has to define one interpolation function for each node and they must be built so that on each node $i$ the function $h_i$ takes the value of 1 and zero at the rest. This is accomplished for a quadrilateral element of 4 to 9 nodes by using the functions given in table \ref{tab:int_funct}. The elements used in the software for the solution of electromagnetic fields are 8 node quadrilateral elements.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{./img/2D_gen_elem.pdf}
-\caption{In order to ease the definition of base functions, every element is transformed to a generalized "isoparametric element" by means of a function $g(x,y)$ \cite{Bathe1996} so that all elements share the same base. The element on the left has an arbitrary shape and position, and by means of function $g(x,y)$ is mapped to a standard element in a domain in $r$, $s$ that goes from $-1$ to $1$ }
+\caption{In order to ease the definition of base functions, every element is transformed to a generalized ``isoparametric element'' by means of a function $g(x,y)$ \cite{Bathe1996} so that all elements share the same base. The element on the left has an arbitrary shape and position, and by means of function $g(x,y)$ is mapped to a standard element in a domain in $r$, $s$ that goes from $-1$ to $1$ }
 \end{figure}
 \begin{center}
 \begin{table}
@@ -232,13 +232,16 @@ Lets say that the set of nodes that represent values of the field in the domain 
 
 If $N$ is the total number of values:
 
-$$N = n_x+ n_y$$.
+\[N = n_x + n_y\].
 
-Where $n_x$ and $n_y$ are the number of evaluation nodes associated to fields in $x$ and  $y$	. When programming it is convenient to distinguish where does a node belongs, so I will treat $n_x$ and $n_y$ as sets as well in order to build a notation for the sums based on  how an iterator surfs a set.
+Where $n_x$ and $n_y$ are the number of evaluation nodes associated to fields in $x$ and  $y$	. When programming it is convenient to distinguish where does a node belongs, so we will treat $n_x$ and $n_y$ as sets as well in order to build a notation for the sums based on  how an iterator surfs a set.
 
-$$n_x = n_x \in \eta_D + n_x \in \eta\setminus\eta_D $$
-$$n_y = n_y \in \eta_D + n_y \in \eta\setminus\eta_D $$
-If I say: $$i: n_x\in \eta_D$$  That will mean that the iteration will occur on the indexes that belong to the set of nodes in the Dirichlet region associated to $x$ component of the field. The field fr each node, for each region and and for each component can then be approximated by:
+
+\begin{align*}
+n_x &= n_x \in \eta_D + n_x \in \eta\setminus\eta_D\\
+n_y &= n_y \in \eta_D + n_y \in \eta\setminus\eta_D
+\end{align*}
+If we say: $$i: n_x\in \eta_D$$  That will mean that the iteration will occur on the indexes that belong to the set of nodes in the Dirichlet region associated to $x$ component of the field. The field fr each node, for each region and and for each component can then be approximated by:
 
 \begin{align*}
 E(x,y)_x\approx \sum_{i:\ n_x \in \eta_D} h_i E_i^x+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i E_i^x \\
@@ -248,14 +251,14 @@ E(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iE_i^y+
  
 Left side is known values and right side is unknowns.
 In the same way for test functions $W$ on the boundary we have: 
-$$\mathbf{W}=W(x,y)_x\hat{a}_x + W(x,y)_y \hat{a}_y $$
+\[\mathbf{W}=W(x,y)_x\hat{a}_x + W(x,y)_y \hat{a}_y \]
 \begin{align*}
 W(x,y)_x\approx \sum_{i:\ n_x \in \eta_D} h_i W_i^x+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i W_i^x \\
 W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
 \sum_{i:\ n_x \in \eta\setminus\eta_D}h_iW_i^y
 \end{align*}
 Moreover $\mathbf{J}$ and $\mathbf{K}_N$ can also be interpolated if there are Neumann boundary conditions or, sources. 
-$$\mathbf{J}=J(x,y)_x\hat{a}_x + J(x,y)_y \hat{a}_y $$
+\[\mathbf{J}=J(x,y)_x\hat{a}_x + J(x,y)_y \hat{a}_y \]
 
 \begin{align*}
 J(x,y)_x\approx \sum_{i:\ n_x \in \eta_D}h_i J_i^x+\sum_{i:\ n_x \in \eta\setminus\eta_D}h_i J_i^x \\
@@ -271,16 +274,17 @@ K(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_i K_i^y+
 
 Substitution of $\mathbf{E}$ and $\mathbf{W}$, into \ref{eq:E-wave-weak_3} is a mess. To make it easier lets use the operators and their nice properties. To be bi linear is to be linear in both arguments, to be linear means to satisfy \href{http://en.wikipedia.org/wiki/Additive_function}{additivity} and \href{http://en.wikipedia.org/wiki/Homogeneous_function}{homogeneity}. An illustration of this:
 
-$$a(\alpha u+\beta v, w)=\alpha a(u,w)+\beta a(v,w)$$
-
-$$a(u,\alpha v+\beta w)=\alpha a(u,v)+\beta a(u,w)$$
+\begin{align*}
+\alpha u+\beta v, w)&=\alpha a(u,w)+\beta a(v,w)\\
+a(u,\alpha v+\beta w)&=\alpha a(u,v)+\beta a(u,w)
+\end{align*}
 
 The rotational and dot product inside the integrals defined in the abstract forms are linear. A proof for that is out of the reach of this document. 
 The proof of
-$$a(u,v) = a(v,u)$$
+\[a(u,v) = a(v,u)\]
 was made in equation \ref{eq:hermiticity_proof}, and a proof of
-$$m(u,v) = m(v,u)$$
-is obtained by assuming that $v$ and $u$ have the same base. Which we did by using Galerkin.
+\[m(u,v) = m(v,u)\]
+is obtained by assuming that $v$ and $u$ have the same base. Which we did by using the Galerkin weighting.
 
 So the following can happen:
 
@@ -291,26 +295,26 @@ a\left(W_x,E_x\right)&=& a\left( \sum_{i:\ n_x \in \eta_D} h_i W_i^x, \sum_{j:\ 
 &=& \sum_{j:\ n_x \in \eta_D} a\left(  h_i ,  h_j \right)E_j^x \sum_{i:\ n_x \in \eta_D}W_i^x+\sum_{j:\ n_x \in \eta\setminus\eta_D}   a\left( h_i, h_j \right)E_j^x\sum_{i:\ n_x \in \eta\setminus\eta_D} W_i^x \label{eq:substitution_of_app_fields_in_a}
 \end{align}
 
-$$\sum_{j:\ n_x \in \eta_D}E_j^x = \vec{g}_j^x $$
-$$\sum_{i:\ n_x \in \eta\setminus\eta_D}W_i^x = \vec{W}^x $$
-$$\sum_{j:\ n_x \in \eta\setminus\eta_D}E_j^x = \vec{E}^x $$
-$$\vec{g}_i = \vec{g}_j^x+\vec{g}_j^y \qquad j = 1.. N$$
-$\vec{g}_j$ is a vector of size $N$ that holds values of $E$ on each Dirichlet boundary node for both $x$, and $y$ components. Vector $\hat{g}_i^y$ follows from a simmilar procedure on $E_y$. It is of importance to say that even though the sets defined under the summation are subsets of the set of all nodes, when programming, their associate vectors will span the whole domain. In other words this notation stands for entries to indexes to vectors that may be defined full of zeroes. Or in a different approach: $j$ in $j:\ n_x \in \eta_D$ can be indexes 1 and $N$ meaning that the first and last nodes belong to Dirichlet boundary points on $x$ All other elements of the vector are undefined and hold their initiation value zero.
+\[\sum_{j:\ n_x \in \eta_D}E_j^x = \vec{g}_j^x \]
+\[\sum_{i:\ n_x \in \eta\setminus\eta_D}W_i^x = \vec{W}^x \]
+\[\sum_{j:\ n_x \in \eta\setminus\eta_D}E_j^x = \vec{E}^x \]
+\[\vec{g}_i = \vec{g}_j^x+\vec{g}_j^y \qquad j = 1.. N \]
+$\vec{g}_j$ is a vector of size $N$ that holds values of $E$ on each Dirichlet boundary node for both $x$, and $y$ components. Vector $\hat{g}_i^y$ follows from a similar procedure on $E_y$. It is of importance to say that even though the sets defined under the summation are subsets of the set of all nodes, when programming, their associate vectors will span the whole domain. In other words this notation stands for entries to indexes to vectors that may be defined full of zeroes. Or in a different approach: $j$ in $j:\ n_x \in \eta_D$ can be indexes 1 and $N$ meaning that the first and last nodes belong to Dirichlet boundary points on $x$. All other elements of the vector are undefined and hold their initiation value zero.
 
 
-Changing the indexes i,j and using the definition of \href{http://en.wikipedia.org/wiki/Dot_product}{dot product} in a matrix notation we can translate the abstract form as:
+Changing the indexes $i$, $j$ and using the definition of \href{http://en.wikipedia.org/wiki/Dot_product}{dot product} in a matrix notation we can translate the abstract form as:
 
 \begin{align*}
 a\left(W_x,E_x\right)=&\langle \mathbb{A}\vec{g}^x,\vec{W}^x\rangle
 +\langle\mathbb{A}\vec{E}^x,\vec{W}^x\rangle  
 \end{align*}
 
-Where A is a matrix whose elements contain the indexed integration over the basis functions $h_i$, and $h_j$, these are known values because we know the form of the functions and can easily calculate the integrals by numerical or analytic means. For the solution in the software routines we implemented numerical integration based on Gauss-Legendre quadrature as defined in \cite{Bathe1996}. 
+Where $\mathbb{A}$ is a matrix whose elements contain the indexed integration over the basis functions $h_i$, and $h_j$, these are known values because we know the form of the functions and can easily calculate the integrals by numerical or analytic means \note[NGZ]{No me parece que anal\'iticamente sea tan simple.}. For the solution in the software routines we implemented numerical integration based on Gauss-Legendre quadrature as defined in \cite{Bathe1996}. 
 
 Matrix $\mathbb{A}$ is known as the stiffness matrix in Mechanics, and here it relates to energy stored in form of electric field. Matrix $\mathbb{A}$ is built as a combination of matrices $\mathbb{A}^x$ and $\mathbb{A}^y$:
-$$\mathbb{A} = \mathbb{A}^x+\mathbb{A}^y$$
+\[\mathbb{A} = \mathbb{A}^x+\mathbb{A}^y\]
 where
-$$\mathbb{A}^x = \sum_{i,j}^{n_x \in \eta\setminus\eta_D} a(h_i,h_j)+\sum_{i,j}^{n_y \in \eta\setminus\eta_D} a(h_i,h_j)$$
+\[\mathbb{A}^x = \sum_{i,j}^{n_x \in \eta\setminus\eta_D} a(h_i,h_j)+\sum_{i,j}^{n_y \in \eta\setminus\eta_D} a(h_i,h_j)\]
 
 The product $\mathbb{A}^x\vec{g}^x = \vec{d}^x$ will be called the Dirichlet vector.
 \begin{align}
@@ -327,18 +331,22 @@ m\left(W_x,E_x\right)=&\langle \vec{b}^x,\vec{W}^x\rangle
 +\langle\mathbb{M}^x\vec{E}^x,\vec{W}^x\rangle \label{eq:kinetic_discrete}
 \end{align}
 
-With $\mathbb{M}$ as the mass matrix or inductance matrix. Being related to the time derivative of the electric field, we can associate this to energy stored in the form of magnetic fields like a sort of inductance matrix. The global mass matrix is also a combination of terms related to the degree of freedom $x$ and $y$: $$\mathbb{M}=\mathbb{M}^x+\mathbb{M}^y$$$$\mathbb{M} = \sum_{i,j}^{n_x \in \eta\setminus\eta_D} m(h_i,h_j)+\sum_{i,j}^{n_y \in \eta\setminus\eta_D} m(h_i,h_j)$$
+With $\mathbb{M}$ as the mass matrix or inductance matrix. Being related to the time derivative of the electric field, we can associate this to energy stored in the form of magnetic fields like a sort of inductance matrix. The global mass matrix is also a combination of terms related to the degree of freedom $x$ and $y$:
+\begin{align*}
+\mathbb{M} &= \mathbb{M}^x+\mathbb{M}^y\\
+\mathbb{M} &= \sum_{i,j}^{n_x \in \eta\setminus\eta_D} m(h_i,h_j)+\sum_{i,j}^{n_y \in \eta\setminus\eta_D} m(h_i,h_j)
+\end{align*}
 
 And the same follows with operators $q$ and $f$:
 
 \begin{align}
 f(W_x) &= \langle \vec{f}^x, \vec{W^x}\rangle \label{eq:body_source}\\
 q(W_x) &= \langle \vec{q}^x, \vec{W^x}\rangle \label{eq:newman}\\
-\vec{f}_i^x &= ik_0Z_0\sum_{i:\ n_x \in \eta}\int_{\Omega} h_iJ_i^x\nonumber\\
+\vec{f}_i^x &= ik_0 Z_0\sum_{i:\ n_x \in \eta}\int_{\Omega} h_iJ_i^x\nonumber\\
 \vec{q}_i^x&= \sum_{i:\ n_x \in \eta_N}\int_{\Gamma_N} h_iK_i^x \nonumber
 \end{align}
 
-Where I introduced a subset of the set $\eta  \setminus \eta_D$ called $\eta_N$ which represents nodes on Newman boundaries.
+Where we introduced a subset of the set $\eta  \setminus \eta_D$ called $\eta_N$ which represents nodes on Neumann boundaries.
 
 Substituting definitions: \ref{eq:potential_discrete},\ref{eq:kinetic_discrete}, \ref{eq:newman},  \ref{eq:body_source} in equation \ref{eq:abstract_E_wave}, we get:
 
@@ -367,7 +375,7 @@ These two systems can be solved simultaneously by intercalating rows and columns
 \left(\mathbb{A}-\mathbb{M}\right)\vec{E} = \vec{b}-\vec{d}-\vec{q}-\vec{f}
 \end{equation*}
 
-Something that is used in many references is to remove rows and columns associated to Dirichlet positions of E in the matrices and vectors of the equation. This is done because we already know the values of E for those points and their information is already saved in vector $\vec{d}$. I will add the symbol $\setminus D$ before the symbols to note that Dirichlet rows and columns should be deleted.
+Something that is used in many references is to remove rows and columns associated to Dirichlet positions of $E$ in the matrices and vectors of the equation. This is done because we already know the values of $E$ for those points and their information is already saved in vector $\vec{d}$. We will add the symbol $\setminus D$ before the symbols to note that Dirichlet rows and columns should be deleted.
 
 \begin{equation*}
 ^{\setminus D}\left[\left(\mathbb{A}-\mathbb{M}\right)\vec{E}= \vec{b}-\vec{d}-\vec{q}-\vec{f}\right]
@@ -375,18 +383,22 @@ Something that is used in many references is to remove rows and columns associat
 \end{equation*}
 
 The solution of this linear system of equations is achieved by means of robust computational routines such as \href{http://www.netlib.org/lapack/}{LAPACK}. And they are finally put together with the known values in order to get a full representation of the field inside the domain.
+
 \section{Edge elements vs Node Elements}
-There is another way to represent vector fields in Finite Elements, and it is by using Edge Elements \cite{Jin2010}. Up until now we defined the problem as a simultaneous solution of two scalar fields, one associated to the $x$ coordinate and another to $y$, the advantage of doing that over solving for only one scalar field is that we have much more flexibility in the kinds of boundary conditions that can be formulated. We also achieve higher accuracy and can know more about the problem. 
-There is  however another form to postulate vector fields, and that is by defining tangential values of the field on each edge and interpolating $\mathbf{E}$ inside the element by using vectorial basis functions, these functions are then not related to each node, but to each line at the element. For example, the field inside  a three node element ($el$) with nodes $1,2,3$ is then the combination of the vector shape functions $\mathbf{N}_{ij}$:
+There is another way to represent vector fields in Finite Elements, and it is by using Edge Elements \cite{Jin2010}. Up until now we defined the problem as a simultaneous solution of two scalar fields, one associated to the $x$ coordinate and another to $y$, the advantage of doing that over solving for only one scalar field is that we have much more flexibility in the kinds of boundary conditions that can be formulated. We also achieve higher accuracy and can know more about the problem.
+
+There is  however another form to postulate vector fields, and that is by defining tangential values of the field on each edge and interpolating $\mathbf{E}$ inside the element by using vectorial basis functions, these functions are then not related to each node, but to each line at the element.  In the jargon of Finite Element these are termed Nedelec elements \cite{nedelec1980, kikuchi2001}, some preferences on these elements over the nodal elements resides on the fact that the electric and magnetic fields are 1-manifolds. For example, the field inside  a three node element ($el$) with nodes $1,2,3$ is then the combination of the vector shape functions $\mathbf{N}_{ij}$:
 \begin{equation}
 \mathbf{E}^{el}(x,y) =\mathbf{N}_{12}^{el}E_{12}^{el} + \mathbf{N}_{13}^{el}E_{13}^{el}+ \mathbf{N}_{23}^{el}E_{23}^{el}
 \end{equation}
 And from this point the formulation continues almost identically to what we did before.
 
-There is however an ongoing discussion \cite{Mur1994,Webb1993,Gerr1998} over the advantages and disadvantages of using edge elements instead of nodal elements, and at the moment of implementation edge elements seemed more troublesome to implement than node elements. The formulation of a vector field solver using edge elements is pending as one possible alternative to our current implementation.
+There is however an ongoing discussion \cite{Mur1994, Webb1993, Gerr1998} over the advantages and disadvantages of using edge elements instead of nodal elements, and at the moment of implementation edge elements seemed more troublesome to implement than node elements. The formulation of a vector field solver using edge elements is pending as one possible alternative to our current implementation.
+
 \section{Time domain formulation}
 For analysis of wave propagation in finite lattices with defects we must be able to simulate the evolution of the fields along time and a stationary harmonic model is no longer suitable. For this we have to define construct a numerical solution that combines the finite element method and finite differences, the former for the solution of spatial derivatives and the later for time derivatives.
 The following procedures are summarized and have less comments because they are made in a very similar way than the process in the previous section.
+
 \subsection{Weak formulation in time dependent problem}
 Proceeding in the same way as in the time harmonic case we take equation
 \ref{eq:E-wave-loads}, and rewrite it as:
@@ -409,7 +421,7 @@ Multiplying by the test function $\mathbf{W}$ and integrating over the entire do
 +\int\limits_{\Omega} \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \label{eq:time_dependent_Electric}
 \end{align}
 
-This is achieved remembering from before that $\hat{n}\cdot\mathbf{W} =0$ on $\Gamma_D$, and using all the vector identities invoked in the previous section.
+This is achieved remembering that $\hat{n}\cdot\mathbf{W} =0$ on $\Gamma_D$, and using all the vector identities invoked in the previous section.
 
 \subsection{Boundary conditions in time dependent problem}
 Boundaries are defined in the same way, but now they are time dependent:
@@ -419,15 +431,16 @@ Boundaries are defined in the same way, but now they are time dependent:
 \right)+Y\hat{n}\times\left(\hat{n}\times\frac{\partial\mathcal{E} (t)}{\partial t}\right)=& \mathcal{K}_N(t)
 \end{align}
 
-Using Newman boundary conditions applied to \ref{eq:time_dependent_Electric} we get:
+Using Neumann boundary conditions applied to \ref{eq:time_dependent_Electric} we get:
 \begin{equation}
 \int\limits_{\Omega} \bar{\bar{\mu_r}}^{-1}\nabla\times \mathcal{E}(t)\cdot \nabla\times\mathbf{W}
 + \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int_{\Gamma_N}\mathbf{W}\cdot\mathcal{K}_N(t)
 -\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \label{eq:td_weak_form_E_equation}
 \end{equation}
-\subsection{Base functions and abstract form?}
+
+\subsection{Base functions and abstract form}
 To obtain a finite element solution the spatial domain has to be discretized in the same way as we did when obtaining the frequency domain solution. For this, we use compact support basis functions that in combination with nodal values will give a representation of the global field as the combination of spatial  subdivisions called elements.
-In this case is better to invoke the definitions for the approximated functions firsthand:
+In this case is better to invoke the definitions for the approximated functions first-hand:
 \begin{align*}
 \mathcal{E}(t)=\mathcal{E}(x,y,t)_x\hat{a}_x + \mathcal{E}(x,y,t)_y \hat{a}_y\\
 \mathcal{E}(x,y,t)_x\approx \sum_{i:\ n_x \in \eta_D} h_i \mathcal{E}_i^x(t)+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i \mathcal{E}_i^x(t)\\
@@ -435,11 +448,11 @@ In this case is better to invoke the definitions for the approximated functions 
 \sum_{i:\ n_x \in \eta\setminus\eta_D}h_i\mathcal{E}_i^y(t)
 \end{align*}
 Noting that when time derivatives are applied over the field, these will act only on the nodal values $\mathcal{E}_i^x(t)$ so that for example:
-$$\frac{\partial \mathcal{E}(x,y,t)_x}{\partial t}\approx \sum_{i:\ n_x \in \eta_D} h_i \frac{\partial \mathcal{E}_i^x(t)}{\partial t}+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i \frac{\partial\mathcal{E}_i^x(t)}{\partial t}$$
-$\mathbf{W}$ Keeps being the same as defined in the previous section.$$\mathcal{J}=\mathbf{J}$$
-$$\mathcal{K}_N=\mathbf{K}_N$$
+\[\frac{\partial \mathcal{E}(x,y,t)_x}{\partial t}\approx \sum_{i:\ n_x \in \eta_D} h_i \frac{\partial \mathcal{E}_i^x(t)}{\partial t}+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i \frac{\partial\mathcal{E}_i^x(t)}{\partial t}\]
+$\mathbf{W}$ Keeps being the same as defined in the previous section.\[\mathcal{J}=\mathbf{J}\]
+\[\mathcal{K}_N=\mathbf{K}_N\]
 
-Operators are be almost the same as before. The main difference being that free space related material constants $k_0$ and $Z_0$ haven't been extracted from material matrices $\bar{\bar{\mu}}$ and $\bar{\bar{\epsilon}}$.
+Operators are almost the same as before. The main difference being that free space related material constants $k_0$ and $Z_0$ haven't been extracted from material matrices $\bar{\bar{\mu}}$ and $\bar{\bar{\epsilon}}$.
 
 \begin{equation}
 \begin{array}{rcl}
@@ -508,7 +521,7 @@ In the simulations that were performed as part of the project we didn't consider
 \label{sec:explicit_formulation}
 discrete representation of a continuous distribution of something that multiplies the second time derivative of the field.
 
-Mass matrices are cataloged as consistent or diagonal. Consistent mass matrices use the same shape functions as the ones used to generate the element stiffness matrix. All reference to mass matrices mentioned before, were consistent \cite{RobertD.Cook1989}. 
+Mass matrices are catalogued as consistent or diagonal. Consistent mass matrices use the same shape functions as the ones used to generate the element stiffness matrix. All reference to mass matrices mentioned before, were consistent \cite{RobertD.Cook1989}. 
 The other way to formulate mass matrices is the lumped mass matrix. Which is made by avoiding the interpolation and simply placing particle masses $m_i$ at nodes $i$ of an element such that $\sum m_i$ is the total element mass. 
 
 The great advantage of lumped mass matrices is that they are diagonal and the solution of the system of equations can be performed in a explicit manner convenient for big computational domains.
@@ -554,4 +567,4 @@ Replacing into our general formulation one gets (fix details):
 \label{eq:implicit_time_domain}
 \end{equation}
 
-The equation \ref{eq:implicit_time_domain} can be solve by an implicit solver that takes matrices and solves in one pass the system of equations for one time $n$ as we do with \ref{eq:harmonic_eq_dirichlet}. This however is not very practical for interesting problems with complex domains when running under workstations that have low memory such as my laptop. For the solution of \ref{eq:implicit_time_domain} is best to solve for each node at a time and this is done by using lumped matrices instead of consistent ones. Having a diagonal mass matrix $\mathbb{M}$ decouples the nodal values in time and makes it possible to solve for $\mathbf{E}_{n+1}$ without solving simultaneous systems of equations. The details of how the algorithm computes the solution of \ref{eq:implicit_time_domain} explicitly are treated in the documentation of the software online.
+The equation \ref{eq:implicit_time_domain} can be solved by an implicit solver that takes matrices and solves in one pass the system of equations for one time $n$ as we do with \ref{eq:harmonic_eq_dirichlet}. This however is not very practical for interesting problems with complex domains when running under workstations that have low memory such as my laptop. For the solution of \ref{eq:implicit_time_domain} is best to solve for each node at a time and this is done by using lumped matrices instead of consistent ones. Having a diagonal mass matrix $\mathbb{M}$ decouples the nodal values in time and makes it possible to solve for $\mathbf{E}_{n+1}$ without solving simultaneous systems of equations. The details of how the algorithm computes the solution of \ref{eq:implicit_time_domain} explicitly are treated in the documentation of the software online.
