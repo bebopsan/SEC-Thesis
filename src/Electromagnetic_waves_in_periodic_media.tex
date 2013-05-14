@@ -1,14 +1,14 @@
 \chapter{Electromagnetic waves in periodic media}
 \label{ch:Electromagnetic waves in periodic media}
 
-This chapter focuses on basic concepts and principles related to electromagnetic fields and waves based on Maxwell's equations. More over, some emphasis will be taken on stating these equations as a linear Hermitian Eigenvalue problem that has many common points with the Schrödinger equation and its application to crystals in the field of Solid State Physics.
+This chapter focuses on basic concepts and principles related to electromagnetic fields and waves based on Maxwell's equations. More over, some emphasis will be taken on stating these equations as a linear Hermitian Eigenvalue problem that has many common points with the Schr\''odinger equation and its application to crystals in the field of Solid State Physics \cite{Kittel2005}. 
 In this way, propagation of light in a photonic crystal can be defined using linear operators acting over wave functions that are solution to a given eigenvalue problem.  Periodicity is then invoked by means of discrete translational symmetry operators, and their associated phase shift eigenvalue. 
 
 \section{Maxwell equations}
 
-The macroscopic behavior of electromagnetism, including propagation of light in Photonic Crystals (PCs) are governed by \textbf{Maxwell quations}. Maxwell's equations are four equations that relate the electric and magnetic fields to their respective sources i.e. electric charges and currents. They were established by James Clerk Maxwell (1831-1879) based on experimental discoveries of André-Marie Ampere (1775-1836) and Michael Faraday (1791-1867) and a law of electricity made by Carl Friederich Gauss (1777-1855) \cite{Jin2010}.
+The macroscopic behavior of electromagnetism, including propagation of light in Photonic Crystals (PCs) are governed by \textbf{Maxwell equations}. Maxwell's equations are four (vectorial) equations that relate the electric and magnetic fields to their respective sources, i.e. electric charges and currents. They were established by James Clerk Maxwell (1831-1879) based on experimental discoveries of Andr\'e-Marie Ampere (1775-1836) and Michael Faraday (1791-1867), and a law of electricity made by Carl Friederich Gauss (1777-1855) \cite{Jin2010}.
 
-These equations are herein expressed in both their Integral and Differential forms. Further information on their derivation can be found in classical undergraduate textbooks on Electromagnetism. 
+These equations are herein expressed in both their Integral and Differential forms. Further information on their derivation can be found in classical textbooks on Electromagnetism (e.g. \cite{Jackson1998}). 
 
 Maxwell equations in integral form are closer to the fundamental postulates that inspired them and use integration of the fields over volumes surfaces and closed paths to relate fields and their sources. They are: 
 \begin{align}
@@ -37,19 +37,19 @@ In both set of equation we have
 \item $\rho$: Electric charge density (coulombs/meter$^3$).
 \end{itemize}
 
-Even though they may appear in this document it is important to say that in the implementation and simulations no current or charge densities are considered so $\rho = 0$ and $\mathbf{J} =0$.
-Being structures from which light must propagate, Photonic Crystals are made of dielectric, transparent  materials that have a given permeability or dielectric constant called $\epsilon$. When fields propagate through dielectric media, the dielectric gets electrically polarized and this affects the field. A polarization field known as polarization vector $\mathbf{P}$ appears and then the electric flux density is defined for a material with dielectric constant $\epsilon$.  A similar phenomenon happens with magnetic fields and materials that get magnetized, and an equivalent constitutive relation is constructed but now with constant $\mu$ or permeability.
+Even though they may appear in this document it is important to say that in the implementation and simulations no current or charge densities are considered so $\rho = 0$ and $\mathbf{J} =0$, what is common for the case of electromagnetic waves far away from the sources.
+Being structures from which light must propagate, Photonic Crystals are made of dielectric, translucent  materials that have a given permeability or dielectric constant called $\epsilon$. When fields propagate through dielectric media, the dielectric gets electrically polarized and this affects the field. A polarization field known as polarization vector $\mathbf{P}$ appears and then the electric flux density is defined for a material with dielectric constant $\epsilon$.  A similar phenomenon happens with magnetic fields and materials that get magnetized, and an equivalent constitutive relation is constructed but now with the parameter $\mu$ or permeability.
 So, the two constitutive relations in EM are:
 \begin{align}
-&\mathbf{D} = \epsilon_0 \cdot \mathbf{E} + \mathbf{P}\\
-&\mathbf{B} = \mu_0 \cdot \mathbf{H} + \mathbf{M},
+&\mathbf{D} = \epsilon_0 \mathbf{E} + \mathbf{P}\\
+&\mathbf{B} = \mu_0  \mathbf{H} + \mathbf{M},
 \end{align}
 where $\mathbf{P}$ is the polarization vector that tell us information about the response of the material to the external field due to orientation of the molecules inside of it, and $\mathbf{M}$ is the magnetization vector that is the analogous of the polarization for the magnetic case. If the fields are small enough the behavior of the material is linear and we can express the polarization and magnetization vectors as linear functions of $\mathbf{E}$ and $\mathbf{H}$
 \begin{align}
 &\mathbf{D} = \bar{\bar{\epsilon}} \cdot \mathbf{E}\\
 &\mathbf{B} = \bar{\bar{\mu}} \cdot \mathbf{H},
 \end{align}
-where the double bar refers to a second order tensor, and $\cdot$ is a tensor-vector product. A tensorial formulation is necessary if the material is anysotropic, this is, if its properties vary depending of the direction from where you look at them. If the material is isotropic (its the same from every angle), then we can assume $\bar{\bar{\epsilon}}$ and $\bar{\bar{\mu}}$ as scalars. Thorough the following chapters, and in the implementation of the software, these two quantities are assumed as scalars.
+where the double bar refers to a second order tensor, and $\cdot$ is a tensor-vector product. A tensorial formulation is necessary if the material is anisotropic, this is, if its properties vary depending of the direction from where you look at them. If the material is isotropic (its the same from every angle), then we can assume $\bar{\bar{\epsilon}}$ and $\bar{\bar{\mu}}$ as scalars. Thorough the following chapters, and in the implementation of the software, these two quantities are assumed as scalars.
 
 Another important fact to note is that PC's do not generally involve magnetic constitutive materials, so from here on we will assume no magnetization $\mathbf{M} = 0$, $\mu = \mu_0$. 
 
@@ -59,7 +59,7 @@ As we can see in equations \ref{eq:diff_Faraday} \ref{eq:diff_Ampere} the electr
 
 If we take the curl to \eqref{eq:diff_Faraday}, we get
 \[ \nabla\times\nabla\times\mathbf{E} = -\frac{\partial}{\partial t} \nabla\times \mathbf{B} = -\frac{\partial}{\partial t} \nabla\times (\bar{\bar{\mu}} \cdot \mathbf{H}) \enspace , \]
-assuming a (piece wise\footnote{Because in Finite Elements we need homogeneity only inside elements}) homogeneous material,
+assuming a (piece wise\footnote{Because in our formulation of the Finite Element we need the functions to be smooth (in the first derivative) only inside elements}) homogeneous material,
 \begin{align*}
 \nabla\times\nabla\times \mathbf{E} = - \frac{\partial}{\partial t} \nabla\times \mathbf{B} &= \- \frac{\partial}{\partial t} ( \bar{\bar{\mu}}\cdot \nabla\times \mathbf{H})\\
 &= -\frac{\partial}{\partial t} \left( \bar{\bar{\mu}}\cdot \left[ \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J}\right] \right)\enspace ,
@@ -156,7 +156,7 @@ Where:
 
 Here the eigenvectors or phasors $\mathbf{E}$ represent spatial patterns of the harmonic modes, and eigenvalues $ \left( \frac{\omega}{c}\right)^2$ give information about the frequency $\omega$ (and thus wave number $k_0$) of such modes.
 \subsection{Hermiticity}
-As in Quantum Mechanics with the Hamiltonian, some key properties of the eigenfunctions that satisfy equation \ref{eq:simple_eigproblem} are \footnote{This proposition holds if we are not considering lossy materials, where the properties are treated as complex valued tensor and then the matrix is no longer Hermitian.}:
+As in Quantum Mechanics with the Hamiltonian, some key properties of the eigenfunctions that satisfy equation \ref{eq:simple_eigproblem} are \footnote{This proposition holds if we are not considering lossy materials, where the properties are treated as complex valued tensor and then the operator is no longer Hermitian.}:
 \begin{itemize}
 \item Have real eigenvalues,
 \item are orthogonal,
@@ -231,7 +231,7 @@ From this one can see that if two eigenfunctions have different frequencies ($\o
 must be true and they are orthogonal.
 Now, if $\left(\omega_1^2-\omega_2^2\right) = 0$ then $\mathbf{E}_1$ and $\mathbf{E}_2$ are not necessarily orthogonal, and the value is known as a \textbf{degenerate} frequency because there is more than one state or wavefunction with eigenvalue $\left(\frac{\omega^2}{c^2}\right)$. In this section we will see that degeneracy is related with symmetries of the domain, and that will be useful for the solution of periodic problems.  
 
-Symmetry operations are operations that do not transform the wavefunction of a mode. Symmetries of a problem are such that if a symetry operation is applied to the wavefunction, it remains the same but multiplied by a scalar. This is called being invariant under the operation.
+Symmetry operations are operations that do not transform the wavefunction of a mode. Symmetries of a problem are such that if a symmetry operation is applied to the wavefunction, it remains the same but multiplied by a scalar. This is called being invariant under the operation.
 So rotation, inversion, and reflections, are common symmetry operations that can be applied to systems that are symmetric under rotation, inversion and reflection, respectively. 
 Probably the most immediate symmetry operation one can think of is the identity operation:
 $\hat{E}\mathbf{E(r)} = \mathbf{E(r)}$, that transform a system into itself.
@@ -249,7 +249,7 @@ So, if we have a wave function $\mathbf{E(r)}$ displace it with $\hat{T_d}$, the
 \hat{\Theta} &= \hat{T_d}^{-1}\hat{\Theta}\hat{T_d}
 \end{align*}
 
-Whenever that happens with operators, we can write it in the form: $$\hat{T_d}\hat{\Theta}-\hat{\Theta}\hat{T_d}=0$$
+Whenever that happens with operators, we can write it in the form: \[\hat{T_d}\hat{\Theta}-\hat{\Theta}\hat{T_d}=0\]
 and bring the definition of \textbf{commutator} between two operators as in Quantum Mechanics: 
 \begin{equation}
 \left[\hat{A},\hat{B}\right] \triangleq \hat{A}\hat{B}-\hat{B}\hat{A}
@@ -259,7 +259,7 @@ If $\left[\hat{A},\hat{B}\right] = 0$ we say that $\hat{\Theta}$ commutes with $
 This is useful because sometimes eigenvalues and eigenfunctions of simple symmetry operators are easier to determine than those of $\hat{\Theta}$.  
 The set of symmetry operators that commute with $\hat{\Theta}$ forms the symmetry group of the problem.  
 The fact that plane wave solutions are a solution of the homogeneous isotropic wave equation problem is a consequence of them being solution to a continuous translational symmetry operation that commutes with the operator of the problem.
-"When one has commuting operators, one can choose simultaneous eiigenvectors of both operators" \cite	{Joannopoulos2008}
+``When one has commuting operators, one can choose simultaneous eiigenvectors of both operators'' \cite	{Joannopoulos2008}
 
 \subsection{Discrete translational symmetries}
 Photonic crystals, like crystals of atoms or molecules do not have continuous translational symmetry, instead, they have discrete translational symmetry \cite{Joannopoulos2008}. This means that the ruling operator for the field inside a photonic crystal is invariant only for certain translation operations, specifically those in which the distance of translation $r'$ is multiple of some fixed length that we will call a \textbf{primitive lattice vector}.
@@ -290,12 +290,12 @@ with $\vec{k} = \vec{k}_x+\vec{k}_y$ as the wave vector with two components.
 Now, \ref{eq:discrete_periodicity} does not immediately satisfy the form of equation \ref{eq:discrete_periodic} and we don't have an eigenfunction of the lattice. In order to get a solution that is invariant under discrete translations $r'$, the factor $e^{i\vec{k}\cdot r'}$ must be equal to 1, and this is obtained when one of two things happen, either $\vec{k}\cdot r' = 0$ or $\vec{k}\cdot r' = 2\pi n$ for $n = 1,2,3...$.
 The first, is a trivial solution where there is no wave, on the other hand, the second is valid for any combination of $\vec{k_x}$ and $\vec{k_y}$ that happens to satisfy $\vec{k_x} = \frac{2\pi m}{a_1}$ and $\vec{k_y} = \frac{2\pi m}{a_2}$.  The minimal quantities $b_1 = \frac{2\pi}{a_1}$ and $b_2 = \frac{2\pi}{a_2}$ are known as the primitive vectors of the reciprocal lattice, and the linear combination of integer multiples of them form the reciprocal lattice (shown in figure ), which is the set of all arbitrary reciprocal lattice vectors defined by:
 
-$$G = v_1b_1+v_2b_2$$
+\[G = v_1b_1+v_2b_2\]
 
 \begin{figure}
 \centering
 \includegraphics[scale=.5]{./img/squarer.pdf}
-\caption{Illustration of a bi dimensional point lattice in the reciprocal domain: a) Section of a square lattice with primitive reciprocal lattice vectors $b_1$ and $b_2$ b)  and a reciprocal unitary cells best known as the first Brilloin zone. Taken with permission from \cite{Guarin2012}.}
+\caption{Illustration of a bi dimensional point lattice in the reciprocal domain: a) Section of a square lattice with primitive reciprocal lattice vectors $b_1$ and $b_2$ b)  and a reciprocal unitary cells best known as the first Brillouin zone. Taken with permission from \cite{Guarin2012}.}
 \end{figure}
 
 The nice thing about reciprocal lattice vectors is that a given wave vector $\vec{k}$ will have an indistinguishable effect on the wave from a wave vector $\vec{k} + G$ that is translated by a reciprocal lattice vector.  And remembering that $\hat{T_d}$ commutes with $\hat{\Theta}$, a general solution for $\mathbf{E}$ can be arranged by having a linear combination of the functions with different $\vec{k} + G$ that are solution to equation \ref{eq:discrete_periodic}. This is done as follows:
@@ -307,7 +307,7 @@ The nice thing about reciprocal lattice vectors is that a given wave vector $\ve
 \mathbf{E(r)}_{\vec{k}} &= e^{i\vec{k}\cdot r} \mathbf{u}_{\vec{k}}(r)
 \end{align*}
 
-Where $\mathbf{u}_{\vec{k}}(r)$ is by definition a bi-periodic function in $r$ that satisfies  $\mathbf{u}_{\vec{k}}(r+r') = \mathbf{u}_{\vec{k}}(r)$ for a given $\vec{k}$.This result is commonly known as Bloch's Theorem, in solid state physics, and in mechanics as Floquet's. $C_{m,n}$ are expansion coefficients to be solved by explicit solution and are the key for the formulation of the Plane Wave Expansion (PWE) method \cite{Loaiza2011,Joannopoulos2008,StevenG.Johnson2001}. We however are not interested in $C_{m,n}$, because we are not solving for plane waves. Instead we will use this as a boundary condition by identifying how is the field after a translation of an arbitrary lattice vector $R$:
+Where $\mathbf{u}_{\vec{k}}(r)$ is by definition a bi-periodic function in $r$ that satisfies  $\mathbf{u}_{\vec{k}}(r+r') = \mathbf{u}_{\vec{k}}(r)$ for a given $\vec{k}$.This result is commonly known as Bloch's Theorem, in solid state physics, and in mechanics as Floquet's. $C_{m,n}$ are expansion coefficients to be solved by explicit solution and are the key for the formulation of the Plane Wave Expansion (PWE) method \cite{Loaiza2011, Joannopoulos2008, StevenG, Johnson2001}. We however are not interested in $C_{m,n}$, because we are not solving for plane waves. Instead we will use this as a boundary condition by identifying how is the field after a translation of an arbitrary lattice vector $R$:
 
 \begin{align}
 \mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot (r+R)} \mathbf{u}_{\vec{k}}(r+R)\\
@@ -319,13 +319,14 @@ We now know that if $R$ is a lattice vector like $r'$, the solution of the field
 
 \subsection{Conservation of energy for waves in source less media}
 
-We define the energy of a field $\mathbf{w}$ as its norm $||\mathbf{w}||^2 = \left(\mathbf{w},\mathbf{w}\right)$.
-Conservation of energy in time in a source less problem like that of equation \ref{eq:E-wave-loads} is obtained when $||\mathbf{w}||^2$ variation in time is zero, thus:
+We define the energy of a field $\mathbf{w}$ as its norm $||\mathbf{w}||^2 = \left(\mathbf{w},\mathbf{w}\right)$.\note[NGZ]{Y qu\'e pasa si el material disipa? no es esta tambi\'en una condici\'on en la que la energ\'ia no se conserva?}
+Conservation of energy in time in a source-less problem like that of equation \ref{eq:E-wave-loads} is obtained when $||\mathbf{w}||^2$ variation in time is zero, thus:
 \begin{equation}
 \frac{\partial ||\mathbf{w}||^2}{\partial t} =\frac{\partial \left(\mathbf{w},\mathbf{w}\right)}{\partial t} = \left(\dot{\mathbf{w}},\mathbf{w}\right)-\left(\mathbf{w},\dot{\mathbf{w}}\right) = \left(\hat{\Theta}\mathbf{w},\mathbf{w}\right)+\left(\mathbf{w},\hat{\Theta}\mathbf{w}\right) = \left(\hat{\Theta}\mathbf{w},\mathbf{w}\right)-\left(\hat{\Theta}\mathbf{w},\mathbf{w}\right) = 0
 \end{equation}
 Remembering that in a problem that is not harmonic we have $\hat{\Theta}\mathbf{E} = \frac{\partial^2 \mathbf{E}}{\partial t^2}$This means that under Hermitic operators such as $\hat{\Theta}$ the energy of the field is conserved
- \subsection{Energy functional of electromagnetic waves}
+
+\subsection{Energy functional of electromagnetic waves}
  
 By means of the \textbf{electromagnetic variational theorem} we can formulate an energy functional to  to be minimized. This functional is defined as a normalized inner product between the function and the function multiplied by the following operator known as Rayleigh Quotient \note[NGZ]{Este funcional se conoce como el cociente de Rayleigh.}:
 \begin{equation}
