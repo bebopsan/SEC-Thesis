@@ -4,7 +4,11 @@ As mentioned in the introduction, we developed a software platform able to simul
 
 \section{Electrostatic benchmark tests}
 
+<<<<<<< HEAD
 Now, platform \href{https://github.com/bebopsan/peyeQM}{PeyeQM } was built in a \href{https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design}{bottom-up } process that started by making a FE solver that could handle static scalar problems of electron confinement in 2D potential wells for application in Quantum Mechanics\footnote{At first the PeYeQM was able to solve time independent Poisson and Schrödinger equations in 1D and 2D.}. This project involved an upgrade of that platform that began with the implementation of support for vector formulations, and a transition to Object Oriented Paradigm that could improve flexibility and maintenance.
+=======
+Now, platform \href{https://github.com/bebopsan/peyeQM}{PeyeQM } was built in a \href{https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design}{bottom-up } process that started by making a FE solver that could handle static scalar problems of electron confinement in 2D potential wells for application in Quantum Mechanics\footnote{At first the PeyeQM was able to solve time independent Poisson and Schr\''odinger equations in 1D and 2D.}. This project involved an upgrade of that platform that began with the implementation of support for vector formulations, and a transition to Object Oriented Paradigm that could improve flexibility and maintenance.
+>>>>>>> b851fd20906b4cac7263cb4d9919528697782cc7
 
 The first section of this chapter shows the results obtained for Electrostatic benchmark tests, and were made in order to assert the accuracy of the static vectorial solver, and  routines for the construction of stiffness matrices.
 
@@ -65,7 +69,7 @@ The script for producing this simulation and the necessary input files can be se
 
 \subsubsection{Charged cylinder}
 
-The next field problem to solve in order to test PeYeQM was one with circular geometry. The solution for the field due to a point charge or a charged cylinder was used to compare the precision of the method for representing fields with two components.
+The next field problem to solve in order to test PeyeQM was one with circular geometry. The solution for the field due to a point charge or a charged cylinder was used to compare the precision of the method for representing fields with two components.
 
 Gauss law \ref{eq:Gauss} in spherical coordinates, assuming a homogeneous medium with scalar permittivity is:
 
@@ -146,7 +150,7 @@ In the same way as before, a comparison between analytic and numerical solutions
 
 \section{Harmonic benchmark tests}
 The second section regards solutions of eigenvalue problems, either for closed domains or infinite and periodic ones. The first part will deal with simulation of resonant modes in wave-guides, and the second with free waves and periodic crystals.
-In this stage of PeYeQM we knew that the program was capable of assembling stiffness matrices and solving systems of linear equations, what the following tests with wave-guides would give was the certainty that we were able to form mass matrices as well  as solve the eigenvalue problems associated with a formulation of the form:
+In this stage of PeyeQM we knew that the program was capable of assembling stiffness matrices and solving systems of linear equations, what the following tests with wave-guides would give was the certainty that we were able to form mass matrices as well  as solve the eigenvalue problems associated with a formulation of the form:
 \[\mathbb{A}\mathbf{\vec{E}} = \mathbb{M}\mathbf{\vec{E}}\]
 
 
