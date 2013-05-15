@@ -225,7 +225,7 @@ Python is often used as a scripting language, it can call and execute other prog
 \begin{quote}
 ``Gmsh is a 3D finite element grid generator with a build-in CAD engine and post-processor. Its design goal is to provide a fast, light and user-friendly meshing tool with parametric input and advanced visualization capabilities'' \cite{Geuzaine2009}. 
 \end{quote}
-We used Gmsh as both a Computer Aided Design (CAD) tool and mesh generator for the modelling of simulation domains used in most part of the results presented in \ref{ch:results}. It could be said that Gmsh is the main pre-processing tool used by PeyeQM.
+We used Gmsh as both a Computer Aided Design (CAD) tool and mesh generator for the modelling of simulation domains used in most part of the results presented in \ref{ch:Results}. It could be said that Gmsh is the main pre-processing tool used by PeyeQM.
 
 Gmsh CAD and meshing modules are design such that its input and output can be parsed using ASCII text files written in Gmsh's own scripting language. In this project we took advantage of this, and developed the input format of the simulator over the same syntax as Gmsh otuput \verb|.msh| mesh files. Moreover, PeyeQM's module for the creation of geometries (\verb|gmsh_library.py|) used to define finite crystals with defects, exports geometry files \verb|.geo| that   are proper inputs for Gmsh. Using that module we can bypass the CAD module of Gmsh and construct arbitrary crystal-like geometries that are be interpreted and meshed by the meshing tool of Gmsh. The main classes used to define geometrical objects that are then translated to gmsh syntax are shown in the diagram of figure \ref{fig:gmsh_library_classes}
 

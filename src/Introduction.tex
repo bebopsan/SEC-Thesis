@@ -2,26 +2,25 @@
 \addcontentsline{toc}{chapter}{Introduction}
 \chapter*{Introduction}
 
-\footnote{La introduccion es lo que motiva al lector a leer el documento. Debe responder las preguntas: Por qu\'e es relevante esto?, Por qu\'e es relevante que yo (como ingeniero f\'isico) lo haya abordado?, Qu\'e componentes de ingenier\'ia y de f\'isica se han tocado en el trabajo?}
-Preface:
-This document presents the 
-The kind of problems that involve photonic crystals can be solved by using 
+This document describes the process of understanding and designing a computational tool for the simulation of electromagnetic waves in periodic crystals. It gives account of the  theory and concepts that are necessary for modeling electromagnetic fields using the Finite Element Method (FEM), and goes further by presenting the approach we used to implement it in the form of a software platform based in the Object Oriented Programming Paradigm. The document concludes by showing a set of results from simulations obtained by using the program, and compares these to analytic solutions and also to Photonic Crystal simulations taken from the literature. Good agreement with the references is found, and the software platform proved to be a promising tool for the modeling of photonic crystal devices.
+The project is thus, framed in the context of a field known as computational electromagnetism, which can bee seen as an intersection between the theory of Electromagnetic Physics, the mathematics of numerical methods and application of techniques and devices product of computer science. All of this together, gives rise to the computational platforms that enable engineers to model, design, and test novel electromagnetic components before actually making them. Saving thus, production costs and optimizing functionality.  
+\begin{figure}
+\centering
+\includegraphics[scale=1]{./img/interdisciplinary.pdf}
+\caption{Computational electromagnetism is a highly interdisciplinary field. Taken from \cite{Jin2010}}
+\label{fig:computational}
+\end{figure}
+In our case, the novel technology that the tool we design is allowing to test is that of \textbf{Photonic Crystals}. Photonic Crystals are materials designed to have light manipulation properties capable of revolutionizing the field of telecommunications and signal processing. With them, we can design devices that are able to confine, and mold light (like in figure \ref{fig:guide_point}) in ways that are similar to how electronic circuits manipulate charges and currents.  Opening the doors to realizable photonic circuits and new technologies.
 
-\footnote{A\~nadir\'e una serie de preguntas que pueden dar respuesta a algunas de las cosas que se esperan de una Introducc\'on. Nada de esto es obligatorio y lo pongo como una gu\'ia para la escritura.}
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{./img/pcs.pdf}
+\caption{a) Line defects acting as a wavegide \cite{Jin2010}. b) Point defects where resonant modes are confined \cite{Joannopoulos2008}.}
+\label{fig:guide_point}
+\end{figure}
 
-Qu\'e se describe en este documento? y en qu\'e consisti\'o el proyecto? (Qu\'e se va a ver en este trabajo y qu\'e no se va a ver en este trabajo)
-
-
-Definition of the problem will be treated in chapter \ref{ch:Problem}, followed by a brief state of the art recollection where some background in the topics of photonic crystals and computational methods for physics will be mentioned. Then, fundamental concepts behind light propagation in periodic materials (chapter \ref{ch:Electromagnetic waves in periodic media})  and the model used for the finite element procedure used are presented.
-
-C\'omo se desarroll\'o el proyecto? (Asociado a algo metodol\'ogico)
-
-Cu\'al es la motivaci\'on del proyecto? Cu\'al es la relevancia del proyecto?
-
-Cu\'ales son las posibles aplicaciones de esto?
-
-Por qu\'e te interesaste en la f\'isica computacional?
-
-Qu\'e te llam\'o la atenci\'on del problema de los cristales fot\'onicos? (Puede ir acompa\~nado de alguno de los art\'iculos de revisi\'on).
-
-
+To sum up, the problem of simulating Photonic Crystals is interesting in the context of Engineering Physics because
+\begin{itemize}
+\item it involves a frontier of technology, with widespread research, and promising future.
+\item And is an engaging, and interdisciplinary that can open doors to new subjects while reinforcing concepts and abilities such as application of numerical methods and software development.  
+\end{itemize}
