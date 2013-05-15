@@ -13,7 +13,7 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Representation of how much of the simulation process is performed by using PeyeQM's routines.}}{46}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram of general simulation stages as abstracted by PeyeQM.}}{47}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces This diagram shows the main classes defined PeyeQM. Classes that are called by a method are connected with lines that end with a black diamonds, and classes that are attributes of other classes are connected by white diamonds.}}{49}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces This diagram shows the classes defined in the module gmshlibrary.py. Classes that are called by a method are connected with lines that end with a black diamonds, inheritance is shown with a white arrow, and classes that are attributes of other classes are connected by white diamonds.}}{54}{figure.4.4}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces This diagram shows the classes defined in the module gmsh\_library.py. Classes that are called by a method are connected with lines that end with a black diamonds, inheritance is shown with a white arrow, and classes that are attributes of other classes are connected by white diamonds.}}{54}{figure.4.4}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Cross sectional view of parallel plate capacitor.}}{57}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Solution of electric field in parallel plate capacitor.}}{57}{figure.5.2}
