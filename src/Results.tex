@@ -3,12 +3,7 @@
 As mentioned in the introduction, we developed a software platform able to simulate propagation of electromagnetic waves in photonic crystals. In chapter \ref{ch:Electromagnetic waves in periodic media} we stated the equations that rule the problem, and discussed background behind one method of solution using FEA in chapter \ref{ch:Finite_element_method}. In this chapter the solutions obtained by applying these concepts are presented and compared with either their analytic solutions or numerical solutions from the literature.
 
 \section{Electrostatic benchmark tests}
-
-<<<<<<< HEAD
-Now, platform \href{https://github.com/bebopsan/peyeQM}{PeyeQM } was built in a \href{https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design}{bottom-up } process that started by making a FE solver that could handle static scalar problems of electron confinement in 2D potential wells for application in Quantum Mechanics\footnote{At first the PeYeQM was able to solve time independent Poisson and Schrödinger equations in 1D and 2D.}. This project involved an upgrade of that platform that began with the implementation of support for vector formulations, and a transition to Object Oriented Paradigm that could improve flexibility and maintenance.
-=======
-Now, platform \href{https://github.com/bebopsan/peyeQM}{PeyeQM } was built in a \href{https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design}{bottom-up } process that started by making a FE solver that could handle static scalar problems of electron confinement in 2D potential wells for application in Quantum Mechanics\footnote{At first the PeyeQM was able to solve time independent Poisson and Schr\''odinger equations in 1D and 2D.}. This project involved an upgrade of that platform that began with the implementation of support for vector formulations, and a transition to Object Oriented Paradigm that could improve flexibility and maintenance.
->>>>>>> b851fd20906b4cac7263cb4d9919528697782cc7
+Now, platform \href{https://github.com/bebopsan/peyeQM}{PeyeQM } was built in a \href{https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design}{bottom-up } process that started by making a FE solver that could handle static scalar problems of electron confinement in 2D potential wells for application in Quantum Mechanics\footnote{At first the PeyeQM was able to solve time independent Poisson and Schr\"odinger equations in 1D and 2D.}. This project involved an upgrade of that platform that began with the implementation of support for vector formulations, and a transition to Object Oriented Paradigm that could improve flexibility and maintenance.
 
 The first section of this chapter shows the results obtained for Electrostatic benchmark tests, and were made in order to assert the accuracy of the static vectorial solver, and  routines for the construction of stiffness matrices.
 
@@ -203,7 +198,7 @@ m,n & 1,1 & 1,2 & 2,2 & 3,1 \\
 \hline 
 FEM & 4.93480857 & 12.33721117 & 19.73961759 & 24.6763011 \\ 
 \hline 
-Anlytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\ 
+Analytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\ 
 \hline 
 \end{tabular} 
 \label{tab:sq_wav_comparison}
@@ -225,7 +220,7 @@ m,n & 1,1 & 2,1 & 3,1 & 1,2 \\
 \hline 
 FEM     & 3.08425459 & 4.93480795 & 8.0190859 & 12.33717191 \\ 
 \hline 
-Anlytic & 3.08425137 & 4.93480220 & 8.0190535 & 12.33700550 \\ 
+Analytic & 3.08425137 & 4.93480220 & 8.0190535 & 12.33700550 \\ 
 \hline 
 \end{tabular} 
 \label{tab:rec_wav_comparison}
@@ -251,7 +246,7 @@ m,n & 0,1 & 1,1 & 2,1 & 0,2 \\
 \hline 
 FEM     & 2.40482634 & 3.83171343 & 5.13564189 & 5.52012378 \\ 
 \hline 
-Anlytic & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\ 
+Analytic & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\ 
 \hline 
 \end{tabular} 
 \label{tab:cir_wav_comparison}
@@ -276,8 +271,6 @@ Threefold degeneracy is seen in modes of hexagonal guides due to symmetries.
 m,n & 0,1 & 1,1 & 2,1 & 0,2 \\ 
 \hline 
 FEM     & 5.34990939 & 8.51630317 & 11.39340788 & 12.2461672 \\ 
-\hline 
-Anlytic &  &  &  &  \\ 
 \hline 
 \end{tabular} 
 \label{tab:hex_wav_comparison}
@@ -351,7 +344,7 @@ Air  & 1.11074305 & 1.75637223 & 2.22176045 & 2.48458998 \\
 \label{tab:fin_lat_comparison}
 \end{center}
 
-Note in table \ref{tab:fin_lat_comparison} that if frequencies found for the air filled case are multiplied by two (this domain is twice as big) and then squared, we get the same result as in \ref{tab:sq_wav_comparison}. 
+Notice in table \ref{tab:fin_lat_comparison} that if frequencies found for the air filled case are multiplied by two (this domain is twice as big) and then squared, we get the same result as in \ref{tab:sq_wav_comparison}. 
 Figure \ref{fig:fin_lat_waveguide} illustrates the difference between solving for an homogeneous and non-homogenous problems. The flexibility to easily model interfaces and to couple regions is one of the great advantages of using both the Finite Element Method and a vectorial formulation. Notice that these are solutions that are hard to solve analytically.
 
 \begin{figure}
