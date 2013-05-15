@@ -4,7 +4,7 @@ As mentioned in the introduction, we developed a software platform able to simul
 
 \section{Electrostatic benchmark tests}
 
-Now, platform \href{https://github.com/bebopsan/peyeQM}{PeyeQM } was built in a \href{https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design}{bottom-up } process that started by making a FE solver that could handle static scalar problems of electron confinement in 2D potential wells for application in Quantum Mechanics\footnote{At first the PeYeQM was able to solve time independent Poisson and Schr\''odinger equations in 1D and 2D.}. This project involved an upgrade of that platform that began with the implementation of support for vector formulations, and a transition to Object Oriented Paradigm that could improve flexibility and maintenance.
+Now, platform \href{https://github.com/bebopsan/peyeQM}{PeyeQM } was built in a \href{https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design}{bottom-up } process that started by making a FE solver that could handle static scalar problems of electron confinement in 2D potential wells for application in Quantum Mechanics\footnote{At first the PeYeQM was able to solve time independent Poisson and Schrödinger equations in 1D and 2D.}. This project involved an upgrade of that platform that began with the implementation of support for vector formulations, and a transition to Object Oriented Paradigm that could improve flexibility and maintenance.
 
 The first section of this chapter shows the results obtained for Electrostatic benchmark tests, and were made in order to assert the accuracy of the static vectorial solver, and  routines for the construction of stiffness matrices.
 
@@ -152,7 +152,7 @@ In this stage of PeYeQM we knew that the program was capable of assembling stiff
 
 \subsection{Eigenvalues and modes in wave-guides}
 
-Ideal wave-guides can be modelled by a source-less version of the wave equation for time harmonic fields \ref{eq:E-wave-harmonic} in arbitrary 2D domains closed by a metallic boundary that guarantees Dirichlet condition $\mathbf{E} = 0\quad at\quad \Gamma$ \note[NGZ]{Un borde met\'alico no garantiza que las l\'ineas entran perpendicular al conductor? y por ende son condiciones de Neumann??}. This problem is relevant in electromagnetism and telecommunications because it is the principle behind many applications such as data transmission in fiber optics, and microwaves. Here, the 2D domain represents a cross section of a metallic structure that guides waves along its axis. We are particularly interested in knowing two things:
+Ideal wave-guides can be modelled by a source-less version of the wave equation for time harmonic fields \ref{eq:E-wave-harmonic} in arbitrary 2D domains closed by a metallic boundary that guarantees Dirichlet condition $\mathbf{E} = 0\quad at\quad \Gamma$ . This problem is relevant in electromagnetism and telecommunications because it is the principle behind many applications such as data transmission in fiber optics, and microwaves. Here, the 2D domain represents a cross section of a metallic structure that guides waves along its axis. We are particularly interested in knowing two things:
 \begin{enumerate}
 \item The modes or wave functions that are solution to the equation for a particular shape.
 \item The frequencies associated to those modes or shapes. 
@@ -330,7 +330,7 @@ Shape 2 & 6.3850403 & 7.65926504 & 9.11794073 & 10.23394057 \\
 
 \subsubsection{Finite lattices}
 
-Now that the software was tested for the solution of eigenvalue problems, it needed to prove its ability to handle simulations of heterogeneous domains, like in photonic crystals. The following results are tests where the harmonic wave equation is solved for a finite grid of $4\times 4$ circular dielectric slabs with ratio $\dfrac{r}{a}=0.2$ and dielectric constant $\epsilon_r = 8.9$ surrounded by air. Boundary conditions are as in \ref{eq:square_bc}, this is, inside a rectangular metallic boundary like if in a wave-guide \note[NGZ]{Yo creo que en este caso tambi\'en estamos hablando de condiciones de Dirichlet...}. The expected result is to see concentration of field inside regions with higher $\epsilon$. As well as lower natural frequencies than those produced by homogeneous medium due to the denominator $\sqrt{\mu\epsilon}$ in \ref{eq:eig_vals_sqare_waveguide}. 
+Now that the software was tested for the solution of eigenvalue problems, it needed to prove its ability to handle simulations of heterogeneous domains, like in photonic crystals. The following results are tests where the harmonic wave equation is solved for a finite grid of $4\times 4$ circular dielectric slabs with ratio $\dfrac{r}{a}=0.2$ and dielectric constant $\epsilon_r = 8.9$ surrounded by air. Boundary conditions are as in \ref{eq:square_bc}, this is, inside a rectangular metallic boundary like if in a wave-guide. The expected result is to see concentration of field inside regions with higher $\epsilon$. As well as lower natural frequencies than those produced by homogeneous medium due to the denominator $\sqrt{\mu\epsilon}$ in \ref{eq:eig_vals_sqare_waveguide}. 
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}

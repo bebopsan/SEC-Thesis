@@ -319,16 +319,16 @@ We now know that if $R$ is a lattice vector like $r'$, the solution of the field
 
 \subsection{Conservation of energy for waves in source less media}
 
-We define the energy of a field $\mathbf{w}$ as its norm $||\mathbf{w}||^2 = \left(\mathbf{w},\mathbf{w}\right)$.\note[NGZ]{Y qu\'e pasa si el material disipa? no es esta tambi\'en una condici\'on en la que la energ\'ia no se conserva?}
+We define the energy of a field $\mathbf{w}$ as its norm $||\mathbf{w}||^2 = \left(\mathbf{w},\mathbf{w}\right)$.
 Conservation of energy in time in a source-less problem like that of equation \ref{eq:E-wave-loads} is obtained when $||\mathbf{w}||^2$ variation in time is zero, thus:
 \begin{equation}
 \frac{\partial ||\mathbf{w}||^2}{\partial t} =\frac{\partial \left(\mathbf{w},\mathbf{w}\right)}{\partial t} = \left(\dot{\mathbf{w}},\mathbf{w}\right)-\left(\mathbf{w},\dot{\mathbf{w}}\right) = \left(\hat{\Theta}\mathbf{w},\mathbf{w}\right)+\left(\mathbf{w},\hat{\Theta}\mathbf{w}\right) = \left(\hat{\Theta}\mathbf{w},\mathbf{w}\right)-\left(\hat{\Theta}\mathbf{w},\mathbf{w}\right) = 0
 \end{equation}
-Remembering that in a problem that is not harmonic we have $\hat{\Theta}\mathbf{E} = \frac{\partial^2 \mathbf{E}}{\partial t^2}$This means that under Hermitic operators such as $\hat{\Theta}$ the energy of the field is conserved
+Remembering that in a problem that is not harmonic we have $\hat{\Theta}\mathbf{E} = \frac{\partial^2 \mathbf{E}}{\partial t^2}$This means that under Hermitic operators such as $\hat{\Theta}$ the energy of the field is conserved\footnote{This expression for energy conservation holds only for cases where the operator does not change in time. A case where we have time varying material properties $\epsilon(r,t)$ can break conservation of energy if the time variation changes the norm\cite{Johnson07noteson}}.
 
 \subsection{Energy functional of electromagnetic waves}
  
-By means of the \textbf{electromagnetic variational theorem} we can formulate an energy functional to  to be minimized. This functional is defined as a normalized inner product between the function and the function multiplied by the following operator known as Rayleigh Quotient \note[NGZ]{Este funcional se conoce como el cociente de Rayleigh.}:
+By means of the \textbf{electromagnetic variational theorem} we can formulate an energy functional to  to be minimized. This functional is defined as a normalized inner product between the function and the function multiplied by the following operator known as Rayleigh Quotient:
 \begin{equation}
 U_f(\mathbf{E}) \triangleq \frac{\left(\mathbf{E}, \hat{\Theta} \mathbf{E}\right)}{\left(\mathbf{E},\mathbf{E}\right)}
 \label{eq:energy_functional}

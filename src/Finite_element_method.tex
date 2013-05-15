@@ -309,7 +309,7 @@ a\left(W_x,E_x\right)=&\langle \mathbb{A}\vec{g}^x,\vec{W}^x\rangle
 +\langle\mathbb{A}\vec{E}^x,\vec{W}^x\rangle  
 \end{align*}
 
-Where $\mathbb{A}$ is a matrix whose elements contain the indexed integration over the basis functions $h_i$, and $h_j$, these are known values because we know the form of the functions and can easily calculate the integrals by numerical or analytic means \note[NGZ]{No me parece que anal\'iticamente sea tan simple.}. For the solution in the software routines we implemented numerical integration based on Gauss-Legendre quadrature as defined in \cite{Bathe1996}. 
+Where $\mathbb{A}$ is a matrix whose elements contain the indexed integration over the basis functions $h_i$, and $h_j$, these are known values because we know the form of the functions and can calculate the integrals by numerical or analytic means. For the solution in the software routines we implemented numerical integration based on Gauss-Legendre quadrature as defined in \cite{Bathe1996}. 
 
 Matrix $\mathbb{A}$ is known as the stiffness matrix in Mechanics, and here it relates to energy stored in form of electric field. Matrix $\mathbb{A}$ is built as a combination of matrices $\mathbb{A}^x$ and $\mathbb{A}^y$:
 \[\mathbb{A} = \mathbb{A}^x+\mathbb{A}^y\]
