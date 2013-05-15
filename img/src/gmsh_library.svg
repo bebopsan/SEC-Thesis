@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1333.6"
+   height="1892.8719"
+   id="svg10257"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="gmsh_library.pdf">
+  <defs
+     id="defs10259">
+    <marker
+       inkscape:stockid="EmptyDiamondL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="EmptyDiamondL"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path7625"
+         d="M 0,-7.0710768 -7.0710894,0 0,7.0710589 7.0710462,0 0,-7.0710768 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.8,0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyDiamondL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker10039"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path10041"
+         d="M 0,-7.0710768 -7.0710894,0 0,7.0710589 7.0710462,0 0,-7.0710768 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.8,0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyDiamondL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker10043"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path10045"
+         d="M 0,-7.0710768 -7.0710894,0 0,7.0710589 7.0710462,0 0,-7.0710768 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.8,0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyDiamondL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker10047"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path10049"
+         d="M 0,-7.0710768 -7.0710894,0 0,7.0710589 7.0710462,0 0,-7.0710768 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.8,0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyDiamondL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker10051"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path10053"
+         d="M 0,-7.0710768 -7.0710894,0 0,7.0710589 7.0710462,0 0,-7.0710768 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.8,0.8)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="1027.4091"
+     inkscape:cy="977.69387"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1375"
+     inkscape:window-height="876"
+     inkscape:window-x="1345"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata10262">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(592.5143,905.50239)">
+    <g
+       class="node"
+       id="node1"
+       transform="matrix(1.25,0,0,1.25,567.07351,573.45391)">
+      <title
+         id="title4666">5</title>
+      <polygon
+         id="polygon4668"
+         points="-0.5,-205 108.5,-205 108.5,-91 -0.5,-91 -0.5,-91 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4670"
+         font-size="14.00"
+         y="-188.39999"
+         x="54"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Physical_Line</text>
+      <polyline
+         id="polyline4672"
+         points="-0.5,-179 108.5,-179 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4674"
+         font-size="14.00"
+         y="-162.39999"
+         x="7.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <text
+         id="text4676"
+         font-size="14.00"
+         y="-144.39999"
+         x="7.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">lines</text>
+      <text
+         id="text4678"
+         font-size="14.00"
+         y="-126.4"
+         x="7.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">tags : str</text>
+      <polyline
+         id="polyline4680"
+         points="-0.5,-117 108.5,-117 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4682"
+         font-size="14.00"
+         y="-100.4"
+         x="54"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'" />
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="node"
+       id="node3">
+      <title
+         id="title4708">7</title>
+      <polygon
+         id="polygon4710"
+         points="771,-55 687,-55 687,-55 687,-241 771,-241 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4712"
+         font-size="14.00"
+         y="-224.39999"
+         x="729"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Point</text>
+      <polyline
+         id="polyline4714"
+         points="687,-215 771,-215 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4716"
+         font-size="14.00"
+         y="-198.39999"
+         x="695"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">y : int</text>
+      <text
+         id="text4718"
+         font-size="14.00"
+         y="-180.39999"
+         x="695"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">x : int</text>
+      <text
+         id="text4720"
+         font-size="14.00"
+         y="-162.39999"
+         x="695"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <polyline
+         id="polyline4722"
+         points="687,-153 771,-153 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4724"
+         font-size="14.00"
+         y="-136.39999"
+         x="695"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">distance()</text>
+      <text
+         id="text4726"
+         font-size="14.00"
+         y="-118.4"
+         x="695"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">isBelow()</text>
+      <text
+         id="text4728"
+         font-size="14.00"
+         y="-100.4"
+         x="695"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">isLeft()</text>
+      <text
+         id="text4730"
+         font-size="14.00"
+         y="-82.400002"
+         x="695"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">isRight()</text>
+      <text
+         id="text4732"
+         font-size="14.00"
+         y="-64.400002"
+         x="695"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">isAbove()</text>
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="node"
+       id="node12">
+      <title
+         id="title4735">16</title>
+      <polygon
+         id="polygon4737"
+         points="632.5,-351 463.5,-351 463.5,-351 463.5,-789 632.5,-789 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4739"
+         font-size="14.00"
+         y="-772.40002"
+         x="548"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Rectangle</text>
+      <polyline
+         id="polyline4741"
+         points="463.5,-763 632.5,-763 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4743"
+         font-size="14.00"
+         y="-746.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">origin</text>
+      <text
+         id="text4745"
+         font-size="14.00"
+         y="-728.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">perimeter</text>
+      <text
+         id="text4747"
+         font-size="14.00"
+         y="-710.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">kind : str</text>
+      <text
+         id="text4749"
+         font-size="14.00"
+         y="-692.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <text
+         id="text4751"
+         font-size="14.00"
+         y="-674.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">center</text>
+      <text
+         id="text4753"
+         font-size="14.00"
+         y="-656.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">last_tag</text>
+      <text
+         id="text4755"
+         font-size="14.00"
+         y="-638.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">phys_tag : NoneType</text>
+      <text
+         id="text4757"
+         font-size="14.00"
+         y="-620.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">surfaces : list</text>
+      <text
+         id="text4759"
+         font-size="14.00"
+         y="-602.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">lines : list</text>
+      <text
+         id="text4761"
+         font-size="14.00"
+         y="-584.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">perimeters : list</text>
+      <text
+         id="text4763"
+         font-size="14.00"
+         y="-566.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">surface</text>
+      <text
+         id="text4765"
+         font-size="14.00"
+         y="-548.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">height</text>
+      <text
+         id="text4767"
+         font-size="14.00"
+         y="-530.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">width</text>
+      <text
+         id="text4769"
+         font-size="14.00"
+         y="-512.40002"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">physical_surfaces : list</text>
+      <text
+         id="text4771"
+         font-size="14.00"
+         y="-494.39999"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">points : list</text>
+      <text
+         id="text4773"
+         font-size="14.00"
+         y="-476.39999"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">phys_lines : list</text>
+      <text
+         id="text4775"
+         font-size="14.00"
+         y="-458.39999"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">last_point</text>
+      <text
+         id="text4777"
+         font-size="14.00"
+         y="-440.39999"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">transfinite : bool</text>
+      <text
+         id="text4779"
+         font-size="14.00"
+         y="-422.39999"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">recombine : bool</text>
+      <text
+         id="text4781"
+         font-size="14.00"
+         y="-404.39999"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">physical_surface</text>
+      <polyline
+         id="polyline4783"
+         points="463.5,-395 632.5,-395 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4785"
+         font-size="14.00"
+         y="-378.39999"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">contains()</text>
+      <text
+         id="text4787"
+         font-size="14.00"
+         y="-360.39999"
+         x="471.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">contains_circ()</text>
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="edge"
+       id="edge16">
+      <title
+         id="title4790">7-&gt;16</title>
+      <path
+         id="path4792"
+         d="M 698.598,-241.353 C 692.156,-259.611 685.136,-278.512 678,-296 c -12.269,-30.067 -26.171,-61.55 -40.209,-92.022"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000" />
+      <polygon
+         id="polygon4794"
+         points="631.508,-392.072 637.659,-388.309 637.659,-388.309 638.767,-395.434 632.616,-399.198 "
+         style="fill:#000000;stroke:#000000" />
+      <text
+         id="text4796"
+         font-size="14.00"
+         y="-319.39999"
+         x="691.5"
+         style="font-size:14px;text-anchor:middle;fill:#008000;font-family:'Times Roman,serif'">center</text>
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="node"
+       id="node4">
+      <title
+         id="title4799">8</title>
+      <polygon
+         id="polygon4801"
+         points="442,-1204 258,-1204 258,-1204 258,-1408 442,-1408 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4803"
+         font-size="14.00"
+         y="-1391.4"
+         x="350"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Unitary_cell</text>
+      <polyline
+         id="polyline4805"
+         points="258,-1382 442,-1382 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4807"
+         font-size="14.00"
+         y="-1365.4"
+         x="266"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">surfaces : list</text>
+      <text
+         id="text4809"
+         font-size="14.00"
+         y="-1347.4"
+         x="266"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">last_tag</text>
+      <text
+         id="text4811"
+         font-size="14.00"
+         y="-1329.4"
+         x="266"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">perimeters : list</text>
+      <text
+         id="text4813"
+         font-size="14.00"
+         y="-1311.4"
+         x="266"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <text
+         id="text4815"
+         font-size="14.00"
+         y="-1293.4"
+         x="266"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">last_point</text>
+      <text
+         id="text4817"
+         font-size="14.00"
+         y="-1275.4"
+         x="266"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">kind : str</text>
+      <text
+         id="text4819"
+         font-size="14.00"
+         y="-1257.4"
+         x="266"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">physical_surfaces : list</text>
+      <text
+         id="text4821"
+         font-size="14.00"
+         y="-1239.4"
+         x="266"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">circle</text>
+      <polyline
+         id="polyline4823"
+         points="258,-1230 442,-1230 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4825"
+         font-size="14.00"
+         y="-1213.4"
+         x="266"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">add_circular_inclussion()</text>
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="edge"
+       id="edge2">
+      <title
+         id="title4828">8-&gt;16</title>
+      <path
+         id="path4830"
+         d="m 256.60521,-1374.0214 c -77.94771,69.3128 -146.3514,332.7107 -76.1484,439.51173 31.488,47.904 188.2745,175.18936 271.39436,160.44955"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000"
+         sodipodi:nodetypes="csc" />
+      <polygon
+         id="polygon4832"
+         points="458.304,-794.87 463.252,-785.502 453.542,-789.74 458.304,-794.87 "
+         style="fill:none;stroke:#000000"
+         transform="matrix(0.80496213,-0.59332619,0.59332619,0.80496213,554.9571,134.29133)" />
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="node"
+       id="node5">
+      <title
+         id="title4835">9</title>
+      <polygon
+         id="polygon4837"
+         points="521,-100 439,-100 439,-100 439,-196 521,-196 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4839"
+         font-size="14.00"
+         y="-179.39999"
+         x="480"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Line_loop</text>
+      <polyline
+         id="polyline4841"
+         points="439,-170 521,-170 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4843"
+         font-size="14.00"
+         y="-153.39999"
+         x="447"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <text
+         id="text4845"
+         font-size="14.00"
+         y="-135.39999"
+         x="447"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">lines</text>
+      <polyline
+         id="polyline4847"
+         points="439,-126 521,-126 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4849"
+         font-size="14.00"
+         y="-109.4"
+         x="480"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'" />
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="edge"
+       id="edge14">
+      <title
+         id="title4852">9-&gt;16</title>
+      <path
+         id="path4854"
+         d="m 487.8,-196.409 c 5.818,-36.103 14.232,-88.322 22.935,-142.327"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000" />
+      <polygon
+         id="polygon4856"
+         points="507.75,-345.36 510.745,-338.8 510.745,-338.8 515.649,-344.087 512.654,-350.647 "
+         style="fill:#000000;stroke:#000000" />
+      <text
+         id="text4858"
+         font-size="14.00"
+         y="-319.39999"
+         x="542"
+         style="font-size:14px;text-anchor:middle;fill:#008000;font-family:'Times Roman,serif'">perimeter</text>
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="node"
+       id="node7">
+      <title
+         id="title4874">11</title>
+      <polygon
+         id="polygon4876"
+         points="410.5,-91 279.5,-91 279.5,-91 279.5,-205 410.5,-205 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4878"
+         font-size="14.00"
+         y="-188.39999"
+         x="345"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Physical_Surface</text>
+      <polyline
+         id="polyline4880"
+         points="279.5,-179 410.5,-179 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4882"
+         font-size="14.00"
+         y="-162.39999"
+         x="287.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">plane_surface</text>
+      <text
+         id="text4884"
+         font-size="14.00"
+         y="-144.39999"
+         x="287.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <text
+         id="text4886"
+         font-size="14.00"
+         y="-126.4"
+         x="287.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">tags : str</text>
+      <polyline
+         id="polyline4888"
+         points="279.5,-117 410.5,-117 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4890"
+         font-size="14.00"
+         y="-100.4"
+         x="345"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'" />
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="node"
+       id="node11">
+      <title
+         id="title4893">15</title>
+      <polygon
+         id="polygon4895"
+         points="503,-845 343,-845 343,-845 343,-1121 503,-1121 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4897"
+         font-size="14.00"
+         y="-1104.4"
+         x="423"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Circle</text>
+      <polyline
+         id="polyline4899"
+         points="343,-1095 503,-1095 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4901"
+         font-size="14.00"
+         y="-1078.4"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">surfaces : list</text>
+      <text
+         id="text4903"
+         font-size="14.00"
+         y="-1060.4"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">phys_tag : NoneType</text>
+      <text
+         id="text4905"
+         font-size="14.00"
+         y="-1042.4"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">perimeters : list</text>
+      <text
+         id="text4907"
+         font-size="14.00"
+         y="-1024.4"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">square</text>
+      <text
+         id="text4909"
+         font-size="14.00"
+         y="-1006.4"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <text
+         id="text4911"
+         font-size="14.00"
+         y="-988.40002"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">center</text>
+      <text
+         id="text4913"
+         font-size="14.00"
+         y="-970.40002"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">lines : list</text>
+      <text
+         id="text4915"
+         font-size="14.00"
+         y="-952.40002"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">points : list</text>
+      <text
+         id="text4917"
+         font-size="14.00"
+         y="-934.40002"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">radius</text>
+      <text
+         id="text4919"
+         font-size="14.00"
+         y="-916.40002"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">transfinite : bool</text>
+      <text
+         id="text4921"
+         font-size="14.00"
+         y="-898.40002"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">recombine : bool</text>
+      <text
+         id="text4923"
+         font-size="14.00"
+         y="-880.40002"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">physical_surface</text>
+      <polyline
+         id="polyline4925"
+         points="343,-871 503,-871 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4927"
+         font-size="14.00"
+         y="-854.40002"
+         x="351"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">contains()</text>
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="edge"
+       id="edge12">
+      <title
+         id="title4930">11-&gt;15</title>
+      <path
+         id="path4932"
+         d="M 337.277,-205.413 C 323.703,-318.591 300.789,-577.93 343,-790 c 2.849,-14.316 6.78,-28.9 11.381,-43.314"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000" />
+      <polygon
+         id="polygon4934"
+         points="352.519,-840.397 354.423,-833.441 354.423,-833.441 360.111,-837.874 358.207,-844.829 "
+         style="fill:#000000;stroke:#000000" />
+      <text
+         id="text4936"
+         font-size="14.00"
+         y="-566.40002"
+         x="399"
+         style="font-size:14px;text-anchor:middle;fill:#008000;font-family:'Times Roman,serif'">physical_surface</text>
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="edge"
+       id="edge20">
+      <title
+         id="title4939">11-&gt;16</title>
+      <path
+         id="path4941"
+         d="m 345.508,-205.205 c 3.383,-40.331 14.353,-92.979 46.492,-126.795 18.594,-19.564 37.821,-0.075 58,-18 1.612,-1.432 3.199,-2.895 4.76,-4.388"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000" />
+      <polygon
+         id="polygon4943"
+         points="456.381,-361.762 455.042,-354.677 455.042,-354.677 462.098,-356.166 463.437,-363.252 "
+         style="fill:#000000;stroke:#000000" />
+      <text
+         id="text4945"
+         font-size="14.00"
+         y="-319.39999"
+         x="448"
+         style="font-size:14px;text-anchor:middle;fill:#008000;font-family:'Times Roman,serif'">physical_surface</text>
+    </g>
+    <g
+       class="node"
+       id="node8"
+       transform="matrix(1.25,0,0,1.25,-1577.5143,-536.12739)">
+      <title
+         id="title4948">12</title>
+      <polygon
+         id="polygon4950"
+         points="788.5,-295 961.5,-295 961.5,-1 788.5,-1 788.5,-1 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4952"
+         font-size="14.00"
+         y="-278.39999"
+         x="875"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Grid</text>
+      <polyline
+         id="polyline4954"
+         points="788.5,-269 961.5,-269 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4956"
+         font-size="14.00"
+         y="-252.39999"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">origin</text>
+      <text
+         id="text4958"
+         font-size="14.00"
+         y="-234.39999"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">phys_tags : list</text>
+      <text
+         id="text4960"
+         font-size="14.00"
+         y="-216.39999"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">sketch</text>
+      <text
+         id="text4962"
+         font-size="14.00"
+         y="-198.39999"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">sk_shape : list</text>
+      <text
+         id="text4964"
+         font-size="14.00"
+         y="-180.39999"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">dicts</text>
+      <text
+         id="text4966"
+         font-size="14.00"
+         y="-162.39999"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">cells</text>
+      <text
+         id="text4968"
+         font-size="14.00"
+         y="-144.39999"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">phys_lines : list</text>
+      <text
+         id="text4970"
+         font-size="14.00"
+         y="-126.4"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">transfinite : bool</text>
+      <polyline
+         id="polyline4972"
+         points="788.5,-117 961.5,-117 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4974"
+         font-size="14.00"
+         y="-100.4"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">extract_left_lines()</text>
+      <text
+         id="text4976"
+         font-size="14.00"
+         y="-82.400002"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">extract_right_lines()</text>
+      <text
+         id="text4978"
+         font-size="14.00"
+         y="-64.400002"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">extract_bottom_lines()</text>
+      <text
+         id="text4980"
+         font-size="14.00"
+         y="-46.400002"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">check_rectangular()</text>
+      <text
+         id="text4982"
+         font-size="14.00"
+         y="-28.4"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">define_boundary()</text>
+      <text
+         id="text4984"
+         font-size="14.00"
+         y="-10.4"
+         x="796.5"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">extract_top_lines()</text>
+    </g>
+    <g
+       class="node"
+       id="node9"
+       transform="matrix(1.25,0,0,1.25,-683.28929,279.19281)">
+      <title
+         id="title4987">13</title>
+      <polygon
+         id="polygon4989"
+         points="979,-223 1139,-223 1139,-73 979,-73 979,-73 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4991"
+         font-size="14.00"
+         y="-206.39999"
+         x="1059"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Line</text>
+      <polyline
+         id="polyline4993"
+         points="979,-197 1139,-197 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text4995"
+         font-size="14.00"
+         y="-180.39999"
+         x="987"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">transfinite : bool</text>
+      <text
+         id="text4997"
+         font-size="14.00"
+         y="-162.39999"
+         x="987"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">phys_tag : NoneType</text>
+      <text
+         id="text4999"
+         font-size="14.00"
+         y="-144.39999"
+         x="987"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">lenght</text>
+      <text
+         id="text5001"
+         font-size="14.00"
+         y="-126.4"
+         x="987"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">points : list</text>
+      <text
+         id="text5003"
+         font-size="14.00"
+         y="-108.4"
+         x="987"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <polyline
+         id="polyline5005"
+         points="979,-99 1139,-99 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text5007"
+         font-size="14.00"
+         y="-82.400002"
+         x="1059"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'" />
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="node"
+       id="node10">
+      <title
+         id="title5010">14</title>
+      <polygon
+         id="polygon5012"
+         points="669,-91 539,-91 539,-91 539,-205 669,-205 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text5014"
+         font-size="14.00"
+         y="-188.39999"
+         x="604"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Plane_Surface</text>
+      <polyline
+         id="polyline5016"
+         points="539,-179 669,-179 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text5018"
+         font-size="14.00"
+         y="-162.39999"
+         x="547"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">transfinite : bool</text>
+      <text
+         id="text5020"
+         font-size="14.00"
+         y="-144.39999"
+         x="547"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <text
+         id="text5022"
+         font-size="14.00"
+         y="-126.4"
+         x="547"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">line_loop</text>
+      <polyline
+         id="polyline5024"
+         points="539,-117 669,-117 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text5026"
+         font-size="14.00"
+         y="-100.4"
+         x="604"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'" />
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="edge"
+       id="edge18">
+      <title
+         id="title5029">14-&gt;16</title>
+      <path
+         id="path5031"
+         d="m 596.389,-205.352 c -4.706,-35.467 -11.092,-83.585 -17.679,-133.224"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000" />
+      <polygon
+         id="polygon5033"
+         points="573.947,-344.064 578.702,-338.643 578.702,-338.643 581.877,-345.117 577.123,-350.538 "
+         style="fill:#000000;stroke:#000000" />
+      <text
+         id="text5035"
+         font-size="14.00"
+         y="-319.39999"
+         x="607"
+         style="font-size:14px;text-anchor:middle;fill:#008000;font-family:'Times Roman,serif'">surface</text>
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="edge"
+       id="edge8">
+      <title
+         id="title5038">15-&gt;8</title>
+      <path
+         id="path5040"
+         d="m 391.724,-1121.39 c -5.306,-23.47 -10.762,-47.61 -15.907,-70.38"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000" />
+      <polygon
+         id="polygon5042"
+         points="370.578,-1196.8 375.802,-1191.83 375.802,-1191.83 378.381,-1198.57 373.157,-1203.54 "
+         style="fill:#000000;stroke:#000000" />
+      <text
+         id="text5044"
+         font-size="14.00"
+         y="-1145.4"
+         x="405"
+         style="font-size:14px;text-anchor:middle;fill:#008000;font-family:'Times Roman,serif'">circle</text>
+    </g>
+    <g
+       transform="matrix(1.25,0,0,1.25,-467.06739,1055.4946)"
+       class="edge"
+       id="edge10">
+      <title
+         id="title5061">16-&gt;15</title>
+      <path
+         id="path5063"
+         d="m 481.657,-789.197 c -4.519,-14.93 -9.01,-29.77 -13.38,-44.208"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000" />
+      <polygon
+         id="polygon5065"
+         points="462.71,-837.99 468.277,-833.406 468.277,-833.406 470.367,-840.308 464.8,-844.892 "
+         style="fill:#000000;stroke:#000000" />
+      <text
+         id="text5067"
+         font-size="14.00"
+         y="-813.40002"
+         x="498.5"
+         style="font-size:14px;text-anchor:middle;fill:#008000;font-family:'Times Roman,serif'">square</text>
+    </g>
+    <g
+       class="node"
+       id="node13"
+       transform="matrix(1.25,0,0,1.25,-940.49159,5.7758012)">
+      <title
+         id="title5070">17</title>
+      <polygon
+         id="polygon5072"
+         points="1317,-82 1157,-82 1157,-82 1157,-214 1317,-214 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text5074"
+         font-size="14.00"
+         y="-197.39999"
+         x="1237"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'">Circle_arc</text>
+      <polyline
+         id="polyline5076"
+         points="1157,-188 1317,-188 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text5078"
+         font-size="14.00"
+         y="-171.39999"
+         x="1165"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">transfinite : bool</text>
+      <text
+         id="text5080"
+         font-size="14.00"
+         y="-153.39999"
+         x="1165"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">phys_tag : NoneType</text>
+      <text
+         id="text5082"
+         font-size="14.00"
+         y="-135.39999"
+         x="1165"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">points</text>
+      <text
+         id="text5084"
+         font-size="14.00"
+         y="-117.4"
+         x="1165"
+         style="font-size:14px;text-anchor:start;font-family:'Times Roman,serif'">id_tag</text>
+      <polyline
+         id="polyline5086"
+         points="1157,-108 1317,-108 "
+         style="fill:none;stroke:#000000" />
+      <text
+         id="text5088"
+         font-size="14.00"
+         y="-91.400002"
+         x="1237"
+         style="font-size:14px;text-anchor:middle;font-family:'Times Roman,serif'" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#EmptyDiamondL)"
+       d="m 162.71706,-160.41144 c 342.85715,-80 344.28575,-81.42857 344.28575,-81.42857"
+       id="path9741"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#EmptyDiamondL)"
+       d="M 162.85997,-141.98293 C 451.43151,-13.411469 538.57431,20.874281 538.57431,20.874281"
+       id="path9741-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#EmptyDiamondL)"
+       d="m -377.14003,-744.84002 c 122.85724,54.28575 232.85717,54.28575 232.85717,54.28575"
+       id="path9741-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#EmptyDiamondL)"
+       d="m 325.08505,301.24221 c 145.71446,-20 214.28576,-279.999979 214.28576,-279.999979"
+       id="path9741-6-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#EmptyDiamondL)"
+       d="m 326.51362,458.38501 c 148.57159,-112.8571 238.57149,-122.857 238.57149,-122.857"
+       id="path9741-6-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

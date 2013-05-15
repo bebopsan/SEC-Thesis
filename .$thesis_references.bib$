@@ -1,0 +1,1363 @@
+% This file was created with JabRef 2.7b.
+% Encoding: UTF-8
+
+@BOOK{Euroscipy2010,
+  title = {Python Scientific lecture notes},
+  publisher = {team},
+  year = {2010},
+  editor = {Emmanuelle Gouillart and Ga\"el Varoquaux},
+  author = {\mbox{EuroScipy tutorial}},
+  month = {July},
+  keywords = {Scipy; Numpy; Matplotlib; Simpy},
+  owner = {edward},
+  timestamp = {2011.10.05}
+}
+
+@ARTICLE{Altug2006,
+  author = {Hatice Altug},
+  title = {{U}ltrafast photonic crystal nanocavity laser},
+  journal = {Nature Physics},
+  year = {2006},
+  volume = {2},
+  abstract = {Spontaneous emission is not inherent to an emitter, but
+	
+	rather depends on its electromagnetic environment. In
+	
+	a microcavity, the spontaneous emission rate can be
+	
+	greatly enhanced compared with that in free space. This
+	
+	so-called Purcell effect can dramatically increase laser
+	
+	modulation speeds, although to date no time-domain
+	
+	measurements have demonstrated this. Here we show
+	
+	extremely fast photonic crystal nanocavity lasers with
+	
+	response times as short as a few picoseconds resulting
+	
+	from 75-fold spontaneous emission rate enhancement
+	
+	in the cavity. We demonstrate direct modulation speeds
+	
+	far exceeding 100 GHz (limited by the detector response
+	
+	time), already more than an order of magnitude above
+	
+	the fastest semiconductor lasers. Such ultrafast, efficient,
+	
+	and compact lasers show great promise for applications in
+	
+	high-speed communications, information processing, and
+	
+	on-chip optical interconnects.},
+  file = {Ultrafst nanocavity laser:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/hatice-nature.pdf:PDF},
+  keywords = {Nanocavity laser, Photonic crystal, Ultrafast},
+  owner = {santiago},
+  timestamp = {2013.02.07}
+}
+
+@ARTICLE{Andonegui2013,
+  author = {Imanol Andonegui},
+  title = {The finite element method applied to the study of two-dimensional
+	photonic crystals and resonant cavities},
+  journal = {Optics Express},
+  year = {2013},
+  volume = {21},
+  pages = {4072-4092},
+  owner = {santiago},
+  timestamp = {2013.05.12}
+}
+
+@ARTICLE{antoine2009review,
+  author = {Antoine, Xavier and Arnold, Anton and Besse, Christophe and Ehrhardt,
+	Matthias and Sch{\"a}dle, Achim},
+  title = {A review of transparent and artificial boundary conditions techniques
+	for linear and nonlinear Schr{\"o}dinger equations},
+  year = {2009},
+  owner = {nicoguaro},
+  timestamp = {2013.05.12}
+}
+
+@ARTICLE{A.M.Apetrei2005,
+  author = {A.M. Apetrei and J.M. Moison},
+  title = {{E}lectromagnetic field confined and tailored with a few air holes
+	in a photonic-crystal fiber},
+  journal = {Applied Physics B: Lasers and Optics},
+  year = {2005},
+  file = {Photonic Crystal fibers:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/Electromagnetic field confined and tailored with a few air holes in a photonic crystal fiber:PDF},
+  owner = {santiago},
+  timestamp = {2013.02.01}
+}
+
+@PHDTHESIS{appelo2003,
+  author = {Appel{\"o}, Daniel},
+  title = {Non-reflecting Boundary Conditions for Wave Propagation Problems},
+  school = {KTH},
+  year = {2003},
+  owner = {nicoguaro},
+  timestamp = {2013.05.12}
+}
+
+@BOOK{Bathe1996,
+  title = {Finite element procedures},
+  publisher = {Prentice hall Englewood Cliffs},
+  year = {1996},
+  author = {Bathe, Klaus-J{\"u}rgen},
+  volume = {2},
+  number = {3},
+  owner = {nicoguaro},
+  timestamp = {2013.05.12}
+}
+
+@ARTICLE{Borcherds2007,
+  author = {P.H. Borcherds},
+  title = {Python: a language for computational physics},
+  journal = {Computer Physics Communications},
+  year = {2007},
+  volume = {177},
+  pages = {199-201},
+  abstract = {Python is a relatively new computing language, created by Guido van
+	Rossum [A.S. Tanenbaum, R. van Renesse, H. van Staveren, G.J. Sharp,
+	
+	S.J. Mullender, A.J. Jansen, G. van Rossum, Experiences with the Amoeba
+	distributed operating system, Communications of the ACM 33 (1990)
+	
+	46–63; also on-line at http://www.cs.vu.nl/pub/amoeba/. [6]], which
+	is particularly suitable for teaching a course in computational physics.
+	There
+	
+	are two questions to be considered: (i) For whom is the course intended?
+	(ii) What are the criteria for a suitable language, and why choose
+	
+	Python? The criteria include the nature of the application. High performance
+	computing requires a compiled language, e.g., FORTRAN. For some
+	
+	applications a computer algebra, e.g., Maple, is appropriate. For
+	teaching, and for program development, an interpreted language has
+	considerable
+	
+	advantages: Python appears particularly suitable. Python’s attractions
+	include (i) its system of modules which makes it easy to extend,
+	(ii) its
+	
+	excellent graphics (VPython module), (iii) its excellent on line documentation,
+	(iv) it is free and can be downloaded from the web. Python and
+	
+	VPython will be described briefly, and some programs demonstrated.},
+  keywords = {Education; Graphics; Computational physics; Computation; Python},
+  owner = {usuario},
+  timestamp = {2011.03.28},
+  url = {10.1016/j.cpc.2007.02.019}
+}
+
+@ARTICLE{Bykov1975,
+  author = {V.P. Bykov},
+  title = {{S}pontaneous emission from a medium with a band spectrum},
+  journal = {Soviet Journal of Quantum Electronics},
+  year = {1975},
+  owner = {santiago},
+  timestamp = {2013.02.04}
+}
+
+@ARTICLE{Baecker2007,
+  author = {A. Bäcker},
+  title = {Computational Physics Education with Python},
+  journal = {Computing in Science and Engineering},
+  year = {2007},
+  pages = {30-47},
+  owner = {santiago},
+  timestamp = {2013.05.14}
+}
+
+@BOOK{Capoliono2009,
+  title = {{T}heory and {P}henomena of {M}etamaterials},
+  publisher = {CRC Press},
+  year = {2009},
+  author = {Filippo Capoliono},
+  file = {About metamaterials:/home/santiago/Dropbox/Faustos/Thesis/Books/Filippo Capolino-Theory and Phenomena of Metamaterials.pdf:PDF},
+  owner = {santiago},
+  timestamp = {2013.02.01}
+}
+
+@ARTICLE{Chapman1995,
+  author = {S. J. Chapman},
+  title = {Drums That Sound the Same},
+  journal = {The American Mathematical Monthly},
+  year = {1995},
+  volume = {102},
+  pages = {124-138},
+  owner = {santiago},
+  timestamp = {2013.05.10}
+}
+
+@BOOK{Cheng1993,
+  title = {{F}undamentals of {E}ngineering {E}lectromagnetics},
+  publisher = {Addison-Wesley},
+  year = {1993},
+  author = {David Keung Cheng},
+  owner = {santiago},
+  timestamp = {2013.05.09}
+}
+
+@ARTICLE{E.R.Brown1993,
+  author = {E.R.Brown},
+  title = {{R}adiation properties if a planar antenna on a photonic crystal
+	substrate},
+  journal = {Journal of Optics Society},
+  year = {1993},
+  volume = {10},
+  abstract = {The photonic crystal is investigated as a substrate material for planar
+	antennas in the microwave and
+	
+	millimeter-wave bands. Experimental results are presented for a bow-tie
+	antenna on a (111)-oriented face-
+	
+	centered-cubic photonic-crystal substrate with a band gap between
+	approximately 13 and 16 GHz. When
+	
+	driven at 13.2 GHz, the antenna radiates predominantly into the air
+	rather than into the substrate. This sug-
+	
+	gests that highly efficient planar antennas can be made on photonic-crystal
+	regions fabricated in semiconductor
+	
+	substrates
+	
+	 such as GaAs.},
+  file = {Radiation properties of a planar antenna on a photonic crystal:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/Design of ultrawideband photonic crystals for broadband antenna applications.pdf:PDF},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@UNPUBLISHED{Echeverri2011,
+  author = {Santiago Echeverri},
+  title = {{I}mplementaci\'on del m\'etodo de elementos finitos para la ecuación
+	de {S}chrodinger en estructuras peri\'odicas},
+  note = {Unpublished project report},
+  year = {2011},
+  owner = {santiago},
+  timestamp = {2013.02.04}
+}
+
+@BOOK{Engheta2006,
+  title = {{M}etamaterials: physics and engineering explorations},
+  publisher = {Wiley Inter Science},
+  year = {2006},
+  author = {Nader Engheta},
+  owner = {santiago},
+  timestamp = {2013.02.01}
+}
+
+@BOOK{GangBao1987,
+  title = {{M}athematical {M}odeling in {O}ptical {S}cience},
+  publisher = {Society for Industrial and Applied Mathematics},
+  year = {1987},
+  author = {Gang Bao, Lawrence Cowsar},
+  owner = {santiago},
+  timestamp = {2013.02.01}
+}
+
+@BOOK{Garcia2011,
+  title = {Lecture Notes on Numerical Analysis},
+  publisher = Fondo # editorial # Universidad # EAFIT,
+  year = {2011},
+  author = {Manuel Julio García},
+  owner = {santiago},
+  timestamp = {2011.07.18}
+}
+
+@MASTERSTHESIS{Georgatos2002,
+  author = {Fotis Georgatos},
+  title = {How applicable is Python as first computer language for teaching
+	programming in a pre-university educational environment, from a teacher's
+	point of view?},
+  school = {AMSTEL Institute, Faculty of Science, Universiteit van Amsterdam},
+  year = {2002},
+  month = {June},
+  abstract = {This project report attempts to evaluate the educational properties
+	of a relatively new computer language named Python. This is done
+	by examining computer language evolution history, related scientific
+	background work, the existing educational research on computer languages
+	and Python’s experimental application in higher secondary education
+	in Greece, during first half of year 2002.},
+  owner = {edward},
+  timestamp = {2011.10.05}
+}
+
+@ARTICLE{Gerr1998,
+  author = {Gerr},
+  title = {The fallacy of edge elements},
+  journal = {IEEE Transactions on magnetics},
+  year = {1998},
+  volume = {34},
+  pages = {3244-3247},
+  owner = {santiago},
+  timestamp = {2013.05.13}
+}
+
+@ARTICLE{Geuzaine2009,
+  author = {Geuzaine, C. and Remacle, J.F.},
+  title = {Gmsh: A 3-D finite element mesh generator with built-in pre-and post-processing
+	facilities},
+  journal = {International Journal for Numerical Methods in Engineering},
+  year = {2009},
+  volume = {79},
+  pages = {1309--1331},
+  number = {11},
+  owner = {santiago},
+  publisher = {Wiley Online Library},
+  timestamp = {2011.08.05}
+}
+
+@BOOK{Goldstein2001,
+  title = {{C}lassical {M}echanics},
+  publisher = {Addison-Wesley},
+  year = {2001},
+  author = {Herbert Goldstein and Charles P. Poole Jr. and John L. Safko},
+  edition = {3},
+  month = {6},
+  owner = {Nico},
+  review = {From the Back Cover:
+	
+	
+	"For thirty years this has been the acknowledged standard in advanced
+	classical mechanics courses. This classic book enables readers to
+	make connections between classical and modern physics - an indispensable
+	part of a physicist's education. In this new edition, Beams Medal
+	winner Charles Poole and John Safko have updated the book to include
+	the latest topics, applications, and notation, to reflect today's
+	physics curriculum. They introduce readers to the increasingly important
+	role that nonlinearities play in contemporary applications of classical
+	mechanics. New numerical exercises help readers to develop skills
+	in how to use computer techniques to solve problems in physics. Mathematical
+	techniques are presented in detail so that the book remains fully
+	accessible to readers who have not had an intermediate course in
+	classical mechanics. For college instructors and students."@BOOK{book:reddy_functional_analysis,
+	
+	 title = {{A}pplied {F}unctional {A}nalysis and {V}ariational {M}ethods
+	in
+	
+	{E}ngineering},
+	
+	 publisher = {Krieger Publishing},
+	
+	 year = {1991},
+	
+	 author = {J.N. Reddy},
+	
+	 pages = {546},
+	
+	 edition = {1},
+	
+	 keywords = {Variational Method, Functional Analysis, Analytical Mechanics},
+	
+	 owner = {nguarinz},
+	
+	 timestamp = {2011.11.28}
+	
+	}},
+  timestamp = {2013.05.08}
+}
+
+@MASTERSTHESIS{Guarin2012,
+  author = {Nicol\'as Guar\'in},
+  title = {{S}imulaci\'on {N}um\'erica de {P}roblemas de {P}ropagaci\'on de
+	{O}ndas: {D}ominios {I}nfinitos y {S}emi-infinitos},
+  school = {Universidad EAFIT},
+  year = {2012},
+  owner = {santiago},
+  timestamp = {2013.02.04},
+  url = {http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CEAQFjAB&url=http%3A%2F%2Fwww.eafit.edu.co%2Fprogramas-academicos%2Fposgrado%2Fmaestria-ingenieria%2FDocuments%2FProyectosgrado%2FONDAS%2520EN%2520MEDIOS%2520INFINITOS.pdf&ei=WRQQUZngI5HK9QTx3oCgDA&usg=AFQjCNHVtjzxl99N0297josMq8Xb2n_WQA&sig2=mKUQUUBirRNsoM_ix-TlYg&bvm=bv.41867550,d.eWU}
+}
+
+@MANUAL{Henderson2007,
+  title = {ParaView Guide, A Parallel Visualization Application.},
+  author = {A. Henderson},
+  organization = {Kitware Inc},
+  year = {2007},
+  owner = {santiago},
+  timestamp = {2013.05.14}
+}
+
+@ARTICLE{I.Hartl2001,
+  author = {I. Hartl, X. D. Li, C. Chudoba, R. K. Ghanta, T. H. Ko, J. G. Fujimoto,
+	J. K. Ranka, and R. S. Windeler},
+  title = {{U}ltrahigh-resolution optical coherence tomography using continuum
+	generation in an air–silica microstructure optical fiber},
+  journal = {Optics Letters},
+  year = {2001},
+  volume = {26},
+  pages = {608-610},
+  owner = {santiago},
+  timestamp = {2013.02.01}
+}
+
+@ELECTRONIC{PCMag,
+  author = {The Computer Language Company Inc.},
+  url = {http://www.pcmag.com/encyclopedia/term/40495/cross-platform#fbid=aHfb3ldkqPq},
+  owner = {santiago},
+  timestamp = {2013.05.14}
+}
+
+@ARTICLE{J.Gazalet2012,
+  author = {J. Gazalet, S. Dupont},
+  title = {A tutorial survey on waves propagating in periodic media: Electronic,
+	photonic and phononic crystals. Perception of the Bloch theorem in
+	both real and Fourier Domains.},
+  journal = {Wave Motion},
+  year = {2012},
+  volume = {50},
+  pages = {619-654},
+  owner = {santiago},
+  timestamp = {2013.05.12}
+}
+
+@ARTICLE{J.Gutierrez-Vega1999,
+  author = {J. Gutierrez-Vega, S. Ch\'avez-Cerda, Ramón Rodriguez-Dagnino},
+  title = {Free oscilations in an elliptic membrane},
+  journal = {Revista Mexicana de Física},
+  year = {1999},
+  volume = {45},
+  pages = {613-622},
+  owner = {santiago},
+  timestamp = {2013.05.10}
+}
+
+@BOOK{Jackson1998,
+  title = {Classical Electrodynamics},
+  publisher = {John Wiley \& Sons: New York},
+  year = {1998},
+  author = {JD Jackson},
+  owner = {nicoguaro},
+  timestamp = {2013.05.13}
+}
+
+@BOOK{Jin2010,
+  title = {{T}heory and computation of electromagnetic fields},
+  publisher = {Wiley},
+  year = {2010},
+  author = {Jian-Ming Jin},
+  comment = {Source of nice images, which I reference on the theory.
+	
+	Page 360 has a nice descriptionof the mthode for vector fields.},
+  file = {Theory and computation of electromagnetic fields:/home/santiago/Dropbox/Faustos/Thesis/Books/Jian-Ming_Jin_Theory_and_Computation_of_Electromagnetic_Fields__2010.pdf:PDF},
+  owner = {santiago},
+  timestamp = {2013.02.07}
+}
+
+@BOOK{Joannopoulos2008,
+  title = {{P}hotonic {C}rystals, {M}olding the {F}low of {L}ight},
+  publisher = {Princeton University Press},
+  year = {2008},
+  author = {John D. Joannopoulos},
+  file = {:/home/santiago/Dropbox/Faustos/Thesis/Books/John_D._Joannopoulos,_Steven_G._Johnson,_Joshua_N._Winn,_Robert_D._Meade-Photonic_crystals___molding_the_flow_of_light-Princeton_univ_press(2008).pdf:PDF},
+  owner = {santiago},
+  timestamp = {2013.02.01}
+}
+
+@ARTICLE{Joannopoulos1997,
+  author = {Joannopoulos, J. D.},
+  title = {{P}hotonic {C}rystals: putting a new twist on light.},
+  journal = {Nature},
+  year = {1997},
+  volume = {386},
+  abstract = {Photonic Crystals are materials patterned with a periodicity in dielectric
+	constant, wich can create a ranfe of 'forbidden' frequencies called
+	a photonic bandgap. Photons with energies lying in the bandgap cannot
+	propagate throughthe medium. This provides the opportunity to shape
+	and mould the flow of light for photonic information technology.},
+  comment = {He mentions that cavities in photonic crystals could allow tunning
+	of laser sources.},
+  file = {Review article about photonic crystals:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/Optional_Paper_review_1997 Joannopoulos.pdf:PDF},
+  owner = {santiago},
+  timestamp = {2013.02.04}
+}
+
+@ARTICLE{John1987,
+  author = {Sajeev John},
+  title = {{S}trong localization of photons in certain dielectric superlattices},
+  journal = {Physical R},
+  year = {1987},
+  volume = {58},
+  abstract = {A new mechanism for strong Anderson localization of photons in carefully
+	prepared disordered dielectric superlattices with an everywhere real
+	positive dielectric constant is described. In three dimensions, two
+	photon mobility edges separate high- and low-frequency extended states
+	from an intermediate-frequency pseudogap of localized states arising
+	from remnant geometric Bragg resonances. Experimentally observable
+	consequences are discussed.},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@ARTICLE{F.X.Kaertner2006,
+  author = {F.X. Kartner and S. Akiyama and G. Barbastathis},
+  title = {{E}lectronic {P}hotonic {I}ntegrated {C}ircuits for {H}igh {S}peed,
+	{H}igh {R}esolution, {A}nalog to {D}igital {C}onversion},
+  journal = {Proc. of SPIE},
+  year = {2006},
+  volume = {6125},
+  pages = {612503-1},
+  abstract = {ABSTRACT
+	
+	Progress in developing high speed ADC’s occurs rather slowly - at
+	a resolution increase of 1.8 bits per decade. This
+	
+	slow progress is mostly caused by the inherent jitter in electronic
+	sampling - currently on the order of 250 femtoseconds
+	
+	in the most advanced CMOS circuitry. Advances in femtosecond lasers
+	and laser stabilization have led to the
+	
+	development of sources of ultrafast optical pulse trains that show
+	jitter on the level of a few femtoseconds over the time
+	
+	spans of typical sampling windows and can be made even smaller. The
+	MIT-GHOST (GigaHertz High Resolution
+	
+	Optical Sampling Technology) Project funded under DARPA’s Electronic
+	Photonic Integrated Circuit (EPIC) Program
+	
+	is trying to harness the low noise properties of femtosecond laser
+	sources to overcome the electronic bottleneck
+	
+	inherently present in pure electronic sampling systems. Within this
+	program researchers from MIT Lincoln Laboratory
+	
+	and MIT Campus develop integrated optical components and optically
+	enhanced electronic sampling circuits that enable
+	
+	the fabrication of an electronic-photonic A/D converter chip that
+	surpasses currently available technology in speed and
+	
+	resolution and opens up a technology development roadmap for ADC’s.
+	This talk will give an overview on the planned
+	
+	activities within this program and the current status on some key
+	devices such as wavelength-tunable filter banks, high-
+	
+	speed modulators, Ge photodetectors, miniature femtosecond-pulse lasers
+	and advanced sampling techniques that are
+	
+	compatible with standard CMOS processing.},
+  file = {:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/06spie-kartner-EPIC-invited-paper.pdf:PDF},
+  keywords = {High speed, AD converter, Fully integrated optical component.},
+  owner = {santiago},
+  timestamp = {2013.02.01}
+}
+
+@ARTICLE{kikuchi2001,
+  author = {Kikuchi, Fumio},
+  title = {Theoretical analysis of {N}edelec’s edge elements},
+  journal = {Japan journal of industrial and applied mathematics},
+  year = {2001},
+  volume = {18},
+  pages = {321--333},
+  number = {2},
+  abstract = {The Nedelec edge elements are now widely used for numerical analysis
+	of various electromagnetic problems. However, it has not been easy
+	to show their mathematical validity since the formulations associated
+	with the edge elements are usually based on some mixed variational
+	principles on special function spaces. In particular case of the
+	simplest Nedelec simplex elements, the present author formerly showed
+	the discrete compactness which plays essential roles in theoretical
+	analysis of such elements. Here we present some new results on such
+	a property for more general edge elements using an approach slightly
+	different from that employed by Boffi to obtain results on the same
+	subject.},
+  owner = {nicoguaro},
+  publisher = {Springer},
+  timestamp = {2013.05.13}
+}
+
+@BOOK{Kittel2005,
+  title = {Introduction to Solid State Physics},
+  publisher = {Joh},
+  year = {2005},
+  editor = {Stuart Johnson},
+  author = {Charles Kittel},
+  owner = {santiago},
+  timestamp = {2013.05.12}
+}
+
+@BOOK{Kiusalaas2005,
+  title = {Numerical Methods in Engineering with Python},
+  publisher = {Cambridge University Press},
+  year = {2005},
+  author = {Jaan Kiusalaas},
+  owner = {santiago},
+  timestamp = {2013.05.14}
+}
+
+@ARTICLE{Konorov2004,
+  author = {S. O. Konorov},
+  title = {{C}ross-correlation frequency-resolved optical gating coherent anti-{S}tokes
+	{R}aman scattering with frequency-converting photonic-crystal fibers},
+  journal = {Phys. Rev.},
+  year = {2004},
+  volume = {E 70, 057601},
+  owner = {santiago},
+  timestamp = {2013.02.01}
+}
+
+@ARTICLE{Krauss1996,
+  author = {Thomas F. Krauss},
+  title = {{T}wo-dimensional photonic-bandgap structures operating at near-infrared
+	wavelengths},
+  journal = {Nature},
+  year = {1996},
+  volume = {383},
+  pages = {699-702},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@TECHREPORT{Lage1998,
+  author = {C. Lage},
+  title = {Concept Oriented Design of Numerical Software},
+  institution = {Eidgenössische Technische Hoschule Zürich},
+  year = {1998},
+  owner = {santiago},
+  timestamp = {2013.05.14}
+}
+
+@BOOK{Langtangen2004,
+  title = {Python Scripting for Computational Science},
+  publisher = {University of Oslo},
+  year = {2004},
+  author = {Hans Petter Langtangen},
+  pages = {725},
+  abstract = {The primary purpose of this book is to help scientists and engineers
+	who
+	
+	work intensively with computers to become more productive, have more
+	fun,
+	
+	and increase the reliability of their investigations. Scripting in
+	the Python
+	
+	programming language can be a key tool for reaching these goals [28,30].
+	
+	The term scripting means different things to different people. By
+	scripting
+	
+	I mean developing programs of an administering nature, mostly to organize
+	
+	your work, using languages where the abstraction level is higher and
+	program-
+	
+	ming is more convenient than in Fortran, C, C++, or Java. Perl, Python,
+	
+	Ruby, Scheme, and Tcl are examples of languages supporting such high-level
+	
+	programming or scripting. To some extent Matlab and similar scientific
+	com-
+	
+	puting environments also fall into this category, but these environments
+	are
+	
+	mainly used for computing and visualization with built-in tools, while
+	script-
+	
+	ing aims at gluing a range of different tools for computing, visualization,
+	data
+	
+	analysis, file/directory management, user interfaces, and Internet
+	communi-
+	
+	cation. So, although Matlab is perhaps the scripting language of choice
+	in
+	
+	computational science today, my use of the term scripting goes beyond
+	typi-
+	
+	cal Matlab scripts. Python stands out as the language of choice for
+	scripting in
+	
+	computational science because of its very clean syntax, outstanding
+	modular-
+	
+	ization features, good support for numerical computing, and rapidly
+	growing
+	
+	popularity.},
+  owner = {usuario},
+  timestamp = {2011.03.28}
+}
+
+@MASTERSTHESIS{Loaiza2011,
+  author = {Yhefferson Gutierrez Loaiza},
+  title = {{E}structura de bandas en un cristal fot\'onico bidimensional},
+  school = {Universidad EAFIT},
+  year = {2011},
+  owner = {santiago},
+  timestamp = {2013.02.04},
+  url = {http://bdigital.eafit.edu.co:8080/bdng/query/single.xsp?id1=EAFIT548CDG984}
+}
+
+@BOOK{Logg2012,
+  title = {Automated solution of differential equations by the finite element
+	method: The fenics book},
+  publisher = {Springer},
+  year = {2012},
+  author = {Logg, Anders and Mardal, Kent-Andre and Wells, Garth},
+  volume = {84},
+  owner = {nicoguaro},
+  timestamp = {2013.05.12}
+}
+
+@ARTICLE{Mackerle2004,
+  author = {Jaroslav Mackerle},
+  title = {Object-oriented programming in FEM and BEM: a bibliography (1990-2003)},
+  journal = {Advances in Engineering Software},
+  year = {2004},
+  volume = {35},
+  pages = {325-336},
+  owner = {santiago},
+  timestamp = {2013.05.14}
+}
+
+@ARTICLE{Masanori2001,
+  author = {Koshiba Masanori},
+  title = {{T}ime-domain beam propagation method and its application to photonic
+	crystal circuits},
+  journal = {Journal of Lightwave Technology},
+  year = {2001},
+  volume = {18},
+  pages = {102-110},
+  abstract = {Abstract-A time-domain beam propagation method (BPM)
+	
+	based on the finite-element scheme is described for the analysis
+	
+	of reflections of both transverse electric and transverse magnetic
+	
+	polariaed pulses in wavegniding structures containing arbitrarily
+	
+	shaped discontinuities. In order to avoid nonphysical reflections
+	
+	from the computational window edges, the perfectly matched layer
+	
+	boundarv condition is introduced. The mesent algorithm usine the
+	
+	Pade approximation is, to our knowle-dge, the Krst time-domain
+	
+	beam propagation method which can treat wide-band optical
+	
+	pulses. After validating this method for an optical grating with
+	
+	modulated refrative indexes, various photonic crystal circuit
+	
+	components are simulated.},
+  comment = {Advantages of using finite elements instead of finite differences
+	are discussed. Finite elements are more versatile and definitley
+	better for frequency analisis. In the time domain FEM handles arbitrary
+	geometries better. non uniform and nonorthogonal meshes are possible.
+	Assumption of slowly varying field is made.
+	
+	FDTD suffers from staircasing approximation.},
+  file = {Time domain beam propagation method:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/M Koshiba.pdf:PDF},
+  keywords = {Finite-element method (FEM), optical waveguide analysis, photonic
+	crystal, time-domain analysis, time-domain beam propagation method
+	(TD-BPM), slowly varying field},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@ARTICLE{meeker2010_FEMM,
+  author = {Meeker, David},
+  title = {Finite element method magnetics},
+  journal = {User’s Manual},
+  year = {2010},
+  volume = {4},
+  pages = {158},
+  owner = {nicoguaro},
+  timestamp = {2013.05.12}
+}
+
+@ARTICLE{Men2010,
+  author = {H. Men},
+  title = {{B}andgap optimization of two-dimensional photonic crystals using
+	semidefinite programming and subspace methods},
+  journal = {Journal of Computational Physics},
+  year = {2010},
+  volume = {229},
+  abstract = {In this paper, we consider the optimal design of photonic crystal
+	structures for two-dimen-
+	
+	sional square lattices. The mathematical formulation of the bandgap
+	optimization problem
+	
+	leads to an infinite-dimensional Hermitian eigenvalue optimization
+	problem parametrized
+	
+	by the dielectric material and the wave vector. To make the problem
+	tractable, the original
+	
+	eigenvalue problem is discretized using the finite element method
+	into a series of finite-
+	
+	dimensional eigenvalue problems for multiple values of the wave vector
+	parameter. The
+	
+	resulting optimization problem is large-scale and non-convex, with
+	low regularity and
+	
+	non-differentiable objective. By restricting to appropriate eigenspaces,
+	we reduce the
+	
+	large-scale non-convex optimization problem via reparametrization
+	to a sequence of
+	
+	small-scale convex semidefinite programs (SDPs) for which modern SDP
+	solvers can be effi-
+	
+	ciently applied. Numerical results are presented for both transverse
+	magnetic (TM) and
+	
+	transverse electric (TE) polarizations at several frequency bands.
+	The optimized structures
+	
+	exhibit patterns which go far beyond typical physical intuition on
+	periodic media design.},
+  file = {Optimization of bandgap:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/Bandgap optimization of two-dimensional photonic crystals using semidefinite programming and subspace methods.pdf:PDF},
+  keywords = {Photonic crystals, Semidefinite programming, Subspace methods, Bandgap
+	optimization},
+  owner = {santiago},
+  timestamp = {2013.02.07}
+}
+
+@ARTICLE{Monat2012,
+  author = {C. Monat},
+  title = {{S}low-light enhanced nonlinearities in photonic crystals and their
+	application to optical signal processing and quantum integrated optics},
+  journal = {Opto-Electronics and Communications Conference},
+  year = {2012},
+  abstract = {We show how slow-light enhanced four-wave mixing in dispersion engineered
+	photonic crystal waveguides can result in ultra-compact devices enabling
+	different applications, namely time-division demultiplexing of 160Gbaud
+	data streams and the generation of correlated photon pairs.},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@ARTICLE{Moore2008,
+  author = {S.A. Moore},
+  title = {{P}hotonic crystal laser with mode selective mirrors},
+  journal = {Optical Society of America},
+  year = {2008},
+  volume = {16},
+  file = {Laser:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/W3laserpaper.pdf:PDF},
+  keywords = {Mode selective mirrors, Photonic crystal based laser.},
+  owner = {santiago},
+  timestamp = {2013.02.07}
+}
+
+@ARTICLE{Mur1994,
+  author = {Gerrit Mur},
+  title = {Edge Elements, their Advantages and Disadvantages},
+  journal = {IEEE Transactions on magnetics},
+  year = {1994},
+  volume = {30},
+  pages = {3552-3557},
+  owner = {santiago},
+  timestamp = {2013.05.13}
+}
+
+@ARTICLE{nedelec1980,
+  author = {N{\'e}d{\'e}lec, Jean-Claude},
+  title = {Mixed finite elements in $\mathbb{R}^3$},
+  journal = {Numerische Mathematik},
+  year = {1980},
+  volume = {35},
+  pages = {315--341},
+  number = {3},
+  abstract = {We present here some new families of non conforming finite elements
+	in R3. These two families of finite elements, built on tetrahedrons
+	or on cubes are respectively conforming in the spaces H(curl) and
+	H(div). We give some applications of these elements for the approximation
+	of Maxwell's equations and equations of elasticity.},
+  owner = {nicoguaro},
+  publisher = {Springer},
+  timestamp = {2013.05.13}
+}
+
+@BOOK{Obayya2011,
+  title = {{C}omputational {P}hotonics},
+  publisher = {Wiley},
+  year = {2011},
+  author = {Salah Obayya},
+  comment = {This book is in the library. Mentions the BPM method extensively and
+	treats the FEM for Frequency domain simulations of photonic crystal
+	fibers.},
+  file = {Computational Photonics:/home/santiago/Dropbox/Faustos/Thesis/Books/Computational Photonics.pdf:PDF},
+  owner = {santiago},
+  timestamp = {2013.01.29}
+}
+
+@ARTICLE{Oskooi2009,
+  author = {Ardavan F. Oskooi and David Roundy and Mihai Ibanescu and Peter Bermel
+	and J.D. Joannopoulos and Steven Johnson G},
+  title = {{M}eep: {A} flexible free-software package for electromagnetic simulations
+	by the {FDTD} method},
+  journal = {Computer Physics Communications},
+  year = {2009},
+  abstract = {This paper describes Meep, a popular free implementation of the finite-difference
+	time-domain (FDTD)
+	
+	method for simulating electromagnetism. In particular, we focus on
+	aspects of implementing a full-fea-
+	
+	tured FDTD package that go beyond standard textbook descriptions of
+	the algorithm, or ways in which
+	
+	Meep differs from typical FDTD implementations. These include pervasive
+	interpolation and accurate
+	
+	modeling of subpixel features, advanced signal processing, support
+	for nonlinear materials via Padé ap-
+	
+	proximants, and flexible scripting capabilities.},
+  file = {:/home/santiago/Dropbox/Photonic Crystals Project/References/MEEP- A flexible free-software package - Oskooi et al [2010].pdf:PDF},
+  keywords = {Computational electromagnetism, FDTD, Maxwell solver},
+  owner = {santiago},
+  timestamp = {2013.02.04}
+}
+
+@ARTICLE{Painter1998,
+  author = {O. Painter},
+  title = {{D}efect modes of a two-dimensional photonic crystal in an optically
+	thin dielectric slab},
+  journal = {Optical Society of America},
+  year = {1998},
+  volume = {16},
+  comment = {Interesting discussion of problem. Treats the problem of design of
+	resonant cavities for application in lasers and LEDs.},
+  file = {Defect modes:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/josab_feb99.pdf:PDF},
+  keywords = {Photonic crystal, Defect Modes, Lasers},
+  owner = {santiago},
+  timestamp = {2013.02.07}
+}
+
+@ARTICLE{Pervez2010,
+  author = {Nadia K. Pervez},
+  title = {{P}hotonic crystal spectrometer},
+  journal = {Optics Express},
+  year = {2010},
+  volume = {18},
+  abstract = {We demonstrate a new kind of optical spectrometer employing photonic
+	crystal patterns to outcouple waveguided light from a transparent
+	substrate. This spectrometer consists of an array of photonic crystal
+	patterns, nanofabricated in a polymer on a glass substrate, combined
+	with a camera. The camera captures an image of the light outcoupled
+	from the patterned substrate; the array of patterns produces a spatially
+	resolved map of intensities for different wavelength bands. The intensity
+	map of the image is converted into a spectrum using the photonic
+	crystal pattern response functions. We present a proof of concept
+	by characterizing a white LED with our photonic crystal spectrometer.},
+  comment = {A source of low cost spectrometry. White light from LED is characterized
+	by using an array of nine photonic crystal patterns.
+	
+	Its good for narrwo band high definition spectroscopy.},
+  file = {Cheap photonic crystal based spectromoter:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/Optical spectrometer.pdf:PDF},
+  owner = {santiago},
+  timestamp = {2013.02.07}
+}
+
+@ARTICLE{Raleigh1885,
+  author = {J.W.S Raleigh},
+  title = {{O}n the remarkable {P}henomenon of {C}rystaline {R}eflection described
+	by {P}rof. {S}tokes.},
+  journal = {Proceedings of the Royal Society of London},
+  year = {1885},
+  volume = {38},
+  pages = {1884-1885},
+  file = {:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/LordRayleighB.pdf:PDF},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@BOOK{Ram2002,
+  title = {Finite element and boundary element applications in quantum mechanics},
+  publisher = {Oxford University Press on Demand},
+  year = {2002},
+  author = {Ram-Mohan, L Ramdas},
+  volume = {5},
+  owner = {nicoguaro},
+  timestamp = {2013.05.12}
+}
+
+@BOOK{Rao2004,
+  title = {{E}lements of engineering electromagnetics},
+  publisher = {Pearson Prentice Hall},
+  year = {2004},
+  author = {Nannapaneni Narayana Rao},
+  owner = {santiago},
+  timestamp = {2013.05.08}
+}
+
+@ARTICLE{Raymond2008,
+  author = {P.L Raymond},
+  title = {A metric for software readability},
+  journal = {International Symposium in Software Testing and Analysis},
+  year = {2008},
+  abstract = {ABSTRACT
+	
+	In this paper, we explore the concept of code readability
+	
+	and investigate its relation to software quality. With data
+	
+	collected from human annotators, we derive associations be-
+	
+	tween a simple set of local code features and human notions
+	
+	of readability. Using those features, we construct an au-
+	
+	tomated readability measure and show that it can be 80%
+	
+	eective, and better than a human on average, at predict-
+	
+	ing readability judgments. Furthermore, we show that this
+	
+	metric correlates strongly with two traditional measures of
+	
+	software quality, code changes and defect reports. Finally,
+	
+	we discuss the implications of this study on programming
+	
+	language design and engineering practice. For example, our
+	
+	data suggests that comments, in of themselves, are less im-
+	
+	portant than simple blank lines to local judgments of read-
+	
+	ability.},
+  owner = {santiago},
+  timestamp = {2013.05.14}
+}
+
+@BOOK{Reddy_functional_analysis,
+  title = {{A}pplied {F}unctional {A}nalysis and {V}ariational {M}ethods in
+	{E}ngineering},
+  publisher = {Krieger Publishing},
+  year = {1991},
+  author = {J.N. Reddy},
+  pages = {546},
+  edition = {1},
+  keywords = {Variational Method, Functional Analysis, Analytical Mechanics},
+  owner = {nguarinz},
+  timestamp = {2011.11.28}
+}
+
+@BOOK{RobertD.Cook1989,
+  title = {{C}oncepts and applications of {F}inite {E}lement {A}nalysis {T}hird
+	edition},
+  publisher = {John Willey and Sons},
+  year = {1989},
+  author = {Robert D. Cook , David S. Malkus, Michael E. Plesha},
+  owner = {santiago},
+  timestamp = {2013.04.29}
+}
+
+@MASTERSTHESIS{Rodriguez2012,
+  author = {Sara E. Rodriguez},
+  title = {{N}umerical {A}nalysis of the {M}odal {C}oupling at low resonances
+	ina a {C}olombian {A}ndean {B}andola in {C} using the {F}inite {E}lement
+	{M}ethod},
+  school = {Universidad EAFIT},
+  year = {2012},
+  owner = {santiago},
+  timestamp = {2013.02.04},
+  url = {http://bdigital.eafit.edu.co:8080/bdng/query/single.xsp?id1=EAFIT620.00151535CDR696}
+}
+
+@ARTICLE{Rodriguez2005,
+  author = {Vitaly Félix Rodriguez},
+  title = {{F}inite-{E}lement {A}nalysis of {P}hotoinc {C}rystal {C}avities:
+	{T}ime and {F}requency {D}omains},
+  journal = {Journal of Lightwave Technology},
+  year = {2005},
+  volume = {23},
+  pages = {1514-1521},
+  abstract = {Abstract—Finite-element analysis in time and frequency
+	
+	domains using perfectly matched layers and isoparametric curvi-
+	
+	linear elements for finite-size photonic-crystal (PC) cavities is
+	
+	presented in this paper. The time-domain approach includes
+	
+	current sources, the full band scheme, and the slowly varying
+	
+	envelope approximation; consequently, bigger time steps can be
+	
+	used independent of the size of the elements. The resonant fre-
+	
+	quency, quality factor, effective modal area, and field distribution
+	
+	for each mode can be obtained in a single simulation. A strategy
+	
+	to compute the higher resonant modes by using only a quarter of
+	
+	the cavity and adequate boundary conditions is also presented.},
+  file = {This is the file with nice mesh pictures.:/home/santiago/Dropbox/Photonic Crystals Project/References/Finite-Element Analysis of Photonic Crystal Cavities-Time and Frequency Domains-Rodriguez et al [2005].pdf:PDF},
+  keywords = {the cavity and adequate boundary conditions is also presented.
+	
+	Index Terms—Cavity resonator, finite-element method (FEM),
+	
+	isoparametric element, photonic crystal (PC),
+	
+	 factor, time-do-
+	
+	main analysis.},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@MASTERSTHESIS{Sierra2010,
+  author = {Daniel E. Sierra},
+  title = {{D}esarrollo de un m\'odulo computacional para la s\'intesis y procesamiento
+	de campos \'opticos con aplicaciones en holograf\'ia digital y speckle},
+  school = {Universidad EAFIT},
+  year = {2010},
+  file = {Tesis Daniel Sierra:/home/santiago/Dropbox/Faustos/Thesis/Thesis document examples/Desarollo de un Modulo de Optica Computacional - Daniel Sierra - Trabajo de grado.pdf:PDF},
+  keywords = {Optics virtual lab, Digital Holography, Speckle},
+  owner = {santiago},
+  timestamp = {2013.02.07}
+}
+
+@ARTICLE{StevenG.Johnson2001,
+  author = {Steven G. Johnson, Joannopoulos, J. D.},
+  title = {{B}lock-iterative frequency-domain methods for {M}axwell's equations
+	in a planewave basis},
+  journal = {Optical Society of America},
+  year = {2001},
+  abstract = {Abstract: We describe a fully-vectorial, three-dimensional algo-
+	
+	rithm to compute the definite-frequency eigenstates of Maxwell’s equa-
+	
+	tions in arbitrary periodic dielectric structures, including systems
+	with
+	
+	anisotropy (birefringence) or magnetic materials, using preconditioned
+	
+	block-iterative eigensolvers in a planewave basis. Favorable scaling
+	with
+	
+	the system size and the number of computed bands is exhibited. We
+	
+	propose a new effective dielectric tensor for anisotropic structures,
+	and
+	
+	2demonstrate that O(∆x ) convergence can be achieved even in sys-
+	
+	tems with sharp material discontinuities. We show how it is possible
+	to
+	
+	solve for interior eigenvalues, such as localized defect modes, without
+	
+	computing the many underlying eigenstates. Preconditioned conjugate-
+	
+	gradient Rayleigh-quotient minimization is compared with the David-
+	
+	son method for eigensolution, and a number of iteration variants and
+	
+	preconditioners are characterized. Our implementation is freely avail-
+	
+	able on the Web.},
+  file = {:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/Block-iterative frequency-domain methods for Maxwell's equations in a planewave basis.pdf:PDF},
+  keywords = {PWM, Frequency domain,},
+  owner = {santiago},
+  timestamp = {2013.02.04}
+}
+
+@ARTICLE{StevenJohnson2001,
+  author = {Steven Johnson, John Joannopoulos},
+  title = {Block-iterative frequency-domain methods for Maxwell's equations
+	in a planewave basis},
+  journal = {Optics Express},
+  year = {2001},
+  volume = {8},
+  pages = {173-190},
+  owner = {santiago},
+  timestamp = {2013.05.12}
+}
+
+@BOOK{TieJunCui2010,
+  title = {{M}etamaterials: {T}heory {D}esign and {A}pplications},
+  publisher = {Springer Link},
+  year = {2010},
+  author = {Tie Jun Cui, David Smith},
+  file = {:/home/santiago/Dropbox/Faustos/Thesis/Books/chp%3A10.1007%2F978-1-4419-0573-4_1.pdf:PDF},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@MASTERSTHESIS{Villegas2011,
+  author = {Edward Villegas},
+  title = {{M}odelizaci\'on y {S}imulaci\'on de {E}fectos de {C}onfinamiento
+	en el {G}rafeno},
+  school = {Universidad EAFIT},
+  year = {2011},
+  owner = {santiago},
+  timestamp = {2013.02.04},
+  url = {http://bdigital.eafit.edu.co:8080/bdng/querySP/single.xsp?id1=EAFIT546.6812CDV732}
+}
+
+@ARTICLE{Villeneuve1996,
+  author = {Pierre R. Villeneuve},
+  title = {{M}icrocavities in photonic crystals: {M}ode symmetry, tunability,
+	and coupling efficiency},
+  journal = {Physical Review B},
+  year = {1996},
+  volume = {54},
+  abstract = {We investigate the properties of resonant modes which arise from the
+	introduction of local defects in
+	
+	two-dimensional ͑2D͒ and 3D photonic crystals. We show that the properties
+	of these modes can be controlled
+	
+	by simply changing the nature and size of the defects. We compute
+	the frequency, polarization, symmetry, and
+	
+	field distribution of the resonant modes by solving Maxwell’s equations
+	in the frequency domain. The dynamic
+	
+	behavior of the modes is determined by using a finite-difference time-domain
+	method which allows us to
+	
+	compute the coupling efficiency and the losses in the microcavity.
+	͓S0163-1829͑96͒05135-1͔},
+  file = {Microcavities:/home/santiago/Dropbox/Faustos/Thesis/Photonic Crystals papers/Villeneuve_PRB_54_7837_1996.pdf:PDF},
+  keywords = {Microcavities, tunability, photonic crystals},
+  owner = {santiago},
+  timestamp = {2013.02.07}
+}
+
+@ARTICLE{Webb1993,
+  author = {J.P. Webb},
+  title = {Edge Elements and what They can do for You},
+  journal = {IEEE Transactions on magnetics},
+  year = {1993},
+  volume = {29},
+  pages = {1460-1465},
+  owner = {santiago},
+  timestamp = {2013.05.13}
+}
+
+@ELECTRONIC{Wikipedia2013,
+  author = {Wikipedia},
+  year = {2013},
+  title = {Object-oriented programming},
+  url = {https://en.wikipedia.org/wiki/Object-oriented_programming},
+  owner = {santiago},
+  timestamp = {2013.05.14}
+}
+
+@ARTICLE{Wolters2010,
+  author = {Janik Wolters},
+  title = {{E}nhancement of the zero phonon line emission from a single nitrogen
+	vacancy center in a nanodiamond via coupling to a photonic crystal
+	cavity},
+  journal = {Applied Physics Letters},
+  year = {2010},
+  abstract = {Using a nanomanipulation technique a nanodiamond with a single nitrogen
+	vacancy center is placed directly on the surface of a gallium phosphide
+	photonic crystal cavity. A Purcell-enhancement of the fluorescence
+	emission at the zero phonon line (ZPL) by a factor of 12.1 is observed.
+	The ZPL coupling is a first crucial step toward future diamond-based
+	integrated quantum optical devices.},
+  owner = {santiago},
+  timestamp = {2013.02.07}
+}
+
+@ARTICLE{Yablonovich1991,
+  author = {E. Yablonovich},
+  title = {{P}hotonic band structure: {T}he face-centered-cubic case employing
+	nonspherical atoms},
+  journal = {Physical Review Letters},
+  year = {1991},
+  volume = {67},
+  abstract = {We introduce a practical, new, face-centered-cubic dielectric structure
+	which simultaneously solves two of the outstanding problems in photonic
+	band structure. In this new ‘‘photonic crystal’’ the atoms are nonspherical,
+	lifting the degeneracy at the W point of the Brillouin zone, and
+	permitting a full photonic band gap rather than a pseudogap. Furthermore,
+	this fully three-dimensional fcc structure lends itself readily to
+	microfabrication on the scale of optical wavelengths. It is created
+	by simply drilling three sets of holes 35.26° off vertical into the
+	top surface of a solid slab or wafer, as can be done, for example,
+	by chemical-beam-assisted ion etching.},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@ARTICLE{Yablonovich1987,
+  author = {Eli. Yablonovich},
+  title = {{I}nhibited spontaneous emission in solid-state physics and electronics},
+  journal = {Physical},
+  year = {1987},
+  volume = {58},
+  pages = {2059-2062},
+  abstract = {It has been recognized for some time that the spontaneous emission
+	by atoms is not necessarily a fixed and immutable property of the
+	coupling between matter and space, but that it can be controlled
+	by modification of the properties of the radiation field. This is
+	equally true in the solid state, where spontaneous emission plays
+	a fundamental role in limiting the performance of semiconductor lasers,
+	heterojunction bipolar transistors, and solar cells. If a three-dimensionally
+	periodic dielectric structure has an electromagnetic band gap which
+	overlaps the electronic band edge, then spontaneous emission can
+	be rigorously forbidden.},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@BOOK{YangHao2009,
+  title = {{FDTD} {M}odeling of {M}etamaterials: {T}heory and applications},
+  publisher = {Artech House},
+  year = {2009},
+  author = {Yang Hao, Raj Mittra},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@PHDTHESIS{ZHang2010,
+  author = {Shu ZHang},
+  title = {{A}coustic {M}etamaterial design and applications},
+  school = {University of Illinois at Urbana Champaign},
+  year = {2010},
+  owner = {santiago},
+  timestamp = {2013.02.06}
+}
+
+@BOOK{Zienkiewicz2005,
+  title = {{T}he {F}inite {E}lement {M}ethod: {I}ts {B}asis and {F}undamentals:
+	{I}ts {B}asis and {F}undamentals},
+  publisher = {Butterworth-Heinemann},
+  year = {2005},
+  author = {Zienkiewicz, Olgierd Cecil and Taylor, Robert Leroy and Zhu, Jian
+	Z}
+}
+
+@ELECTRONIC{ParaviewDoc,
+  title = {Paraview Documentation},
+  language = {English},
+  organization = {Kitware Inc.},
+  note = {Accessed 2 October 2011},
+  url = {http://www.paraview.org/paraview/help/documentation.html},
+  abstract = {ParaView is an open-source, multi-platform application designed to
+	visualize data sets of size varying from small to very large.},
+  owner = {edward},
+  timestamp = {2011.10.05}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
