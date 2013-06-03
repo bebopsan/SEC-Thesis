@@ -519,9 +519,9 @@ In the simulations that were performed as part of the project we didn't consider
 
 \section{Mass matrices}
 \label{sec:explicit_formulation}
-discrete representation of a continuous distribution of something that multiplies the second time derivative of the field.
+In numerical methods, and more specifically in Finite elements, mass matrices are a discrete representation of a continuous distribution of something, that multiplies the second time derivative of the solution function.
 
-Mass matrices are catalogued as consistent or diagonal. Consistent mass matrices use the same shape functions as the ones used to generate the element stiffness matrix. All reference to mass matrices mentioned before, were consistent \cite{RobertD.Cook1989}. 
+Mass matrices are cataloged as consistent or diagonal. Consistent mass matrices use the same shape functions as the ones used to generate the element stiffness matrix. All reference to mass matrices mentioned before, were consistent \cite{RobertD.Cook1989}. 
 The other way to formulate mass matrices is the lumped mass matrix. Which is made by avoiding the interpolation and simply placing particle masses $m_i$ at nodes $i$ of an element such that $\sum m_i$ is the total element mass. 
 
 The great advantage of lumped mass matrices is that they are diagonal and the solution of the system of equations can be performed in a explicit manner convenient for big computational domains.

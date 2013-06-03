@@ -1,6 +1,6 @@
 \chapter{Results}
 \label{ch:Results}
-As mentioned in the introduction, we developed a software platform able to simulate propagation of electromagnetic waves in photonic crystals. In chapter \ref{ch:Electromagnetic waves in periodic media} we stated the equations that rule the problem, and discussed background behind one method of solution using FEA in chapter \ref{ch:Finite_element_method}. In this chapter the solutions obtained by applying these concepts are presented and compared with either their analytic solutions or numerical solutions from the literature.
+As mentioned in the introduction, we developed a software platform able to simulate propagation of electromagnetic waves in Photonic Crystals. In chapter \ref{ch:Electromagnetic waves in periodic media} we stated the equations that rule the problem, and discussed background behind one method of solution using FEA in chapter \ref{ch:Finite_element_method}. In this chapter the solutions obtained by applying these concepts are presented and compared with either their analytic solutions or numerical solutions from the literature.
 
 \section{Electrostatic benchmark tests}
 
@@ -330,7 +330,7 @@ Shape 2 & 6.3850403 & 7.65926504 & 9.11794073 & 10.23394057 \\
 
 \subsubsection{Finite lattices}
 
-Now that the software was tested for the solution of eigenvalue problems, it needed to prove its ability to handle simulations of heterogeneous domains, like in photonic crystals. The following results are tests where the harmonic wave equation is solved for a finite grid of $4\times 4$ circular dielectric slabs with ratio $\dfrac{r}{a}=0.2$ and dielectric constant $\epsilon_r = 8.9$ surrounded by air. Boundary conditions are as in \ref{eq:square_bc}, this is, inside a rectangular metallic boundary like if in a wave-guide. The expected result is to see concentration of field inside regions with higher $\epsilon$. As well as lower natural frequencies than those produced by homogeneous medium due to the denominator $\sqrt{\mu\epsilon}$ in \ref{eq:eig_vals_sqare_waveguide}. 
+Now that the software was tested for the solution of eigenvalue problems, it needed to prove its ability to handle simulations of heterogeneous domains, like in Photonic Crystals. The following results are tests where the harmonic wave equation is solved for a finite grid of $4\times 4$ circular dielectric slabs with ratio $\dfrac{r}{a}=0.2$ and dielectric constant $\epsilon_r = 8.9$ surrounded by air. Boundary conditions are as in \ref{eq:square_bc}, this is, inside a rectangular metallic boundary like if in a wave-guide. The expected result is to see concentration of field inside regions with higher $\epsilon$. As well as lower natural frequencies than those produced by homogeneous medium due to the denominator $\sqrt{\mu\epsilon}$ in \ref{eq:eig_vals_sqare_waveguide}. 
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
