@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 % For text justification
 \usepackage{ragged2e}
+\usepackage{animate} %need the animate.sty file 
 % ams math packages
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -18,7 +19,6 @@
 \usetheme[]{Madrid}
 %\usepackage{colortbl}
 %\usepackage[table]{xcolor} 
-\usepackage{multimedia}
 \usepackage{subfigure}
 %\usetheme{Boadilla} 
 %\usecolortheme{dolphin} 
@@ -39,7 +39,6 @@
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 
 \usepackage{listings}
-
 % Python style for highlighting
 \newcommand\pythonstyle{\lstset{
 language=Python,
@@ -314,7 +313,6 @@ of the resonator, quantum dot and probe laser.
 	\frame{
 	\frametitle{Las ecuaciones que rigen el problema}
 	\centerline{Ecuaciones de Maxwell}
-	\vskip20pt
 	\begin{columns}[t]
 		\begin{column}{0.5 \textwidth}
 		\begin{block}{En forma Integral }
@@ -342,7 +340,211 @@ of the resonator, quantum dot and probe laser.
 		\end{column}
 	\end{columns}
 	}
+	\frame{
+	\frametitle{Campos en materiales dieléctricos}
+	\begin{block}{Relaciones constitutivas}
+	\small
+	\begin{align*}
+	&\mathbf{D} = \epsilon_0 \mathbf{E} + \mathbf{P} &\mathbf{B} = \mu_0  \mathbf{H} + \mathbf{M}\\
+&\mathbf{D} = \bar{\bar{\epsilon}} \cdot \mathbf{E}
+&\mathbf{B} = \bar{\bar{\mu}} \cdot \mathbf{H},
+	\end{align*}
 	
+	\end{block}
+	}
+	
+	\frame{
+	\frametitle{La ecuación de onda}
+	\note{Se busca desacoplar las ecuaciones de Faraday
+	y Ampere}
+	\begin{block}{Ecuación de onda para los campos 
+$\mathbf{E}$ y $\mathbf{H}$}
+	\small
+	Si los vectores de polarización y magnetización no varían con el tiempo:
+\begin{align*}
+&\nabla\times\nabla\times \mathbf{E} = -\bar{\bar{\mu}}\cdot \left[ \bar{\bar{\epsilon}}\cdot\frac{\partial^2 \mathbf{E}}{\partial t^2} + \frac{\partial \mathbf{J}}{\partial t} \right] \enspace \\
+&\nabla\times\nabla\times \mathbf{H} = -\bar{\bar{\epsilon}}\cdot  \bar{\bar{\mu}}\cdot\frac{\partial^2 \mathbf{H}}{\partial t^2} + \nabla\times\mathbf{J} \enspace .
+\end{align*}
+	\end{block}
+	\pause
+	\begin{block}{Ecuaciones de Helmholtz}
+	\small
+	Usando la identidad vectorial  $\nabla\times\nabla\times \mathbf{A} = \nabla(\nabla\cdot\mathbf{A}) - \nabla^2 \mathbf{A}$, y asumiendo que no hay fuentes, tenemos las ecuaciones de Helmholtz para los campos eléctrico y magnético.
+	\begin{align*}
+&\nabla^2 \mathbf{E} = \bar{\bar{\mu}}\cdot\bar{\bar{\epsilon}}\cdot \frac{\partial^2 \mathbf{E}}{\partial t^2} - \bar{\bar{\mu}}\cdot \frac{\partial \mathbf{J}}{\partial t} \\
+&\nabla^2 \mathbf{H} = \bar{\bar{\epsilon}}\cdot\bar{\bar{\mu}}\cdot \frac{\partial^2 \mathbf{H}}{\partial t^2} - \nabla\times \mathbf{J}
+\end{align*}
+	\end{block}
+	}
+	\frame{
+	\frametitle{Soluciones armónicas}
+	\small
+		\begin{columns}[t]
+			\begin{column}{.6\textwidth}
+		Suponemos que el campo varía de forma armónica en el tiempo. 
+		
+$$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
+		\pause
+		Y asumimos que no hay fuentes ni sumideros:
+			\begin{align*}
+&\left(\nabla^2 - \mu\epsilon \frac{\partial^2}{\partial t^2} \right) \mathbf{E} = \mathbf{0}
+			\end{align*}
+			\end{column}
+			\pause
+			\begin{column}{0.4\textwidth}
+			\small
+			\begin{block}{\small Ecuación de onda armónica}
+			\begin{align*}
+&\dfrac{1}{\mu_r}\nabla^2 \mathbf{E} = -\omega^2\mu_0\epsilon_0\epsilon_r \mathbf{E}
+			\end{align*}
+			
+			\end{block}
+			\end{column}
+		\end{columns}
+	}
+	\frame{
+	\small
+	\frametitle{Un problema de autovalores}
+	La ecuación de onda armónica se puede tratar como un problema de autovalores y aprovechar la notación de Dirac para extraer conclusiones sobre las soluciones. El cristal se describe como un problema de la forma:
+	
+		\begin{equation*}
+		\hat{\Theta}\mathbf{E} = \left(\frac{\omega}		{c}\right)^2\mathbf{E}
+		\end{equation*} 
+		\pause
+	Dónde 
+	\note{El operador $\hat{\Theta}$ está  definido por}
+		\begin{equation*}
+\hat{\Theta}\mathbf{E}\triangleq \bar{\bar{\mu_r}}^{-1}\nabla\times\nabla\times \mathbf{E}
+	\end{equation*}
+	\pause
+	Al igual que el Hamiltoniano en mecánica cuántica este operador es hermítico, y como tal sus autofunciones tienen las siguientes propiedades:
+	\begin{itemize}
+\item<4-> Tiene auto valores reales,
+\item<5-> las autofunciones son ortogonales entre sí,
+\item<6-> puede ser obtenido por principios variacionales
+\item<7-> y se pueden catalogar utilizando propiedades de simetría.
+\end{itemize}
+	}
+	\frame{
+	\small
+	\frametitle{Definición del producto interior	y sus propiedades}	
+	El producto interno de dos funciones vectoriales $\mathbf{F(r)}$ y $\mathbf{G(r)}$ se define como:
+
+\begin{equation*}
+\left\langle \mathbf{F(r)},\mathbf{G(r)}\right\rangle \triangleq
+\int \mathbf{F^*(r)}\cdot \mathbf{G(r)}
+\label{eq:inner_prod}
+\end{equation*}
+
+\pause
+Se puede ver que:
+
+$$\left\langle\mathbf{F},\mathbf{G}\right\rangle =  \left\langle\mathbf{G},\mathbf{F}\right\rangle^*$$
+\pause
+Se concluye también que, la norma $L^2$ de $\mathbf{F}$: $$\left\langle\mathbf{F},\mathbf{F}\right\rangle \in \mathbb{R}^+$$ 
+\pause
+Una función de onda normalizada es tal que:
+$$\left\langle\mathbf{F},\mathbf{F}\right\rangle=1$$.
+	}
+	\frame{
+	\small
+	\frametitle{Prueba de la hermiticidad del operador $\hat{\Theta}$}	
+	Decimos que el operador $\hat{\Theta}$ es \textbf{hermítico} si $$\left\langle\mathbf{F},\hat{\Theta}\mathbf{G}\right\rangle = \left\langle\hat{\Theta}\mathbf{F},\mathbf{G}\right\rangle$$
+para cualquier par de campos $\mathbf{F}$ y $\mathbf{G}$. 
+\pause \\
+Usando la definición del producto interior podemos probar que $\hat{\Theta}$ es hermítico:
+\tiny
+	\begin{align*}
+	\uncover<3->{
+\left\langle\mathbf{F},\hat{\Theta}\mathbf{G}\right\rangle &=
+\int \mathbf{F^*}\cdot \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\nabla\times \mathbf{G}\\}
+	\uncover<4->{
+& = \int \left(\nabla\times\mathbf{F}\right)^*\cdot
+	\frac{1}{\bar{\bar{\mu_r}}}\left(\nabla\times\mathbf{G}
+	\right)+ \int \nabla\cdot\left( \mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right)\\}
+		\uncover<5->{
+&= \int \left[\nabla\times \left(\frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{F}\right)\right]^*
+\cdot\mathbf{G} + 
+\int \nabla\cdot\left(\nabla\times\mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right)+\int \nabla\cdot\left( \mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right) \\}
+	\uncover<6->{
+& = \int \left[\nabla\times \left(\frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{F}\right)\right]^*
+\cdot\mathbf{G} \\}
+	\uncover<7->{
+&= \left\langle\hat{\Theta}\mathbf{F},\mathbf{G}\right\rangle}
+\end{align*}	
+\uncover<8>{
+Usando la identidad $\nabla \cdot \left(\mathbf{A}\times \mathbf{B} \right) = \mathbf{B}\cdot\left(\nabla \times \mathbf{A} \right) - \mathbf{A}\cdot\left(\nabla \times \mathbf{B} \right)$, y el teorema de la divergencia.}
+	}
+	\frame{
+	\small
+	\frametitle{Ortogonalidad}	
+%	Se dice que dos autofunciones son ortogonales y tienen distintos autovalores asociados si:
+%	$$\left\langle\mathbf{E}_1,\mathbf{E}_2\right\rangle=0$$
+%	\pause
+La ortogonalidad en bases distintas de un operador hermítico se puede ver si se hace la siguiente igualdad:
+	\begin{align*}
+c^2\left\langle\mathbf{E}_2,\hat{\Theta}\mathbf{E}_1\right\rangle &=
+c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
+\omega_1^2\left\langle\mathbf{E}_2,\mathbf{E}_1\right\rangle &= \omega_2^2\left\langle\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
+\left(\omega_1^2-\omega_2^2\right) \left\langle\mathbf{E}_2,\mathbf{E}_1\right\rangle &= 0
+	\end{align*}
+	\pause
+	Vale cuando los modos o autofunciones son:
+	\pause
+	\begin{columns}[t]
+		\column{0.3\textwidth}
+		\begin{block}{\centerline{Ortogonales}}
+		$$\omega_1^2-\omega_2^2\neq 0$$
+		$$\left\langle\mathbf{E}_1,\mathbf{E}_2\right\rangle = 0$$
+		\end{block}
+		\pause
+		\column{0.5\textwidth}
+		\begin{block}{\centerline{Degenerados}}
+		$$\left(\omega_1^2-\omega_2^2\right) = 0$$	
+		Se dice que $\omega_1^2 =\omega_2^2$ es un autovalor \textbf{degenerado}.
+			\end{block}
+	\end{columns}
+	}
+	\frame{
+	\small
+	\frametitle{Operaciones de simetrías}
+	Las operaciones de simetría son operaciones de transformación que llevan un sistema a formas equivalentes de si mismo.
+	\small
+	\begin{columns}[t]
+	\column{0.2\textwidth}
+	\begin{block}{\small Identidad $\hat{E}$}
+	%Transforma un sistema en sí mismo
+	$$\hat{E}\mathbf{E(r)} = \mathbf{E(r)}$$
+	\end{block}
+	\column{0.25\textwidth}
+	\begin{block}{\small Inversión $\hat{O_I}$}
+	\small
+	%Invierte las coordenadas de un sistema al rededor de un eje.
+	$$\hat{O_I}\mathbf{E(r)} = \mathbf{E(-r)}$$
+	\centering
+	\uncover<2>{\animategraphics[autoplay,loop,height=2cm]{1}{mirr_}{1}{4}}
+	\end{block}
+	\column{0.3\textwidth}
+
+	\begin{block}{\small Rotación $\mathcal{R}$}
+	\small
+	%Rota el sistema dados un ángulo y un eje.
+	$$\hat{\mathcal{R}}(\hat{n},\alpha)\mathbf{E(r)} = \mathbf{E(r)}$$
+	\centering
+	\animategraphics[autoplay,loop,width = 2cm]{1}{unit_}{1}{6} 	
+	\end{block}
+
+	\end{columns}
+	}
+	\frame{
+	\frametitle{Operaciones de translación}
+	\centering
+	\begin{figure}
+	\uncover<4>{\animategraphics[loop,height=5cm]{1}{trans_}{1}{4}	}
+	\end{figure}
+	\pause
+	\note{Si el sistema tiene simetrías no tenemos cómo diferenciarlo bajo aplicación de operaciones de simetría}
+	}
 	\subsection{Los métodos para simular el fenómeno}
 
 \section{Implementación}
