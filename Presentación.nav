@@ -80,51 +80,90 @@
 \headcommand {\beamer@framepages {96}{98}}
 \headcommand {\slideentry {2}{2}{5}{99/99}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
 \headcommand {\beamer@framepages {99}{99}}
-\headcommand {\slideentry {2}{2}{6}{100/101}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
-\headcommand {\beamer@framepages {100}{101}}
-\headcommand {\slideentry {2}{2}{7}{102/103}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
-\headcommand {\beamer@framepages {102}{103}}
-\headcommand {\slideentry {2}{2}{8}{104/104}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
-\headcommand {\beamer@framepages {104}{104}}
-\headcommand {\sectionentry {3}{Implementaci\IeC {\'o}n}{105}{Implementaci\IeC {\'o}n}{0}}
-\headcommand {\beamer@sectionpages {42}{104}}
-\headcommand {\beamer@subsectionpages {90}{104}}
-\headcommand {\slideentry {3}{0}{9}{105/105}{}{0}}
-\headcommand {\beamer@framepages {105}{105}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{106}{Requerimientos}}\headcommand {\beamer@subsectionpages {105}{105}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{106}{Pasos de desarrollo}}\headcommand {\beamer@subsectionpages {106}{105}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{106}{Herramientas}}\headcommand {\beamer@subsectionpages {106}{105}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{106}{Ejemplos, y referencias}}\headcommand {\beamer@subsectionpages {106}{105}}
-\headcommand {\sectionentry {4}{Resultados}{106}{Resultados}{0}}
-\headcommand {\beamer@sectionpages {105}{105}}
-\headcommand {\beamer@subsectionpages {106}{105}}
-\headcommand {\slideentry {4}{0}{1}{106/106}{}{0}}
+\headcommand {\slideentry {2}{2}{6}{100/103}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
+\headcommand {\beamer@framepages {100}{103}}
+\headcommand {\slideentry {2}{2}{7}{104/105}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
+\headcommand {\beamer@framepages {104}{105}}
+\headcommand {\slideentry {2}{2}{8}{106/106}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
 \headcommand {\beamer@framepages {106}{106}}
-\headcommand {\sectionentry {5}{Conclusiones y trabajo futuro}{107}{Conclusiones y trabajo futuro}{0}}
-\headcommand {\beamer@sectionpages {106}{106}}
-\headcommand {\beamer@subsectionpages {106}{106}}
-\headcommand {\slideentry {5}{0}{2}{107/107}{}{0}}
+\headcommand {\slideentry {2}{2}{9}{107/107}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
 \headcommand {\beamer@framepages {107}{107}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{108}{Trabajo futuro}}\headcommand {\beamer@subsectionpages {107}{107}}
-\headcommand {\slideentry {5}{1}{1}{108/116}{Trabajo futuro}{0}}
-\headcommand {\beamer@framepages {108}{116}}
-\headcommand {\slideentry {5}{1}{2}{117/123}{Trabajo futuro}{0}}
-\headcommand {\beamer@framepages {117}{123}}
-\headcommand {\sectionentry {6}{Bibliograf\'ia}{124}{Bibliograf\'ia}{0}}
-\headcommand {\beamer@sectionpages {107}{123}}
-\headcommand {\beamer@subsectionpages {108}{123}}
-\headcommand {\slideentry {6}{0}{3}{124/124}{}{0}}
-\headcommand {\beamer@framepages {124}{124}}
-\headcommand {\slideentry {6}{0}{4}{125/125}{}{0}}
-\headcommand {\beamer@framepages {125}{125}}
-\headcommand {\slideentry {6}{0}{4}{125/126}{}{0}}
-\headcommand {\beamer@framepages {125}{126}}
-\headcommand {\slideentry {6}{0}{4}{125/127}{}{0}}
-\headcommand {\beamer@framepages {125}{127}}
-\headcommand {\slideentry {6}{0}{4}{125/128}{}{0}}
-\headcommand {\beamer@framepages {125}{128}}
-\headcommand {\beamer@partpages {1}{128}}
-\headcommand {\beamer@subsectionpages {124}{128}}
-\headcommand {\beamer@sectionpages {124}{128}}
-\headcommand {\beamer@documentpages {128}}
-\headcommand {\def \inserttotalframenumber {48}}
+\headcommand {\slideentry {2}{2}{10}{108/111}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
+\headcommand {\beamer@framepages {108}{111}}
+\headcommand {\slideentry {2}{2}{11}{112/114}{Los m\IeC {\'e}todos para simular el fen\IeC {\'o}meno}{0}}
+\headcommand {\beamer@framepages {112}{114}}
+\headcommand {\sectionentry {3}{Implementaci\IeC {\'o}n}{115}{Implementaci\IeC {\'o}n}{0}}
+\headcommand {\beamer@sectionpages {42}{114}}
+\headcommand {\beamer@subsectionpages {90}{114}}
+\headcommand {\slideentry {3}{0}{12}{115/115}{}{0}}
+\headcommand {\beamer@framepages {115}{115}}
+\headcommand {\slideentry {3}{0}{13}{116/123}{}{0}}
+\headcommand {\beamer@framepages {116}{123}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{124}{Requerimientos}}\headcommand {\beamer@subsectionpages {115}{123}}
+\headcommand {\slideentry {3}{1}{1}{124/128}{Requerimientos}{0}}
+\headcommand {\beamer@framepages {124}{128}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{129}{Paradigmas}}\headcommand {\beamer@subsectionpages {124}{128}}
+\headcommand {\slideentry {3}{2}{1}{129/129}{Paradigmas}{0}}
+\headcommand {\beamer@framepages {129}{129}}
+\headcommand {\slideentry {3}{2}{2}{130/131}{Paradigmas}{0}}
+\headcommand {\beamer@framepages {130}{131}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{132}{Herramientas}}\headcommand {\beamer@subsectionpages {129}{131}}
+\headcommand {\slideentry {3}{3}{1}{132/135}{Herramientas}{0}}
+\headcommand {\beamer@framepages {132}{135}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{136}{Estructura}}\headcommand {\beamer@subsectionpages {132}{135}}
+\headcommand {\slideentry {3}{4}{1}{136/141}{Estructura}{0}}
+\headcommand {\beamer@framepages {136}{141}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{142}{Ejemplos, y referencias}}\headcommand {\beamer@subsectionpages {136}{141}}
+\headcommand {\slideentry {3}{5}{1}{142/144}{Ejemplos, y referencias}{0}}
+\headcommand {\beamer@framepages {142}{144}}
+\headcommand {\slideentry {3}{5}{2}{145/146}{Ejemplos, y referencias}{0}}
+\headcommand {\beamer@framepages {145}{146}}
+\headcommand {\slideentry {3}{5}{3}{147/148}{Ejemplos, y referencias}{0}}
+\headcommand {\beamer@framepages {147}{148}}
+\headcommand {\slideentry {3}{5}{4}{149/149}{Ejemplos, y referencias}{0}}
+\headcommand {\beamer@framepages {149}{149}}
+\headcommand {\slideentry {3}{5}{5}{150/150}{Ejemplos, y referencias}{0}}
+\headcommand {\beamer@framepages {150}{150}}
+\headcommand {\slideentry {3}{5}{6}{151/151}{Ejemplos, y referencias}{0}}
+\headcommand {\beamer@framepages {151}{151}}
+\headcommand {\slideentry {3}{5}{7}{152/152}{Ejemplos, y referencias}{0}}
+\headcommand {\beamer@framepages {152}{152}}
+\headcommand {\sectionentry {4}{Resultados}{153}{Resultados}{0}}
+\headcommand {\beamer@sectionpages {115}{152}}
+\headcommand {\beamer@subsectionpages {142}{152}}
+\headcommand {\slideentry {4}{0}{8}{153/153}{}{0}}
+\headcommand {\beamer@framepages {153}{153}}
+\headcommand {\slideentry {4}{0}{9}{154/154}{}{0}}
+\headcommand {\beamer@framepages {154}{154}}
+\headcommand {\slideentry {4}{0}{10}{155/155}{}{0}}
+\headcommand {\beamer@framepages {155}{155}}
+\headcommand {\slideentry {4}{0}{11}{156/156}{}{0}}
+\headcommand {\beamer@framepages {156}{156}}
+\headcommand {\sectionentry {5}{Conclusiones y trabajo futuro}{157}{Conclusiones y trabajo futuro}{0}}
+\headcommand {\beamer@sectionpages {153}{156}}
+\headcommand {\beamer@subsectionpages {153}{156}}
+\headcommand {\slideentry {5}{0}{12}{157/157}{}{0}}
+\headcommand {\beamer@framepages {157}{157}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{158}{Trabajo futuro}}\headcommand {\beamer@subsectionpages {157}{157}}
+\headcommand {\slideentry {5}{1}{1}{158/166}{Trabajo futuro}{0}}
+\headcommand {\beamer@framepages {158}{166}}
+\headcommand {\slideentry {5}{1}{2}{167/173}{Trabajo futuro}{0}}
+\headcommand {\beamer@framepages {167}{173}}
+\headcommand {\sectionentry {6}{Bibliograf\'ia}{174}{Bibliograf\'ia}{0}}
+\headcommand {\beamer@sectionpages {157}{173}}
+\headcommand {\beamer@subsectionpages {158}{173}}
+\headcommand {\slideentry {6}{0}{3}{174/174}{}{0}}
+\headcommand {\beamer@framepages {174}{174}}
+\headcommand {\slideentry {6}{0}{4}{175/175}{}{0}}
+\headcommand {\beamer@framepages {175}{175}}
+\headcommand {\slideentry {6}{0}{4}{175/176}{}{0}}
+\headcommand {\beamer@framepages {175}{176}}
+\headcommand {\slideentry {6}{0}{4}{175/177}{}{0}}
+\headcommand {\beamer@framepages {175}{177}}
+\headcommand {\slideentry {6}{0}{4}{175/178}{}{0}}
+\headcommand {\beamer@framepages {175}{178}}
+\headcommand {\beamer@partpages {1}{178}}
+\headcommand {\beamer@subsectionpages {174}{178}}
+\headcommand {\beamer@sectionpages {174}{178}}
+\headcommand {\beamer@documentpages {178}}
+\headcommand {\def \inserttotalframenumber {67}}

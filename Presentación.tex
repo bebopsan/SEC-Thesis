@@ -52,6 +52,7 @@ frame=tb,                         % Any extra options here
 showstringspaces=false            % 
 }}
 % Python environment
+
 \lstnewenvironment{python}[1][]
 {
 \pythonstyle
@@ -701,11 +702,25 @@ c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
 		\end{block}
 	}
 	\frame{
-	\frametitle{Discretización}
+	\only<1-2>{\frametitle{Discretización}}
+	\only<3-4>{\frametitle{Discretización Vectorial}}
+		
+	\only<1-2>{
 		\begin{align*}
 	\mathbf{E} &= \sum_{el=1}^{N_{el}}\mathbf{E}^{el}
-	\uncover<2>{&\mathbf{E}^{el} = \sum_{i =1}^N E_i^{el}h_i^{el}}
+	&\mathbf{E}^{el} = \sum_{i =1}^N E_i^{el}h_i^{el}
 		\end{align*}
+		}
+		\only<3>{\begin{align*}
+E(x,y)_x\approx \sum_{i:\ n_x \in \eta_D} h_i E_i^x+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i E_i^x \\
+E(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iE_i^y+
+\sum_{i:\ n_x \in \eta\setminus\eta_D}h_iE_i^y
+\end{align*}}
+		\only<4>{\begin{align*}
+W(x,y)_x\approx \sum_{i:\ n_x \in \eta_D} h_i W_i^x+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i W_i^x \\
+W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
+\sum_{i:\ n_x \in \eta\setminus\eta_D}h_iW_i^y
+\end{align*}}
 		\begin{figure}
 		\centering
 		\includegraphics[scale=0.3]{dominio_discreto.pdf}
@@ -750,16 +765,394 @@ c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
 \end{center}
 	}
 	\frame{
-	\frametitle 	
+	\frametitle{Elementos y funciones de interpolacion}
+	\begin{figure}
+	\includegraphics[scale=0.5]{edge_element.pdf}
+	\caption{Elementos triangulares de borde tomados de Jian \cite{Jin2010}}
+	\end{figure}
 	}
-	
+	\begin{frame}
+	\frametitle{Operadores discretos}
+	\only<1>{\begin{figure}
+	\includegraphics[scale=0.2]{matrices1.png}	
+	\end{figure}}
+	\only<2>{
+	\begin{figure}
+	\includegraphics[scale=0.15]{matrices_2.png}
+	\end{figure}		
+	}
+	\only<3>{
+	\begin{figure}
+	\includegraphics[scale=0.15]{matrices_3.png}
+	\end{figure}		
+	}
+	\only<4>{
+	\begin{figure}
+	\includegraphics[scale=0.2]{matrices_4.png}
+	\end{figure}		
+	}
+	\end{frame}	
+	\frame{
+	\frametitle{Diferencias centradas y formulación explícita}
+	\begin{equation*}
+\mathbb{A}\left\lbrace \mathcal{E} \right\rbrace- \mathbb{M}\frac{\partial^2\left\lbrace\mathcal{E} \right\rbrace}{\partial t^2} = -\left\lbrace d \right\rbrace-\left\lbrace q   \right\rbrace
+	\end{equation*}
+	\pause
+	\begin{equation*}
+\ddot{\mathbf{E}}_n = \frac{1}{\delta t^2}\left(\mathbf{E}_{n+1}-2 \mathbf{E}_{n} + \mathbf{E}_{n-1}\right)
+	\end{equation*}	
+	\pause
+	\begin{equation*}
+\frac{1}{\delta t^2} \mathbb{M} \mathbf{E}_{n+1} = - \mathbb{A}\mathbf{E}_n + \frac{1}{\delta t^2}\mathbb{M}\left[2
+\mathbf{E}_{n}-\mathbf{E}_{n-1}
+\right] 	 
+	\end{equation*}
+	\note{Mencionar matrices de masa diagonales}	
+	}
 \section{Implementación}
-	\subsection{Requerimientos}
-	\subsection{Pasos de desarrollo}
-	\subsection{Herramientas}
-	\subsection{Ejemplos, y referencias}
-\section{Resultados}
+	\frame{
+	\frametitle{ Pasos que se siguieron en el desarrollo de Software}
+	\setbeamercovered{transparent}
+	\begin{itemize}
+	\item<1-> Se parte de unos requerimientos, de uso y funcionalidad,
+	\item<2-> y se evalúan alternativas para cumplirlos.
+	\item<3-> Abstracción del problema y la estructura del programa.
+	\item<4-> Selección de un lenguaje y herramientas acordes a los requerimientos.
+	\item<5-> Programación y depuración de las rutinas.	
+	\end{itemize}
+	\setbeamercovered{invisible}
+	\uncover<6->{Adicionalmente: }
 
+	\begin{itemize}
+	\item<7-> Se debe establecer un sistema de control de cambios,
+	\item<8-> y generar documentación para los posibles usuarios o desarrolladores.
+	\end{itemize}			
+	}
+	\subsection{Requerimientos}
+	\frame{
+	\frametitle{Requerimientos de PeyeQM}
+	\begin{description}
+	\item<1->[Modularidad] Diseño de software haciendo uso de componentes independientes o levemente interconectados \cite{Lage1998}. 
+	\item<2->[Reusabilidad] La flexibilidad necesaria para que un segmento de código pueda ser usado en contextos distintos sin necesidad de introducir modificaciones.
+\item<3->[Extensibilidad] El diseño tiene en consideración el crecimiento de la aplicación.
+\item<4-> [Multiplataforma] Software que se implementa para operar en múltiples sistemas operativos \cite{PCMag}.
+%\item<6->[Readability]  A human judgment of how easy a
+%text is to understand. ``The readability of a program is related
+%to its maintainability'' \cite{Raymond2008}.
+	\item<5->[Libre y abierto] Se quiere que la plataforma, y las herramientas asociadas sean libres de distribuir, copiar, y o modificar.
+	\end{description}	
+	}
+	\subsection{Paradigmas}
+	\frame{
+	\frametitle{Paradigmas, y alternativas de desarrollo}
+	\begin{figure}
+	\includegraphics[scale=0.4]{lenguajes.pdf}
+	\end{figure}		
+	}
+	\frame{
+	\frametitle{Programación Orientada a Objetos}
+		\begin{columns}
+		\begin{column}{0.2 \textwidth}
+		\shadowbox{Abstracción}
+		\note{Con la abstracción se puede lograr modularidad. Podemos crear objetos arbitrarios que poseen características comunes}
+		\shadowbox{Encapsulación}
+		\shadowbox{Herencia}
+		\shadowbox{Polimorfismo}
+			\note{Data abstraction In OOP data abstraction is obtained by definition of classes. A class is the
+set of common attributes that a general object of a certain kind or class has. For example,
+“Banana” class would represent the properties and functionality of bananas in general, such
+as being edible, or having potassium. Usage of data abstraction allows us to generalize the
+behavior of objects independently of what is their current state (name, value of its attributes).
+}
+			\end{column}
+			\pause
+			\begin{column}{0.7 \textwidth}
+			Un ejemplo:						
+			\begin{figure}
+			\includegraphics[scale=0.3]{clase_perro.eps}
+			\end{figure}
+			\end{column}
+		\end{columns}
+	}	
+	\subsection{Herramientas}
+	\frame{
+	\frametitle{Herramientas}
+	\begin{columns}
+	\column{0.4\textwidth}
+		\begin{block}{Python, Spyder y Scipy}
+		\centering
+			\begin{figure}
+			\includegraphics[scale=1.5]{scripting.pdf}	
+			\end{figure}
+		\end{block}		
+		\pause
+		\begin{block}{Gmsh y Paraview}
+		\centering
+			\begin{figure}
+			\includegraphics[scale=1.5]{post_y_pre_proc.pdf}	
+			\end{figure}
+		\end{block}	
+		\pause
+	\column{0.4\textwidth}
+		\begin{block}{Git y Github}
+		\centering
+			\begin{figure}
+			\includegraphics[scale=1.5]{version_control.pdf}	
+			\end{figure}
+		\end{block}		
+		\pause
+		\begin{block}{Documentación}
+		\centering
+			\begin{figure}
+			\includegraphics[scale=1]{sphinx.pdf}	
+			\end{figure}
+		\end{block}	
+	\end{columns}
+	}
+	\subsection{Estructura}
+	\frame{
+	\frametitle{Estructura de PeyeQM}
+		\only<1>{
+			\begin{figure}
+			\centering
+			\includegraphics[scale=.3]{stages_comparison.eps}
+			\caption{Representación de qué parte del proceso de simulación es hecho usando las rutinas de PeyeQM.}
+			\end{figure}  	
+		}
+		\only<2>{
+			\begin{figure}[h]
+			\centering
+			\includegraphics[scale=.22]{stages_abstract.eps}
+			\caption{Interpretación en PeyeQM de las tres etapas.}
+			\end{figure}
+		}
+		\only<3>{
+			\begin{figure}
+			\centering
+			\includegraphics[scale=0.35]{classes_reduced.eps}
+			\caption{Diagrama clases superiores.}
+			\end{figure}		
+		}
+		\only<4>{
+			\begin{figure}
+			\centering
+			\includegraphics[scale=0.35]{classes_reduced_2.eps}
+			\caption{Diagrama de clase Simulation.}
+			\end{figure}		
+		}
+		\only<5>{
+			\begin{figure}
+			\centering
+			\includegraphics[scale=0.3]{classes_reduced_3.eps}
+			\caption{Diagrama de clase Domain.}
+			\end{figure}		
+		}
+		\only<6>{
+			\begin{figure}
+			\centering
+			\includegraphics[scale=0.35]{classes_reduced_4.eps}
+			\caption{Diagrama de clase Elements.}
+			\end{figure}		
+		}
+	}
+	\subsection{Ejemplos, y referencias}
+
+	\begin{frame}[fragile]{¿Cómo se formula un problema en PeyeQM?}
+	Se debe ejecutar un archivo de que contenga las siguientes operaciones:\\
+		\pause
+		Importación de clases y rutinas
+		\begin{python}<1>
+		from Classes import Simulation
+		from Interpreter import Interpreter
+		from Solver import Solver
+		from write import write_vtk, write_solver_input 
+		from numpy import zeros
+		\end{python}	
+		\pause 
+		Definición del nombre de archivos de entrada y parámetros de solución
+		\begin{python}<2>
+	filename = 'square_waveguide'
+	write_solver_input(filename +'.msh',dimension = 2, bc_type = 		'Dir', \
+	parameter = [], eq = 'EM', sol_type = 'Stationary',analysis_param \
+	= ['y', 'y', 15, 15, 20, 20, 2], bc_filename = filename +'.bc')  
+		\end{python}
+	\end{frame}
+	\begin{frame}[fragile]{¿Cómo se formula un problema en PeyeQM?}
+	Inicialización de las clases para definir la simulación
+	\begin{python}
+simu = Simulation()
+simu.read_solver_input(filename +'.msh')
+simu.domain.read_mesh_file(filename +'.msh', True)
+simu.domain.read_bc_file(simu.bc_filename)
+reg_filename = simu.bc_filename.split('.bc')[0]
+simu.domain.read_regions_file(reg_filename)
+	\end{python}
+	\pause
+	Y del intérprete
+	\begin{python}
+inter = Interpreter()
+eq = inter.build_harmonic_EM_eq(simu)
+	\end{python}	
+	
+	\end{frame}
+	\begin{frame}[fragile]{¿Cómo se formula un problema en PeyeQM?}
+	Solución del sistema de ecuaciones	
+	\begin{python}
+	my_solver = Solver()
+value, fields = my_solver.solve_spectral(simu, eq)
+print len(fields), 'value', value
+	\end{python}
+	\pause
+	Post procesamiento de la solución
+	\begin{python}
+quads = my_solver.substract_1(simu.domain.elements.quads.el_set)
+quads = quads[:,1:]
+for i in range(len(fields)):
+    field3 =  zeros((simu.domain.nodes.n,3))
+    field3[:,0:2] = fields[i]
+    fields[i] = field3
+	\end{python}
+	\end{frame}
+	\begin{frame}[fragile]{¿Cómo se formula un problema en PeyeQM?}
+	Exportar la solución a un archivo Vtk
+	\begin{python}
+	write_vtk(filename +str(i)+'.vtk', 'MyTitle', 'UNSTRUCTURED_GRID' \
+	 ,simu.domain.nodes.coords,\	 				
+        quads, ['VECTORS', ['sol'], [fields[i]]])
+\end{python}
+	\end{frame}
+	\begin{frame}[fragile]{Homogeneidades y cristales finitos desde PeyeQM}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.7]{gmsh_library_classes.eps}
+		\end{figure}
+	\end{frame}
+	\begin{frame}[fragile]{Homogeneidades y cristales finitos desde PeyeQM}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\tiny
+			\begin{python}
+	from gmsh_library import *
+	point = Point(0,0,0)
+
+a = 1
+phys_tag_outside = 30
+phys_tag_inside = 31
+
+frame = \
+Unitary_cell(0, point, a, a, \
+transfinite = (2,1), \
+phys_tag = phys_tag_outside)
+
+circle_center = \
+Point(frame.points[-1].id_tag, a/2.,a/2.)
+
+frame.add_circular_inclussion(1,\
+circle_center,0.2, \
+phys_tag = phys_tag_inside)
+
+lumpy.object_diagram()
+for s in frame.surfaces[5:]:
+    print s
+f = open('unit_cell_1-02_two_reg.geo','w')
+f.write(frame.__str__())
+f.close
+			\end{python}
+		\column{0.5\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[scale=0.2]{unit_cell_pretty.eps}
+			\end{figure}
+		\end{columns}
+	\end{frame}
+	\begin{frame}[fragile]
+		\begin{columns}
+			\column{0.5 \textwidth}		
+			\tiny
+			\begin{python}
+			from gmsh_library import * 
+blc = Point(0,0,0) #Bottom left corner
+a = 1 # unit cell width
+cc = Point(0, a/2.,a/2.) # circle center
+
+phys_tag_outside = 30
+phys_tag_inside = 31
+
+pt = [phys_tag_outside, phys_tag_inside] 
+
+sketch =
+ [['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','0','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1']]
+  
+c = Properties_bag('circle', \
+		 origin = cc, r = 0.2)
+e = Properties_bag('empty')
+d = {'1': c,'0':e}
+
+domain = Grid(blc, a, sketch, d,\
+ phys_tags = pt, transfinite = (2,1))
+domain.define_boundary()
+
+f = open('finite_lattice_point_defect.geo','w')
+f.write(domain.__str__())
+f.close
+			\end{python}
+			\column{0.5\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[scale=0.2]{lattice_point_deffect.pdf}
+			\end{figure}
+		\end{columns}
+	\end{frame}
+\section{Resultados}
+%	\subsection{Pruebas de problemas electrostáticos}
+%	\begin{frame}{Pruebas de problemas electrostáticos}
+%	\begin{figure}
+%	\centering
+%	\includegraphics[scale=0.5]{parallel_plate_capacitor.pdf}
+%	\caption{Capacitor de placas paralelas.}
+%	\end{figure}
+%	\begin{figure}
+%	\centering
+%	\includegraphics[scale=0.3]{capacitor.pdf}
+%	\caption{Simulación de campo en un capacitor de placas paralelas.}
+%	\end{figure}	
+%	\end{frame}
+	\begin{frame}{Pruebas de problemas electrostáticos}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.15]{charged_cylinder_inside_rectangle.eps}
+		\caption{Simulación de el campo eléctrico debido a un cilindro cargado.}
+		\end{figure}
+	\end{frame}
+	\begin{frame}{Pruebas de problemas electrostáticos}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.15]{Eight_of_cylinder.eps}
+		\caption{Segmento de un octavo de la simulación del campo eléctrico debidos a un cilindro cargado.}
+		\end{figure}
+	\end{frame}
+	\begin{frame}{Pruebas de problemas electrostáticos}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.1]{two_cylinders.eps}
+		\caption{Components of the electric field after simulating a problem of two cylinders with opposite charges.}
+		\label{fig:two_cylinders}
+		\end{figure}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.4]{two_cylinders_error.eps}
+		\caption{Error calculation of simulation against exact solution. The method reproduces the nature of the problem, but a finer mesh is needed to obtain precise results.}
+		\label{fig:two_cylinders_error}
+		\end{figure}
+	\end{frame}
 \section{Conclusiones y trabajo futuro}	
 	\subsection{Trabajo futuro}
 	\begin{frame}
