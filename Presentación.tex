@@ -1,5 +1,7 @@
 % Class def
 \documentclass[xcolor=table,serif]{beamer} 
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{8 on 1}[a4paper,border shrink=5mm]
 % %Language and accents
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
@@ -149,16 +151,16 @@ showstringspaces=false            %
 	\note{Proceso empíricos, y la presión de la supervivencia del más apto, llevaron a la humanidad a desarrollar nuevos materiales con los cuales construir, entro otras cosas, armas y armaduras.}	
 	\vskip10pt
 	\begin{columns}
-	\pause
+	
 	\column{0.25 \textwidth}
 	\centerline{\includegraphics[scale=0.1]{stone_tool.pdf}}
-	\pause
+
 	\column{0.25 \textwidth}
 	\centerline{\includegraphics[scale=0.25]{bronze_sword.jpeg}}
-	\pause
+
 	\column{0.25 \textwidth}
 	\centerline{\includegraphics[scale=0.09]{roman_armour.jpg}}
-	\pause
+
 	\column{0.25 \textwidth}
 	\centerline{\includegraphics[scale=0.08]{katana.jpg}}
 	\note{La katana como uno de los pináculos de el proceso empírico de formación de aleaciones y combinación de propiedades en materiales para obtener un resultado específico}
@@ -168,13 +170,13 @@ showstringspaces=false            %
 	\begin{columns}
 	\column{0.25 \textwidth}
 	\centerline{\includegraphics[scale=0.1]{skyscrapper.jpg}}
-	\pause
+
 	\column{0.2 \textwidth}
 	\centerline{\includegraphics[scale=0.05]{plastic.jpg}}
-	\pause
+
 	\column{0.25 \textwidth}
 	\centerline{\includegraphics[scale=0.5]{space_age.jpg}}	
-	\pause
+
 	\column{0.25 \textwidth}
 	\centerline{\includegraphics[scale=0.1]{microprocessor.jpg}}	
 	\end{columns}
@@ -345,8 +347,19 @@ of the resonator, quantum dot and probe laser.
 &\mathbf{D} = \bar{\bar{\epsilon}} \cdot \mathbf{E}
 &\mathbf{B} = \bar{\bar{\mu}} \cdot \mathbf{H},
 	\end{align*}
-	
 	\end{block}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.2]{polarization.eps}		
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.3]{magnetization.png}
+		\end{figure}
+	\end{columns}
 	}
 	
 	\frame{
@@ -458,7 +471,7 @@ $$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
 	En un sistema homogéneo e infinito cualquier punto es equivalente. Es un sistema que es invariante ante traslaciones:
 	$$\hat{T}_d\mathbf{E(r)} = \mathbf{E(r-d)}$$
 	\begin{figure}
-	\animategraphics[autoplay,loop,height=5cm]{0.5}{mediums_}{1}{3}	
+	\animategraphics[autoplay,loop,height=5cm]{0.8}{mediums_}{1}{3}	
 	\end{figure}
 	\note{Si el sistema tiene simetrías no tenemos cómo diferenciarlo bajo aplicación de operaciones de simetría}
 	}
@@ -492,7 +505,7 @@ $$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
 \end{align*}
 \pause
 	\begin{figure}
-	\animategraphics[autoplay,loop,height=5cm]{0.7}{trans2_}{0}{5}	
+	\animategraphics[autoplay,loop,height=5cm]{1}{trans2_}{0}{5}	
 	\end{figure}
 	}
 	
