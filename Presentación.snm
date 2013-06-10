@@ -1,5 +1,6 @@
-\beamer@slide {eq:inner_prod}{57}
-\beamer@slide {eq:commutator}{75}
-\beamer@slide {tab:int_funct}{106}
-\beamer@slide {fig:two_cylinders}{156}
-\beamer@slide {fig:two_cylinders_error}{156}
+\beamer@slide {eq:commutator}{40}
+\beamer@slide {tab:int_funct}{66}
+\beamer@slide {fig:rectangular_waveguide}{108}
+\beamer@slide {tab:hex_wav_comparison}{111}
+\beamer@slide {fig:isoespectral_waveguide}{113}
+\beamer@slide {eq:inner_prod}{144}

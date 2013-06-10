@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   width="614"
+   height="356"
+   sodipodi:docname="EM_simulation_applications.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1375"
+     inkscape:window-height="876"
+     id="namedview4"
+     showgrid="false"
+     showguides="false"
+     inkscape:zoom="1.3745928"
+     inkscape:cx="307"
+     inkscape:cy="178"
+     inkscape:window-x="1345"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4532" />
+  <g
+     id="g4532">
+    <path
+       inkscape:connector-curvature="0"
+       id="path3538"
+       d="m 219.35181,248.50308 c 0,0 5.81065,-24.69523 5.32643,-26.63211 -0.48422,-1.93689 -35.83231,-16.94772 -35.83231,-16.94772 l 24.69524,-17.43193 -26.63212,-27.60056 47.45359,2.4211 -22.27413,-39.70606 46.96937,13.07395 0.96844,-36.800751 38.73763,35.348081 21.78992,-33.89542 14.52661,29.05322 48.42203,-24.21102 -17.43193,45.0325 44.06405,-8.71597 -27.11634,23.24258 60.52754,19.36881 -61.49598,5.32642 10.65285,21.3057 -25.66368,-0.48422 21.78991,38.73762 -45.51671,-28.08477 -3.87376,26.14789 -28.569,-20.82147 -12.58973,23.24258 -15.97927,-17.91616 -19.36882,14.04239 -8.23174,-16.94771 z"
+       style="fill:#ededed;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text2987"
+       y="169.80296"
+       x="301.84229"
+       style="font-size:21.6113472px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan2991"
+         y="169.80296"
+         x="301.84229"
+         sodipodi:role="line">Simulación</tspan><tspan
+         y="196.81715"
+         x="301.84229"
+         sodipodi:role="line"
+         id="tspan10643">Electromagnética</tspan></text>
+  </g>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3032"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Times New Roman;font-style:normal;font-weight:normal;font-size:40px;text-anchor:start;text-align:justify;-inkscape-font-specification:Times New Roman;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+       id="flowRegion3034"><rect
+         id="rect3036"
+         width="124.63196"
+         height="54.783279"
+         x="140.38216"
+         y="94.409851" /></flowRegion><flowPara
+       id="flowPara3038" /></flowRoot>  <g
+     id="g4509"
+     transform="translate(0,1.9073486e-6)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993"
+       y="28.086514"
+       x="21.267731"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         y="28.086514"
+         x="21.267731"
+         id="tspan2995"
+         sodipodi:role="line">Ingeniería </tspan><tspan
+         y="48.286514"
+         x="21.267731"
+         sodipodi:role="line"
+         id="tspan10538">biomédica y </tspan><tspan
+         id="tspan3003"
+         y="68.486511"
+         x="21.267731"
+         sodipodi:role="line">biotecnología</tspan></text>
+    <rect
+       y="10.180559"
+       x="8.9022827"
+       height="68.479095"
+       width="133.53424"
+       id="rect3393"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4502"
+     transform="translate(-1.069883,-13.822275)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4-88-4-2-9-3-5-9-6"
+       y="123.95726"
+       x="20.328871"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3391"
+         y="123.95726"
+         x="20.328871"
+         sodipodi:role="line">Comunicaciones</tspan><tspan
+         y="144.15726"
+         x="20.328871"
+         sodipodi:role="line"
+         id="tspan10629">inalámbricas y</tspan><tspan
+         y="164.35725"
+         x="20.328871"
+         sodipodi:role="line"
+         id="tspan10631">propagación</tspan></text>
+    <rect
+       y="106.05131"
+       x="9.2446775"
+       height="68.479095"
+       width="133.53424"
+       id="rect3393-4"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4420"
+     transform="translate(-3.782567,0)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4-88-4-2-9-3-5"
+       y="296.52457"
+       x="20.674351"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3291-8"
+         y="296.52457"
+         x="20.674351"
+         sodipodi:role="line">Análisis de sección </tspan><tspan
+         y="316.72458"
+         x="20.674351"
+         sodipodi:role="line"
+         id="tspan10615">de radar y </tspan><tspan
+         id="tspan3327"
+         y="336.92456"
+         x="20.674351"
+         sodipodi:role="line">tecnología stealth</tspan></text>
+    <rect
+       y="278.63483"
+       x="12.68485"
+       height="68.446663"
+       width="142.40408"
+       id="rect3393-9"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4444"
+     transform="translate(17.462151,-3.8146973e-6)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4-88-4-2-9"
+       y="296.52457"
+       x="318.08771"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3255"
+         y="296.52457"
+         x="318.08771"
+         sodipodi:role="line">Diseño de </tspan><tspan
+         y="316.72458"
+         x="318.08771"
+         sodipodi:role="line"
+         id="tspan10602">metamateriales </tspan><tspan
+         y="336.92456"
+         x="318.08771"
+         sodipodi:role="line"
+         id="tspan10604">electrónicos</tspan></text>
+    <rect
+       y="278.58035"
+       x="309.14487"
+       height="68.555618"
+       width="113.75182"
+       id="rect3393-3"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4456"
+     transform="translate(1.7182161,-2.1462708)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4-88-4-2"
+       y="298.67084"
+       x="461.09976"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3189-4"
+         y="298.67084"
+         x="461.09976"
+         sodipodi:role="line">Sensado remoto, </tspan><tspan
+         y="318.87085"
+         x="461.09976"
+         sodipodi:role="line"
+         id="tspan10588">subterraneo y pruebas</tspan><tspan
+         id="tspan3219"
+         y="339.07083"
+         x="461.09976"
+         sodipodi:role="line">no destructivas</tspan></text>
+    <rect
+       y="280.77118"
+       x="455.04993"
+       height="68.466499"
+       width="150.04039"
+       id="rect3393-1"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4478"
+     transform="translate(1.6708986,0)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4-88"
+       y="121.7648"
+       x="485.65698"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3083-2"
+         y="121.7648"
+         x="485.65698"
+         sodipodi:role="line">MEMS, RF,</tspan><tspan
+         id="tspan3155"
+         y="141.9648"
+         x="485.65698"
+         sodipodi:role="line">e ingeniería </tspan><tspan
+         y="162.16479"
+         x="485.65698"
+         sodipodi:role="line"
+         id="tspan10582">de microondas</tspan></text>
+    <rect
+       y="103.95591"
+       x="479.65506"
+       height="68.561134"
+       width="112.38776"
+       id="rect3393-92"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4485">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4-8"
+       y="28.102297"
+       x="475.38513"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3083-3"
+         y="28.102297"
+         x="475.38513"
+         sodipodi:role="line">Fótonica, </tspan><tspan
+         y="48.302296"
+         x="475.38513"
+         sodipodi:role="line"
+         id="tspan10567">láseres y </tspan><tspan
+         id="tspan3119"
+         y="68.502296"
+         x="475.38513"
+         sodipodi:role="line">optoelectrónica</tspan></text>
+    <rect
+       y="10.166409"
+       x="467.69803"
+       height="68.507401"
+       width="126.02984"
+       id="rect3393-92-3"
+       style="fill:none;stroke:#000000;stroke-width:0.9716953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4523"
+     transform="translate(0,-1.3695822)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4"
+       y="30.95137"
+       x="335.86243"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3083"
+         y="30.95137"
+         x="335.86243"
+         sodipodi:role="line">Diseño </tspan><tspan
+         y="51.151371"
+         x="335.86243"
+         sodipodi:role="line"
+         id="tspan10561">computacional </tspan><tspan
+         y="71.351372"
+         x="335.86243"
+         sodipodi:role="line"
+         id="tspan10563">de circuitos</tspan></text>
+    <rect
+       y="11.52275"
+       x="323.87872"
+       height="68.533882"
+       width="119.20841"
+       id="rect3393-92-3-4"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4516"
+     transform="translate(0,4.7683716e-6)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1"
+       y="28.08651"
+       x="178.27992"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3003-7"
+         y="28.08651"
+         x="178.27992"
+         sodipodi:role="line">Procesamiento</tspan><tspan
+         y="48.28651"
+         x="178.27992"
+         sodipodi:role="line"
+         id="tspan10547">de señales escaneo</tspan><tspan
+         id="tspan3047"
+         y="68.486511"
+         x="178.27992"
+         sodipodi:role="line">basado en física</tspan></text>
+    <rect
+       y="10.180556"
+       x="171.19774"
+       height="68.479095"
+       width="133.53424"
+       id="rect3393-92-3-4-9"
+       style="fill:none;stroke:#000000;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4432"
+     transform="translate(5.1359253,-0.68481064)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4-88-4-2-9-3"
+       y="297.07129"
+       x="194.89644"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3291"
+         y="297.07129"
+         x="194.89644"
+         sodipodi:role="line">Análisis y </tspan><tspan
+         y="317.2713"
+         x="194.89644"
+         sodipodi:role="line"
+         id="tspan10611">diseño de </tspan><tspan
+         y="337.47128"
+         x="194.89644"
+         sodipodi:role="line"
+         id="tspan10613">antenas</tspan></text>
+    <rect
+       y="279.22638"
+       x="185.15892"
+       height="68.633179"
+       width="95.340027"
+       id="rect3393-92-3-4-9-2"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g3554"
+     transform="translate(0.34239602,0)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4-88-4-2-9-3-5-9"
+       y="197.87524"
+       x="18.894102"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3361"
+         y="197.87524"
+         x="18.894102"
+         sodipodi:role="line">Análisis de </tspan><tspan
+         y="218.07524"
+         x="18.894102"
+         sodipodi:role="line"
+         id="tspan10639">interferencia </tspan><tspan
+         y="238.27524"
+         x="18.894102"
+         sodipodi:role="line"
+         id="tspan10635">y compatibilidad </tspan><tspan
+         y="258.47525"
+         x="18.894102"
+         sodipodi:role="line"
+         id="tspan10637">electromagnética</tspan></text>
+    <rect
+       y="179.11838"
+       x="6.2967091"
+       height="88.836128"
+       width="135.87813"
+       id="rect3393-92-3-4-9-1"
+       style="fill:none;stroke:#000000;stroke-width:0.83857393;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <g
+     id="g4467"
+     transform="translate(-1.7072905,0)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993-1-4-88-4"
+       y="225.68188"
+       x="488.65009"
+       style="font-size:16.15999985px;font-style:normal;font-weight:normal;text-align:justify;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       xml:space="preserve"><tspan
+         id="tspan3189"
+         y="225.68188"
+         x="488.65009"
+         sodipodi:role="line">Equipo eléctrico</tspan><tspan
+         y="245.88188"
+         x="488.65009"
+         sodipodi:role="line"
+         id="tspan10586">y máquinas</tspan></text>
+    <rect
+       y="206.20169"
+       x="481.52023"
+       height="48.160843"
+       width="119.72068"
+       id="rect3393-92-3-4-9-1-1"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 138.12659,278.63483 223.8158,228.09268"
+     id="path4538"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4420"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 142.51723,213.43378 193.0676,201.94325"
+     id="path4540"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g3554"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 141.70904,139.72463 90.00748,17.87024"
+     id="path4542"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4502"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 258.35276,78.659657 24.37359,40.933113"
+     id="path4546"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4516"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 365.45739,78.68705 340.11204,126.8691"
+     id="path4550"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4523"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 481.32596,147.32154 -96.12542,15.54093"
+     id="path4554"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4478"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 479.81294,215.38505 -96.9181,-24.26687"
+     id="path4556"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4467"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 473.40003,278.62491 369.93935,210.3044"
+     id="path4558"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4456"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 366.61244,278.58035 342.13525,228.8471"
+     id="path4560"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4444"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 257.08321,278.54157 25.80787,-46.32399"
+     id="path4562"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4432"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 473.82753,78.673809 369.42536,141.53985"
+     id="path4564"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4485"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 138.88353,78.659657 89.518,48.486883"
+     id="path4566"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g4509"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g4532"
+     inkscape:connection-end-point="d4" />
+</svg>

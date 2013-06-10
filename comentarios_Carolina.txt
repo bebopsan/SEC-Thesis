@@ -1,0 +1,62 @@
+Comentarios de Carolina sobre la presentación
+---------------------------------------------
+
+- En los objetivos hay mucho texto. Puede ser más simple sólo plantear las ideas.
+
+- Que los items aparezcan uno por uno puede ser algo "cansón", y no debe hacerse
+así salvo que se haga especial énfasis en cada cosa.
+
+- En la diapositiva de los semiconductores: "...que nos permite conducir electricidad
+a nuestro gusto." Es un poco categórica esta afirmación, podría ser mejor decir algo como
+"Conducir electricidad de manera condicionada".
+
+- Mezclar texto en español con imágenes en inglés es algo "inconsistente".
+
+- Diapositiva 9. El título está incompleto.
+
+- Diapositiva 14. Guión en la palabra "termo-óptico".
+
+- En la diapositiva de las ecuaciones de Maxwell sería más simétrico poner
+"En forma integral" y "(En) forma diferencial".
+
+- Diapositiva 17... las ecuaciones se ven un poco abandonadas.
+
+- Diapositiva 21: Guión en la palabra "auto-valores".
+
+- Diapositiva 22: Hay un punto "perdido" al final de la diapositiva.
+
+- Las ecuaciones y demostraciones pueden ponerse al final, como anexo, por si 
+alguien hace alguna pregunta al respecto.
+
+- Mantener la atención del público en la parte teórica puede ser difícil. Esto exige
+que debe haber una exposición muy clara para lograrlo.
+
+- Diapositiva 40: Son muy pocas ecuaciones para la presentación.
+
+- Las ecuaciones en los resultados son muy pequeñas y no se logran leer.
+
+- ¿Por qué no poner "Campo en x (Ex)", "Campo en y (Ey)" y "Error"?
+
+- "En varias partes sentí como si me estuvieran dando una clase de Elementos Finitos,
+De Programación Orientada a objetos... La atención de la gente es limitada y tal vez
+se está perdiendo énfasis en lo que se hizo que es lo que se va a resaltar. A eso
+es que la gente va a ir a la presentación, a ver qué fue lo que hizo Santiago.
+Mencionar esas cosas pueden poner un contexto, pero pueden hacer que la gente pierda
+atención e incluso generar una distracción".
+
+- "Las diapositivas de los resultados deben ser muy bonitas, ya que son lo
+que todo el mundo estará esperando".
+
+- Hay muchas diapositivas y el tiempo es limitado. Todas las que hay serían
+suficientes como para dar una clase de dos horas.
+
+- Las diapositivas son una ayuda y dependiendo del manejo que se le de pueden
+usarse tal como están o pulirse un poco más. Sin embargo, pueden mejorarse
+para facilitar su uso.
+
+
+
+
+
+
+

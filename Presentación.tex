@@ -72,15 +72,21 @@ showstringspaces=false            %
 \begin{frame}
 \titlepage
 \end{frame}
+\frame{
+\footnotesize 
+\frametitle{Contenido}
+\tableofcontents
+}
 \AtBeginSection[]
 		{
 			 \begin{frame}
 			  \frametitle{Contenido}
-			  \small
-		  	\tableofcontents[currentsection]%,hideothersubsections]
+			  \footnotesize 
+			\tableofcontents[currentsection]%,hideothersubsections]
 			  \normalsize
  			\end{frame}
 		}
+		
 \section{Introducción}
 		
 	\subsection{Planteamiento del Problema}
@@ -88,7 +94,6 @@ showstringspaces=false            %
 	\frametitle{Planteamiento del problema}
 	\justifying
 	En el trabajo que se presenta aquí se propuso construir un paquete de herramientas de software que permitiera el análisis de propagación de campos electromagnéticos en el contexto de cristales fotónicos (PCs), con la capacidad de modelar defectos.  \\
-	\pause
 	Esta presentación se propone responder las siguientes preguntas:
 	\vskip20pt
 	\begin{columns}[t]
@@ -103,18 +108,13 @@ showstringspaces=false            %
 	\end{frame}
 	\begin{frame}
 	\frametitle{Objetivos planteados en el anteproyecto}
-		\begin{block}{Objetivo General}
+		\begin{block}{Objetivos Generales}
 		\begin{itemize}
-			\pause
 			\item Construir una plataforma de software capaz de simular propagación de campos electromagnéticos en PCs con defectos tales como cavidades e inclusiones.
-			\pause
 			\item La arquitectura de la plataforma debe ser diseñada de tal forma que se faciliten: 
 			\begin{itemize}
-				\pause
 				\item las futuras actualizaciones,
-				\pause
 				\item soporte de esquemas de optimización,
-				\pause
 				\item e integración con otros tipos de simulaciones como aquellas de confinamiento de electrones en pozos de potencial y cristales. 	
 			\end{itemize}
 		\end{itemize}
@@ -122,29 +122,22 @@ showstringspaces=false            %
 		\end{frame}
 		\begin{frame}
 		\begin{block}{Objetivos Espec\'ificos}
-	    \pause
 	    \begin{enumerate}
-			\item  Adquirir la teoría detrás de los campos electromagnéticos y sus aplicaciones en el contexto de cristales fotónicos. Particularmente: 
-			\pause
+			\item Adquirir la teoría, particularmente:
+			% Adquirir la teoría detrás de los campos electromagnéticos y sus aplicaciones en el contexto de cristales fotónicos. Particularmente: 
 			\begin{enumerate}
-				\item Detalles sobre la modelación de cristales fotónicos y las herramientas matemáticas con las que se define la periodicidad, así como \pause
-	 			\item  una visión global de los métodos computacionales en electromagnetismo y un entendimiento más profundo de los métodos que mejor se ajustan a la definición del problema.
+				\item Electromagnetismo y modelación de cristales fotónicos, 
+	 			\item Así como, métodos computacionales en  electromagnetismo.
 	 		\end{enumerate}
-			\pause
-			\item Definir un conjunto de requerimientos de implementación. 
-			\pause
-			\item Programar los algoritmos que solucionen los problemas relacionados con las aplicaciones evaluadas:
+			\item Definir requerimientos de implementación. 
+			\item Programar algoritmos para:
 				\begin{enumerate}
-					\pause
-					\item Solucionar problemas escalares simples en 2D.	\pause
-					\item Implementar un solucionador vectorial para problemas estacionarios con condiciones no periódicas.
-					\pause
+					\item Problemas escalares simples en 2D.	
+					\item Problemas vectoriales, estacionarios con condiciones no periódicas.
 					\item Soluciones vectoriales para problemas dependientes del tiempo.
-					\pause
 					\item Introducir condiciones de periodicidad.
 				\end{enumerate}
-			\pause
-			\item Documentar los resultados haciendo un análisis de la relevancia y viabilidad de la plataforma.
+			\item Documentar los resultados.
 		\end{enumerate}
 		\end{block}
 	\end{frame}
@@ -188,7 +181,7 @@ showstringspaces=false            %
 	\end{frame}
 	
 	\begin{frame}
-	En particular el entendimiento de las propiedades de los materiales semiconductores nos permitió diseñar materiales capaces de  conducir electricidad a nuestro gusto. Esto fue la semilla de un cambio de paradigma que dio comienzo a la era de la información.
+	En particular, el entendimiento de las propiedades de los materiales semiconductores nos permitió diseñar materiales capaces de  conducir electricidad de manera condicionada. Esto fue la semilla de un cambio de paradigma que dio comienzo a la era de la información.
 	\vskip20pt
 	\begin{columns}
 	\begin{column}{0.2 \textwidth}
@@ -204,7 +197,7 @@ showstringspaces=false            %
 	\begin{column}{0.2 \textwidth}
 	\centering
 	\begin{figure}
-	\includegraphics<1>[scale=0.2]{transistors.pdf}
+	\includegraphics<1>[scale=0.25]{transistors.pdf}
 	\only<1>{\caption{Micrografía de un transistor FET (2009)  \href{http://infoscience.epfl.ch/record/141935}{\cite{A.M.Apetrei2005}}}}
 	\note{Transistor de efecto campo}
 	\includegraphics<2>[scale=0.2]{2000_Pentium4.jpg}
@@ -239,16 +232,18 @@ showstringspaces=false            %
 		\end{columns}	
 	}	
 	\frame{
-	\frametitle{Proceso en simulación de }
+	\frametitle{\small Pasos básicos para la solución de problemas en ingeniería.}
 	\begin{figure}
-	\includegraphics[scale=1]{basic.pdf}
+	\includegraphics[scale=1]{basic_spanish.pdf}
+	\caption{Basado en un esquema del libro ``Theory and computation of electromagnetic fields'' \cite{Jin2010}.}
 	\end{figure}
 	}	
 	\subsection{Estado del arte}
 	\frame{
 	\frametitle{Sobre las aplicaciones de la simulación en EM}
 	\begin{figure}
-	\includegraphics[scale=0.5]{EM_simulation_applications.pdf}
+	\includegraphics[scale=0.5]{EM_simulation_applications_spanish.pdf}
+	\caption{Basado en un esquema del libro ``Theory and computation of electromagnetic fields'' \cite{Jin2010}.}
 	\end{figure}
 	}
 	\frame{
@@ -264,7 +259,7 @@ showstringspaces=false            %
 	
 	\frame{
 	
-	Aplicación de cristales fotónicos 1D y 2D para fibras ópticas de nueva generación. Tomado de "Molding the flow of Light" Joannopolous \cite{Joannopoulos2008}.
+	Aplicación de cristales fotónicos 1D y 2D para fibras ópticas de nueva generación. Tomado de ``Molding the flow of Light'' Joannopolous \cite{Joannopoulos2008}.
 	\vskip15pt
 	\begin{figure}
 	\includegraphics[scale=0.5]{bragg_fibers.pdf}
@@ -284,7 +279,7 @@ showstringspaces=false            %
 	\frame{
 	\begin{columns}
 		\begin{column}{0.4\textwidth}
-	Beggs y White desarrollaron acoples con guías de onda hechas a partir de cristales fotónicos que permiten hacer swicheo óptico por medio del efecto termo óptico \cite{beggsdesign}
+	Beggs y White desarrollaron acoples con guías de onda hechas a partir de cristales fotónicos que permiten hacer \textit{swicheo} óptico por medio del efecto termo-óptico \cite{beggsdesign}
 		\end{column}
 		\begin{column}{0.5\textwidth}
 			\begin{figure}
@@ -294,7 +289,7 @@ showstringspaces=false            %
 	\end{columns}
 	}
 	\frame{
-	Acoplamiento de puntos cuánticos con cavidades ópticas para procesamiento cuántico de información. La transmitividad de la cavidad es controlada por el estado del punto cuántico. El estado del punto se cambia a su vez usando lasers.   \cite{AndreiFaraon2008}
+	Acoplamiento de puntos cuánticos con cavidades ópticas para procesamiento de información \cite{AndreiFaraon2008}. El estado del sistema se cambia a través de láseres, y la señal que llega a la cavidad está acoplada al estado cuántico del punto.
 	\vskip15pt
 	\note{Fig. 2. Schematic showing the operation of the device. A heating laser is used to control the
 device temperature thus changing the resonance frequency of the cavity and the quantum
@@ -329,7 +324,7 @@ of the resonator, quantum dot and probe laser.
 		\end{column}
 		\begin{column}{0.45 \textwidth}
 		
-		\begin{block}{forma diferencial}
+		\begin{block}{En forma diferencial}
 		\small
 		\begin{align*}
 &\nabla\times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t}  \\
@@ -405,111 +400,32 @@ $$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
 	}
 	\frame{
 	\small
-	\frametitle{Un problema de autovalores}
-	La ecuación de onda armónica se puede tratar como un problema de autovalores y aprovechar la notación de Dirac para extraer conclusiones sobre las soluciones. El cristal se describe como un problema de la forma:
+	\frametitle{Un problema de auto-valores}
+	La ecuación de onda armónica se puede tratar como un problema de auto-valores y aprovechar la notación de Dirac para extraer conclusiones sobre las soluciones. El cristal se describe como un problema de la forma:
 	
 		\begin{equation*}
 		\hat{\Theta}\mathbf{E} = \left(\frac{\omega}		{c}\right)^2\mathbf{E}
 		\end{equation*} 
 		\pause
-	Dónde 
+	Donde 
 	\note{El operador $\hat{\Theta}$ está  definido por}
 		\begin{equation*}
 \hat{\Theta}\mathbf{E}\triangleq \bar{\bar{\mu_r}}^{-1}\nabla\times\nabla\times \mathbf{E}
 	\end{equation*}
 	\pause
-	Al igual que el Hamiltoniano en mecánica cuántica este operador es hermítico, y como tal sus autofunciones tienen las siguientes propiedades:
+	Al igual que el Hamiltoniano en mecánica cuántica este operador es hermítico, y como tal sus auto-funciones tienen las siguientes propiedades:
 	\begin{itemize}
-\item<4-> Tiene auto valores reales,
-\item<5-> las autofunciones son ortogonales entre sí,
-\item<6-> puede ser obtenido por principios variacionales
-\item<7-> y se pueden catalogar utilizando propiedades de simetría.
+\item Tiene auto valores reales,
+\item las auto-funciones son ortogonales entre sí,
+\item puede ser obtenido por principios variacionales
+\item y se pueden catalogar utilizando propiedades de simetría.
 \end{itemize}
 	}
-	\frame{
-	\small
-	\frametitle{Definición del producto interior	y sus propiedades}	
-	El producto interno de dos funciones vectoriales $\mathbf{F(r)}$ y $\mathbf{G(r)}$ se define como:
-
-\begin{equation*}
-\left\langle \mathbf{F(r)},\mathbf{G(r)}\right\rangle \triangleq
-\int \mathbf{F^*(r)}\cdot \mathbf{G(r)}
-\label{eq:inner_prod}
-\end{equation*}
-
-\pause
-Se puede ver que:
-
-$$\left\langle\mathbf{F},\mathbf{G}\right\rangle =  \left\langle\mathbf{G},\mathbf{F}\right\rangle^*$$
-\pause
-Se concluye también que, la norma $L^2$ de $\mathbf{F}$: $$\left\langle\mathbf{F},\mathbf{F}\right\rangle \in \mathbb{R}^+$$ 
-\pause
-Una función de onda normalizada es tal que:
-$$\left\langle\mathbf{F},\mathbf{F}\right\rangle=1$$.
-	}
-	\frame{
-	\small
-	\frametitle{Prueba de la hermiticidad del operador $\hat{\Theta}$}	
-	Decimos que el operador $\hat{\Theta}$ es \textbf{hermítico} si $$\left\langle\mathbf{F},\hat{\Theta}\mathbf{G}\right\rangle = \left\langle\hat{\Theta}\mathbf{F},\mathbf{G}\right\rangle$$
-para cualquier par de campos $\mathbf{F}$ y $\mathbf{G}$. 
-\pause \\
-Usando la definición del producto interior podemos probar que $\hat{\Theta}$ es hermítico:
-\tiny
-	\begin{align*}
-	\uncover<3->{
-\left\langle\mathbf{F},\hat{\Theta}\mathbf{G}\right\rangle &=
-\int \mathbf{F^*}\cdot \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\nabla\times \mathbf{G}\\}
-	\uncover<4->{
-& = \int \left(\nabla\times\mathbf{F}\right)^*\cdot
-	\frac{1}{\bar{\bar{\mu_r}}}\left(\nabla\times\mathbf{G}
-	\right)+ \int \nabla\cdot\left( \mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right)\\}
-		\uncover<5->{
-&= \int \left[\nabla\times \left(\frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{F}\right)\right]^*
-\cdot\mathbf{G} + 
-\int \nabla\cdot\left(\nabla\times\mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right)+\int \nabla\cdot\left( \mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right) \\}
-	\uncover<6->{
-& = \int \left[\nabla\times \left(\frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{F}\right)\right]^*
-\cdot\mathbf{G} \\}
-	\uncover<7->{
-&= \left\langle\hat{\Theta}\mathbf{F},\mathbf{G}\right\rangle}
-\end{align*}	
-\uncover<8>{
-Usando la identidad $\nabla \cdot \left(\mathbf{A}\times \mathbf{B} \right) = \mathbf{B}\cdot\left(\nabla \times \mathbf{A} \right) - \mathbf{A}\cdot\left(\nabla \times \mathbf{B} \right)$, y el teorema de la divergencia.}
-	}
-	\frame{
-	\small
-	\frametitle{Ortogonalidad}	
-%	Se dice que dos autofunciones son ortogonales y tienen distintos autovalores asociados si:
-%	$$\left\langle\mathbf{E}_1,\mathbf{E}_2\right\rangle=0$$
-%	\pause
-La ortogonalidad en bases distintas de un operador hermítico se puede ver si se hace la siguiente igualdad:
-	\begin{align*}
-c^2\left\langle\mathbf{E}_2,\hat{\Theta}\mathbf{E}_1\right\rangle &=
-c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
-\omega_1^2\left\langle\mathbf{E}_2,\mathbf{E}_1\right\rangle &= \omega_2^2\left\langle\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
-\left(\omega_1^2-\omega_2^2\right) \left\langle\mathbf{E}_2,\mathbf{E}_1\right\rangle &= 0
-	\end{align*}
-	\pause
-	Vale cuando los modos o autofunciones son:
-	\pause
-	\begin{columns}[t]
-		\column{0.3\textwidth}
-		\begin{block}{\centerline{Ortogonales}}
-		$$\omega_1^2-\omega_2^2\neq 0$$
-		$$\left\langle\mathbf{E}_1,\mathbf{E}_2\right\rangle = 0$$
-		\end{block}
-		\pause
-		\column{0.5\textwidth}
-		\begin{block}{\centerline{Degenerados}}
-		$$\left(\omega_1^2-\omega_2^2\right) = 0$$	
-		Se dice que $\omega_1^2 =\omega_2^2$ es un autovalor \textbf{degenerado}.
-			\end{block}
-	\end{columns}
-	}
+	
 	\frame{
 	\small
 	\frametitle{Operaciones de simetrías}
-	Las operaciones de simetría son operaciones de transformación que llevan un sistema a formas equivalentes de si mismo.
+	Las operaciones de simetría son operaciones de transformación que llevan un sistema a formas equivalentes de sí mismo.
 	\small
 	\begin{columns}[t]
 	\column{0.2\textwidth}
@@ -548,12 +464,12 @@ c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
 	}
 	\frame{
 	\frametitle{Operaciones de traslación, y conmutación}
-	Las ondas planas son solución a los sistemas homogeneos invariantes ante traslación:
+	Las ondas planas son solución a los sistemas homogéneos invariantes ante traslación:
 	$$\hat{T}e^{ikz} = e^{ik(z-\mathbf{d})} = e^{-ik\mathbf{d}}e^{ikz}$$
 	\pause
 	Y simultáneamente son solución a $$\hat{\Theta}e^{ikz} = k^2e^{ikz}$$
 	\pause
-	\note{cuando $\epsilon$ y $\mu$ son homogeneos.}
+	\note{cuando $\epsilon$ y $\mu$ son homogéneos.}
 	\pause
 	Es decir que los operadores $\hat{T}$ y $\hat{\Theta}$ comparten una misma base. \pause
 	\begin{align*}
@@ -579,36 +495,19 @@ c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
 	\animategraphics[autoplay,loop,height=5cm]{0.7}{trans2_}{0}{5}	
 	\end{figure}
 	}
-	\frame{
-	\frametitle{Condición de Bloch}
-	El operador de traslación discreta debe cumplir entonces:
-	\begin{align*}
-\hat{T}_{r'}e^{i\vec{k}\cdot r} &= e^{i\vec{k}\cdot (r-r')}\\
-\hat{T}_{r'}e^{i\vec{k}\cdot r} &= e^{i\vec{k}\cdot r} e^{i\vec{k}\cdot r'}\\
-\hat{T}_{r'}e^{i\vec{k}\cdot r} &= e^{i\vec{k}\cdot r} e^{i\vec{k}_x u_1a_1}e^{i\vec{k}_x u_2a_2}
-	\end{align*}	
-	\pause
-	Se satisface cuando el autovalor $e^{i\vec{k}\cdot r'}=1$
-	\pause \vskip10pt
-	\centerline{$\vec{k_x} = \frac{2\pi m}{a_1}$ y $\vec{k_y} = \frac{2\pi m}{a_2}$ para $n,m = 1,2,3...$}
-	\vskip10pt
-	\pause
-	\centerline{	$b_1 = \frac{2\pi}{a_1}$ y $b_2 = \frac{2\pi}{a_2}$}
-	\pause
-	\[G = v_1b_1+v_2b_2\]
-	}	
+	
 	\frame{
 	\frametitle{Condición de Bloch}
 	La solución general es una combinación lineal de ondas planas:
 	\begin{align*}
 \mathbf{E(x,y)}_{k_x,k_y} &= e^{i\vec{k}_x x}e^{i\vec{k}_y y}\sum_{m,n}C_{m,n}e^{imb_1x}e^{imb_2y}\\
-\mathbf{E(r)}_{\vec{k}} &= e^{i\vec{k}\cdot r} \mathbf{u}_{\vec{k}}(r)
+\mathbf{E(r)}_{\vec{k}} &= e^{i\vec{k}\cdot r} \mathbf{u}_{\vec{k}}(\mathbf{r})
 	\end{align*}
 	\pause
 	\begin{align*}
-\mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot (r+R)} \mathbf{u}_{\vec{k}}(r+R)\\
-\mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot R}e^{i\vec{k}\cdot r} \mathbf{u}_{\vec{k}}(r)\\
-\mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot R}\mathbf{E(r)}_{\vec{k}}
+\mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot (\mathbf{r+R})} \mathbf{u}_{\vec{k}}(\mathbf{r+R})\\
+\mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot \mathbf{R}}e^{i\vec{k}\cdot \mathbf{r}} \mathbf{u}_{\vec{k}}(\mathbf{r})\\
+\mathbf{E(\mathbf{r}+R)}_{\vec{k}} &= e^{i\vec{k}\cdot \mathbf{R}}\mathbf{E(\mathbf{r})}_{\vec{k}}
 	\end{align*}
 	}
 	\subsection{Los métodos para simular el fenómeno}
@@ -628,7 +527,7 @@ c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
 	\frame{
 	\frametitle{Formulación de Galerkin del método de Elementos finitos.}	
 	\begin{itemize}
-	\item Es un método de residuos ponderados que aproxima una ecuación diferencial parcial, minimizando una integral:
+	\item Es un método de residuos ponderados que aproxima una ecuación diferencial parcial, minimizando un funcional:
  	$$\mathcal{L}(u) = f$$
  	\pause
  	$$\mathcal{R} = \mathcal{L}(u')-f$$
@@ -731,7 +630,7 @@ W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
 	\frametitle{Elementos y funciones de interpolacion}
 		\begin{figure}
 		\centering
-		\includegraphics[scale=0.4]{./img/two_dim_elem.pdf}
+		\includegraphics[scale=0.4]{two_dim_elem.pdf}
 		\caption{Elementos 2D comúnmente usados en electromagnetismo.\cite{Bathe1996}}
 		\end{figure}		
 		\pause
@@ -773,20 +672,25 @@ W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
 	}
 	\begin{frame}
 	\frametitle{Operadores discretos}
-	\only<1>{\begin{figure}
+	\only<1>{
+	Las funciones base y las funciones de prueba discretas se ingresan en la forma abstracta del funcional:	
+	\begin{figure}
 	\includegraphics[scale=0.2]{matrices1.png}	
 	\end{figure}}
+%	\only<2>{
+%	Los operadores del funcional se interpretan como productos interiores de vectores discretos:
+%	\begin{figure}
+%	\includegraphics[scale=0.15]{matrices_2.png}
+%	\end{figure}		
+%	}
 	\only<2>{
+	Al actuar sobre elementos discretos los operadores también se discretizan:
 	\begin{figure}
-	\includegraphics[scale=0.15]{matrices_2.png}
+	\includegraphics[scale=0.18]{matrices_3.pdf}
 	\end{figure}		
 	}
 	\only<3>{
-	\begin{figure}
-	\includegraphics[scale=0.15]{matrices_3.png}
-	\end{figure}		
-	}
-	\only<4>{
+	El problema se puede hacer independiente de los valores de las funciones de prueba y obtenemos un sistema de ecuaciones lineales:
 	\begin{figure}
 	\includegraphics[scale=0.2]{matrices_4.png}
 	\end{figure}		
@@ -794,14 +698,15 @@ W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
 	\end{frame}	
 	\frame{
 	\frametitle{Diferencias centradas y formulación explícita}
+	La misma formulación se puede hacer para problemas no armónicos:
 	\begin{equation*}
 \mathbb{A}\left\lbrace \mathcal{E} \right\rbrace- \mathbb{M}\frac{\partial^2\left\lbrace\mathcal{E} \right\rbrace}{\partial t^2} = -\left\lbrace d \right\rbrace-\left\lbrace q   \right\rbrace
 	\end{equation*}
 	\pause
+	En este caso se usa la aproximación de diferencias finitas centradas para modelar el cambio temporal:
 	\begin{equation*}
 \ddot{\mathbf{E}}_n = \frac{1}{\delta t^2}\left(\mathbf{E}_{n+1}-2 \mathbf{E}_{n} + \mathbf{E}_{n-1}\right)
 	\end{equation*}	
-	\pause
 	\begin{equation*}
 \frac{1}{\delta t^2} \mathbb{M} \mathbf{E}_{n+1} = - \mathbb{A}\mathbf{E}_n + \frac{1}{\delta t^2}\mathbb{M}\left[2
 \mathbf{E}_{n}-\mathbf{E}_{n-1}
@@ -821,25 +726,26 @@ W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
 	\item<5-> Programación y depuración de las rutinas.	
 	\end{itemize}
 	\setbeamercovered{invisible}
-	\uncover<6->{Adicionalmente: }
+	\uncover<6->{Adicionalmente: 
 
 	\begin{itemize}
-	\item<7-> Se debe establecer un sistema de control de cambios,
-	\item<8-> y generar documentación para los posibles usuarios o desarrolladores.
-	\end{itemize}			
+	\item Se debe establecer un sistema de control de cambios,
+	\item y generar documentación para los posibles usuarios o desarrolladores.
+	\end{itemize}	
+	}		
 	}
 	\subsection{Requerimientos}
 	\frame{
 	\frametitle{Requerimientos de PeyeQM}
 	\begin{description}
-	\item<1->[Modularidad] Diseño de software haciendo uso de componentes independientes o levemente interconectados \cite{Lage1998}. 
-	\item<2->[Reusabilidad] La flexibilidad necesaria para que un segmento de código pueda ser usado en contextos distintos sin necesidad de introducir modificaciones.
-\item<3->[Extensibilidad] El diseño tiene en consideración el crecimiento de la aplicación.
-\item<4-> [Multiplataforma] Software que se implementa para operar en múltiples sistemas operativos \cite{PCMag}.
+	\item[Modularidad] Diseño de software haciendo uso de componentes independientes o levemente interconectados \cite{Lage1998}. 
+	\item[Reusabilidad] La flexibilidad necesaria para que un segmento de código pueda ser usado en contextos distintos sin necesidad de introducir modificaciones.
+\item[Extensibilidad] El diseño tiene en consideración el crecimiento de la aplicación.
+\item [Multiplataforma] Software que se implementa para operar en múltiples sistemas operativos \cite{PCMag}.
 %\item<6->[Readability]  A human judgment of how easy a
 %text is to understand. ``The readability of a program is related
 %to its maintainability'' \cite{Raymond2008}.
-	\item<5->[Libre y abierto] Se quiere que la plataforma, y las herramientas asociadas sean libres de distribuir, copiar, y o modificar.
+	\item[Libre y abierto] Se quiere que la plataforma, y las herramientas asociadas sean libres de distribuir, copiar, y o modificar.
 	\end{description}	
 	}
 	\subsection{Paradigmas}
@@ -885,14 +791,12 @@ behavior of objects independently of what is their current state (name, value of
 			\includegraphics[scale=1.5]{scripting.pdf}	
 			\end{figure}
 		\end{block}		
-		\pause
 		\begin{block}{Gmsh y Paraview}
 		\centering
 			\begin{figure}
 			\includegraphics[scale=1.5]{post_y_pre_proc.pdf}	
 			\end{figure}
 		\end{block}	
-		\pause
 	\column{0.4\textwidth}
 		\begin{block}{Git y Github}
 		\centering
@@ -900,7 +804,6 @@ behavior of objects independently of what is their current state (name, value of
 			\includegraphics[scale=1.5]{version_control.pdf}	
 			\end{figure}
 		\end{block}		
-		\pause
 		\begin{block}{Documentación}
 		\centering
 			\begin{figure}
@@ -915,14 +818,14 @@ behavior of objects independently of what is their current state (name, value of
 		\only<1>{
 			\begin{figure}
 			\centering
-			\includegraphics[scale=.3]{stages_comparison.eps}
+			\includegraphics[scale=.3]{stages_comparison_spanish.pdf}
 			\caption{Representación de qué parte del proceso de simulación es hecho usando las rutinas de PeyeQM.}
 			\end{figure}  	
 		}
 		\only<2>{
 			\begin{figure}[h]
 			\centering
-			\includegraphics[scale=.22]{stages_abstract.eps}
+			\includegraphics[scale=.22]{stages_abstract_spanish.pdf}
 			\caption{Interpretación en PeyeQM de las tres etapas.}
 			\end{figure}
 		}
@@ -1125,6 +1028,8 @@ f.close
 %	\caption{Simulación de campo en un capacitor de placas paralelas.}
 %	\end{figure}	
 %	\end{frame}
+	\subsection{Pruebas de problemas electrostáticos}
+	
 	\begin{frame}{Pruebas de problemas electrostáticos}
 		\begin{figure}
 		\centering
@@ -1142,16 +1047,188 @@ f.close
 	\begin{frame}{Pruebas de problemas electrostáticos}
 		\begin{figure}
 		\centering
-		\includegraphics[scale=0.1]{two_cylinders.eps}
-		\caption{Components of the electric field after simulating a problem of two cylinders with opposite charges.}
-		\label{fig:two_cylinders}
+		\includegraphics[scale=0.18]{two_cylinders.eps}
+		\caption{Componentes del campo eléctrico luego de simular el efecto de dos semiesferas cargadas.}
 		\end{figure}
+	\end{frame}
+	\begin{frame}{Pruebas de problemas electrostáticos}
 		\begin{figure}
 		\centering
 		\includegraphics[scale=0.4]{two_cylinders_error.eps}
-		\caption{Error calculation of simulation against exact solution. The method reproduces the nature of the problem, but a finer mesh is needed to obtain precise results.}
-		\label{fig:two_cylinders_error}
+		\caption{Cálculo del error para el problema de dos cilindros cargados.}
 		\end{figure}
+	\end{frame}
+	\subsection{Pruebas de problemas armónicos}
+	\begin{frame}{Pruebas de problemas armónicos}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.07]{square_waveguide.eps}
+		\caption{Resultados para tres modos distintos de la simulación de guías de onda cuadrada $a=b=2$.}
+		\end{figure}
+	\end{frame}
+	\begin{frame}{Pruebas de problemas armónicos}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.06]{rectangular_waveguide.pdf}
+		\caption{Resultados de simulación para guías de onda rectangulares con lados $a=4$ y $b=2$.}
+		\label{fig:rectangular_waveguide}
+		\end{figure}
+	\end{frame}
+	\begin{frame}{Pruebas de problemas armónicos}
+		\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multicolumn{5}{|c|}{Comparación de $\omega^2$ para guías de onda cuadradas} \\
+		\hline 
+		m,n & 1,1 & 1,2 & 2,2 & 3,1 \\ 
+		\hline 
+		FEM & 4.93480857 & 12.33721117 & 19.73961759 & 24.6763011 \\ 
+		\hline 
+		Analítico & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\ 
+		\hline 
+		\end{tabular} 
+		\end{center}
+		\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\multicolumn{5}{|c|}{Comparación de $\omega^2$ para guías rectangulares de lado $a =2b$} \\
+	\hline 
+	m,n & 1,1 & 2,1 & 3,1 & 1,2 \\ 
+	\hline 
+	FEM     & 3.08425459 & 4.93480795 & 8.0190859 & 12.33717191 \\ 
+	\hline 
+	Analítico & 3.08425137 & 4.93480220 & 8.0190535 & 12.33700550 \\ 
+	\hline 
+	\end{tabular} 
+	\end{center}
+	\end{frame}
+	\begin{frame}{Prueba de problemas armónicos}
+	\begin{figure}
+\centering
+\includegraphics[scale=0.07]{circular_waveguide.eps}
+%\caption{Resultados de tres modos para la simulación de cavidades resonantes circulares con radio $a=2$.}
+\small
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Comparación de $\frac{\omega}{a}$ para guía de onda circular.} \\
+\hline 
+m,n & 0,1 & 1,1 & 2,1 & 0,2 \\ 
+\hline 
+FEM     & 2.40482634 & 3.83171343 & 5.13564189 & 5.52012378 \\ 
+\hline 
+Analítico & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{figure}	
+	\end{frame}
+	\begin{frame}{Prueba de problemas armónicos}
+	\begin{figure}
+\centering
+\includegraphics[scale=0.07]{hexagonal_waveguide.pdf}
+\end{figure}
+\small
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Primeras 4 frecuencias $\omega^2$ de una cavidad resonante hexagonal.} \\
+\hline 
+m,n & 0,1 & 1,1 & 2,1 & 0,2 \\ 
+\hline 
+FEM     & 5.34990939 & 8.51630317 & 11.39340788 & 12.2461672 \\ 
+\hline 
+\end{tabular} 
+\label{tab:hex_wav_comparison}
+\end{center}
+	\end{frame}
+	\begin{frame}{Pruebas de problemas armónicos}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.07]{elliptical_waveguide.eps}
+		\caption{Modos en cavidad resonante elíptica con eje menor  $a=2$ y eje mayor $b=3$.}
+		\end{figure}	
+		\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multicolumn{5}{|c|}{Primeras cuatro frecuencias $\omega$} 		\\
+		\hline 
+		FEM & 2.0195 & 2.4149 & 2.6627 & 2.9457 \\ 
+		\hline 
+		\end{tabular} 
+		\end{center}	
+	\end{frame}
+	\begin{frame}{Pruebas de problemas armónicos}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.11]{isoespectral.eps}
+		\caption{Modos de dos cavidades iso-espectrales tomadas de \cite{Chapman1995}.}
+		\label{fig:isoespectral_waveguide}
+		\end{figure}
+		\small
+		\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multicolumn{5}{|c|}{Comparación de $\omega^2$} \\
+		\hline 
+Shape 1  & 6.38705867 & 7.65676809 & 9.11294713 & 10.23292227 \\ 
+		\hline 
+Shape 2 & 6.3850403 & 7.65926504 & 9.11794073 & 10.23394057 \\ 
+		\hline 
+		\end{tabular}
+		\end{center}
+	\end{frame}
+	\begin{frame}{Pruebas de cristales finitos}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.05]{finite_lattice.eps}
+		%\caption{A lattice of dielectric rods embedded in a domain causes peaks of field magnitude in the places with higher dielectric constant.}
+		\end{figure}
+	\end{frame}
+	\begin{frame}{Pruebas de cristales finitos}
+	\small
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multicolumn{5}{|c|}{Comparación de $\omega$ para una red finita.} \\
+\hline 
+m,n & 1,1 & 1,2 & 2,2 & 3,1 \\ 
+\hline 
+varillas dieléctricas & 0.77475487 & 1.19190369 & 1.46064033 & 1.58328716 \\ 
+\hline 
+Aire  & 1.11074305 & 1.75637223 & 2.22176045 & 2.48458998 \\ 
+\hline 
+\end{tabular}
+
+\end{center}
+	\end{frame}
+	\subsection{Pruebas de cristales infinitos}
+	\begin{frame}{Pruebas de cristales infinitos}
+	\only<1>{
+	\begin{figure}
+\centering
+\includegraphics[scale=0.2]{reduced_brillouin_zone.pdf}
+\caption{Ilustración de la zona de Brillouin y el contorno que se usa para los gráficos de bandas.}
+\end{figure}
+	}
+	\only<2>{
+	\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{square_lattice_ra01.pdf}
+	\end{figure}
+	}
+	\only<3>{
+	\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{square_lattice_ra02.pdf}
+	\end{figure}
+	}
+	\only<4>{
+	\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{square_lattice_ra04.pdf}
+	\end{figure}
+	}
 	\end{frame}
 \section{Conclusiones y trabajo futuro}	
 	\subsection{Trabajo futuro}
@@ -1162,7 +1239,7 @@ f.close
 		\pause
 		\item Elementos triangulares vectoriales y de segundo orden.
 		\pause		
-		\item  Elementos cuadrilateros lineales y escalares.
+		\item  Elementos cuadriláteros lineales y escalares.
 		\pause
 		\item Añadir soporte para condiciones de frontera infinitas de alguno de estos tipos:
 		\begin{itemize}
@@ -1172,9 +1249,9 @@ f.close
 			\item Uso de condiciones de frontera de Robin cuando la impedancia intrínseca es conocida.
 			\pause
 			\item Mapeo  de la región no acotada a una geometría conocida (e.g con mapeo conformal). \pause
-		\item Formulación híbrida de  FEM y Boundary Elements(BEM) como la desarrollada por Nicol\'as Guar\'in en \cite{Guarin2012}.
+		\item Formulación híbrida de  FEM y Boundary Elements(BEM) como la implementada por Nicol\'as Guar\'in en \cite{Guarin2012}.
 		\pause
-		\item Elementos Infinitos, caso especial de los elementos finitos con un comportamiento de decaída (\cite{Zienkiewicz2005}).
+		\item Elementos Infinitos, caso especial de los elementos finitos con un comportamiento de decaimiento (\cite{Zienkiewicz2005}).
 		\end{itemize} 
 	\end{itemize}
 	\end{frame}
@@ -1188,7 +1265,7 @@ f.close
 		\pause
 		\item Comparar los resultados de factor Q y eficiencia, con publicaciones en la literatura.
 		\pause
-		\item Integrar la herramienta CAD, y el solucionador en una rutina que pueda resolver problemas de optimización topológica para maximizar propiedades como confinamiento o transmisión induciendo variaciones en la posición y forma de los defectos en la red.
+		\item Integrar la herramienta CAD, y el solucionador en una rutina que pueda resolver problemas de optimización para maximizar propiedades como confinamiento o transmisión induciendo variaciones en la posición y forma de los defectos en la red.
 		\pause
 		\item Implementar un esquema de paralelización.
 		\pause
@@ -1202,5 +1279,103 @@ f.close
   \bibliographystyle{unsrt}
   \bibliography{thesis_references}
   \end{frame}
+\section{Apéndice}
+\frame{
+	\small
+	\frametitle{Definición del producto interior	y sus propiedades}	
+	El producto interno de dos funciones vectoriales $\mathbf{F(r)}$ y $\mathbf{G(r)}$ se define como:
 
+\begin{equation*}
+\left\langle \mathbf{F(r)},\mathbf{G(r)}\right\rangle \triangleq
+\int \mathbf{F^*(r)}\cdot \mathbf{G(r)}
+\label{eq:inner_prod}
+\end{equation*}
+
+\pause
+Se puede ver que:
+
+$$\left\langle\mathbf{F},\mathbf{G}\right\rangle =  \left\langle\mathbf{G},\mathbf{F}\right\rangle^*$$
+\pause
+Se concluye también que, la norma $L^2$ de $\mathbf{F}$: $$\left\langle\mathbf{F},\mathbf{F}\right\rangle \in \mathbb{R}^+$$ 
+\pause
+Una función de onda normalizada es tal que:
+$$\left\langle\mathbf{F},\mathbf{F}\right\rangle=1$$
+	}
+	\frame{
+	\small
+	\frametitle{Prueba de la hermiticidad del operador $\hat{\Theta}$}	
+	Decimos que el operador $\hat{\Theta}$ es \textbf{hermítico} si $$\left\langle\mathbf{F},\hat{\Theta}\mathbf{G}\right\rangle = \left\langle\hat{\Theta}\mathbf{F},\mathbf{G}\right\rangle$$
+para cualquier par de campos $\mathbf{F}$ y $\mathbf{G}$. 
+\pause \\
+Usando la definición del producto interior podemos probar que $\hat{\Theta}$ es hermítico:
+\tiny
+	\begin{align*}
+	\uncover<3->{
+\left\langle\mathbf{F},\hat{\Theta}\mathbf{G}\right\rangle &=
+\int \mathbf{F^*}\cdot \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\nabla\times \mathbf{G}\\}
+	\uncover<4->{
+& = \int \left(\nabla\times\mathbf{F}\right)^*\cdot
+	\frac{1}{\bar{\bar{\mu_r}}}\left(\nabla\times\mathbf{G}
+	\right)+ \int \nabla\cdot\left( \mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right)\\}
+		\uncover<5->{
+&= \int \left[\nabla\times \left(\frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{F}\right)\right]^*
+\cdot\mathbf{G} + 
+\int \nabla\cdot\left(\nabla\times\mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right)+\int \nabla\cdot\left( \mathbf{F} \times \frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{G} \right) \\}
+	\uncover<6->{
+& = \int \left[\nabla\times \left(\frac{1}{\bar{\bar{\mu_r}}}\nabla\times\mathbf{F}\right)\right]^*
+\cdot\mathbf{G} \\}
+	\uncover<7->{
+&= \left\langle\hat{\Theta}\mathbf{F},\mathbf{G}\right\rangle}
+\end{align*}	
+\uncover<8>{
+Usando la identidad $\nabla \cdot \left(\mathbf{A}\times \mathbf{B} \right) = \mathbf{B}\cdot\left(\nabla \times \mathbf{A} \right) - \mathbf{A}\cdot\left(\nabla \times \mathbf{B} \right)$, y el teorema de la divergencia.}
+	}
+	\frame{
+	\small
+	\frametitle{Ortogonalidad}	
+%	Se dice que dos autofunciones son ortogonales y tienen distintos autovalores asociados si:
+%	$$\left\langle\mathbf{E}_1,\mathbf{E}_2\right\rangle=0$$
+%	\pause
+La ortogonalidad en bases distintas de un operador hermítico se puede ver si se hace la siguiente igualdad:
+	\begin{align*}
+c^2\left\langle\mathbf{E}_2,\hat{\Theta}\mathbf{E}_1\right\rangle &=
+c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
+\omega_1^2\left\langle\mathbf{E}_2,\mathbf{E}_1\right\rangle &= \omega_2^2\left\langle\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
+\left(\omega_1^2-\omega_2^2\right) \left\langle\mathbf{E}_2,\mathbf{E}_1\right\rangle &= 0
+	\end{align*}
+	\pause
+	Vale cuando los modos o auto-funciones son:
+	\pause
+	\begin{columns}[t]
+		\column{0.3\textwidth}
+		\begin{block}{\centerline{Ortogonales}}
+		$$\omega_1^2-\omega_2^2\neq 0$$
+		$$\left\langle\mathbf{E}_1,\mathbf{E}_2\right\rangle = 0$$
+		\end{block}
+		\pause
+		\column{0.5\textwidth}
+		\begin{block}{\centerline{Degenerados}}
+		$$\left(\omega_1^2-\omega_2^2\right) = 0$$	
+		Se dice que $\omega_1^2 =\omega_2^2$ es un autovalor \textbf{degenerado}.
+			\end{block}
+	\end{columns}
+	}
+	\frame{
+	\frametitle{Condición de Bloch}
+	El operador de traslación discreta debe cumplir entonces:
+	\begin{align*}
+\hat{T}_{r'}e^{i\vec{k}\cdot r} &= e^{i\vec{k}\cdot (r-r')}\\
+\hat{T}_{r'}e^{i\vec{k}\cdot r} &= e^{i\vec{k}\cdot r} e^{i\vec{k}\cdot r'}\\
+\hat{T}_{r'}e^{i\vec{k}\cdot r} &= e^{i\vec{k}\cdot r} e^{i\vec{k}_x u_1a_1}e^{i\vec{k}_x u_2a_2}
+	\end{align*}	
+	\pause
+	Se satisface cuando el autovalor $e^{i\vec{k}\cdot r'}=1$
+	\pause \vskip10pt
+	\centerline{$\vec{k_x} = \frac{2\pi m}{a_1}$ y $\vec{k_y} = \frac{2\pi m}{a_2}$ para $n,m = 1,2,3...$}
+	\vskip10pt
+	\pause
+	\centerline{	$b_1 = \frac{2\pi}{a_1}$ y $b_2 = \frac{2\pi}{a_2}$}
+	\pause
+	\[G = v_1b_1+v_2b_2\]
+	}	
 \end{document}

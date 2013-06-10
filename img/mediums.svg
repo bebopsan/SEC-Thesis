@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="mediums.svg">
   <defs
      id="defs4">
     <marker
@@ -132,7 +132,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -168,7 +168,7 @@
        x="399.14459"
        y="329.39603" />
     <rect
-       style="opacity:0.63374484;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:#217821;stroke-width:2.9000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="opacity:0.63374483999999998;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.90000010000000019;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4446"
        width="171.11984"
        height="151.32085"
