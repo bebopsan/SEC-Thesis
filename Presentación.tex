@@ -105,6 +105,8 @@ showstringspaces=false            %
 				\shadowbox{¿Para qué?}
 		\column{0.2 \textwidth}
 				\shadowbox{¿Cómo?}
+		\column{0.2 \textwidth}
+				\shadowbox{¿Qué?}
 	\end{columns}
 
 	\end{frame}
@@ -308,59 +310,6 @@ of the resonator, quantum dot and probe laser.
 \section{Marco Teórico}
 
 	\subsection{La física detrás de un cristal fotónico}
-	\frame{
-	\frametitle{Las ecuaciones que rigen el problema}
-	\centerline{Ecuaciones de Maxwell}
-	\begin{columns}[t]
-		\begin{column}{0.5 \textwidth}
-		\begin{block}{En forma Integral }
-		\small
-		\begin{align*}
-		&\oint_C \mathbf{E}\cdot d\mathbf{l} = -\frac{d}{dt}\int_S \mathbf{B}\cdot d\mathbf{S} \\
-&\oint_C \mathbf{H}\cdot d\mathbf{l} = \frac{d}{dt}\int_S \mathbf{D}\cdot d\mathbf{S} + \int_S \mathbf{J}\cdot d\mathbf{S} \\
-&\int_S \mathbf{D}\cdot d\mathbf{S} = \int_V \rho dV  \\
-&\int_S \mathbf{B}\cdot d\mathbf{S} = 0 
-		\end{align*}
-		
-		\end{block}
-		\end{column}
-		\begin{column}{0.45 \textwidth}
-		
-		\begin{block}{En forma diferencial}
-		\small
-		\begin{align*}
-&\nabla\times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t}  \\
-&\nabla\times \mathbf{H} =  \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J} \\
-&\nabla\cdot \mathbf{D} = \rho  \\
-&\nabla\cdot \mathbf{B} = 0  
-		\end{align*}		
-		\end{block}
-		\end{column}
-	\end{columns}
-	}
-	\frame{
-	\frametitle{Campos en materiales dieléctricos}
-	\begin{block}{Relaciones constitutivas}
-	\small
-	\begin{align*}
-	&\mathbf{D} = \epsilon_0 \mathbf{E} + \mathbf{P} &\mathbf{B} = \mu_0  \mathbf{H} + \mathbf{M}\\
-&\mathbf{D} = \bar{\bar{\epsilon}} \cdot \mathbf{E}
-&\mathbf{B} = \bar{\bar{\mu}} \cdot \mathbf{H},
-	\end{align*}
-	\end{block}
-	\begin{columns}
-		\column{0.5\textwidth}
-		\begin{figure}
-		\centering
-		\includegraphics[scale=0.2]{polarization.eps}		
-		\end{figure}
-		\column{0.5\textwidth}
-		\begin{figure}
-		\centering
-		\includegraphics[scale=0.3]{magnetization.png}
-		\end{figure}
-	\end{columns}
-	}
 	
 	\frame{
 	\frametitle{La ecuación de onda}
@@ -385,32 +334,7 @@ $\mathbf{E}$ y $\mathbf{H}$}
 \end{align*}
 	\end{block}
 	}
-	\frame{
-	\frametitle{Soluciones armónicas}
-	\small
-		\begin{columns}[t]
-			\begin{column}{.6\textwidth}
-		Suponemos que el campo varía de forma armónica en el tiempo. 
-		
-$$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
-		\pause
-		Y asumimos que no hay fuentes ni sumideros:
-			\begin{align*}
-&\left(\nabla^2 - \mu\epsilon \frac{\partial^2}{\partial t^2} \right) \mathbf{E} = \mathbf{0}
-			\end{align*}
-			\end{column}
-			\pause
-			\begin{column}{0.4\textwidth}
-			\small
-			\begin{block}{\small Ecuación de onda armónica}
-			\begin{align*}
-&\dfrac{1}{\mu_r}\nabla^2 \mathbf{E} = -\omega^2\mu_0\epsilon_0\epsilon_r \mathbf{E}
-			\end{align*}
-			
-			\end{block}
-			\end{column}
-		\end{columns}
-	}
+	
 	\frame{
 	\small
 	\frametitle{Un problema de auto-valores}
@@ -436,37 +360,6 @@ $$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
 	}
 	
 	\frame{
-	\small
-	\frametitle{Operaciones de simetrías}
-	Las operaciones de simetría son operaciones de transformación que llevan un sistema a formas equivalentes de sí mismo.
-	\small
-	\begin{columns}[t]
-	\column{0.2\textwidth}
-	\begin{block}{\small Identidad $\hat{E}$}
-	%Transforma un sistema en sí mismo
-	$$\hat{E}\mathbf{E(r)} = \mathbf{E(r)}$$
-	\end{block}
-	\column{0.25\textwidth}
-	\begin{block}{\small Inversión $\hat{O_I}$}
-	\small
-	%Invierte las coordenadas de un sistema al rededor de un eje.
-	$$\hat{O_I}\mathbf{E(r)} = \mathbf{E(-r)}$$
-	\centering
-	\animategraphics[autoplay,loop,height=2cm]{1}{mirr_}{1}{4}
-	\end{block}
-	\column{0.3\textwidth}
-
-	\begin{block}{\small Rotación $\mathcal{R}$}
-	\small
-	%Rota el sistema dados un ángulo y un eje.
-	$$\hat{\mathcal{R}}(\hat{n},\alpha)\mathbf{E(r)} = \mathbf{E(r)}$$
-	\centering
-	\animategraphics[autoplay,loop,width = 2cm]{1}{unit_}{1}{6} 	
-	\end{block}
-
-	\end{columns}
-	}
-	\frame{
 	\frametitle{Operaciones de traslación}
 	En un sistema homogéneo e infinito cualquier punto es equivalente. Es un sistema que es invariante ante traslaciones:
 	$$\hat{T}_d\mathbf{E(r)} = \mathbf{E(r-d)}$$
@@ -475,27 +368,7 @@ $$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
 	\end{figure}
 	\note{Si el sistema tiene simetrías no tenemos cómo diferenciarlo bajo aplicación de operaciones de simetría}
 	}
-	\frame{
-	\frametitle{Operaciones de traslación, y conmutación}
-	Las ondas planas son solución a los sistemas homogéneos invariantes ante traslación:
-	$$\hat{T}e^{ikz} = e^{ik(z-\mathbf{d})} = e^{-ik\mathbf{d}}e^{ikz}$$
-	\pause
-	Y simultáneamente son solución a $$\hat{\Theta}e^{ikz} = k^2e^{ikz}$$
-	\pause
-	\note{cuando $\epsilon$ y $\mu$ son homogéneos.}
-	\pause
-	Es decir que los operadores $\hat{T}$ y $\hat{\Theta}$ comparten una misma base. \pause
-	\begin{align*}
-\hat{\Theta}\mathbf{E(r)} &= \hat{T_d}^{-1}\hat{\Theta}\hat{T_d}\mathbf{E(r)}\\
-\hat{\Theta} &= \hat{T_d}^{-1}\hat{\Theta}\hat{T_d}
-\end{align*}
-	\pause
-	\begin{equation*}
-\left[\hat{A},\hat{B}\right] \triangleq \hat{A}\hat{B}-\hat{B}\hat{A}
-\label{eq:commutator}
-	\end{equation*}
-	\note{The fact that plane wave solutions are a solution of the homogeneous isotropic wave equation problem is a consequence of them being solution to a continuous translational symmetry operation that commutes with the operator of the problem. “When one has commuting operators, one can choose simultaneous eiigenvectors of both operators” [2]}
-	}
+	
 	\frame{
 	\frametitle{Traslaciones discretas}
 	\centering
@@ -547,9 +420,67 @@ $$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
  	\pause
 	$$\int w \mathcal{R}(u') = 0$$
 	\pause
-	\item Se diferencia de otros métodos porque la función de ponderación tiene la misma base que las funciones de aproximación:
+	\item Se diferencia de otros métodos porque la función de ponderación tiene la misma base que las funciones de aproximación.
 	\end{itemize}
 	}	
+	\frame{
+	\frametitle{Discretización}
+	%\only<3-4>{\frametitle{Discretización Vectorial}}
+		
+	\begin{align*}
+	\mathbf{E} &= \sum_{el=1}^{N_{el}}\mathbf{E}^{el}
+	&\mathbf{E}^{el} = \sum_{i =1}^N E_i^{el}h_i^{el}
+		\end{align*}
+		
+%		\only<3>{\begin{align*}
+%E(x,y)_x\approx \sum_{i:\ n_x \in \eta_D} h_i E_i^x+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i E_i^x \\
+%E(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iE_i^y+
+%\sum_{i:\ n_x \in \eta\setminus\eta_D}h_iE_i^y
+%\end{align*}}
+%		\only<4>{\begin{align*}
+%W(x,y)_x\approx \sum_{i:\ n_x \in \eta_D} h_i W_i^x+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i W_i^x \\
+%W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
+%\sum_{i:\ n_x \in \eta\setminus\eta_D}h_iW_i^y
+%\end{align*}}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.3]{dominio_discreto.pdf}
+		\caption{\tiny Dominio discretizado, definido por un conjunto de elementos y sus nodos \cite{Guarin2012}}.
+		\end{figure}	
+	}
+	\begin{frame}
+	\frametitle{Un sistema de ecuaciones lineales}
+	
+	La discretización del dominio hace que la ecuación de onda se pueda definir como un problema discreto representado por un sistema de ecuaciones:
+	\begin{equation*}
+^{\setminus D}\left[\left(\mathbb{A}-\mathbb{M}\right)\vec{E}= -\vec{d}-\vec{q}-\vec{f}\right]
+\end{equation*}
+	\pause
+	Que proviene de partir el funcional en operadores
+	\begin{figure}
+	\includegraphics[scale=0.18]{matrices_3.pdf}
+	\end{figure}		
+%	\begin{figure}
+%	\includegraphics[scale=0.2]{matrices_4.png}
+%	\end{figure}		
+	
+%	\only<2>{
+%	Las funciones base y las funciones de prueba discretas se ingresan en la forma abstracta del funcional:	
+	
+%	\only<2>{
+%	Los operadores del funcional se interpretan como productos interiores de vectores discretos:
+%	\begin{figure}
+%	\includegraphics[scale=0.15]{matrices_2.png}
+%	\end{figure}		
+%	}
+%	\only<2>{
+%	Al actuar sobre elementos discretos los operadores también se discretizan:
+%	\begin{figure}
+%	\includegraphics[scale=0.18]{matrices_3.pdf}
+%	\end{figure}		
+%	}
+%	
+	\end{frame}	
 	\frame{
 	\frametitle{La forma débil del problema}
 	\begin{columns}
@@ -559,26 +490,7 @@ $$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
 			\includegraphics[scale=0.8]{dominio.pdf}
 			\end{figure}}
 		\column{0.7\textwidth}
-			\begin{block}{\small Funcional a minimizar}
-			\scriptsize
-				\begin{equation*}
-			\int_{\Omega}\mathbf{W}\cdot\left[ \nabla\times\ \left(\bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E} \right) - k_0^{2}\bar{\bar{\epsilon_r}}\cdot \mathbf{E}\right]= - ik_0Z_0 \int_{\Omega} \mathbf{W}\cdot\mathbf{J} 
-				\end{equation*}
-			\end{block}
-			\pause
-			\begin{block}{\small Forma débil}
-				\tiny
-				\begin{align*}
-\int_{\Omega} \bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E}\cdot \nabla\times\mathbf{W}
--\int_{\Omega}k_0^{2}\mathbf{W}\cdot \bar{\bar{\epsilon_r}}\cdot \mathbf{E}
-&+&\\ \int_{\Gamma_N} \mathbf{W} \cdot
- \left(\hat{n}\times\bar{\bar{\mu_r}}^{-1}
-\nabla\times\mathbf{E}\right)
-&=& -ik_0Z_0 \int_{\Omega} \mathbf{W}\cdot\mathbf{J}
-				\end{align*}
-			\end{block}
-			\pause
-			\begin{block}{\small Condiciones iniciales y de frontera}
+				\begin{block}{\small Forma débil con condiciones de frontera.}
 				\small
 				\begin{equation*}
 				\int_{\Omega} \bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E}\cdot \nabla\times\mathbf{W}
@@ -586,59 +498,28 @@ $$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
 				=- \int_{\Gamma_N} \mathbf{W} \cdot\mathbf{K}_N 
 				\end{equation*}
 			\end{block}
-		
+			\begin{block}{\small Funcional a minimizar}
+			\scriptsize
+				\begin{equation*}
+			\int_{\Omega}\mathbf{W}\cdot\left[ \nabla\times\ \left(\bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E} \right) - k_0^{2}\bar{\bar{\epsilon_r}}\cdot \mathbf{E}\right]= - ik_0Z_0 \int_{\Omega} \mathbf{W}\cdot\mathbf{J} 
+				\end{equation*}
+			\end{block}
+%			\pause
+%			\begin{block}{\small Forma débil}
+%				\tiny
+%				\begin{align*}
+%\int_{\Omega} \bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E}\cdot \nabla\times\mathbf{W}
+%-\int_{\Omega}k_0^{2}\mathbf{W}\cdot \bar{\bar{\epsilon_r}}\cdot \mathbf{E}
+%&+&\\ \int_{\Gamma_N} \mathbf{W} \cdot
+% \left(\hat{n}\times\bar{\bar{\mu_r}}^{-1}
+%\nabla\times\mathbf{E}\right)
+%&=& -ik_0Z_0 \int_{\Omega} \mathbf{W}\cdot\mathbf{J}
+%				\end{align*}
+%			\end{block}
+%			\pause
 	\end{columns}
 	}
-	\frame{
-	\frametitle{Forma abstracta}	
-		\begin{block}{\small Operador de rigidez o energía potencial}
-			\begin{equation*}
-      a(\mathbf{W},\mathbf{E})= \int\limits_{\Omega}  \bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E}\cdot \nabla\times\mathbf{W} d\Omega
-			\end{equation*}
 	
-		\end{block}
-		\begin{block}{\small Operador de masa o inductancia}
-			\begin{equation*}
-		      m(\mathbf{W},\mathbf{E})= \int\limits_{\Omega} k_0^{2}\mathbf{W}\cdot \bar{\bar{\epsilon_r}}\cdot \mathbf{E} d\Omega
-			\end{equation*}	
-		\end{block}
-		\begin{block}{\small Operador de fuentes de frontera}
-			\begin{equation*}
-		      q(\mathbf{W})=\int_{\Gamma_N} \mathbf{W} \cdot\mathbf{K}_N
-			\end{equation*}	
-		\end{block}
-		\begin{block}{\small Forma abstracta}
-			\begin{equation*}
-		      a(\mathbf{W},\mathbf{E}) - m(\mathbf{W},\mathbf{E}) = -q(\mathbf{W})
-			\end{equation*}	
-		\end{block}
-	}
-	\frame{
-	\only<1-2>{\frametitle{Discretización}}
-	\only<3-4>{\frametitle{Discretización Vectorial}}
-		
-	\only<1-2>{
-		\begin{align*}
-	\mathbf{E} &= \sum_{el=1}^{N_{el}}\mathbf{E}^{el}
-	&\mathbf{E}^{el} = \sum_{i =1}^N E_i^{el}h_i^{el}
-		\end{align*}
-		}
-		\only<3>{\begin{align*}
-E(x,y)_x\approx \sum_{i:\ n_x \in \eta_D} h_i E_i^x+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i E_i^x \\
-E(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iE_i^y+
-\sum_{i:\ n_x \in \eta\setminus\eta_D}h_iE_i^y
-\end{align*}}
-		\only<4>{\begin{align*}
-W(x,y)_x\approx \sum_{i:\ n_x \in \eta_D} h_i W_i^x+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i W_i^x \\
-W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
-\sum_{i:\ n_x \in \eta\setminus\eta_D}h_iW_i^y
-\end{align*}}
-		\begin{figure}
-		\centering
-		\includegraphics[scale=0.3]{dominio_discreto.pdf}
-		\caption{\tiny Dominio discretizado, definido por un conjunto de elementos y sus nodos \cite{Guarin2012}}.
-		\end{figure}	
-	}
 	\frame{
 	\frametitle{Elementos y funciones de interpolacion}
 		\begin{figure}
@@ -653,29 +534,7 @@ W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
 		\caption{Mapeo a elementos isoparamétricos}
 		\end{figure}
 	}
-	\frame{
-	\frametitle{Elementos y funciones de interpolacion}
-		\begin{center}
-\begin{table}
-\centering
-    \begin{tabular}{r|c|c|c|c|c|c|}
-       \multicolumn{2}{c}{~} & \multicolumn{5}{c}{Include if the node is present.}\\
-       \multicolumn{1}{c}{~} & \multicolumn{1}{c|}{~} & $i=5$ & $i=6$ & $i=7$ & $i=8$ & $i=9$ \\      
-    $h_1$ & $\frac{1}{4}\left(1+r\right)\left(1+s\right)$    & $-\frac{1}{2}h_5$ & ~     & ~ & $-\frac{1}{2}h_8$ & $-\frac{1}{2}h_9$ \\
-    $h_2$ & $\frac{1}{4}\left(1-r\right)\left(1+s\right)$    & $-\frac{1}{2}h_5$ & $-\frac{1}{2}h_6$     &  &  & $-\frac{1}{2}h_9$ \\
-    $h_3$ & $\frac{1}{4}\left(1-r\right)\left(1-s\right)$    &     & $-\frac{1}{2}h_6$ & $-\frac{1}{2}h_7$ &  & $-\frac{1}{2}h_9$ \\
-    $h_4$ & $\frac{1}{4}\left(1+r\right)\left(1-s\right)$    &      &      & $-\frac{1}{2}h_7$ & $-\frac{1}{2}h_8$ & $-\frac{1}{2}h_9$ \\
-    $h_5$ & $\frac{1}{2}\left(1-r^2\right)\left(1+s\right)$  &  & & &  & $-\frac{1}{2}h_9$ \\
-    $h_6$ & $\frac{1}{2}\left(1-s^2\right)\left(1-r\right)$  & & &  &  & $-\frac{1}{2}h_9$ \\
-    $h_7$ & $\frac{1}{2}\left(1-r^2\right)\left(1-s\right)$  & & & & &$-\frac{1}{2}h_9$ \\
-    $h_8$ & $\frac{1}{2}\left(1-s^2\right)\left(1+r\right)$  & & & & & $-\frac{1}{2}h_9$ \\
-    $h_9$ & $\frac{1}{2}\left(1-r^2\right)\left(1-r^2\right)$& & & & & $-\frac{1}{2}h_9$\\
-    \end{tabular}
-\caption{Funciones de interpolación para elementos isoparamétricos de 4 a 9 nodos.}
-\label{tab:int_funct}
-\end{table}
-\end{center}
-	}
+	
 	\frame{
 	\frametitle{Elementos y funciones de interpolacion}
 	\begin{figure}
@@ -683,32 +542,7 @@ W(x,y)_y\approx \sum_{i:\ n_y \in \eta_D}h_iW_i^y+
 	\caption{Elementos triangulares de borde tomados de Jian \cite{Jin2010}}
 	\end{figure}
 	}
-	\begin{frame}
-	\frametitle{Operadores discretos}
-	\only<1>{
-	Las funciones base y las funciones de prueba discretas se ingresan en la forma abstracta del funcional:	
-	\begin{figure}
-	\includegraphics[scale=0.2]{matrices1.png}	
-	\end{figure}}
-%	\only<2>{
-%	Los operadores del funcional se interpretan como productos interiores de vectores discretos:
-%	\begin{figure}
-%	\includegraphics[scale=0.15]{matrices_2.png}
-%	\end{figure}		
-%	}
-	\only<2>{
-	Al actuar sobre elementos discretos los operadores también se discretizan:
-	\begin{figure}
-	\includegraphics[scale=0.18]{matrices_3.pdf}
-	\end{figure}		
-	}
-	\only<3>{
-	El problema se puede hacer independiente de los valores de las funciones de prueba y obtenemos un sistema de ecuaciones lineales:
-	\begin{figure}
-	\includegraphics[scale=0.2]{matrices_4.png}
-	\end{figure}		
-	}
-	\end{frame}	
+	
 	\frame{
 	\frametitle{Diferencias centradas y formulación explícita}
 	La misma formulación se puede hacer para problemas no armónicos:
@@ -874,7 +708,7 @@ behavior of objects independently of what is their current state (name, value of
 	\subsection{Ejemplos, y referencias}
 
 	\begin{frame}[fragile]{¿Cómo se formula un problema en PeyeQM?}
-	Se debe ejecutar un archivo de que contenga las siguientes operaciones:\\
+	Se debe ejecutar un archivo que contenga las siguientes operaciones:\\
 		\pause
 		Importación de clases y rutinas
 		\begin{python}<1>
@@ -1061,7 +895,7 @@ f.close
 		\begin{figure}
 		\centering
 		\includegraphics[scale=0.18]{two_cylinders.eps}
-		\caption{Componentes del campo eléctrico luego de simular el efecto de dos semiesferas cargadas.}
+		\caption{Componentes del campo eléctrico luego de simular el efecto de dos cilindros cargados.}
 		\end{figure}
 	\end{frame}
 	\begin{frame}{Pruebas de problemas electrostáticos}
@@ -1285,7 +1119,17 @@ Aire  & 1.11074305 & 1.75637223 & 2.22176045 & 2.48458998 \\
 		\item Integración de procesos de pre y post procesamiento externos por medio de scripting que usa librerías de Python compatibles con gmsh o Paraview Python libraries.
 		\end{itemize}
 	\end{frame}
-
+	\begin{frame}{¿Preguntas?}
+	\includegraphics[scale=0.5]{thinker.jpeg}
+	\end{frame}
+	\begin{frame}{Agradecimientos}
+	\begin{itemize}
+		\item<1-> A mi familia por su apoyo e inspiración.
+		\item<2-> A mi asesor Nicolás Guarín Zapata.
+		\item<3-> A los profesores del programa y compañeros.
+	\end{itemize}		
+	\end{frame}
+	
 \section{Bibliograf\'ia}
   \begin{frame}[allowframebreaks]
   \frametitle{Bibliograf\'ia}
@@ -1293,6 +1137,85 @@ Aire  & 1.11074305 & 1.75637223 & 2.22176045 & 2.48458998 \\
   \bibliography{thesis_references}
   \end{frame}
 \section{Apéndice}
+\frame{
+	\frametitle{Las ecuaciones que rigen el problema}
+	\centerline{Ecuaciones de Maxwell}
+	\begin{columns}[t]
+		\begin{column}{0.5 \textwidth}
+		\begin{block}{En forma Integral }
+		\small
+		\begin{align*}
+		&\oint_C \mathbf{E}\cdot d\mathbf{l} = -\frac{d}{dt}\int_S \mathbf{B}\cdot d\mathbf{S} \\
+&\oint_C \mathbf{H}\cdot d\mathbf{l} = \frac{d}{dt}\int_S \mathbf{D}\cdot d\mathbf{S} + \int_S \mathbf{J}\cdot d\mathbf{S} \\
+&\int_S \mathbf{D}\cdot d\mathbf{S} = \int_V \rho dV  \\
+&\int_S \mathbf{B}\cdot d\mathbf{S} = 0 
+		\end{align*}
+		
+		\end{block}
+		\end{column}
+		\begin{column}{0.45 \textwidth}
+		
+		\begin{block}{En forma diferencial}
+		\small
+		\begin{align*}
+&\nabla\times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t}  \\
+&\nabla\times \mathbf{H} =  \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J} \\
+&\nabla\cdot \mathbf{D} = \rho  \\
+&\nabla\cdot \mathbf{B} = 0  
+		\end{align*}		
+		\end{block}
+		\end{column}
+	\end{columns}
+	}
+	\frame{
+	\frametitle{Campos en materiales dieléctricos}
+	\begin{block}{Relaciones constitutivas}
+	\small
+	\begin{align*}
+	&\mathbf{D} = \epsilon_0 \mathbf{E} + \mathbf{P} &\mathbf{B} = \mu_0  \mathbf{H} + \mathbf{M}\\
+&\mathbf{D} = \bar{\bar{\epsilon}} \cdot \mathbf{E}
+&\mathbf{B} = \bar{\bar{\mu}} \cdot \mathbf{H},
+	\end{align*}
+	\end{block}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.2]{polarization.eps}		
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+		\centering
+		\includegraphics[scale=0.3]{magnetization.png}
+		\end{figure}
+	\end{columns}
+	}
+	\frame{
+	\frametitle{Soluciones armónicas}
+	\small
+		\begin{columns}[t]
+			\begin{column}{.6\textwidth}
+		Suponemos que el campo varía de forma armónica en el tiempo. 
+		
+$$ \mathbf{E}(\mathbf{r},t) =\mathbf{E}(\mathbf{r})e^{-i\omega t} $$
+		\pause
+		Y asumimos que no hay fuentes ni sumideros:
+			\begin{align*}
+&\left(\nabla^2 - \mu\epsilon \frac{\partial^2}{\partial t^2} \right) \mathbf{E} = \mathbf{0}
+			\end{align*}
+			\end{column}
+			\pause
+			\begin{column}{0.4\textwidth}
+			\small
+			\begin{block}{\small Ecuación de onda armónica}
+			\begin{align*}
+&\dfrac{1}{\mu_r}\nabla^2 \mathbf{E} = -\omega^2\mu_0\epsilon_0\epsilon_r \mathbf{E}
+			\end{align*}
+			
+			\end{block}
+			\end{column}
+		\end{columns}
+	}
 \frame{
 	\small
 	\frametitle{Definición del producto interior	y sus propiedades}	
@@ -1374,6 +1297,57 @@ c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
 	\end{columns}
 	}
 	\frame{
+	\frametitle{Operaciones de simetrías}
+	Las operaciones de simetría son operaciones de transformación que llevan un sistema a formas equivalentes de sí mismo.
+	\small
+	\begin{columns}[t]
+	\column{0.2\textwidth}
+	\begin{block}{\small Identidad $\hat{E}$}
+	%Transforma un sistema en sí mismo
+	$$\hat{E}\mathbf{E(r)} = \mathbf{E(r)}$$
+	\end{block}
+	\column{0.25\textwidth}
+	\begin{block}{\small Inversión $\hat{O_I}$}
+	\small
+	%Invierte las coordenadas de un sistema al rededor de un eje.
+	$$\hat{O_I}\mathbf{E(r)} = \mathbf{E(-r)}$$
+	\centering
+	\animategraphics[autoplay,loop,height=2cm]{1}{mirr_}{1}{4}
+	\end{block}
+	\column{0.3\textwidth}
+
+	\begin{block}{\small Rotación $\mathcal{R}$}
+	\small
+	%Rota el sistema dados un ángulo y un eje.
+	$$\hat{\mathcal{R}}(\hat{n},\alpha)\mathbf{E(r)} = \mathbf{E(r)}$$
+	\centering
+	\animategraphics[autoplay,loop,width = 2cm]{1}{unit_}{1}{6} 	
+	\end{block}
+
+	\end{columns}
+	}
+	\frame{
+	\frametitle{Operaciones de traslación, y conmutación}
+	Las ondas planas son solución a los sistemas homogéneos invariantes ante traslación:
+	$$\hat{T}e^{ikz} = e^{ik(z-\mathbf{d})} = e^{-ik\mathbf{d}}e^{ikz}$$
+	\pause
+	Y simultáneamente son solución a $$\hat{\Theta}e^{ikz} = k^2e^{ikz}$$
+	\pause
+	\note{cuando $\epsilon$ y $\mu$ son homogéneos.}
+	\pause
+	Es decir que los operadores $\hat{T}$ y $\hat{\Theta}$ comparten una misma base. \pause
+	\begin{align*}
+\hat{\Theta}\mathbf{E(r)} &= \hat{T_d}^{-1}\hat{\Theta}\hat{T_d}\mathbf{E(r)}\\
+\hat{\Theta} &= \hat{T_d}^{-1}\hat{\Theta}\hat{T_d}
+\end{align*}
+	\pause
+	\begin{equation*}
+\left[\hat{A},\hat{B}\right] \triangleq \hat{A}\hat{B}-\hat{B}\hat{A}
+\label{eq:commutator}
+	\end{equation*}
+	\note{The fact that plane wave solutions are a solution of the homogeneous isotropic wave equation problem is a consequence of them being solution to a continuous translational symmetry operation that commutes with the operator of the problem. “When one has commuting operators, one can choose simultaneous eiigenvectors of both operators” [2]}
+	}
+	\frame{
 	\frametitle{Condición de Bloch}
 	El operador de traslación discreta debe cumplir entonces:
 	\begin{align*}
@@ -1391,4 +1365,51 @@ c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
 	\pause
 	\[G = v_1b_1+v_2b_2\]
 	}	
+	\frame{
+	\frametitle{Forma abstracta}	
+		\begin{block}{\small Operador de rigidez o energía potencial}
+			\begin{equation*}
+      a(\mathbf{W},\mathbf{E})= \int\limits_{\Omega}  \bar{\bar{\mu_r}}^{-1}\nabla\times \mathbf{E}\cdot \nabla\times\mathbf{W} d\Omega
+			\end{equation*}
+	
+		\end{block}
+		\begin{block}{\small Operador de masa o inductancia}
+			\begin{equation*}
+		      m(\mathbf{W},\mathbf{E})= \int\limits_{\Omega} k_0^{2}\mathbf{W}\cdot \bar{\bar{\epsilon_r}}\cdot \mathbf{E} d\Omega
+			\end{equation*}	
+		\end{block}
+		\begin{block}{\small Operador de fuentes de frontera}
+			\begin{equation*}
+		      q(\mathbf{W})=\int_{\Gamma_N} \mathbf{W} \cdot\mathbf{K}_N
+			\end{equation*}	
+		\end{block}
+		\begin{block}{\small Forma abstracta}
+			\begin{equation*}
+		      a(\mathbf{W},\mathbf{E}) - m(\mathbf{W},\mathbf{E}) = -q(\mathbf{W})
+			\end{equation*}	
+		\end{block}
+	}
+	\frame{
+	\frametitle{Elementos y funciones de interpolacion}
+		\begin{center}
+\begin{table}
+\centering
+    \begin{tabular}{r|c|c|c|c|c|c|}
+       \multicolumn{2}{c}{~} & \multicolumn{5}{c}{Include if the node is present.}\\
+       \multicolumn{1}{c}{~} & \multicolumn{1}{c|}{~} & $i=5$ & $i=6$ & $i=7$ & $i=8$ & $i=9$ \\      
+    $h_1$ & $\frac{1}{4}\left(1+r\right)\left(1+s\right)$    & $-\frac{1}{2}h_5$ & ~     & ~ & $-\frac{1}{2}h_8$ & $-\frac{1}{2}h_9$ \\
+    $h_2$ & $\frac{1}{4}\left(1-r\right)\left(1+s\right)$    & $-\frac{1}{2}h_5$ & $-\frac{1}{2}h_6$     &  &  & $-\frac{1}{2}h_9$ \\
+    $h_3$ & $\frac{1}{4}\left(1-r\right)\left(1-s\right)$    &     & $-\frac{1}{2}h_6$ & $-\frac{1}{2}h_7$ &  & $-\frac{1}{2}h_9$ \\
+    $h_4$ & $\frac{1}{4}\left(1+r\right)\left(1-s\right)$    &      &      & $-\frac{1}{2}h_7$ & $-\frac{1}{2}h_8$ & $-\frac{1}{2}h_9$ \\
+    $h_5$ & $\frac{1}{2}\left(1-r^2\right)\left(1+s\right)$  &  & & &  & $-\frac{1}{2}h_9$ \\
+    $h_6$ & $\frac{1}{2}\left(1-s^2\right)\left(1-r\right)$  & & &  &  & $-\frac{1}{2}h_9$ \\
+    $h_7$ & $\frac{1}{2}\left(1-r^2\right)\left(1-s\right)$  & & & & &$-\frac{1}{2}h_9$ \\
+    $h_8$ & $\frac{1}{2}\left(1-s^2\right)\left(1+r\right)$  & & & & & $-\frac{1}{2}h_9$ \\
+    $h_9$ & $\frac{1}{2}\left(1-r^2\right)\left(1-r^2\right)$& & & & & $-\frac{1}{2}h_9$\\
+    \end{tabular}
+\caption{Funciones de interpolación para elementos isoparamétricos de 4 a 9 nodos.}
+\label{tab:int_funct}
+\end{table}
+\end{center}
+	}
 \end{document}
