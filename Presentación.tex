@@ -100,15 +100,14 @@ showstringspaces=false            %
 	\vskip20pt
 	\begin{columns}[t]
 		\column{0.2 \textwidth}
+				\shadowbox{¿Qué?}
+		\column{0.2 \textwidth}
 				\shadowbox{¿Por qué?}
 		\column{0.2 \textwidth}
 				\shadowbox{¿Para qué?}
 		\column{0.2 \textwidth}
 				\shadowbox{¿Cómo?}
-		\column{0.2 \textwidth}
-				\shadowbox{¿Qué?}
 	\end{columns}
-
 	\end{frame}
 	\begin{frame}
 	\frametitle{Objetivos planteados en el anteproyecto}
@@ -327,10 +326,10 @@ $\mathbf{E}$ y $\mathbf{H}$}
 	\pause
 	\begin{block}{Ecuaciones de Helmholtz}
 	\small
-	Usando la identidad vectorial  $\nabla\times\nabla\times \mathbf{A} = \nabla(\nabla\cdot\mathbf{A}) - \nabla^2 \mathbf{A}$, y asumiendo que no hay fuentes, tenemos las ecuaciones de Helmholtz para los campos eléctrico y magnético.
+	Usando la identidad vectorial  $\nabla\times\nabla\times \mathbf{A} = \nabla(\nabla\cdot\mathbf{A}) - \nabla^2 \mathbf{A}$, asumiendo que no hay fuentes, y pasando al dominio de la frecuencia, tenemos las ecuaciones de Helmholtz:
 	\begin{align*}
-&\nabla^2 \mathbf{E} = \bar{\bar{\mu}}\cdot\bar{\bar{\epsilon}}\cdot \frac{\partial^2 \mathbf{E}}{\partial t^2} - \bar{\bar{\mu}}\cdot \frac{\partial \mathbf{J}}{\partial t} \\
-&\nabla^2 \mathbf{H} = \bar{\bar{\epsilon}}\cdot\bar{\bar{\mu}}\cdot \frac{\partial^2 \mathbf{H}}{\partial t^2} - \nabla\times \mathbf{J}
+&\nabla^2 \mathbf{E} = \omega^2\bar{\bar{\mu}}\cdot\bar{\bar{\epsilon}}  \\
+&\nabla^2 \mathbf{H} = \omega^2\bar{\bar{\epsilon}}\cdot\bar{\bar{\mu}}
 \end{align*}
 	\end{block}
 	}
@@ -410,19 +409,7 @@ $\mathbf{E}$ y $\mathbf{H}$}
 	\includegraphics[scale=1]{software.pdf}	
 	\end{figure}
 	}
-	\frame{
-	\frametitle{Formulación de Galerkin del método de Elementos finitos.}	
-	\begin{itemize}
-	\item Es un método de residuos ponderados que aproxima una ecuación diferencial parcial, minimizando un funcional:
- 	$$\mathcal{L}(u) = f$$
- 	\pause
- 	$$\mathcal{R} = \mathcal{L}(u')-f$$
- 	\pause
-	$$\int w \mathcal{R}(u') = 0$$
-	\pause
-	\item Se diferencia de otros métodos porque la función de ponderación tiene la misma base que las funciones de aproximación.
-	\end{itemize}
-	}	
+	
 	\frame{
 	\frametitle{Discretización}
 	%\only<3-4>{\frametitle{Discretización Vectorial}}
@@ -456,9 +443,9 @@ $\mathbf{E}$ y $\mathbf{H}$}
 ^{\setminus D}\left[\left(\mathbb{A}-\mathbb{M}\right)\vec{E}= -\vec{d}-\vec{q}-\vec{f}\right]
 \end{equation*}
 	\pause
-	Que proviene de partir el funcional en operadores
+	Que proviene de partir un funcional de energía en operadores:
 	\begin{figure}
-	\includegraphics[scale=0.18]{matrices_3.pdf}
+	\includegraphics[scale=0.18]{matrices_3.eps}
 	\end{figure}		
 %	\begin{figure}
 %	\includegraphics[scale=0.2]{matrices_4.png}
@@ -1073,11 +1060,27 @@ Aire  & 1.11074305 & 1.75637223 & 2.22176045 & 2.48458998 \\
 	\only<4>{
 	\begin{figure}
 	\centering
+	\includegraphics[scale=0.35]{joannopolous.png}
+	\end{figure}
+	}
+	\only<5>{
+	\begin{figure}
+	\centering
 	\includegraphics[scale=0.5]{square_lattice_ra04.pdf}
 	\end{figure}
 	}
 	\end{frame}
 \section{Conclusiones y trabajo futuro}	
+	\begin{frame}{Conclusiones}
+	
+	\begin{itemize}
+	\item Se desarrollaron las herramientas necesarias para modelar problemas generales de cristales fotónicos.
+	\item Para ello se apropiaron los conocimientos necesarios para el planteamiento del problema, 
+	\item y se llevó a cabo un proceso de diseño que concluyó en la selección del método FEM como herramienta numérica, y POO cómo paradigma de programación.
+	\item  La plataforma fue probada, y se evalúo su desempeño comparando los resultados numéricos con soluciones exactas y referencias en la literatura.
+	\item Queda pendiente concluir el desarrollo de las rutinas para simulaciones temporales, depuración de algunas rutinas y finalización de la documentación en línea.
+	\end{itemize}
+	\end{frame}
 	\subsection{Trabajo futuro}
 	\begin{frame}
 		\frametitle{Trabajo futuro}
@@ -1120,7 +1123,11 @@ Aire  & 1.11074305 & 1.75637223 & 2.22176045 & 2.48458998 \\
 		\end{itemize}
 	\end{frame}
 	\begin{frame}{¿Preguntas?}
-	\includegraphics[scale=0.5]{thinker.jpeg}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{thinker.jpeg}	
+	\end{figure}
+
 	\end{frame}
 	\begin{frame}{Agradecimientos}
 	\begin{itemize}
@@ -1364,6 +1371,19 @@ c^2\left\langle\hat{\Theta}\mathbf{E}_2,\mathbf{E}_1\right\rangle \\
 	\centerline{	$b_1 = \frac{2\pi}{a_1}$ y $b_2 = \frac{2\pi}{a_2}$}
 	\pause
 	\[G = v_1b_1+v_2b_2\]
+	}	
+	\frame{
+	\frametitle{Formulación de Galerkin del método de Elementos finitos.}	
+	\begin{itemize}
+	\item Es un método de residuos ponderados que aproxima una ecuación diferencial parcial, minimizando un funcional:
+ 	$$\mathcal{L}(u) = f$$
+ 	\pause
+ 	$$\mathcal{R} = \mathcal{L}(u')-f$$
+ 	\pause
+	$$\int w \mathcal{R}(u') = 0$$
+	\pause
+	\item Se diferencia de otros métodos porque la función de ponderación tiene la misma base que las funciones de aproximación.
+	\end{itemize}
 	}	
 	\frame{
 	\frametitle{Forma abstracta}	
