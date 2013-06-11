@@ -3,7 +3,7 @@
 
 \section{Problem statement}
 
-In this project we proposed to develop a simulation software package that allows analysis of electromagnetic (EM) wave propagation, in the context of Photonic Crystal (PC) defects modelling and design.
+In this project we proposed to develop a simulation software package that allows analysis of electromagnetic (EM) wave propagation, in the context of Photonic Crystals (PCs)\remove[SEC]{defects modeling and design}.
 
 %Problem statement will herein be addressed as the goal of the project.
 % Being so it is an abstraction of what has to be accomplished.
@@ -11,33 +11,28 @@ In this project we proposed to develop a simulation software package that allows
 % It is very likely that the problem statement and a general objective be confused, actiually I do. Maybe they are the same. I address this confusion here making the general objective a bit more implementation-oriented.
 \section{Objectives }
 The following were the objectives as stated in the project proposal document:
-\subsection{General objectives}
-\begin{itemize}
-\item Build a software platform capable of simulating   electromagnetic field propagation in perfect PC and also in PC with defects such as cavities and inclusions.
-\item The platform architecture must be structured in a way that facilitates future upgrading, possible optimization schemes, and integration with other kinds of simulations like confinement of electrons in potential wells and crystals. 
-\end{itemize}
+\subsection{General objective\remove[SEC]{s}}
+%\remove[SEC]{
+%\begin{itemize}
+%\item Build a software platform capable of simulating   electromagnetic field propagation in perfect PC and also in PC with defects such as cavities and inclusions.
+%\item The platform architecture must be structured in a way that facilitates future upgrading, possible optimization schemes, and integration with other kinds of simulations like confinement of electrons in potential wells and crystals.
+%\end{itemize}}
+\add[SEC]{
+Build a software platform capable of simulating electromagnetic field propagation in perfect PCs. The platform architecture must be structured in a way that facilitates upgrading, specifically, future implementation of optimization schemes, and support for future simulations that involve other equations such as confinement of electrons in potential wells and crystals.}\note[SEC]{Cuando mencionaba integración no me refería a simulaciones multifísicas sino a que la plataforma tenga la flexibilidad para simular distintos fenomenos (no simulatneos)}
 
 % Objectives must be S.M.A.R.T:
 % Specific, Measurable, Achievable, Relevant and Time-bound.%
 
-
-\subsubsection{Specific objectives}
+\subsection{Specific objectives}
+\note[SEC]{Se removió todo el objetivo específico 1 porque adquirir la teoría no es un objetivo medible objetivamente. Con esto se elimina también la sección que hace mención a aplicaciones tecnológicas. Cabe mencionar que en el documento original las aplicaciones tecnológicas se comentan en este objetivo como algo a entender y no a desarrollar; es decir, que yo entienda cómo se pueden usar los PCs para aplicaciones tecnológicas y eso si se hizo.} 
 \begin{enumerate}
-\item  Apprehend the theory behind EM fields and its applications in photonics. Particularly: 
-\begin{enumerate}
-	 \item general overview of computational methods in electromagnetism and deeper understanding of methods that fit the problem statement.
-	 \item Photonic crystals and the mathematical tools for modelling periodicity, as well as 
-	 \item technological applications of defects in Photonic Crystals and common case studies. 
-\end{enumerate}
+\item Define a set of implementation requirements and constraints, in terms of the numerical method\remove[SEC]{,} and expected functionality.  
 
-\item Define a set of implementation requirements and constraints, in terms of the numerical method, and expected functionality.  
-
-\item Implement algorithms to solve problems that relate to technological applications studied in the appropriation stage. 
+\item Implement the routines that form the platform and perform tests \change[SEC]{that relate to technological applications studied in the appropriation stage}{that validate its performance.} \add[SEC]{Such tests include:} 
 	\begin{enumerate}
-	\item Solve simple scalar-static 2D problems
-	\item Implement vector field solver for stationary non periodic conditions (this may qualify as spectral solution or not)
-	\item Vector field solutions for time dependent problems
-	\item Introduce periodic conditions
+	\item Solution of simple scalar-static 2D problems.
+	\item Vector field solution of stationary problems with non periodic conditions (this may qualify as spectral solution or not).
+	\item Solution of infinite crystals by means of the introduction of periodicity conditions.
 	\end{enumerate}
 	
 \item Document and share the results of the simulations making an analysis of the relevance and feasibility of the platform. 
