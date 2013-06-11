@@ -4,7 +4,7 @@ As mentioned in the introduction, we developed a software platform able to simul
 
 \section{Electrostatic benchmark tests}
 
-\remove[SEC]{Now,} Platform \href{https://github.com/bebopsan/peyeQM}{PeyeQM } \add[SEC]{\url{https://github.com/bebopsan/peyeQM}} \note[SEC]{Aquí había un hipervínculo al repositorio, pero no se ve al imprimir en blanco y negro} was built in a \href{https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design}{bottom-up } process that started by making a FE solver that could handle static scalar problems of electron confinement in 2D potential wells for application in Quantum Mechanics\footnote{At first the PeYeQM was able to solve time independent Poisson and Schrödinger equations in 1D and 2D.}. This project involved an upgrade of that platform that began with the implementation of support for vector formulations, and a transition to Object Oriented Paradigm that could improve flexibility and maintenance.
+\remove[SEC]{Now,} Platform \href{https://github.com/bebopsan/peyeQM}{PeyeQM } \url{https://github.com/bebopsan/peyeQM} \note[SEC]{Aquí había un hipervínculo al repositorio, pero no se ve al imprimir en blanco y negro} was built in a \href{https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design}{bottom-up } process that started by making a FE solver that could handle static scalar problems of electron confinement in 2D potential wells for application in Quantum Mechanics\footnote{At first, the PeyeQM was able to solve time independent Poisson and Schrödinger equations in 1D and 2D.}. This project involved an upgrade of that platform that began with the implementation of support for vector formulations, and a transition to Object Oriented Paradigm that could improve flexibility and maintenance.
 
 The first section of this chapter shows the results obtained for Electrostatic benchmark tests, and were made in order to assert the accuracy of the static vectorial solver, and  routines for the construction of stiffness matrices.
 
@@ -12,33 +12,33 @@ The first section of this chapter shows the results obtained for Electrostatic b
 \subsubsection{Parallel plate capacitor}
 The first experiment was to simulate the most basic field we could think of, this is, that inside a parallel plate capacitor, where field lines go straight from one plate to the other. 
 
-Electric fields satisfy equation \ref{eq:diff_Faraday}. If there are no sources or sinks ($- \frac{\partial \mathbf{B}}{\partial t}=0)$, then the field $\mathbf{E}$ is said to be \textit{irrotational} and by an \href{http://ebooksgo.org/mathematics/Vector_Identity.pdf}{identity of vector} calculus we know that there must exist a scalar field $V$ whose gradient is a valid Electrostatic vector field:
+Electric fields satisfy equation \ref{eq:diff_Faraday}. If there are no sources or sinks ($- \frac{\partial \mathbf{B}}{\partial t}=0)$, then the field $\mathbf{E}$ is said to be \textit{irrotational} and by an \href{http://ebooksgo.org/mathematics/Vector_Identity.pdf}{identity of vector} calculus we know that there must exist a scalar field $V$ whose gradient is a valid electrostatic vector field:
 \begin{equation}
-\nabla\times\nabla V = 0
+\nabla\times\nabla V = 0.
 \label{eq:Laplace}
 \end{equation}
 Scalar equations are easier to solve and are very useful when the medium is homogeneous and isotropic, this is the reason why many books stick with scalar problems and leave the process of obtaining $\mathbf{E}$ as performing on $V$ the derivations in operator $\nabla$. Using the scalar potential as an intermediate step for the solution of $\mathbf{E}$ stops being a good idea when interfaces between mediums and sharp geometries appear, and a direct solution using vector fields gains relevance.
 
 In a parallel plate capacitor like that in figure \ref{fig:parallel_plate}, we consider two (infinite, parallel, plane, perfectly conducting, charged) plates that occupy the planes $x = 0$ and $x = d$ kept at potentials $V = 0$ and $V = V_0$ respectively.  
 With plates of very large dimensions compared to the spacing between them, the potential becomes a function of $x$ only, and equation \ref{eq:Laplace} becomes:
-$$\dfrac{d^2V}{d x^2}=0$$ Integrating twice, we get: 
+$$\dfrac{d^2V}{d x^2}=0.$$ Integrating twice, we get: 
 \begin{equation}
-V(x) = Ax + B
+V(x) = Ax + B.
 \end{equation}
-Where $A$  and $B$ are constants of integration solved by using boundary conditions.
+Where $A$  and $B$ are constants of integration solved by using the following boundary conditions\remove[SEC]{.}
 \begin{align*}
-V(0) &= A0 + B = 0 \quad or \quad B = 0\\
-V(d) &= Ad + B = V_0 \quad or \quad A = \dfrac{V_0}{d}
+V(0) &= A0 + B = 0 \quad or \quad B = 0,\\
+V(d) &= Ad + B = V_0 \quad or \quad A = \dfrac{V_0}{d}.
 \end{align*}
 
 Making the particular solution for the potential:
-$$V=\dfrac{V_0}{d}x \quad for \quad 0<x<d$$ 
-The field is then obtained by taking the gradient of $V$, and we add a $-$ sign taking into account that $\mathbf{E}$ is a conservative field.
+$$V=\dfrac{V_0}{d}x \quad for \quad 0<x<d.$$ 
+The field is then obtained by taking the gradient of $V$, and we add a $-$ sign taking into account that $\mathbf{E}$ is a conservative field
 
 \begin{equation}
-\mathbf{E}= -\nabla V = - \dfrac{dV}{dx}\hat{a}_x = -\dfrac{V}{d}\hat{a}_x
+\mathbf{E}= -\nabla V = - \dfrac{dV}{dx}\hat{a}_x = -\dfrac{V}{d}\hat{a}_x.
 \end{equation}
-This means that the field is uniform and directed from the higher potential plate to the lower potential plate as shown in \ref{fig:parallel_plate} \cite{Rao2004}.
+This means that the field is uniform and directed from the higher potential plate to the lower potential plate as shown in figure  \ref{fig:parallel_plate} and reference \cite{Rao2004}.
 
 \begin{figure}
 \centering
@@ -47,33 +47,33 @@ This means that the field is uniform and directed from the higher potential plat
 \label{fig:parallel_plate}
 \end{figure}
 
-A rectangular region was meshed and Dirichlet boundary condition were applied in the bottom and top plates as a field pointing down. Separation $d$ is taken unitary and the result is shown in figure \ref{fig:capacitor}.
+A rectangular region \add{filled with a perfect dielectric and with perfect conductor upper and lower plates} was meshed and Dirichlet boundary condition were applied.  Separation $d$ is taken unitary and the result is shown in figure \ref{fig:capacitor}. \add[SEC]{Given that in the implementation units have been normalized we can assign arbitrary values of field to the solution. It can be assumed that the constant value of 12 corresponds to $V/m$}
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.3]{./img/capacitor.pdf}
-\caption{Solution of electric field in parallel plate capacitor.}
+\caption{Solution of electric field in parallel plate capacitor.\add[SEC]{Boundary conditions on vertical sides were such that edge effects are avoided.}}
 \label{fig:capacitor}
 \end{figure}
 
-It can be seen that the lines don't change in either magnitude or direction, and go from the charged plate wit potential $V_0$ to the bottom plate as expected.
+It can be seen that the lines \change[SEC]{don't}{do not} change in either magnitude or direction, and go from the charged plate \change{wit}{with} potential $V_0$ to the bottom plate as expected.
 
-This test showed that the routines for assembling stiffness matrices are capable of continuing a simple field over a distance between to boundaries.
+This test showed that the routines for assembling stiffness matrices are capable of continuing a simple field over a distance between to boundaries. \add[SEC]{If a representation of a finite capacitor is intended one must create a larger domain (or one with infinite boundaries) in which the plates are embedded.} 
 
 The script for producing this simulation and the necessary input files can be seen in the 
-\href{https://github.com/bebopsan/peyeQM/tree/Depuration/Lib/OOPyQM/Examples/Capacitor}{\textit{repository}.}
+\href{https://github.com/bebopsan/peyeQM/tree/Depuration/Lib/OOPyQM/Examples/Capacitor}{\textit{repository}} at \url{https://github.com/bebopsan/peyeQM/tree/Depuration/Lib/OOPyQM/Examples/Capacitor} \note[SEC]{De nuevo, esto estaba como un hipervínculo en la versión digital del documento.}
 
 \subsubsection{Charged cylinder}
 
-The next field problem to solve in order to test PeYeQM was one with circular geometry. The solution for the field due to a point charge or a charged cylinder was used to compare the precision of the method for representing fields with two components.
+The next field problem to solve in order to test PeyeQM was one with circular geometry. The solution for the field due to a \remove[SEC]{point charge or a} charged cylinder was used to compare the precision of the method for representing fields with two components.
 
 Gauss law \ref{eq:Gauss} in spherical coordinates, assuming a homogeneous medium with scalar permittivity is:
 
 \begin{equation}
-\epsilon \int_S \mathbf{E}\cdot d\mathbf{S} = \int_V \rho dV
+\epsilon \int_S \mathbf{E}\cdot d\mathbf{S} = \int_V \rho dV.
 \end{equation}
 
-Where $\int_V \rho dV = q$ is the charge of the particle. If that charge is distributed uniformly, then there are no preferred directions and the electric field must be radial \cite{Cheng1993} and have constant intensity over spherical shells. So for an arbitrary 
+Where $\int_V \rho dV = q$ is the total charge of the \change[SEC]{particle}{cylinder}. If that charge is distributed uniformly, then there are no preferred directions and the electric field must be radial \cite{Cheng1993}, and have constant intensity over spherical shells. So for an arbitrary 
 spherical shell of radius $r$:
 
 \begin{align*}
