@@ -10,15 +10,14 @@ In this project we proposed to develop a simulation software package that allows
 % Objectives, which are to be addressed next reffer to the specifics of the problem statment
 % It is very likely that the problem statement and a general objective be confused, actiually I do. Maybe they are the same. I address this confusion here making the general objective a bit more implementation-oriented.
 \section{Objectives }
-The following were the objectives as stated in the project proposal document:
+\remove[SEC]{The following were the objectives as stated in the project proposal document:}
 \subsection{General objective\remove[SEC]{s}}
 %\remove[SEC]{
 %\begin{itemize}
 %\item Build a software platform capable of simulating   electromagnetic field propagation in perfect PC and also in PC with defects such as cavities and inclusions.
 %\item The platform architecture must be structured in a way that facilitates future upgrading, possible optimization schemes, and integration with other kinds of simulations like confinement of electrons in potential wells and crystals.
 %\end{itemize}}
-\add[SEC]{
-Build a software platform capable of simulating electromagnetic field propagation in perfect PCs. The platform architecture must be structured in a way that facilitates upgrading, specifically, future implementation of optimization schemes, and support for future simulations that involve other equations such as confinement of electrons in potential wells and crystals.}\note[SEC]{Cuando mencionaba integración no me refería a simulaciones multifísicas sino a que la plataforma tenga la flexibilidad para simular distintos fenomenos (no simulatneos)}
+\add[SEC]{Build software capable of simulating electromagnetic field propagation in Photonic Crystals.}\note[SEC]{Cuando mencionaba integración no me refería a simulaciones multifísicas sino a que la plataforma tenga la flexibilidad para simular distintos fenomenos (no simulatneos)}
 
 % Objectives must be S.M.A.R.T:
 % Specific, Measurable, Achievable, Relevant and Time-bound.%
@@ -27,14 +26,14 @@ Build a software platform capable of simulating electromagnetic field propagatio
 \note[SEC]{Se removió todo el objetivo específico 1 porque adquirir la teoría no es un objetivo medible objetivamente. Con esto se elimina también la sección que hace mención a aplicaciones tecnológicas. Cabe mencionar que en el documento original las aplicaciones tecnológicas se comentan en este objetivo como algo a entender y no a desarrollar; es decir, que yo entienda cómo se pueden usar los PCs para aplicaciones tecnológicas y eso si se hizo.} 
 \begin{enumerate}
 \item Define a set of implementation requirements and constraints, in terms of the numerical method\remove[SEC]{,} and expected functionality.  
-
+\item Design an architecture for the software structured in a way that facilitates upgrading, specifically, future implementation of optimization schemes, and support for future simulations that involve other equations such as confinement of electrons in potential wells and crystals.
 \item Implement the routines that form the platform and perform tests \change[SEC]{that relate to technological applications studied in the appropriation stage}{that validate its performance.} \add[SEC]{Such tests include:} 
 	\begin{enumerate}
 	\item Solution of simple scalar-static 2D problems.
 	\item Vector field solution of stationary problems with non periodic conditions (this may qualify as spectral solution or not).
 	\item Solution of infinite crystals by means of the introduction of periodicity conditions.
 	\end{enumerate}
-	
+
 \item Document and share the results of the simulations making an analysis of the relevance and feasibility of the platform. 
 \end{enumerate}
 
