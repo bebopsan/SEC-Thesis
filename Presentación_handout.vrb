@@ -1,0 +1,44 @@
+\begin {columns}
+\column{0.5 \textwidth}
+\tiny
+\begin{python}
+from gmsh_library import *
+blc = Point(0,0,0) #Bottom left corner
+a = 1 # unit cell width
+cc = Point(0, a/2.,a/2.) # circle center
+
+phys_tag_outside = 30
+phys_tag_inside = 31
+
+pt = [phys_tag_outside, phys_tag_inside]
+
+sketch =
+ [['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','0','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1'],
+  ['1','1','1','1','1','1','1','1','1']]
+
+c = Properties_bag('circle', \
+ origin = cc, r = 0.2)
+e = Properties_bag('empty')
+d = {'1': c,'0':e}
+
+domain = Grid(blc, a, sketch, d,\
+ phys_tags = pt, transfinite = (2,1))
+domain.define_boundary()
+
+f = open('finite_lattice_point_defect.geo','w')
+f.write(domain.__str__())
+f.close
+\end{python}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.2]{lattice_point_deffect.pdf}
+\end{figure}
+\end{columns}
