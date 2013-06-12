@@ -1,4 +1,4 @@
-\documentclass[office, 10pt, openany]{book}
+\documentclass[10pt]{book}
 %\usepackage[inline]{trackchanges}
 \usepackage[finalnew]{trackchanges}
 \addeditor{SEC}
@@ -6,72 +6,48 @@
 % idioma
 \usepackage[utf8]{inputenc}
 \usepackage[USenglish,british,american,australian,english]{babel}
-% numeración
-\pagestyle{plain}
-%tablas
-\usepackage{booktabs}
+
+\usepackage{booktabs} %tablas
 \usepackage{tabularx}
-%rotar tablas
-\usepackage{rotating}
-%Manejo de referencias
-%\usepackage[style=mla]{biblatex}
-%color tablas
-\usepackage{colortbl}
-%espaciado
-\usepackage{setspace}
+\usepackage{rotating}  %rotar tablas
+%\usepackage[style=mla]{biblatex}  %Manejo de referencias
+\usepackage{colortbl} %color tablas
+\usepackage{setspace} %espaciado
+\usepackage{url}
+%\usepackage{hyperref}
+% Paquetes de la AMS:
+
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+
+
+% Custom colors
+\usepackage{color}
+  \definecolor{deepblue}{rgb}{0,0,0.5}
+  \definecolor{deepred}{rgb}{0.6,0,0}
+  \definecolor{deepgreen}{rgb}{0,0.5,0}
+\usepackage{listings}
+%margenes segun n. icontec
+\usepackage{vmargin}
+  \setmarginsrb  { 3.0cm}  % left margin
+                 { 4.0cm}  % top margcm
+                 { 3.0cm}  % right margcm
+                 { 3.0cm}  % bottom margcm
+                 {  10pt}  % head height
+                 {0.25cm}  % head sep
+                 {   9pt}  % foot height
+                 { 0.8cm}  % foot sep
+
+
+
 \onehalfspacing
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
+\pagestyle{plain} % numeracion en la parte inferior
+
 % Default fixed font does not support bold face
 \DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8} % for bold
 \DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8}  % for normal
 
-% Custom colors
-\usepackage{color}
-\definecolor{deepblue}{rgb}{0,0,0.5}
-\definecolor{deepred}{rgb}{0.6,0,0}
-\definecolor{deepgreen}{rgb}{0,0.5,0}
-
-\usepackage{listings}
-
-% Python style for highlighting
-\newcommand\pythonstyle{\lstset{
-language=Python,
-basicstyle=\ttm,
-otherkeywords={self},             % Add keywords here
-keywordstyle=\ttb\color{deepblue},
-emph={MyClass,__init__},          % Custom highlighting
-emphstyle=\ttb\color{deepred},    % Custom highlighting style
-stringstyle=\color{deepgreen},
-frame=tb,                         % Any extra options here
-showstringspaces=false            % 
-}}
-% Python environment
-\lstnewenvironment{python}[1][]
-{
-\pythonstyle
-\lstset{#1}
-}
-{}
-
-%margenes según n. icontec
-\usepackage{vmargin}
-\setmarginsrb           { 3.0cm}  % left margin
-                        { 4.0cm}  % top margcm
-                        { 3.0cm}  % right margcm
-                        { 3.0cm}  % bottom margcm
-                        {  10pt}  % head height
-                        {0.25cm}  % head sep
-                        {   9pt}  % foot height
-                        { 0.8cm}  % foot sep
-
-
-% inserción url's notas de pie.
-\usepackage{url}
-%\usepackage{hyperref}
-% Paquetes de la AMS:
-\usepackage{amsmath, amsthm, amsfonts, amssymb}
-
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
 
 \newcommand\portada{
 \begin{titlepage}
@@ -88,7 +64,7 @@ showstringspaces=false            %
 			{\large\bf Escuela de Ciencias y Humanidades \par}
 			{\large\bf Universidad EAFIT \par}
 			{\large\bf Medell\'in, Colombia\par}
-			{\large\bf May 2013 \par}
+			{\large\bf May 2013}
 		\end{center}
 \end{titlepage}
 }
@@ -111,10 +87,30 @@ showstringspaces=false            %
 			{\large\bf Escuela de Ciencias y Humanidades \par}
 			{\large\bf Universidad EAFIT \par}
 			{\large\bf Medell\'in, Colombia\par}
-			{\large\bf May 2013 \par}
+			{\large\bf May 2013}
 		\end{center}
 \end{titlepage}
 }
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
 
 
 %--------------------------------------------------------------------------
@@ -133,7 +129,9 @@ urlcolor=blue, cite color=blue]{hyperref} %
 \begin{document}
 \portada
 %\cleardoublepage
+\let\cleardoublepage\clearpage
 \contraportada
+\let\cleardoublepage\clearpage
 
 \pdfbookmark[0]{Table of contents}{}
 \tableofcontents
