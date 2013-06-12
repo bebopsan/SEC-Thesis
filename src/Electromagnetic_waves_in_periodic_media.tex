@@ -267,7 +267,7 @@ Photonic crystals, like crystals of atoms or molecules do not have continuous tr
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{./img/squarel.pdf}
-\caption{Illustration of a bi dimensional point lattice: a) Section of a square lattice with primitive lattice vectors $a_1$ and $a_2$ b)  and one of the possible correspondent unitary cells where corners of four points are shared by one cell. Taken with permission from \cite{Guarin2012}.}
+\caption{Illustration of a bi dimensional point lattice: a) Section of a square lattice with primitive lattice vectors $a_1$ and $a_2$. b) One of the possible correspondent unitary cells where corners of four points are shared by one cell. Taken with permission from \cite{Guarin2012}.}
 \label{fig:sq_lat_fig}
 \end{figure}
 
@@ -290,12 +290,17 @@ with $\vec{k} = \vec{k}_x+\vec{k}_y$ as the wave vector with two components.
 Now, \ref{eq:discrete_periodicity} does not immediately satisfy the form of equation \ref{eq:discrete_periodic} and we don't have an eigenfunction of the lattice. In order to get a solution that is invariant under discrete translations $r'$, the factor $e^{i\vec{k}\cdot r'}$ must be equal to 1, and this is obtained when one of two things happen, either $\vec{k}\cdot r' = 0$ or $\vec{k}\cdot r' = 2\pi n$ for $n = 1,2,3...$.
 The first, is a trivial solution where there is no wave, on the other hand, the second is valid for any combination of $\vec{k_x}$ and $\vec{k_y}$ that happens to satisfy $\vec{k_x} = \frac{2\pi m}{a_1}$ and $\vec{k_y} = \frac{2\pi m}{a_2}$.  The minimal quantities $b_1 = \frac{2\pi}{a_1}$ and $b_2 = \frac{2\pi}{a_2}$ are known as the primitive vectors of the reciprocal lattice, and the linear combination of integer multiples of them form the reciprocal lattice (shown in figure ), which is the set of all arbitrary reciprocal lattice vectors defined by:
 
-\[G = v_1b_1+v_2b_2\]
+\begin{equation}
+G = v_1b_1+v_2b_2
+\label{reciprocal_vectors}
+\end{equation}
+
 
 \begin{figure}
 \centering
 \includegraphics[scale=.5]{./img/squarer.pdf}
 \caption{Illustration of a bi dimensional point lattice in the reciprocal domain: a) Section of a square lattice with primitive reciprocal lattice vectors $b_1$ and $b_2$ b)  and a reciprocal unitary cells best known as the first Brillouin zone. Taken with permission from \cite{Guarin2012}.}
+\label{fig:rec_sq_lat_fig}
 \end{figure}
 
 The nice thing about reciprocal lattice vectors is that a given wave vector $\vec{k}$ will have an indistinguishable effect on the wave from a wave vector $\vec{k} + G$ that is translated by a reciprocal lattice vector.  And remembering that $\hat{T_d}$ commutes with $\hat{\Theta}$, a general solution for $\mathbf{E}$ can be arranged by having a linear combination of the functions with different $\vec{k} + G$ that are solution to equation \ref{eq:discrete_periodic}. This is done as follows:
@@ -312,7 +317,7 @@ Where $\mathbf{u}_{\vec{k}}(r)$ is by definition a bi-periodic function in $r$ t
 \begin{align}
 \mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot (r+R)} \mathbf{u}_{\vec{k}}(r+R)\\
 \mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot R}e^{i\vec{k}\cdot r} \mathbf{u}_{\vec{k}}(r)\\
-\mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot R}\mathbf{E(r)}_{\vec{k}}
+\mathbf{E(r+R)}_{\vec{k}} &= e^{i\vec{k}\cdot R}\mathbf{E(r)}_{\vec{k}} \label{eq:bloch_condition}
 \end{align}
 
 We now know that if $R$ is a lattice vector like $r'$, the solution of the field at that point will be exactly the same than the solution of the filed in the point before the translation multiplied by a complex factor $e^{i\vec{k}\cdot R}$. So given a known wave vector $\vec{k}$ and the solution of every point inside the base, or unitary cell, one can know the value of $\mathbf{E}$ everywhere. This is because the boundaries of a unit cell are separated by a distance that is either $a_1$ in $x$ or $a_2$ in $y$. Details about how to implement this condition in a numerical solution are given in \cite{Guarin2012}.

@@ -144,7 +144,7 @@ In the same way as before, a comparison between analytic and numerical solutions
 \end{figure}
 
 \section{Harmonic benchmark tests}
-The second section regards solutions of eigenvalue problems, either for closed domains or infinite and periodic ones. The first part will deal with simulation of resonant modes in waveguides, and the second with free waves and periodic crystals.
+The second section regards solutions of eigenvalue problems, either for closed domains or infinite and periodic ones. The first part will deal with simulation of resonant modes in waveguides, and the second with free waves and periodic crystals. \add[SEC]{All simulations assume perfect dielectric materials inside the waveguide and perfect conductor boundaries, this means that no losses are to be considered.}  
 In this stage of Pe\change[SEC]{Y}{y}eQM we knew that the program was capable of assembling stiffness matrices and solving systems of linear equations\change[SEC]{,}{.} \change[SEC]{w}{W}hat the following tests with resonant cavities give is the certainty that we \change[SEC]{were}{are} able to form useful mass matrices, as well as solve the eigenvalue problems associated with a formulation of the form:
 \[\mathbb{A}\mathbf{\vec{E}} = \mathbb{M}\mathbf{\vec{E}}.\]
 \note[SEC]{Lo que las pruebas con cavidades resonantes nos dan es la seguridad de que somos capaces de formar matrices de masa útiles, así como solucionar problemas de autovalores asociados a la formulación de la forma:}
@@ -158,10 +158,10 @@ Ideal wave\remove[SEC]{-}guides can be modeled by a source-less version of the w
 \end{enumerate}
 And will start by introducing the analytic solution behind simple wave\remove[SEC]{-}guides such as rectangular and circular guides.
 
-\subsubsection{Rectangular wave-guides} 
+\subsubsection{Rectangular waveguides} 
 
 In transverse magnetic fields (TM) that travel inside a wave-guide whose axis is over $z$, we have $\mathbf{H}_z = 0$ and solve for $\mathbf{E}$ components. 
-Solutions of equation \ref{eq:E-wave-harmonic2}, where the medium inside the wave guide is a perfect dielectric, and  for eigenvalues $\vec{k}^2 = \omega^2\mu\epsilon$ is a lengthy but straightforward process that involves separation of variables and use of boundary conditions:
+Solutions of equation \ref{eq:E-wave-harmonic2}, where the medium inside the wave guide is a perfect dielectric, and  for eigenvalues $k^2 = \omega^2\mu\epsilon$ is a lengthy but straightforward process that involves separation of variables and use of boundary conditions:
 \begin{align}
 &\mathbf{E}_x = 0 \quad for \quad y=0,\ 0<x<a\\
 &\mathbf{E}_x = 0 \quad for \quad y=b,\ 0<x<a\\
@@ -186,7 +186,7 @@ The wave functions that are solution to this eigenproblem for each component of 
 &\mathbf{E}_y =\mp jC\dfrac{n\pi}{b}\sin{\dfrac{m\pi x}{a}}\cos{\dfrac{n\pi x}{b}}e^{\mp jk_zz}.
 \end{align}
 
-For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \add[SEC]{equation} \ref{eq:Ez_mag}, and how similar are the analytic and numeric  natural frequencies of the guide $\omega$. \add[SEC]{In order to obtain values to compare guides of arbitrary size we normalize the frequency by using a normalization factor $\frac{a}{2\pi}$.} Table \ref{tab:sq_wav_comparison} \add[SEC]{shows the difference between the adimensional normalized frequency simulated with PeyeQM and calculated by hand.} Table \ref{fig:rectangular_waveguide} \add[SEC]{shows adimensional eigenvalues for rectangular waveguides where one side is twice the other.}
+For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \add[SEC]{equation} \ref{eq:Ez_mag}, and how similar are the analytic and numeric  natural frequencies of the guide $\omega$. \add[SEC]{In order to obtain values to compare guides of arbitrary size we normalize the frequency by using a normalization factor $\frac{a}{2\pi}$.} Table \ref{tab:sq_wav_comparison} \add[SEC]{shows the difference between the non-dimensional normalized frequency simulated with PeyeQM and calculated by hand.} Table \ref{fig:rectangular_waveguide} \add[SEC]{shows non-dimensional eigenvalues for rectangular waveguides where one side is twice the other.}
 
 The numerical solution for a rectangular waveguide is shown in figure \ref{fig:rectangular_waveguide}, it has less degenerate TM modes, and the shapes are in better accordance with typical representations. Only the x component of the field is shown because there were not significant differences between the shapes.
 \begin{table}
@@ -202,7 +202,7 @@ FEM  & 0.70710722 &  1.11804330  &  1.41422820 & 1.58121220441 \\
 Analytic  & 0.70710678 &  1.11803398 &  1.41421356 &  1.58113883 \\
 \hline 
 \end{tabular} 
-\caption{Comparison of adimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM fields in square shaped waveguides. Where $a$ is the characteristic length and $c$ the speed of light in the medium.}
+\caption{Comparison of non-dimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM fields in square shaped waveguides. Where $a$ is the characteristic length and $c$ the speed of light in the medium.}
 \end{center}
 \label{tab:sq_wav_comparison}
 \end{table}
@@ -236,7 +236,7 @@ FEM      & 1.11803457 & 1.41421438 & 1.8027792 &  2.23608305 \\
 Analytic & 1.11803398 & 1.41421356 & 1.8027756 &  2.23606797 \\
 \hline 
 \end{tabular} 
-\caption{Comparison of adimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM modes in  rectangular shaped waveguides. The longest side $a$ is taken as the characteristic length and $c$ is the speed of light in the medium.}
+\caption{Comparison of non-dimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM modes in  rectangular shaped waveguides. The longest side $a$ is taken as the characteristic length and $c$ is the speed of light in the medium.}
 \label{tab:rec_wav_comparison}
 \end{center}
 \end{table}
@@ -244,15 +244,15 @@ Analytic & 1.11803398 & 1.41421356 & 1.8027756 &  2.23606797 \\
 \begin{figure}
 \centering
 \includegraphics[scale=0.1]{./img/rectangular_waveguide.pdf}
-\caption{Results for three different TM modes from the simulation of a rectangle shaped waveguide with sides $a=4$ and $b=2$.}
+\caption{Results for three different TM modes from the simulation of a rectangle shaped waveguide with ratio $a/b=2$.}
 \label{fig:rectangular_waveguide}
 \end{figure}
 
 
-\subsubsection{Circular wave-guides}
+\subsubsection{Circular waveguides}
 
 A circular wave-guide was also modeled in order to test the platform for the solution of problems with curved shapes and non-regular meshes. The modes are presented in figure \ref{fig:circular_waveguide}, and their shapes are in close accordance with the expected form of Bessel functions as illustrated in reference \cite{Soto2009}. The mathematical expression for the analytic solution of eigenvalues is related to the roots of Bessel J functions for indexes $m$ and $n$ similar to those in the rectangular case. More details of the expression are left for the reader to look up in references such as Rao \cite{Rao2004}. 
-Again, the results for eigenvalues are presented in table \ref{tab:cir_wav_comparison} as adimensional numbers using the normalization factor $\frac{a}{c}$ which lacks the term $2\pi$ due to the shape of the problem.
+Again, the results for eigenvalues are presented in table \ref{tab:cir_wav_comparison} as non-dimensional numbers using the normalization factor $\frac{a}{c}$ which lacks the term $2\pi$ due to the shape of the problem.
 \begin{table}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
@@ -266,7 +266,7 @@ FEM     & 2.40482634 & 3.83171343 & 5.13564189 & 5.52012378 \\
 Analytic & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\ 
 \hline 
 \end{tabular} 
-\caption{Adimensional eigenvalues $\frac{\omega a}{c}$ for TM modes in circular shaped waveguides. Radius $a$ is taken as the characteristic length and $c$ is the speed of light in the medium. These shapes are given by Bessel functions modulated by trigonometric functions as described by the theory in \cite{Rao2004}.}
+\caption{Non-dimensional eigenvalues $\frac{\omega a}{c}$ for TM modes in circular shaped waveguides. Radius $a$ is taken as the characteristic length and $c$ is the speed of light in the medium. These shapes are given by Bessel functions modulated by trigonometric functions as described by the theory in \cite{Rao2004}.}
 \label{tab:cir_wav_comparison}
 \end{center}
 \end{table}
@@ -278,112 +278,134 @@ Analytic & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\
 \label{fig:circular_waveguide}
 \end{figure}
 
-\subsubsection{Hexagonal wave-guide}
+\subsubsection{Hexagonal waveguide}
 
 Threefold degeneracy is seen in modes of hexagonal guides due to symmetries.
-
+\begin{table}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
-\hline
-\multicolumn{5}{|c|}{Comparison of $\omega^2$ for hexagonal wave-guide} \\
+%\hline
+%\multicolumn{5}{|c|}{Comparison of $\omega^2$ for hexagonal wave-guide} \\
 \hline 
-m,n & 0,1 & 1,1 & 2,1 & 0,2 \\ 
+Mode & 1 & 2 & 3 & 4 \\ 
 \hline 
-FEM     & 5.34990939 & 8.51630317 & 11.39340788 & 12.2461672 \\ 
-\hline 
-Anlytic &  &  &  &  \\ 
+%FEM     & 5.34990939 & 8.51630317 & 11.39340788 & 12.2461672 \\ 
+FEM 	 & 0.36812333 & 0.46445718 &  0.53721354 & 0.55695514985 \\
 \hline 
 \end{tabular} 
+\caption{Simulation of TM modes in hexagonal waveguides gives these non-dimensional eigenvalues $\frac{\omega a}{c}$. The apothem of the hexagon is used here as characteristic length $a$, and $c$ is the speed of light in the medium. Not having a separable equation for the hexagonal case we are not able to enumerate modes with indexes $m$ and $n$.}
 \label{tab:hex_wav_comparison}
 \end{center}
+\end{table}
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.07]{./img/hexagonal_waveguide.pdf}
-\caption{Degneracy of modes from the simulation of hexagonal wave-guide.}
+\caption{Plots of electric field magnitude for TM modes in a hexagonal waveguide. Degeneracy is evident by looking at modes that are rotational transformations of each other.}
 \label{fig:hexagonal_waveguide}
 \end{figure}
 \subsubsection{Elliptical waveguide}
 
-The closest to a reference from which to compare the solutions of elliptical waveguides was a study of oscillation in an elliptic membrane by J. Guti\'errez Vega \cite{J.Gutierrez-Vega1999}. Shapes shown in figure \ref{fig:elliptical_waveguide} are in agreement with the images in the reference. 
-
+Elliptical waveguides are an example of other problems that are complex to solve analytically, and easy for FEM codes. In contrast with hexagonal waveguides, elliptical waveguides can be separated in a given coordinate system, in this case \href{http://en.wikipedia.org/wiki/Elliptic_coordinate_system}{the elliptic coordinate system.} Solutions for resonance in elliptical domains are given by \href{http://en.wikipedia.org/wiki/Mathieu_function}{Mathieu functions} and are described in a study by J. Guti\'errez Vega \cite{J.Gutierrez-Vega1999}. Shapes of electric field magnitude of TM modes are shown in figure \ref{fig:elliptical_waveguide} and are in agreement with the images in the reference. Additionally, the non-dimensional eigenvalues are presented in table
+\begin{table}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
-\hline
-\multicolumn{5}{|c|}{First four frequencies $\omega$ for elliptical wave-guide} \\
+%\hline
+%\multicolumn{5}{|c|}{First four frequencies $\omega$ for elliptical wave-guide} \\
 \hline 
-FEM     & 2.0195 & 2.4149 & 2.6627 & 2.9457 \\ 
+m,n & 1,1 & 1,2 & 2,1 & 1,3 \\ 
+\hline 
+FEM   & 2.0195 & 2.4149 & 2.6627 & 2.9457 \\ 
 \hline 
 \end{tabular} 
 \label{tab:eli_wav_comparison}
+\caption{Eigenvalues $\frac{\omega a}{c}$ of four TM modes in a elliptical resonant cavity. This time the characteristic length $a$ is taken as the semi-minor axis.}
 \end{center}
+\end{table}
+
 \begin{figure}
 \centering
-\includegraphics[scale=0.1]{./img/elliptical_waveguide.pdf}
-\caption{Results for the first 8 modes from the simulation of an elliptical wave-guide with minor axis $a=2$ and mayor axis $b=3$.}
+\includegraphics[scale=0.12]{./img/elliptical_waveguide.pdf}
+\caption{Results for the first 8 TM modes from the simulation of an elliptical wave-guide with ratio of $a/b=2/3$ where $a$ is the minor axis and $b$ as the mayor.}
 \label{fig:elliptical_waveguide}
 \end{figure}
 
 \subsubsection{Isoespectral shapes}
 We also tested the solver by performing the computation of isoespectral shapes as proposed by Chapman in \cite{Chapman1995}. The idea behind this was to obtain the same eigenvalues from different shapes by taking advantage of possible mappings between figures that share certain properties.
 A comparison between eigenvalues is presented in table \ref{tab:iso_wav_comparison}, and the first 4 non-degenerate modes are shown in figure \ref{fig:isoespectral_waveguide}.
+\begin{table}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
-\hline
-\multicolumn{5}{|c|}{Comparison of $\omega^2$ for two isoespectral wave-guides} \\
+%\hline
+%\multicolumn{5}{|c|}{Comparison of $\omega^2$ for two isoespectral wave-guides} \\
+\hline 
+Mode & 1 & 2 & 3 & 4 \\ 
 \hline 
 Shape 1  & 6.38705867 & 7.65676809 & 9.11294713 & 10.23292227 \\ 
 \hline 
 Shape 2 & 6.3850403 & 7.65926504 & 9.11794073 & 10.23394057 \\ 
 \hline 
 \end{tabular}
+\caption{For the case of isoespectral shapes we defined the characteristic length to be the height of the figures. Both figures have the same height and width and thus we assigned $a$ to be either. As in the case of hexagonal cavities, there is no immediate way to establish indexed numbering and the tags were added in order of increasing eigenvalue.}
 \label{tab:iso_wav_comparison}
 \end{center}
+\end{table}
+
 \begin{figure}
 \centering
-\includegraphics[scale=0.1]{./img/isoespectral.pdf}
-\caption{First 4 modes from the simulation of two isoespectral shapes as taken from \cite{Chapman1995}.}
+\includegraphics[scale=0.15]{./img/isoespectral.pdf}
+\caption{First four modes from the simulation of two isoespectral shapes as taken from \cite{Chapman1995}.}
 \label{fig:isoespectral_waveguide}
 \end{figure}
 
 \subsubsection{Finite lattices}
 
-Now that the software was tested for the solution of eigenvalue problems, it needed to prove its ability to handle simulations of heterogeneous domains, like in Photonic Crystals. The following results are tests where the harmonic wave equation is solved for a finite grid of $4\times 4$ circular dielectric slabs with ratio $\dfrac{r}{a}=0.2$ and dielectric constant $\epsilon_r = 8.9$ surrounded by air. Boundary conditions are as in \ref{eq:square_bc}, this is, inside a rectangular metallic boundary like if in a wave-guide. The expected result is to see concentration of field inside regions with higher $\epsilon$. As well as lower natural frequencies than those produced by homogeneous medium due to the denominator $\sqrt{\mu\epsilon}$ in \ref{eq:eig_vals_sqare_waveguide}. 
+Now that the software was tested for the solution of eigenvalue problems, it needed to prove its ability to handle simulations of fields inside heterogeneous domains, \change[SEC]{like}{as} in Photonic Crystals. As mentioned in the implementation chapter, this is performed by defining regions with contrasting permitivity values. The construction and proof of performance in the context of finite lattices is a very important step towards modeling of transitory phenomena and future implementation of defects. 
+The results presented in this section are from tests where the harmonic wave equation is solved for a finite, 2D Bravais lattice very similar to the one shown in figure \ref{fig:sq_lat_fig} where the primitive vectors are orthogonal and of equal magnitude $a_1$ = $a_2$. In this lattice the pattern that is repeated by the vectors is a square shaped unit cell that has embedded a circular inhomogeneity. 
+Due to computational resources the grid is made by $4\times 4$ unit cells where the ratio $\dfrac{r}{a}=0.2$ is given between the radius of the circular inclusion and the characteristic length of the cell. The material of the inclusion has a dielectric constant $\epsilon_r = 8.9$ and the surrounding media is assumed to be air $\epsilon =1$. Boundary conditions are as presented in \add[SEC]{equation} \ref{eq:square_bc}, this is, inside a rectangular metallic boundary like if in a wave\remove[SEC]{-}guide. The expected result is to see concentration of field inside regions with higher $\epsilon$\change[SEC]{. A}{, a}s well as slightly bigger non-dimensional eigenvalues than those produced by homogeneous medium. this is due to light speed $c$ being in the denominator of $\frac{\omega
+a}{2\pi c}$. 
+\begin{table}
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
-\hline
-\multicolumn{5}{|c|}{Comparison of $\omega$ for finite grid of dielectric rods vs air for the same mesh.} \\
+%\hline
+%\multicolumn{5}{|c|}{Comparison of $\omega$ for finite grid of dielectric rods vs air for the same mesh.} \\
 \hline 
 m,n & 1,1 & 1,2 & 2,2 & 3,1 \\ 
 \hline 
 Embedded rods & 0.77475487 & 1.19190369 & 1.46064033 & 1.58328716 \\ 
 \hline 
-Air  & 1.11074305 & 1.75637223 & 2.22176045 & 2.48458998 \\ 
+Air  & 0.70710722 &  1.11804330  &  1.41422820 & 1.58121220441 \\
 \hline 
 \end{tabular}
+\caption{Non-dimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM modes in  square shaped waveguides with and without inclusion of higher electric permitivity regions. The side of the guide $a$ is taken as the characteristic length and $c$ is the speed of light in the medium. As expected, we have bigger eigenvalues for the region with higher dielectric constant $\epsilon$.}
 \label{tab:fin_lat_comparison}
 \end{center}
+\end{table}
 
-Note in table \ref{tab:fin_lat_comparison} that if frequencies found for the air filled case are multiplied by two (this domain is twice as big) and then squared, we get the same result as in \ref{tab:sq_wav_comparison}. 
+Note in table \ref{tab:fin_lat_comparison} that if frequencies found for the air filled case are multiplied by two (this domain is twice as big) and then squared, we get the same result as in \add[SEC]{table}  \ref{tab:sq_wav_comparison}. 
 Figure \ref{fig:fin_lat_waveguide} illustrates the difference between solving for an homogeneous and non-homogenous problems. The flexibility to easily model interfaces and to couple regions is one of the great advantages of using both the Finite Element Method and a vectorial formulation. Notice that these are solutions that are hard to solve analytically.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.1]{./img/finite_lattice.pdf}
-\caption{A lattice of dielectric rods embedded in a domain causes peaks of field magnitude in the places with higher dielectric constant.}
+\caption{A lattice of dielectric rods causes peaks of field magnitude in the places with higher dielectric constant. This figure shows what happens with a) the magnitude of the field and b) the x component, when dielectric rods are included. Each block compares the result with the modes shown in figure \ref{fig:square_waveguide} the first row of the block being in a waveguide without rods and the second with the lattice. This simulation allowed us to confirm that the software was capable of handling situations with multiple regions and with contrasts in material properties.}
 \label{fig:fin_lat_waveguide}
 \end{figure}
 
 \subsection{Bloch periodic lattices and dispersion curves}
-Finally, we solved the harmonic equation for infinite crystals by defining Bloch periodicity boundary conditions over a unitary cell. Looping through combinations of phase changes at boundaries, allowed us to see the spectrum for the crystal given different incident plane waves defined by varying wave number $\vec{k}$. 
-Dispersion plots shown in figures \ref{fig:dispersion_plot_ra01}, \ref{fig:dispersion_plot_ra02}, and \ref{fig:dispersion_plot_ra04} are made by taking only the perimeter of the irreducible Brillouin zone which is the minimal representation of the domain in frequency space. Figure \ref{fig:frequency_surfaces} shows the complete representation of natural frequencies for the lattice given every combination of incident plane waves with wave number $\vec{k} = \vec{k}_x+\vec{k}_y$ inside a unitary cell.
+Finally, we solved the harmonic equation for infinite crystals by defining Bloch periodicity boundary conditions over a unitary cell. \add[SEC]{This was accomplished by means of routines that interpreted opposing sides of the unitary cells as points that necessarily satisfy equation} \ref{eq:bloch_condition}. \add[SEC]{ If seen in the context of Bravais lattices, what we do here is to discretize only the unit cell shown in figure} \ref{fig:sq_lat_fig}  \add[SEC]{and construct the infinite lattice by multiplying with phase factors that are dependent on all possible reciprocal vectors G defined in expression} \ref{reciprocal_vectors}.
+Looping through combinations of phase changes at boundaries, allowed us to see the spectrum for the crystal given different incident plane waves defined by varying wave number $\vec{k}$. 
+Dispersion plots shown in figures \ref{fig:dispersion_plot_ra01}, \ref{fig:dispersion_plot_ra02}, and \ref{fig:dispersion_plot_ra04} are made by taking only the perimeter of the irreducible Brillouin zone which is the minimal representation of the domain in frequency space.\add[SEC]{This zone is illustrated in figure} \ref{fig:Brillouin},  \add[SEC]{it is defined as a zone that has been reduced by using all of the symmetries in the point group of the lattice. For details about Brillouin zones and symmetry groups, the reader is referred to Kittels famous books on solid state phisics }\cite{Kittel2005}. 
+
+Figure \ref{fig:frequency_surfaces} shows the complete representation of natural frequencies for the lattice given every combination of incident plane waves with wave number $\vec{k} = \vec{k}_x+\vec{k}_y$ inside a unitary cell.
 The results presented in figure \ref{fig:dispersion_plot_ra02} were made with the same conditions as those used by Joannopolous in page 68 of the book: \textbf{Photonic Crystals: molding the flow of light} \cite{Joannopoulos2008} and agree with their findings. Apart from great similarity between the curves, our value of $31.41\%$ for the gap-midgap ratio is close to the one reported by them of $31.4\%$.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.2]{./img/reduced_brillouin_zone.pdf}
 \caption{Illustration of reduced Brillouin zone in spectral domain, and reference points $\Gamma$, $\chi$ and $M$.}
+\label{fig:Brillouin}
 \end{figure}
  
 \begin{figure}
