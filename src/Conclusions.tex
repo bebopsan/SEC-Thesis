@@ -2,16 +2,16 @@
 
 \section{Conclusions}
 
-We developed the necessary computational tools for the Finite Element modelling, simulation and analysis of EM wave propagation in the context of Photonic Crystals.  This was done as an ongoing open source software platform based on Python and structured around Object Oriented Paradigm. 
-In order to build this platform, the necessary concepts and mathematical tools associated to the modelling of electromagnetic waves in periodic media were appropriated, specifically Maxwell's equations, and periodicity formulations taken from solid state physics. 
+We developed the necessary computational tools for the Finite Element modeling, simulation and analysis of EM wave propagation in the context of Photonic Crystals.  This was done as an ongoing open source software platform based on Python and structured around Object Oriented Paradigm. 
+In order to build this platform, the necessary concepts and mathematical tools associated to the modeling of electromagnetic waves in periodic media were appropriated, specifically Maxwell's equations, and periodicity formulations taken from solid state physics. 
 
-Moreover, the finite element method was explored as an alternative to other methods commonly used in the analysis of PCs such as the Plane Wave Expansion (PWE) \cite{StevenJohnson2001} method and Finite Differences Time Domain (FDTD)\cite{Oskooi2009}. FEM was chosen mainly because it has proven to be a great general purpose method for investigating PCs \cite{Andonegui2013} being its flexibility to model interfaces and defects in both frequency and spatial domains one of its greatest advantages. FEM is also well known for its stability and robustness and has proven its versatility in many fields of engineering \cite{Bathe1996, Ram2002, Zienkiewicz2005, Logg2012}.
+Moreover, the finite element method was explored as an alternative to other methods commonly used in the analysis of PCs such as the Plane Wave Expansion (PWE) \cite{StevenJohnson2001} method\add[SEC]{,} and Finite Differences Time Domain (FDTD)\cite{Oskooi2009}. FEM was chosen mainly because it has proven to be a great general purpose method for investigating PCs \cite{Andonegui2013} being its flexibility to model interfaces and defects in both frequency and spatial domains one of its greatest advantages. FEM is also well known for its stability and robustness and has proven its versatility in many fields of engineering \cite{Bathe1996, Ram2002, Zienkiewicz2005, Logg2012}.
 
-The platform was designed using the Object Oriented Paradigm having in mind the objective of having a well structured and flexible architecture, capable of being upgraded to future capabilities. Even though the architecture is in a developing stage and a proper manual for its use its pending, the modules, classes and methods that conform it are functional for production of results, and are documented for user reference. The reader is encouraged to visit the \href{https://github.com/bebopsan/peyeQM/tree/Depuration}{\textbf{online repository}}  and explore its examples.
+The platform was designed using the Object Oriented Paradigm having in mind the objective of \change[SEC]{having}{implementing} a well structured and flexible architecture, capable of being upgraded to future capabilities. \remove{Even though the architecture is in a developing stage and a proper manual for its use its pending,} The modules, classes and methods that conform it are functional for production of results, and are documented for user reference. The reader is encouraged to visit the \href{https://github.com/bebopsan/peyeQM/tree/Depuration}{\textbf{online repository}} at \url{https://github.com/bebopsan/peyeQM/tree/Depuration}  and explore its examples.
 
-We proved that PeyeQM is capable of accurately simulating  2D electromagnetism stationary, and harmonic vector fields as well as fields inside in-homogeneous domains and infinite crystals. Time domain simulations (FDTD) of finite lattices with point and line defects are still in developing phase but look very promising. The need of CAD tools for the construction of finite lattices of dielectric rods with arbitrary size and placement was a factor that was underestimated in the beginning. And some time was spent on defining routines for the definition of clusters of  dielectric regions within a rectangular matrix.      
+We proved that PeyeQM is capable of accurately simulating  2D electromagnetism stationary, and harmonic vector fields as well as fields inside in-homogeneous domains and infinite crystals. The need of CAD tools for the construction of finite lattices of dielectric rods with arbitrary size and placement was a factor that was underestimated in the beginning, but the outcome ended up becoming a great addition that gives flexibility to the modeling of complex domains.
 
-In the present time, we are working on fixing bugs, cleaning the code, and making a proper documentation of the software in order to achieve a product that can be shared and published as an article and or a downloadable application. This is a work that has great potential for academic and educational use by students of engineering and physics interested in diving into computational physics in the context of open source collaborative software.  
+\change[SEC]{In the} At present time, we are working on fixing bugs, cleaning the code, and making a detailed documentation of the software in order to achieve a product that can be shared and published as an article and or a downloadable application. This is a work that has great potential for academic and educational use by students of engineering and physics interested in diving into computational physics in the context of open source collaborative software.  
  
 
 \section{Future work}
@@ -22,14 +22,14 @@ The following is a list of items that are worth exploring in future work on Peye
 %
 \item Consider adding support for infinite boundary conditions for the simulation of unbounded domains \cite{antoine2009review, appelo2003}. One popular candidate very often used in electromagnetism is the use of regions with Perfectly Matched Layers (PML)\cite{Jin2010}, where the domain is surrounded with a material that has artificial energy dissipation and the properties are fitted to minimize reflection between the interfaces. Other possibilities are:
 \begin{itemize}
-\item to use a Robin boundary condition when intrinsic impedance is known, or to map the unbounded region to a known geometry (e.g, with a conformal mapping), both approaches used in the open source code FEMM (\href{http://www.femm.info/wiki/HomePage}{\textbf{Finite Element Method Magnetics}}) \cite{meeker2010_FEMM};
-\item hybrid FEM and Boundary Elements(BEM) as presented by Nicol\'as Guar\'in in \cite{Guarin2012};
-\item Infinite Elements, that are special finite elements with an assumed decaying behavior (\cite{Zienkiewicz2005}).
+\item to use a Robin boundary condition when intrinsic impedance is known, or to map the unbounded region to a known geometry (e.g, with a conformal mapping), both approaches used in the open source code FEMM (\href{http://www.femm.info/wiki/HomePage}{\textbf{Finite Element Method Magnetics}}) \cite{meeker2010_FEMM},
+\item implement hybrid FEM and Boundary Elements(BEM) as presented by Nicol\'as Guar\'in in \cite{Guarin2012},
+\item or define infinite Elements, that are special finite elements with an assumed decaying behavior (\cite{Zienkiewicz2005}).
 \end{itemize} 
 %
 \item Evaluate convergence of the method for the problems described in chapter \ref{ch:Results} using finer spatial and spectral ($\vec{k}$ domain) meshes.
 %
-\item Perform more simulations of time dependent problems involving defects in finite crystals. And compare the results of $Q$ factor and efficiency with  publications.
+\item Perform simulations of time dependent problems involving defects in finite crystals, and compare efficiency of designs involving PC waveguides or cavities with publications.
 %
 \item Integrate the CAD and solver into an optimization algorithm that maximizes transmission or confinement by inducing variations in position and shape of defects in the lattice.
 %

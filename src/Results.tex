@@ -364,6 +364,9 @@ Now that the software was tested for the solution of eigenvalue problems, it nee
 The results presented in this section are from tests where the harmonic wave equation is solved for a finite, 2D Bravais lattice very similar to the one shown in figure \ref{fig:sq_lat_fig} where the primitive vectors are orthogonal and of equal magnitude $a_1$ = $a_2$. In this lattice the pattern that is repeated by the vectors is a square shaped unit cell that has embedded a circular inhomogeneity. 
 Due to computational resources the grid is made by $4\times 4$ unit cells where the ratio $\dfrac{r}{a}=0.2$ is given between the radius of the circular inclusion and the characteristic length of the cell. The material of the inclusion has a dielectric constant $\epsilon_r = 8.9$ and the surrounding media is assumed to be air $\epsilon =1$. Boundary conditions are as presented in \add[SEC]{equation} \ref{eq:square_bc}, this is, inside a rectangular metallic boundary like if in a wave\remove[SEC]{-}guide. The expected result is to see concentration of field inside regions with higher $\epsilon$\change[SEC]{. A}{, a}s well as slightly bigger non-dimensional eigenvalues than those produced by homogeneous medium. this is due to light speed $c$ being in the denominator of $\frac{\omega
 a}{2\pi c}$. 
+
+\add[SEC]{We also noted that the first TM modes of both cases are very similar and with higher modes the confinement in dielectric rods is easier to visualize. This can be explained by remembering that for bigger wavelengths the material looks homogeneous to the wave. As the frequency increases the wavelength is reduced to a size comparable to that of the inclusions, and they start acting as resonant cavities as well.}
+
 \begin{table}
 
 \begin{center}
@@ -378,7 +381,7 @@ Embedded rods & 0.77475487 & 1.19190369 & 1.46064033 & 1.58328716 \\
 Air  & 0.70710722 &  1.11804330  &  1.41422820 & 1.58121220441 \\
 \hline 
 \end{tabular}
-\caption{Non-dimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM modes in  square shaped waveguides with and without inclusion of higher electric permitivity regions. The side of the guide $a$ is taken as the characteristic length and $c$ is the speed of light in the medium. As expected, we have bigger eigenvalues for the region with higher dielectric constant $\epsilon$.}
+\caption{Non-dimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM modes in  square shaped waveguides with and without inclusion of higher electric permitivity regions. The side of the guide $a$ is taken as the characteristic length, $c$ is the speed of light in vacuum and the rods have a relative electrical permitivity of 8.9. As expected, we have bigger eigenvalues for the region with higher dielectric constant $\epsilon$.}
 \label{tab:fin_lat_comparison}
 \end{center}
 \end{table}
@@ -430,6 +433,6 @@ The results presented in figure \ref{fig:dispersion_plot_ra02} were made with th
 \begin{figure}
 \centering
 \includegraphics[scale=0.1]{./img/energy_surfaces.pdf}
-\caption{Frequency surfaces for square lattice of \ref{fig:dispersion_plot_ra02}, where each point in a surface $i$ represents the eigenvalue $i$ of the solution, given a pair of $\vec{k}_x$, $\vec{k}_y$.}
+\caption{Frequency surfaces for square lattice of figure \ref{fig:dispersion_plot_ra02}, where each point in \add[SEC]{one of the surfaces} represents the eigenvalue in ascending order, given the components of the wavenumber: $\vec{k}_x$, $\vec{k}_y$.}
 \label{fig:frequency_surfaces}
 \end{figure}
