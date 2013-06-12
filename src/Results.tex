@@ -186,9 +186,9 @@ The wave functions that are solution to this eigenproblem for each component of 
 &\mathbf{E}_y =\mp jC\dfrac{n\pi}{b}\sin{\dfrac{m\pi x}{a}}\cos{\dfrac{n\pi x}{b}}e^{\mp jk_zz}.
 \end{align}
 
-For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \add[SEC]{equation} \ref{eq:Ez_mag}, and how similar are the analytic and numeric  natural frequencies of the guide $\omega$. \add[SEC]{In order to obtain values to compare guides of arbitrary size we normalize the frequency by using a normalization factor $\frac{a}{2\pi}$.} Table \ref{tab:sq_wav_comparison} \add[SEC]{shows the difference between the adimensional normalized frequency simulated with PeyeQM and calculated by hand.}
+For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \add[SEC]{equation} \ref{eq:Ez_mag}, and how similar are the analytic and numeric  natural frequencies of the guide $\omega$. \add[SEC]{In order to obtain values to compare guides of arbitrary size we normalize the frequency by using a normalization factor $\frac{a}{2\pi}$.} Table \ref{tab:sq_wav_comparison} \add[SEC]{shows the difference between the adimensional normalized frequency simulated with PeyeQM and calculated by hand.} Table \ref{fig:rectangular_waveguide} \add[SEC]{shows adimensional eigenvalues for rectangular waveguides where one side is twice the other.}
 
-The numerical solution for a rectangular waveguide has less degenerate modes, and the shapes look better.
+The numerical solution for a rectangular waveguide is shown in figure \ref{fig:rectangular_waveguide}, it has less degenerate TM modes, and the shapes are in better accordance with typical representations. Only the x component of the field is shown because there were not significant differences between the shapes.
 \begin{table}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
@@ -196,10 +196,10 @@ The numerical solution for a rectangular waveguide has less degenerate modes, an
 m,n & 1,1 & 1,2 & 2,2 & 3,1 \\ 
 \hline 
 %FEM & 4.93480857 & 12.33721117 & 19.73961759 & 24.6763011 \\ 
-FEM  & 0.35355361 &  0.55902165 &  0.70711410 & 0.7906061022 \\ 
+FEM  & 0.70710722 &  1.11804330  &  1.41422820 & 1.58121220441 \\ 
 \hline 
 %Analytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\ 
-Analytic  & 0.35355339 &  0.55901699 &  0.70710678 &  0.79056941499 \\
+Analytic  & 0.70710678 &  1.11803398 &  1.41421356 &  1.58113883 \\
 \hline 
 \end{tabular} 
 \caption{Comparison of adimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM fields in square shaped waveguides. Where $a$ is the characteristic length and $c$ the speed of light in the medium.}
@@ -211,26 +211,32 @@ Analytic  & 0.35355339 &  0.55901699 &  0.70710678 &  0.79056941499 \\
 \begin{figure}
 \centering
 \includegraphics[scale=0.1]{./img/square_waveguide.pdf}
-\caption{Results for three different modes from the simulation of a square shaped waveguide with side $a=b=2$}
+\caption{Electric field plots of three different \add[SEC]{TM} modes from the simulation of a square shaped waveguide with side $a=b=2$. The first row shows the magnitude of the field and the next two rows have contour and surface plots of x and y components of the field.}
 \label{fig:square_waveguide}
 \end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[scale=0.1]{./img/square_waveguide_x.pdf}
+%\caption{Results for three different modes from the simulation of a square shaped waveguide with side $a=b=2$}
+%\label{fig:square_waveguide}
+%\end{figure}
 
 \begin{table}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
-%\hline
+%\hline4.93480795
 %\multicolumn{5}{|c|}{Comparison of $\omega^2$ for rectangular wave-guide $a =2b$} \\
 \hline 
 m,n & 1,1 & 2,1 & 3,1 & 1,2 \\ 
 \hline 
 %FEM     & 3.08425459 & 4.93480795 & 8.0190859 & 12.33717191 \\ 
-FEM      & 0.27950864 & 0.35355359 & 0.4506948 &  0.55902076 \\
+FEM      & 1.11803457 & 1.41421438 & 1.8027792 &  2.23608305 \\
 \hline 
 %Anlytic & 3.08425137 & 4.93480220 & 8.0190535 & 12.33700550 \\ 
-Analytic & 0.27950849 & 0.35355339 & 0.4506939 &  0.55901699 \\
+Analytic & 1.11803398 & 1.41421356 & 1.8027756 &  2.23606797 \\
 \hline 
 \end{tabular} 
-\caption{Comparison of adimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM fields in  rectangular shaped waveguides. Where $a$ is the characteristic length and $c$ the speed of light in the medium.}
+\caption{Comparison of adimensional eigenvalues $\frac{\omega a}{2\pi c}$ for TM modes in  rectangular shaped waveguides. The longest side $a$ is taken as the characteristic length and $c$ is the speed of light in the medium.}
 \label{tab:rec_wav_comparison}
 \end{center}
 \end{table}
@@ -238,29 +244,32 @@ Analytic & 0.27950849 & 0.35355339 & 0.4506939 &  0.55901699 \\
 \begin{figure}
 \centering
 \includegraphics[scale=0.1]{./img/rectangular_waveguide.pdf}
-\caption{Results for three different modes from the simulation of a rectangle shaped waveguide with sides $a=4$ and $b=2$.}
+\caption{Results for three different TM modes from the simulation of a rectangle shaped waveguide with sides $a=4$ and $b=2$.}
 \label{fig:rectangular_waveguide}
 \end{figure}
 
 
 \subsubsection{Circular wave-guides}
 
-For a circular wave-guide the modes are 
-
+A circular wave-guide was also modeled in order to test the platform for the solution of problems with curved shapes and non-regular meshes. The modes are presented in figure \ref{fig:circular_waveguide}, and their shapes are in close accordance with the expected form of Bessel functions as illustrated in reference \cite{Soto2009}. The mathematical expression for the analytic solution of eigenvalues is related to the roots of Bessel J functions for indexes $m$ and $n$ similar to those in the rectangular case. More details of the expression are left for the reader to look up in references such as Rao \cite{Rao2004}. 
+Again, the results for eigenvalues are presented in table \ref{tab:cir_wav_comparison} as adimensional numbers using the normalization factor $\frac{a}{c}$ which lacks the term $2\pi$ due to the shape of the problem.
+\begin{table}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
-\hline
-\multicolumn{5}{|c|}{Comparison of $\frac{\omega}{a}$ for circular wave-guide} \\
+%\hline
+%\multicolumn{5}{|c|}{Comparison of $\frac{\omega}{a}$ for circular wave-guide} \\
 \hline 
 m,n & 0,1 & 1,1 & 2,1 & 0,2 \\ 
 \hline 
 FEM     & 2.40482634 & 3.83171343 & 5.13564189 & 5.52012378 \\ 
 \hline 
-Anlytic & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\ 
+Analytic & 2.40482555 & 3.83170597 & 5.13562230 & 5.52007811 \\ 
 \hline 
 \end{tabular} 
+\caption{Adimensional eigenvalues $\frac{\omega a}{c}$ for TM modes in circular shaped waveguides. Radius $a$ is taken as the characteristic length and $c$ is the speed of light in the medium. These shapes are given by Bessel functions modulated by trigonometric functions as described by the theory in \cite{Rao2004}.}
 \label{tab:cir_wav_comparison}
 \end{center}
+\end{table}
 
 \begin{figure}
 \centering

@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="circular_waveguide.pdf">
+   sodipodi:docname="circular_waveguide.svg">
   <defs
      id="defs4">
     <clipPath
@@ -59,7 +59,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -991,7 +991,7 @@
        y="239.40244" />
     <g
        id="g6418"
-       transform="matrix(5.34309,0,0,5.34309,1236.9189,625.49923)">
+       transform="matrix(5.34309,0,0,5.34309,1402.6332,299.78494)">
       <g
          id="g6420"
          transform="matrix(0.9959184,0,0,-0.9959184,-174.28572,548.57144)"
@@ -1072,46 +1072,46 @@
     <text
        xml:space="preserve"
        style="font-size:161.45202637px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="3617.6772"
-       y="-254.03725"
+       x="3457.6772"
+       y="-248.32297"
        id="text7535"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7537"
-         x="3617.6772"
-         y="-254.03725">0,1</tspan></text>
+         x="3457.6772"
+         y="-248.32297">TM 0,1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="4444.3433"
-       y="-258.43524"
+       x="4358.6289"
+       y="-264.14954"
        id="text7560"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7562"
-         x="4444.3433"
-         y="-258.43524">1,1</tspan></text>
+         x="4358.6289"
+         y="-264.14954">TM 1,1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="5232.9146"
-       y="-247.00667"
+       x="5122.9146"
+       y="-257.00665"
        id="text7564"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7566"
-         x="5232.9146"
-         y="-247.00667">2,1</tspan></text>
+         x="5122.9146"
+         y="-257.00665">TM 2,1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="5992.9146"
+       x="5907.2002"
        y="-258.43524"
        id="text7568"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7570"
-         x="5992.9146"
-         y="-258.43524">0,2</tspan></text>
+         x="5907.2002"
+         y="-258.43524">TM 0,2</tspan></text>
   </g>
 </svg>

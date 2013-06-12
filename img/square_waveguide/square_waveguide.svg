@@ -24,7 +24,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.175"
      inkscape:cx="2217.3897"
-     inkscape:cy="1652.7116"
+     inkscape:cy="1881.283"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1807,7 +1807,7 @@
     </g>
     <g
        id="g5703"
-       transform="matrix(5.5520184,0,0,5.5520184,-2192.7013,2253.6193)">
+       transform="matrix(5.5520184,0,0,5.5520184,-1992.7013,1922.1907)">
       <g
          word-spacing="normal"
          letter-spacing="normal"
@@ -1831,7 +1831,7 @@
            style="fill:#000000;stroke-width:0" /></g>    </g>
     <g
        id="g6418"
-       transform="matrix(5.34309,0,0,5.34309,-2130.2811,960.59146)">
+       transform="matrix(5.34309,0,0,5.34309,-1941.7096,623.44861)">
       <g
          id="g6420"
          transform="matrix(0.9959184,0,0,-0.9959184,-174.28572,548.57144)"
@@ -1912,46 +1912,46 @@
     <text
        xml:space="preserve"
        style="font-size:161.45202637px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="353.33435"
+       x="130.4772"
        y="81.054993"
        id="text7535"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7537"
-         x="353.33435"
-         y="81.054993">1,1</tspan></text>
+         x="130.4772"
+         y="81.054993">TM 1,1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="1060"
-       y="76.656975"
+       x="980"
+       y="70.942688"
        id="text7560"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7562"
-         x="1060"
-         y="76.656975">1,2</tspan></text>
+         x="980"
+         y="70.942688">TM1,2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="1854.2858"
+       x="1730.2858"
        y="76.656975"
        id="text7564"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7566"
-         x="1854.2858"
-         y="76.656975">2,2</tspan></text>
+         x="1730.2858"
+         y="76.656975">TM2,2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="2608.5715"
+       x="2482.5715"
        y="76.656975"
        id="text7568"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7570"
-         x="2608.5715"
-         y="76.656975">3,1</tspan></text>
+         x="2482.5715"
+         y="76.656975">TM3,1</tspan></text>
   </g>
 </svg>

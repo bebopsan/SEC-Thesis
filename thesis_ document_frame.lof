@@ -24,16 +24,16 @@
 \contentsline {figure}{\numberline {5.5}{\ignorespaces \change [SEC]{Components}{Magnitude plot} of \add [SEC]{components x (a) and y (b) of the} electric field after simulating a problem of two cylinders with opposite charges. \add [SEC]{The charge has been chosen such that field at perfect conductor cylinder boundaries is of 12 V/m}}}{64}{figure.5.5}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Arrow glyphs of the solution for the dipole problem. Length and color of the arrow indicate magnitude of the field. As expected, the field points from the positively charged cylinder to the negative.}}{64}{figure.5.6}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Error calculation of simulation against exact solution. The method reproduces the nature of the problem, but a finer mesh is needed to obtain precise results.}}{65}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Results for three different modes from the simulation of a square shaped waveguide with side $a=b=2$}}{67}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Results for three different modes from the simulation of a rectangle shaped waveguide with sides $a=4$ and $b=2$.}}{67}{figure.5.9}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Electric field plots of three different \add [SEC]{TM} modes from the simulation of a square shaped waveguide with side $a=b=2$. The first row shows the magnitude of the field and the next two rows have contour and surface plots of x and y components of the field.}}{67}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Results for three different TM modes from the simulation of a rectangle shaped waveguide with sides $a=4$ and $b=2$.}}{67}{figure.5.9}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Results for three different modes from the simulation of circular wave-guide with radius $a=2$.}}{68}{figure.5.10}
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Degneracy of modes from the simulation of hexagonal wave-guide.}}{69}{figure.5.11}
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Results for the first 8 modes from the simulation of an elliptical wave-guide with minor axis $a=2$ and mayor axis $b=3$.}}{69}{figure.5.12}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces First 4 modes from the simulation of two isoespectral shapes as taken from \cite {Chapman1995}.}}{69}{figure.5.13}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces First 4 modes from the simulation of two isoespectral shapes as taken from \cite {Chapman1995}.}}{70}{figure.5.13}
 \contentsline {figure}{\numberline {5.14}{\ignorespaces A lattice of dielectric rods embedded in a domain causes peaks of field magnitude in the places with higher dielectric constant.}}{71}{figure.5.14}
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Illustration of reduced Brillouin zone in spectral domain, and reference points $\Gamma $, $\chi $ and $M$.}}{72}{figure.5.15}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Dispersion plot for a square lattice of r/a = 0.1 and $\epsilon _r = 8.9$.}}{72}{figure.5.16}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Dispersion plot for a square lattice of r/a = 0.1 and $\epsilon _r = 8.9$.}}{73}{figure.5.16}
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Dispersion plot for a square lattice of r/a = 0.2 and $\epsilon _r = 8.9$.}}{73}{figure.5.17}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Dispersion plot for a square lattice of r/a = 0.4 and $\epsilon _r = 8.9$.}}{73}{figure.5.18}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Dispersion plot for a square lattice of r/a = 0.4 and $\epsilon _r = 8.9$.}}{74}{figure.5.18}
 \contentsline {figure}{\numberline {5.19}{\ignorespaces Frequency surfaces for square lattice of \ref {fig:dispersion_plot_ra02}, where each point in a surface $i$ represents the eigenvalue $i$ of the solution, given a pair of $\mathaccentV {vec}17E{k}_x$, $\mathaccentV {vec}17E{k}_y$.}}{74}{figure.5.19}
 \addvspace {10\p@ }

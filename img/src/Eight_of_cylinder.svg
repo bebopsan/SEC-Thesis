@@ -11,11 +11,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="3128.9792"
-   height="548.61072"
+   height="601.41272"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="Eight_of_cylinder.svg">
+   sodipodi:docname="Eight_of_cylinder.pdf">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,8 +24,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="1580.1946"
-     inkscape:cy="209.10457"
+     inkscape:cx="1530.1946"
+     inkscape:cy="261.90662"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -104,7 +104,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -600,5 +600,38 @@
        x="1404.5714"
        y="464.71933"
        clip-path="url(#clipPath3944)" />
+    <text
+       xml:space="preserve"
+       style="font-size:69.05583954px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="-126.81355"
+       y="1056.6321"
+       id="text3561"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3563"
+         x="-126.81355"
+         y="1056.6321">a)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:69.05583954px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="872.05188"
+       y="1056.6659"
+       id="text3561-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3563-7"
+         x="872.05188"
+         y="1056.6659">b)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:69.05583954px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="1859.4508"
+       y="1056.6321"
+       id="text3561-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3563-4"
+         x="1859.4508"
+         y="1056.6321">c)</tspan></text>
   </g>
 </svg>
