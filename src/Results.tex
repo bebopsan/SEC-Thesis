@@ -47,7 +47,7 @@ This means that the field is uniform and directed from the higher potential plat
 \label{fig:parallel_plate}
 \end{figure}
 
-A rectangular region \add{filled with a perfect dielectric and with perfect conductor upper and lower plates} was meshed and Dirichlet boundary condition were applied.  Separation $d$ is taken unitary and the result is shown in figure \ref{fig:capacitor}. \add[SEC]{Given that in the implementation units have been normalized we can assign arbitrary values of field to the solution. It can be assumed that the constant value of 12 corresponds to $V/m$}
+A rectangular region \add{filled with a perfect dielectric and with perfect conductor upper and lower plates} was meshed and Dirichlet boundary condition were applied.  Separation $d$ is taken unitary and the result is shown in figure \ref{fig:capacitor}. \add[SEC]{We imposed the constant value of 12 V /m on the boundary.}
 
 \begin{figure}
 \centering
@@ -73,32 +73,31 @@ Gauss law \ref{eq:Gauss} in spherical coordinates, assuming a homogeneous medium
 \epsilon \int_S \mathbf{E}\cdot d\mathbf{S} = \int_V \rho dV.
 \end{equation}
 
-Where $\int_V \rho dV = q$ is the total charge of the \change[SEC]{particle}{cylinder}. If that charge is distributed uniformly, then there are no preferred directions and the electric field must be radial \cite{Cheng1993}, and have constant intensity over spherical shells. So for an arbitrary 
-spherical shell of radius $r$:
+Where $\int_V \rho dV = q$ is the total charge of the \change[SEC]{particle}{cylinder}. If that charge is distributed uniformly, then there are no preferred directions and the electric field must be radial \cite{Cheng1993}, and have constant intensity over spherical shells. So for an arbitrary spherical shell of radius $r$ \add[SEC]{the field outside is given by:}
 
 \begin{align*}
-&\epsilon \mathbf{E} \int_{\theta}\int_{\phi} r^2 sin(\theta) d \phi = q \\
-& \mathbf{E}_r(r) = \frac{q}{4\pi \epsilon r^2} \hat{r}
+&\epsilon \mathbf{E} \int_{\theta}\int_{\phi} r^2 sin(\theta) d \phi = q, \\
+& \mathbf{E}_r(r) = \frac{q}{4\pi \epsilon r^2} \hat{r}.
 \end{align*}
-This has to be transformed into Cartesian coordinates in order to input boundary conditions. If we consider $r$ as the magnitude of vector $\vec{r}$ in the unitary direction $\hat{r}$ then we can transform it to a linear combination of unitary vectors $\hat{x}$ and $\hat{y}$ by the following:
+This has to be transformed into cartesian coordinates in order to input boundary conditions. If we consider $r$ as the magnitude of vector $\vec{r}$ in the unitary direction $\hat{r}$ then we can transform it to a linear combination of unitary vectors $\hat{x}$ and $\hat{y}$ by the following:
 \begin{equation}
-\vec{r} = r cos(\theta) \hat{x} + r sin(\theta) \hat{y}
+\vec{r} = r cos(\theta) \hat{x} + r sin(\theta) \hat{y},
 \end{equation}
-And by trigonometry we know that $cos(\theta) =\dfrac{x}{r}$ and $sin(\theta)=\dfrac{y}{r}$. Making the necessary substitutions we get to:
+\change[SEC]{A}{a}nd by trigonometry we know that $cos(\theta) =\dfrac{x}{r}$ and $sin(\theta)=\dfrac{y}{r}$. Making the necessary substitutions we get to:
 
 \begin{equation}
-\mathbf{E}_r(r) = \mathbf{E}_x(x,y) + \mathbf{E}_y(x,y) = \frac{qx}{4\pi \epsilon \sqrt{\left(x^2+y^2\right)}^3} \hat{x}+\frac{qy}{4\pi \epsilon \sqrt{\left(x^2+y^2\right)}^3} \hat{y}
+\mathbf{E}_r(r) = \mathbf{E}_x(x,y) + \mathbf{E}_y(x,y) = \frac{qx}{4\pi \epsilon \sqrt{\left(x^2+y^2\right)}^3} \hat{x}+\frac{qy}{4\pi \epsilon \sqrt{\left(x^2+y^2\right)}^3} \hat{y}.
 \end{equation}
-So, a plot the solution after simulating should match a representation of this analytic result. We initially proposed a model where the charged cylinder or point source is modelled as a \href{https://github.com/bebopsan/peyeQM/tree/
-Depuration/Lib/OOPyQM/Examples/Whole\%20cylinder}{whole circle inside a square domain}, the results of the simulation ( figure \ref{fig:whole_cylinder}) showed that for this kind of problem where the field decays in the form $\dfrac{1}{r^2}$ it was better to use finer meshes and take advantage of symmetries to reduce the computational cost. 
+So, a plot \add[SEC]{of} the solution after simulating should match a representation of this analytic result. We initially proposed a model where the charged cylinder or point source is modeled as a \href{https://github.com/bebopsan/peyeQM/tree/
+Depuration/Lib/OOPyQM/Examples/Whole\%20cylinder}{whole charged circle inside a square domain}, the results of the simulation ( figure \ref{fig:whole_cylinder}) showed that for this kind of problem where the field decays in the form $\dfrac{1}{r^2}$ it was better to use finer meshes and take advantage of symmetries to reduce the computational cost. \add[SEC]{This simulation was performed assuming perfect dielectric materials and assuming a coefficient $\frac{q}{4\pi\epsilon}$ such that the field normal to the edge is equal to 12 V/m.}
 Taking just an eight of the model, and reshaping the outer boundary to a circle improved the quality of the elements and allowed us to use a finer mesh. figure \ref{fig:eight_of_cylinder} shows the $y$ and $x$ components of the field as well as the error between the simulation and the analytic solution.
-For the simulation factor $\dfrac{q}{2\pi \epsilon}$ has been normalized to 1, and the mesh was done done using 1996 QUAD8 elements with 5525 nodes, thus 11050 degrees of freedom. As a comparison, the simulation of the whole circle involved 2432 elements and 7040 nodes with 14080 degrees of freedom, but it solved for a domain that was eight times bigger.
+For the simulation \remove[SEC]{factor $\dfrac{q}{2\pi \epsilon}$ has been normalized to 1, and }the mesh was made of 1996 QUAD8 elements with 5525 nodes, thus 11050 degrees of freedom. As a comparison, the simulation of the whole circle involved 2432 elements and 7040 nodes with 14080 degrees of freedom, but it solved for a domain that was eight times bigger.
 
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.2]{./img/charged_cylinder_inside_rectangle.pdf}
-\caption{Whole simulation of Electric field due to a charged cylinder. a) Numerical result for the $x$ component of the field. b) $y$ component of the solution right. c) Mesh and error calculated between analytic formula and results. Units are arbitrary electric field units such as $V/m$.}
+\caption{Whole simulation of \change[SEC]{E}{e}lectric field due to a charged cylinder. a) Numerical result for the $x$ component of the field. b) $y$ component of the solution right. c) Mesh and error calculated between analytic formula and results. Units are arbitrary electric field units such as $V/m$.}
 \label{fig:whole_cylinder}
 \end{figure}
  
@@ -109,24 +108,24 @@ For the simulation factor $\dfrac{q}{2\pi \epsilon}$ has been normalized to 1, a
 \label{fig:eight_of_cylinder}
 \end{figure}
 
-\subsubsection{Electric Dipole, two charged spheres.}
+\subsubsection{Electric \change{D}{d}ipole, two charged spheres.}
 
 A similar simulation was performed using two semicircular surfaces, taking advantage of inversion symmetry along $x$ axis. Boundary conditions are Dirichlet conditions over the circles and the rectangular boundaries on top, and Neumann conditions set to 0 on bottom lines.  The analytic solution is simply the overlapping of the field due to charge 1 and charge 2, having one of them centered in the origin, and the other displaced by a distance $d$. The field everywhere can be expressed as: 
 
 \begin{align}
-&\mathbf{E}_1(x,y)=x\left(x^2+y^2\right)^{-\frac{3}{2}}\hat{x} + y\left(x^2+y^2\right)^{\frac{3}{2}}\hat{y}\\ 
-&\mathbf{E}_2(x,y)=-(x-4)\left((x-4)^2+y^2\right)^{-\frac{3}{2}} \hat{x}-y\left((x-4)^2+y^2\right)^{\frac{3}{2}}\hat{y}\\
-&\mathbf{E}_x = \left[ x\left(x^2+y^2\right)^{-\frac{3}{2}} -(x-4)\left((x-4)^2+y^2\right)^{-\frac{3}{2}}\right] \hat{x}\\
-&\mathbf{E}_y =\left[ y\left(x^2+y^2\right)^{\frac{3}{2}} -y\left((x-4)^2+y^2\right)^{\frac{3}{2}}\right]\hat{y}
+&\mathbf{E}_1(x,y)=x\left(x^2+y^2\right)^{-\frac{3}{2}}\hat{x} + y\left(x^2+y^2\right)^{\frac{3}{2}}\hat{y},\\ 
+&\mathbf{E}_2(x,y)=-(x-4)\left((x-4)^2+y^2\right)^{-\frac{3}{2}} \hat{x}-y\left((x-4)^2+y^2\right)^{\frac{3}{2}}\hat{y},\\
+&\mathbf{E}_x = \left[ x\left(x^2+y^2\right)^{-\frac{3}{2}} -(x-4)\left((x-4)^2+y^2\right)^{-\frac{3}{2}}\right] \hat{x},\\
+&\mathbf{E}_y =\left[ y\left(x^2+y^2\right)^{\frac{3}{2}} -y\left((x-4)^2+y^2\right)^{\frac{3}{2}}\right]\hat{y}.
 \end{align}
 
-Where again $\dfrac{q}{2\pi \epsilon} = 1$ for the left charged circle and $-1$ for the one on the right at a distance $d=4$. Figure \ref{fig:two_cylinders} shows components $x$ and $y$ of the resulting field as obtained from the FE solver. The direction of the field lines can be observed by means of arrow glyphs in figure \ref{fig:two_cylinders_glyph}, where field lines go outwards in the positively charged cylinder and inwards in the negative.
+Where again $\dfrac{q}{4\pi \epsilon}$ \change[SEC]{for the left charged circle and $-1$ for the one on the right at a distance $d=4$}{is such that the field normal to the cylinders is scaled to a value of 12 V/m at radius $d=4$}. Figure \ref{fig:two_cylinders} shows components $x$ and $y$ of the resulting field as obtained from the FE solver. The direction of the field lines can be observed by means of arrow glyphs in figure \ref{fig:two_cylinders_glyph}, where field lines go outwards in the positively charged cylinder and inwards in the negative.
 In the same way as before, a comparison between analytic and numerical solutions was performed (figure \ref{fig:two_cylinders_error}) and error appeared to be magnified in the region between cylinders. This value keeps being higher than expected, and different meshing schemes were tested in order to improve accuracy. Less error was observed using adaptative meshing methods than structured grids. The current mesh for this simulation has 510 elements and 1622 degrees of freedom, a future simulation is proposed with finer meshes using a PC with bigger RAM.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.2]{./img/two_cylinders.pdf}
-\caption{Components of the electric field after simulating a problem of two cylinders with opposite charges.}
+\caption{\change[SEC]{Components}{Magnitude plot} of \add[SEC]{components x (a) and y (b) of the} electric field after simulating a problem of two cylinders with opposite charges. \add[SEC]{The charge has been chosen such that field at perfect conductor cylinder boundaries is of 12 V/m}}
 \label{fig:two_cylinders}
 \end{figure}
 
@@ -145,24 +144,24 @@ In the same way as before, a comparison between analytic and numerical solutions
 \end{figure}
 
 \section{Harmonic benchmark tests}
-The second section regards solutions of eigenvalue problems, either for closed domains or infinite and periodic ones. The first part will deal with simulation of resonant modes in wave-guides, and the second with free waves and periodic crystals.
-In this stage of PeYeQM we knew that the program was capable of assembling stiffness matrices and solving systems of linear equations, what the following tests with wave-guides would give was the certainty that we were able to form mass matrices as well  as solve the eigenvalue problems associated with a formulation of the form:
-\[\mathbb{A}\mathbf{\vec{E}} = \mathbb{M}\mathbf{\vec{E}}\]
-
+The second section regards solutions of eigenvalue problems, either for closed domains or infinite and periodic ones. The first part will deal with simulation of resonant modes in waveguides, and the second with free waves and periodic crystals.
+In this stage of Pe\change[SEC]{Y}{y}eQM we knew that the program was capable of assembling stiffness matrices and solving systems of linear equations\change[SEC]{,}{.} \change[SEC]{w}{W}hat the following tests with resonant cavities give is the certainty that we \change[SEC]{were}{are} able to form useful mass matrices, as well as solve the eigenvalue problems associated with a formulation of the form:
+\[\mathbb{A}\mathbf{\vec{E}} = \mathbb{M}\mathbf{\vec{E}}.\]
+\note[SEC]{Lo que las pruebas con cavidades resonantes nos dan es la seguridad de que somos capaces de formar matrices de masa útiles, así como solucionar problemas de autovalores asociados a la formulación de la forma:}
 
 \subsection{Eigenvalues and modes in wave-guides}
 
-Ideal wave-guides can be modelled by a source-less version of the wave equation for time harmonic fields \ref{eq:E-wave-harmonic} in arbitrary 2D domains closed by a metallic boundary that guarantees Dirichlet condition $\mathbf{E} = 0\quad at\quad \Gamma$ . This problem is relevant in electromagnetism and telecommunications because it is the principle behind many applications such as data transmission in fiber optics, and microwaves. Here, the 2D domain represents a cross section of a metallic structure that guides waves along its axis. We are particularly interested in knowing two things:
+Ideal wave\remove[SEC]{-}guides can be modeled by a source-less version of the wave equation for time harmonic fields \ref{eq:E-wave-harmonic} in arbitrary 2D domains closed by a metallic \add[SEC]{(perfect conductor)} boundary that guarantees Dirichlet condition $\mathbf{E} = 0\quad at\quad \Gamma$ . This problem is relevant in electromagnetism and telecommunications because it is the principle behind many applications such as data transmission in fiber optics, and \change[SEC]{microwaves}{signal guiding of microwave radiation}. Here, the 2D domain represents a cross section of a metallic structure that guides waves along its axis. We are particularly interested in knowing two things:
 \begin{enumerate}
 \item The modes or wave functions that are solution to the equation for a particular shape.
 \item The frequencies associated to those modes or shapes. 
 \end{enumerate}
-And will start by introducing the analytic solution behind simple wave-guides such as rectangular and circular guides.
+And will start by introducing the analytic solution behind simple wave\remove[SEC]{-}guides such as rectangular and circular guides.
 
 \subsubsection{Rectangular wave-guides} 
 
 In transverse magnetic fields (TM) that travel inside a wave-guide whose axis is over $z$, we have $\mathbf{H}_z = 0$ and solve for $\mathbf{E}$ components. 
-Solutions of equation \ref{eq:E-wave-harmonic2} where the medium inside the wave guide is a perfect dielectric, and  for eigenvalues $\vec{k}^2 = \omega^2\mu\epsilon$ is a lengthy but straightforward process that involves separation of variables and use of boundary conditions:
+Solutions of equation \ref{eq:E-wave-harmonic2}, where the medium inside the wave guide is a perfect dielectric, and  for eigenvalues $\vec{k}^2 = \omega^2\mu\epsilon$ is a lengthy but straightforward process that involves separation of variables and use of boundary conditions:
 \begin{align}
 &\mathbf{E}_x = 0 \quad for \quad y=0,\ 0<x<a\\
 &\mathbf{E}_x = 0 \quad for \quad y=b,\ 0<x<a\\
@@ -171,39 +170,42 @@ Solutions of equation \ref{eq:E-wave-harmonic2} where the medium inside the wave
 \label{eq:square_bc}
 \end{align}
 
-A description of the solution process is left for the reader to look up in references such as Rao  \cite{Rao2004} or Jianming \cite{Jin2010}. What is found in the process is that only certain discrete frequencies are allowed inside the wave-guide, and they are given by:
+A description of the solution process is left for the reader to look up in references such as Rao  \cite{Rao2004} or Jianming \cite{Jin2010}. What is found in the process is that only certain discrete frequencies are allowed inside the wave\remove[SEC]{-}guide, and they are given by:
 
 \begin{equation}
 \omega_{n,m} = \frac{1}{\sqrt{\mu\epsilon}}\sqrt{\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2}
-\qquad m,n = 0,1,2,\cdots \quad (m=n\neq0)
+\qquad m,n = 0,1,2,\cdots \quad (m=n\neq0).
 \label{eq:eig_vals_sqare_waveguide}
 \end{equation}
 Where $\omega$ is indexed by integers $n,m$ and the trivial solution $\omega = 0$ is excluded. $a$ is the width of the rectangular cross section and $b$ is its height.
 The wave functions that are solution to this eigenproblem for each component of the field are in the following general form:
 
 \begin{align}
-&\mathbf{E}_z = A\sin{\dfrac{m\pi x}{a}}\sin{\dfrac{n\pi x}{b}}e^{\mp jk_zz} \label{eq:Ez_mag}\\
-&\mathbf{E}_x =\mp jB\dfrac{m\pi}{a}\cos{\dfrac{m\pi x}{a}}\sin{\dfrac{n\pi x}{b}}e^{\mp jk_zz}\\
-&\mathbf{E}_y =\mp jC\dfrac{n\pi}{b}\sin{\dfrac{m\pi x}{a}}\cos{\dfrac{n\pi x}{b}}e^{\mp jk_zz}
+&\mathbf{E}_z = A\sin{\dfrac{m\pi x}{a}}\sin{\dfrac{n\pi x}{b}}e^{\mp jk_zz}, \label{eq:Ez_mag}\\
+&\mathbf{E}_x =\mp jB\dfrac{m\pi}{a}\cos{\dfrac{m\pi x}{a}}\sin{\dfrac{n\pi x}{b}}e^{\mp jk_zz},\\
+&\mathbf{E}_y =\mp jC\dfrac{n\pi}{b}\sin{\dfrac{m\pi x}{a}}\cos{\dfrac{n\pi x}{b}}e^{\mp jk_zz}.
 \end{align}
 
-For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \ref{eq:Ez_mag}, and how similar are the analytic and numeric  natural frequencies of the guide $\omega$.
+For our comparisons we will only look at how closely the shapes of the simulated solution represent $\mathbf{E}$ in \add[SEC]{equation} \ref{eq:Ez_mag}, and how similar are the analytic and numeric  natural frequencies of the guide $\omega$. \add[SEC]{In order to obtain values to compare guides of arbitrary size we normalize the frequency by using a normalization factor $\frac{a}{2\pi}$.} Table \ref{tab:sq_wav_comparison} \add[SEC]{shows the difference between the adimensional normalized frequency simulated with PeyeQM and calculated by hand.}
 
-The numerical solution for rectangular wave-guide has less degenerate modes, and the shapes look better.
+The numerical solution for a rectangular waveguide has less degenerate modes, and the shapes look better.
+\begin{table}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
-\hline
-\multicolumn{5}{|c|}{Comparison of $\omega^2$ for square wave-guide} \\
 \hline 
 m,n & 1,1 & 1,2 & 2,2 & 3,1 \\ 
 \hline 
-FEM & 4.93480857 & 12.33721117 & 19.73961759 & 24.6763011 \\ 
+%FEM & 4.93480857 & 12.33721117 & 19.73961759 & 24.6763011 \\ 
+FEM  & 0.35355361 &  0.55902165 &  0.70711410 & 0.7906061022 \\ 
 \hline 
-Anlytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\ 
+%Analytic & 4.93480220 & 12.33700550 & 19.73920880 & 24.67401100 \\ 
+Analytic  & 0.35355339 &  0.55901699 &  0.70710678 &  0.79056941499 \\
 \hline 
 \end{tabular} 
-\label{tab:sq_wav_comparison}
+\caption{Comparison of normalized eigenvalues $\frac{\omega a}{2\pi c}$ for TM fields in square shaped waveguide. Where $a=1$ and $c=1$.}
 \end{center}
+\label{tab:sq_wav_comparison}
+\end{table}
 
 \begin{figure}
 \centering
