@@ -24,7 +24,7 @@
 \contentsline {figure}{\numberline {5.5}{\ignorespaces \change [SEC]{Components}{Magnitude plot} of \add [SEC]{components x (a) and y (b) of the} electric field after simulating a problem of two cylinders with opposite charges. \add [SEC]{The charge has been chosen such that field at perfect conductor cylinder boundaries is of 12 V/m}}}{64}{figure.5.5}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Arrow glyphs of the solution for the dipole problem. Length and color of the arrow indicate magnitude of the field. As expected, the field points from the positively charged cylinder to the negative.}}{64}{figure.5.6}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Error calculation of simulation against exact solution. The method reproduces the nature of the problem, but a finer mesh is needed to obtain precise results.}}{65}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Results for three different modes from the simulation of a square shaped wave-guide with side $a=b=2$}}{67}{figure.5.8}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Results for three different modes from the simulation of a square shaped waveguide with side $a=b=2$}}{67}{figure.5.8}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Results for three different modes from the simulation of a rectangle shaped waveguide with sides $a=4$ and $b=2$.}}{67}{figure.5.9}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Results for three different modes from the simulation of circular wave-guide with radius $a=2$.}}{68}{figure.5.10}
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Degneracy of modes from the simulation of hexagonal wave-guide.}}{69}{figure.5.11}
