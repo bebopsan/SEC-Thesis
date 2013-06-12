@@ -398,22 +398,22 @@ The following procedures are summarized and have less comments because they are 
 Proceeding in the same way as in the time harmonic case we take equation
 \ref{eq:E-wave-loads}, and rewrite it as:
 \begin{align}
-\nabla\times\left[\mu^-1\cdot\nabla \times\mathcal{E}(t)\right] + \epsilon\cdot\frac{\partial^2 \mathcal{E}(t)}{\partial t^2}=-\frac{\partial \mathcal{J}}{\partial t}.
+\nabla\times\left[\mu^-1\cdot\nabla \times\mathcal{E}(t)\right] + \epsilon\cdot\frac{\partial^2 \mathcal{E}(t)}{\partial t^2}=0.
 \end{align}
 
 Multiplying by the test function $\mathbf{W}$ and integrating over the entire domain will give us a functional equivalent to \ref{eq:E-wave-weak} to be minimized: 
 \begin{align}
-\int\limits_{\Omega}\mathbf{W}\cdot\nabla\times\left[\mu^-1\cdot\nabla \times\mathcal{E}(t)\right] + \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \nonumber,\\
-\int\limits_{\Omega}\mathbf{W}\cdot\nabla\times\left[\mu^-1\cdot\nabla \times\mathcal{E}(t)\right] +\int\limits_{\Omega} \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \nonumber\\
+\int\limits_{\Omega}\mathbf{W}\cdot\nabla\times\left[\mu^-1\cdot\nabla \times\mathcal{E}(t)\right] + \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=0,\nonumber\\
+\int\limits_{\Omega}\mathbf{W}\cdot\nabla\times\left[\mu^-1\cdot\nabla \times\mathcal{E}(t)\right] +\int\limits_{\Omega} \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=0 \nonumber,\\
 \int\limits_{\Omega} \mu_r^{-1}\nabla\times \mathcal{E}(t)\cdot \nabla\times\mathbf{W}-\int\limits_{\Omega}\nabla\cdot
 \left(\mathbf{W}\times\mu_r^{-1}\nabla\times \mathcal{E}(t)
-\right) +\int\limits_{\Omega} \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \nonumber\\
+\right) +\int\limits_{\Omega} \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=0 \nonumber,\\
 \int\limits_{\Omega} \mu_r^{-1}\nabla\times \mathcal{E}(t)\cdot \nabla\times\mathbf{W}-\oint_{\Gamma}\hat{n}\cdot
-\left(\mathbf{W}\times\mu_r^{-1}\nabla \times\mathcal{E}(t)\right)  +\int\limits_{\Omega} \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \nonumber\\
+\left(\mathbf{W}\times\mu_r^{-1}\nabla \times\mathcal{E}(t)\right)  +\int\limits_{\Omega} \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=0 \nonumber,\\
 \int\limits_{\Omega} \mu_r^{-1}\nabla\times \mathcal{E}(t)\cdot \nabla\times\mathbf{W}
 +\int_{\Gamma_N}\mathbf{W}\cdot
 \left(\hat{n}\times\mu_r^{-1}\nabla \times\mathcal{E}(t)\right)
-+\int\limits_{\Omega} \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \label{eq:time_dependent_Electric}
++\int\limits_{\Omega} \mathbf{W}\cdot\epsilon\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=0. \label{eq:time_dependent_Electric}
 \end{align}
 
 This is achieved remembering that $\hat{n}\cdot\mathbf{W} =0$ on $\Gamma_D$, and using all the vector identities invoked in the previous section.
@@ -421,87 +421,86 @@ This is achieved remembering that $\hat{n}\cdot\mathbf{W} =0$ on $\Gamma_D$, and
 \subsection{Boundary conditions in time dependent problem}
 Boundaries are defined in the same way, but now they are time dependent:
 \begin{align}
-\hat{n}\times\mathcal{E}(t)=&\mathcal{P}(t)\quad on \quad \Gamma_D\\
+\hat{n}\times\mathcal{E}(t)=&\mathcal{P}(t)\quad on \quad \Gamma_D,\\
 \hat{n}\times\left(\bar{\bar{\mu}}^{-1}\nabla\times\mathcal{E}(t)
-\right)+Y\hat{n}\times\left(\hat{n}\times\frac{\partial\mathcal{E} (t)}{\partial t}\right)=& \mathcal{K}_N(t)
+\right)+Y\hat{n}\times\left(\hat{n}\times\frac{\partial\mathcal{E} (t)}{\partial t}\right)=& \mathcal{K}_N(t).
 \end{align}
 
 Using Neumann boundary conditions applied to \ref{eq:time_dependent_Electric} we get:
 \begin{equation}
 \int\limits_{\Omega} \bar{\bar{\mu_r}}^{-1}\nabla\times \mathcal{E}(t)\cdot \nabla\times\mathbf{W}
-+ \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int_{\Gamma_N}\mathbf{W}\cdot\mathcal{K}_N(t)
--\int\limits_{\Omega}\mathbf{W}\cdot\frac{\partial \mathcal{J}}{\partial t} \label{eq:td_weak_form_E_equation}
++ \mathbf{W}\cdot\bar{\bar{\epsilon}}\cdot\frac{\partial ^2\mathcal{E}(t)}{\partial t^2}=-\int_{\Gamma_N}\mathbf{W}\cdot\mathcal{K}_N(t). \label{eq:td_weak_form_E_equation}
 \end{equation}
 
 \subsection{Base functions and abstract form}
 To obtain a finite element solution the spatial domain has to be discretized in the same way as we did when obtaining the frequency domain solution. For this, we use compact support basis functions that in combination with nodal values will give a representation of the global field as the combination of spatial  subdivisions called elements.
 In this case is better to invoke the definitions for the approximated functions first-hand:
 \begin{align*}
-\mathcal{E}(t)=\mathcal{E}(x,y,t)_x\hat{a}_x + \mathcal{E}(x,y,t)_y \hat{a}_y\\
-\mathcal{E}(x,y,t)_x\approx \sum_{i:\ n_x \in \eta_D} h_i \mathcal{E}_i^x(t)+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i \mathcal{E}_i^x(t)\\
+\mathcal{E}(t)=\mathcal{E}(x,y,t)_x\hat{a}_x + \mathcal{E}(x,y,t)_y \hat{a}_y,\\
+\mathcal{E}(x,y,t)_x\approx \sum_{i:\ n_x \in \eta_D} h_i \mathcal{E}_i^x(t)+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i \mathcal{E}_i^x(t),\\
 \mathcal{E}(x,y,t)_y\approx \sum_{i:\ n_y \in \eta_D}h_i\mathcal{E}_i^y(t)+
-\sum_{i:\ n_x \in \eta\setminus\eta_D}h_i\mathcal{E}_i^y(t)
+\sum_{i:\ n_x \in \eta\setminus\eta_D}h_i\mathcal{E}_i^y(t).
 \end{align*}
 Noting that when time derivatives are applied over the field, these will act only on the nodal values $\mathcal{E}_i^x(t)$ so that for example:
-\[\frac{\partial \mathcal{E}(x,y,t)_x}{\partial t}\approx \sum_{i:\ n_x \in \eta_D} h_i \frac{\partial \mathcal{E}_i^x(t)}{\partial t}+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i \frac{\partial\mathcal{E}_i^x(t)}{\partial t}\]
-$\mathbf{W}$ Keeps being the same as defined in the previous section.\[\mathcal{J}=\mathbf{J}\]
-\[\mathcal{K}_N=\mathbf{K}_N\]
+\[\frac{\partial \mathcal{E}(x,y,t)_x}{\partial t}\approx \sum_{i:\ n_x \in \eta_D} h_i \frac{\partial \mathcal{E}_i^x(t)}{\partial t}+\sum_{i:\ n_x \in \eta\setminus\eta_D} h_i \frac{\partial\mathcal{E}_i^x(t)}{\partial t}.\]
+$\mathbf{W}$ keeps being the same as defined in the previous section.\[\mathcal{J}=\mathbf{J},\]
+\[\mathcal{K}_N=\mathbf{K}_N.\]
 
-Operators are almost the same as before. The main difference being that free space related material constants $k_0$ and $Z_0$ haven't been extracted from material matrices $\bar{\bar{\mu}}$ and $\bar{\bar{\epsilon}}$.
+Operators are almost the same as before. The main difference being that free space related material constants $k_0$ and $Z_0$ haven't been extracted from material matrices $\mu$ and $\epsilon$.
 
 \begin{equation}
 \begin{array}{rcl}
-      a(\mathbf{W},\mathbf{E})&&:\mathbb{V}\times \mathbb{V}\rightarrow \mathbb{R}\\
-      a(\mathbf{W},\mathbf{E})&&= \int\limits_{\Omega}  \bar{\bar{\mu}}^{-1}\nabla\times \mathbf{E}\cdot \nabla\times\mathbf{W} d\Omega
+      a(\mathbf{W},\mathbf{E})&&:\mathbb{V}\times \mathbb{V}\rightarrow \mathbb{R},\\
+      a(\mathbf{W},\mathbf{E})&&= \int\limits_{\Omega}  \bar{\bar{\mu}}^{-1}\nabla\times \mathbf{E}\cdot \nabla\times\mathbf{W} d\Omega,
 \label{eq:a_td_def}
 \end{array}
 \end{equation}
 \begin{equation}
 \begin{array}{rcl}
-      m(\mathbf{W},\mathbf{E})&:\mathbb{V}\times \mathbb{V}\rightarrow \mathbb{R}\\
-      m(\mathbf{W},\mathbf{E})&= \int\limits_{\Omega} \mathbf{W}\cdot \bar{\bar{\epsilon}}\cdot \mathbf{E} d\Omega
+      m(\mathbf{W},\mathbf{E})&:\mathbb{V}\times \mathbb{V}\rightarrow \mathbb{R},\\
+      m(\mathbf{W},\mathbf{E})&= \int\limits_{\Omega} \mathbf{W}\cdot \bar{\bar{\epsilon}}\cdot \mathbf{E} d\Omega,
 \label{eq:m_td_def}
 \end{array}
 \end{equation}
 
 \begin{equation}
 \begin{array}{rcl}
-      q(\mathbf{W})&:\mathbb{V}\rightarrow \mathbb{R}\\
-      q(\mathbf{W})&=\int_{\Gamma_N} \mathbf{W} \cdot\mathcal{K}_N
+      q(\mathbf{W})&:\mathbb{V}\rightarrow \mathbb{R},\\
+      q(\mathbf{W})&=\int_{\Gamma_N} \mathbf{W} \cdot\mathcal{K}_N.
 \label{eq:m_td_def}
 \end{array}
 \end{equation}
-
-\begin{equation}
-\begin{array}{rcl}
-      f(\mathbf{W})&:\mathbb{V}\rightarrow \mathbb{R}\\
-      f(\mathbf{W})&= \int_{\Omega} \mathbf{W}\cdot\frac{\partial\mathcal{J}}{\partial t}
-\label{eq:m_td_def}
-\end{array}
-\end{equation}
+%
+%\begin{equation}
+%\begin{array}{rcl}
+%      f(\mathbf{W})&:\mathbb{V}\rightarrow \mathbb{R}\\
+%      f(\mathbf{W})&= \int_{\Omega} \mathbf{W}\cdot\frac{\partial\mathcal{J}}{\partial t}
+%\label{eq:m_td_def}
+%\end{array}
+%\end{equation}
 Note that all these are operators that act on spatial coordinates and as such are independent of time derivatives. The abstract form for wave propagation in time domain formulation is then:
 
 \begin{equation}
 a\left(\mathbf{W},\mathcal{E}\right)+m\left(\mathbf{W},\frac{\partial^2 \mathcal{E}}{\partial t^2}\right)
-=-f\left(\mathbf{W}\right)-q\left(\mathbf{W}\right) 
+=-q\left(\mathbf{W}\right).
 \end{equation}
 
 If a process of substitution like that shown in equation \ref{eq:substitution_of_app_fields_in_a} is performed for each of these operators, one gets a system of equations equivalent to the one in equation \ref{eq:harmonic_eq_dirichlet}
 
-$$\sum_{j:\ n_x \in \eta_D}\mathcal{E}_j^x = \left\lbrace g^x \right\rbrace $$
-$$ \mathbb{A}^x\left\lbrace g^x \right\rbrace=\left\lbrace d^x \right\rbrace$$ 
-$$\mathbb{M}^x\left\lbrace g^x \right\rbrace=\left\lbrace b^x \right\rbrace$$
-$$\sum_{i:\ n_x \in \eta\setminus\eta_D}W_i^x = \vec{W}^x $$
-$$\sum_{j:\ n_x \in\eta\setminus\eta_D}\mathcal{E}_j^x = \left\lbrace \mathcal{E}^x\right\rbrace $$
-$$\sum_{j:\ n_x \in\eta\setminus\eta_D}\frac{\partial^2 \mathcal{E}_j^x}{\partial t^2} = \frac{\partial^2\left\lbrace \mathcal{E}^x\right\rbrace}{\partial t^2} $$
-$$ \sum_{i:\ n_x \in \eta}\int_{\Omega} h_i\frac{\partial\mathcal{J}_i^x}{\partial t} = \left\lbrace f^x \right\rbrace $$
-$$\sum_{i:\ n_x \in \eta_N}\int_{\Gamma_N} h_i\mathcal{K}_i^x = \left\lbrace q^x   \right\rbrace$$
+$$\sum_{j:\ n_x \in \eta_D}\mathcal{E}_j^x = \left\lbrace g^x \right\rbrace, $$
+$$ \mathbb{A}^x\left\lbrace g^x \right\rbrace=\left\lbrace d^x \right\rbrace,$$ 
+$$\mathbb{M}^x\left\lbrace g^x \right\rbrace=\left\lbrace b^x \right\rbrace,$$
+$$\sum_{i:\ n_x \in \eta\setminus\eta_D}W_i^x = \vec{W}^x, $$
+$$\sum_{j:\ n_x \in\eta\setminus\eta_D}\mathcal{E}_j^x = \left\lbrace \mathcal{E}^x\right\rbrace, $$
+$$\sum_{j:\ n_x \in\eta\setminus\eta_D}\frac{\partial^2 \mathcal{E}_j^x}{\partial t^2} = \frac{\partial^2\left\lbrace \mathcal{E}^x\right\rbrace}{\partial t^2}, $$
+%$$ \sum_{i:\ n_x \in \eta}\int_{\Omega} h_i\frac{\partial\mathcal{J}_i^x}{\partial t} = \left\lbrace f^x \right\rbrace, $$
+$$\sum_{i:\ n_x \in \eta_N}\int_{\Gamma_N} h_i\mathcal{K}_i^x = \left\lbrace q^x   \right\rbrace,$$
 
 \begin{align}
 \langle\left\lbrace d^x \right\rbrace,\vec{W}^x\rangle
 +\langle\mathbb{A}^x\left\lbrace\mathcal{E}^x \right\rbrace,\vec{W}^x\rangle&-\langle \left\lbrace b^x \right\rbrace,\vec{W}^x\rangle
--\langle\mathbb{M}^x \frac{\partial^2\left\lbrace\mathcal{E}^x \right\rbrace}{\partial t^2},\vec{W}^x\rangle = -\langle \left\lbrace f^x\right\rbrace, \vec{W^x}\rangle-\langle \left\lbrace q^x\right\rbrace, \vec{W^x}\rangle \nonumber\\
-\langle\mathbb{A}^x\left\lbrace \mathcal{E}^x \right\rbrace- \mathbb{M}^x\frac{\partial^2\left\lbrace\mathcal{E}^x \right\rbrace}{\partial t^2},\vec{W}^x \rangle &=\langle \left\lbrace b^x \right\rbrace-\left\lbrace d^x \right\rbrace-\left\lbrace q^x   \right\rbrace-\left\lbrace f^x\right\rbrace , \vec{W}^x \rangle
+-\langle\mathbb{M}^x \frac{\partial^2\left\lbrace\mathcal{E}^x \right\rbrace}{\partial t^2},\vec{W}^x\rangle = -\langle \left\lbrace q^x\right\rbrace, \vec{W^x}\rangle \nonumber,\\
+\langle\mathbb{A}^x\left\lbrace \mathcal{E}^x \right\rbrace- \mathbb{M}^x\frac{\partial^2\left\lbrace\mathcal{E}^x \right\rbrace}{\partial t^2},\vec{W}^x \rangle &=\langle \left\lbrace b^x \right\rbrace-\left\lbrace d^x \right\rbrace-\left\lbrace q^x   \right\rbrace.
 \end{align}
 
 \begin{equation}
@@ -509,7 +508,7 @@ $$\sum_{i:\ n_x \in \eta_N}\int_{\Gamma_N} h_i\mathcal{K}_i^x = \left\lbrace q^x
 \label{eq:time_domain_linear_matrix_form}
 \end{equation}
 
-In the simulations that were performed as part of the project we didn't consider any sources or Neumann boundaries, so $\left\lbrace q=0\right\rbrace$ and $\left\lbrace f\right\rbrace$. The details about the finite difference formulation used to discretize the time derivative are explained in the section (\ref{sec:explicit_formulation}) where the explicit solution of \ref{eq:time_domain_linear_matrix_form} is explored .
+In the simulations that were performed as part of the project we did not consider any sources or Neumann boundaries, so $\left\lbrace q=0\right\rbrace$ and $\left\lbrace f\right\rbrace$. The details about the finite difference formulation used to discretize the time derivative are explained in the section (\ref{sec:explicit_formulation}) where the explicit solution of \ref{eq:time_domain_linear_matrix_form} is explored .
 
 
 \section{Mass matrices}
@@ -535,20 +534,20 @@ Lumped mass matrices are used in the implementation of an explicit formulation o
 
 \section{Explicit formulation}
 
-The central-difference method is used to approximate the second order derivative of $\mathbf{E}$ in \ref{eq:time_domain_linear_matrix_form} by expanding $\mathbf{E}_{n+1}$ and $\mathbf{E}_{n-1}$  in taylor series about time $n \vartriangle t$:
+The central-difference method is used to approximate the second order derivative of $\mathbf{E}$ in \ref{eq:time_domain_linear_matrix_form} by expanding $\mathbf{E}_{n+1}$ and $\mathbf{E}_{n-1}$  in taylor series about \add[SEC]{a given discrete} time $n \vartriangle t$:
 
 \begin{equation}
-\mathbf{E}_{n+1} = \mathbf{E}_n + \delta t \dot{\mathbf{E}}_n +\frac{\delta t^2}{2} \ddot{\mathbf{E}}_n +\frac{\delta t^3}{6} \dddot{\mathbf{E}}_n+ O(\delta t^4)
+\mathbf{E}_{n+1} = \mathbf{E}_n + \delta t \dot{\mathbf{E}}_n +\frac{\delta t^2}{2} \ddot{\mathbf{E}}_n +\frac{\delta t^3}{6} \dddot{\mathbf{E}}_n+ O(\delta t^4),
 \label{eq:2d_taylor_exp1}
 \end{equation}
 \begin{equation}
-\mathbf{E}_{n-1} = \mathbf{E}_n - \delta t \dot{\mathbf{E}}_n +\frac{\delta t^2}{2} \ddot{\mathbf{E}}_n-\frac{\delta t^3}{6} \dddot{\mathbf{E}}_n+ O(\delta t^4)
+\mathbf{E}_{n-1} = \mathbf{E}_n - \delta t \dot{\mathbf{E}}_n +\frac{\delta t^2}{2} \ddot{\mathbf{E}}_n-\frac{\delta t^3}{6} \dddot{\mathbf{E}}_n+ O(\delta t^4).
 \label{eq:2d_taylor_exp2}
 \end{equation}
 
 Restricting to fourth-order accuracy ($O(\delta t^4)$) and  adding \ref{eq:2d_taylor_exp1} to \ref{eq:2d_taylor_exp2} one can easily solve for $\mathbf{E}_{n+1}$:
 \begin{equation}
-\ddot{\mathbf{E}}_n = \frac{1}{\delta t^2}\left(\mathbf{E}_{n+1}-2 \mathbf{E}_{n} + \mathbf{E}_{n-1}\right)
+\ddot{\mathbf{E}}_n = \frac{1}{\delta t^2}\left(\mathbf{E}_{n+1}-2 \mathbf{E}_{n} + \mathbf{E}_{n-1}\right),
 \label{eq:central-difference}
 \end{equation}
 subscript $n$ denotes time $n\delta t$ with $\delta t$ being the selected timestep.
@@ -558,7 +557,7 @@ Replacing into our general formulation one gets (fix details):
 \begin{equation}
 \frac{1}{\delta t^2} \mathbb{M} \mathbf{E}_{n+1} = - \mathbb{A}\mathbf{E}_n + \frac{1}{\delta t^2}\mathbb{M}\left[2
 \mathbf{E}_{n}-\mathbf{E}_{n-1}
-\right] 	 
+\right]. 	 
 \label{eq:implicit_time_domain}
 \end{equation}
 
